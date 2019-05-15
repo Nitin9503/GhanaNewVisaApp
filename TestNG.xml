@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name = "Ghana Web Application" vervose = "1"  parallel = none thread-count = "3">
+    
+    <listeners>
+        
+        <listener class-name = "com.ghana.app.qa.extentreport.ExtendReportListener" />
+        
+        </listeners>

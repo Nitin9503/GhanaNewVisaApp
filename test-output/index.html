@@ -1,0 +1,1778 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite, 4 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-Torenzo_WebSite">
+              <span class="suite-name border-failed">Torenzo WebSite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Torenzo_WebSite">
+                    <span>E:\SeleniumWorkSpace\GhanaWebApp\TestNGXML\TestNG.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-Torenzo_WebSite">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-Torenzo_WebSite">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-Torenzo_WebSite">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-Torenzo_WebSite">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Torenzo_WebSite">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-Torenzo_WebSite">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">63 methods, 4 failed,   59 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Torenzo_WebSite" class="hide-methods failed suite-Torenzo_WebSite"> (hide)</a> <!-- hide-methods failed suite-Torenzo_WebSite -->
+                      <a href="#" panel-name="suite-Torenzo_WebSite" class="show-methods failed suite-Torenzo_WebSite"> (show)</a> <!-- show-methods failed suite-Torenzo_WebSite -->
+                    </span>
+                    <div class="method-list-content failed suite-Torenzo_WebSite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.AddressInfoPageTest" hash-for-method="SaveAndContinueFromPersonalInfoTest">SaveAndContinueFromPersonalInfoTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.AddressInfoPageTest" hash-for-method="filladdressInfoTest">filladdressInfoTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.AddressInfoPageTest" hash-for-method="selectFormerNationalityTest">selectFormerNationalityTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.VisaPaymentPageTest" hash-for-method="verifyClickOnSubmitBtnTest">verifyClickOnSubmitBtnTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Torenzo_WebSite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Torenzo_WebSite" class="hide-methods passed suite-Torenzo_WebSite"> (hide)</a> <!-- hide-methods passed suite-Torenzo_WebSite -->
+                      <a href="#" panel-name="suite-Torenzo_WebSite" class="show-methods passed suite-Torenzo_WebSite"> (show)</a> <!-- show-methods passed suite-Torenzo_WebSite -->
+                    </span>
+                    <div class="method-list-content passed suite-Torenzo_WebSite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.TravelInfoPageTest" hash-for-method="ContinueAndSaveEmergTest">ContinueAndSaveEmergTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.TravelInfoPageTest" hash-for-method="PassSecondaryRefDetailsTest">PassSecondaryRefDetailsTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.EmergencyContactPageTest" hash-for-method="SaveAndContinueAddressInfoTest">SaveAndContinueAddressInfoTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.PersonalInfoPageTest" hash-for-method="clickOnGenderTest">clickOnGenderTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.TravelInfoPageTest" hash-for-method="clickOnIsApplicantPossessionRoundTicketTest">clickOnIsApplicantPossessionRoundTicketTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.TravelInfoPageTest" hash-for-method="clickOnTravelByTest">clickOnTravelByTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.VisaCategoriesPageTest" hash-for-method="clickOnVisaTypeTest">clickOnVisaTypeTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.TravelInfoPageTest" hash-for-method="clickPurpose_of_journeyTest">clickPurpose_of_journeyTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.EmergencyContactPageTest" hash-for-method="emergencyContactDetailsTest">emergencyContactDetailsTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.EmergencyContactPageTest" hash-for-method="emergencyProfessionDetailsTest">emergencyProfessionDetailsTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.SignUpPageTest" hash-for-method="enterCaptchaFieldTest">enterCaptchaFieldTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.PersonalInfoPageTest" hash-for-method="fillSignUpFormTest">fillSignUpFormTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.PersonalInfoPageTest" hash-for-method="getApplicationIdTest">getApplicationIdTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.PersonalInfoPageTest" hash-for-method="getApplicationPageTitleTest">getApplicationPageTitleTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.ReviewApplicationPageTest" hash-for-method="getTextAddressInfoTest">getTextAddressInfoTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.ReviewApplicationPageTest" hash-for-method="getTextEmergencyContactTest">getTextEmergencyContactTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.ReviewApplicationPageTest" hash-for-method="getTextPersonalInfoTest">getTextPersonalInfoTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.ReviewApplicationPageTest" hash-for-method="getTextTravelInfoTest">getTextTravelInfoTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.UploadDocPageTest" hash-for-method="getUploadDocTest">getUploadDocTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.VisaCategoriesPageTest" hash-for-method="getVisaCategoriesText">getVisaCategoriesText</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.SignUpPageTest" hash-for-method="launchAndGotoSignUP">launchAndGotoSignUP</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.TravelInfoPageTest" hash-for-method="passDateOfDepartureTest">passDateOfDepartureTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.SignUpPageTest" hash-for-method="passEmailIdTest">passEmailIdTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.PersonalInfoPageTest" hash-for-method="passFirstNameTest">passFirstNameTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.PersonalInfoPageTest" hash-for-method="passLastNameTest">passLastNameTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.PersonalInfoPageTest" hash-for-method="passMiddleNameTest">passMiddleNameTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.PersonalInfoPageTest" hash-for-method="passPassportNumberTest">passPassportNumberTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.SignUpPageTest" hash-for-method="passPhoneNoTest">passPhoneNoTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.PersonalInfoPageTest" hash-for-method="passPlaceOfBirthTest">passPlaceOfBirthTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.TravelInfoPageTest" hash-for-method="passPrimaryRefFirstnameTest">passPrimaryRefFirstnameTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.TravelInfoPageTest" hash-for-method="passPrimaryRefLastnameTest">passPrimaryRefLastnameTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.SignUpPageTest" hash-for-method="passReEmailIdTest">passReEmailIdTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.TravelInfoPageTest" hash-for-method="passTicketNumberTest">passTicketNumberTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.TravelInfoPageTest" hash-for-method="pass_Primary_ref_addressTest">pass_Primary_ref_addressTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.TravelInfoPageTest" hash-for-method="pass_primary_ref_cityTest">pass_primary_ref_cityTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.TravelInfoPageTest" hash-for-method="pass_primary_ref_countryTest">pass_primary_ref_countryTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.TravelInfoPageTest" hash-for-method="pass_primary_ref_phone_numberTest">pass_primary_ref_phone_numberTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.TravelInfoPageTest" hash-for-method="pass_primary_ref_pincodeTest">pass_primary_ref_pincodeTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.TravelInfoPageTest" hash-for-method="pass_primary_ref_stateTest">pass_primary_ref_stateTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.SignUpPageTest" hash-for-method="selectDateOfBirthTest">selectDateOfBirthTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.SignUpPageTest" hash-for-method="selectNationalityTest">selectNationalityTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.PersonalInfoPageTest" hash-for-method="selectPassExpiryDateTest">selectPassExpiryDateTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.PersonalInfoPageTest" hash-for-method="selectPassIssueDateTest">selectPassIssueDateTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.SignUpPageTest" hash-for-method="selectPassportTypeTest">selectPassportTypeTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.SignUpPageTest" hash-for-method="selectPortOfArrivalTest">selectPortOfArrivalTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.EmergencyContactPageTest" hash-for-method="selectRelationTest">selectRelationTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.SignUpPageTest" hash-for-method="selectVisaLocation">selectVisaLocation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.SignUpPageTest" hash-for-method="selectVisaType">selectVisaType</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.EmergencyContactPageTest" hash-for-method="signUpAndFillAddressInfo">signUpAndFillAddressInfo</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.TravelInfoPageTest" hash-for-method="signUpAndFillEmergInfo">signUpAndFillEmergInfo</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.AddressInfoPageTest" hash-for-method="signUpAndFillPersonalInfo">signUpAndFillPersonalInfo</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.UploadDocPageTest" hash-for-method="signUpAndFillTravelInfo">signUpAndFillTravelInfo</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.VisaPaymentPageTest" hash-for-method="signUpAndPayment">signUpAndPayment</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.ReviewApplicationPageTest" hash-for-method="signUpAndValidateReviewApp">signUpAndValidateReviewApp</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.VisaCategoriesPageTest" hash-for-method="validateVisaPageTiltleTest">validateVisaPageTiltleTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.TravelInfoPageTest" hash-for-method="verifyCheckBoxTest">verifyCheckBoxTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.HomePageTest" hash-for-method="verifyHomePageTitleTest">verifyHomePageTitleTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.PersonalInfoPageTest" hash-for-method="verifyPersonalInfoTest">verifyPersonalInfoTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Torenzo_WebSite" title="com.ghana.app.qa.testcases.HomePageTest" hash-for-method="verifyVisaCategoriesTest">verifyVisaCategoriesTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Torenzo_WebSite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Torenzo_WebSite" class="panel Torenzo_WebSite">
+          <div class="suite-Torenzo_WebSite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.ghana.app.qa.testcases.VisaPaymentPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyClickOnSubmitBtnTest">
+                  </a> <!-- verifyClickOnSubmitBtnTest -->
+                  <span class="method-name">verifyClickOnSubmitBtnTest</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@name=&apos;creditCardNumber&apos;]&quot;}
+  (Session info: chrome=74.0.3729.108)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-A3DICO7&apos;, ip: &apos;169.254.89.74&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\Sachin\AppData\Loc...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:60986}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.108, webStorageEnabled: true}
+Session ID: 1164bcf83bb4c2da4e1d36f4fd86c941
+*** Element info: {Using=xpath, value=//input[@name=&apos;creditCardNumber&apos;]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy9.sendKeys(Unknown Source)
+	at com.ghana.app.qa.pages.VisaPaymentPage.passCardNo(VisaPaymentPage.java:74)
+	at com.ghana.app.qa.testcases.VisaPaymentPageTest.verifyClickOnSubmitBtnTest(VisaPaymentPageTest.java:120)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Here verifying confirmation message and click on ok btn )                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Torenzo_WebSite-class-failed -->
+          <div class="suite-Torenzo_WebSite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.ghana.app.qa.testcases.AddressInfoPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="SaveAndContinueFromPersonalInfoTest">
+                  </a> <!-- SaveAndContinueFromPersonalInfoTest -->
+                  <span class="method-name">SaveAndContinueFromPersonalInfoTest</span>
+                  <div class="stack-trace">java.lang.AssertionError: The following asserts failed:
+	it is not navigate to address info page expected [Address Information] but found []
+	at com.ghana.app.qa.testcases.AddressInfoPageTest.SaveAndContinueFromPersonalInfoTest(AddressInfoPageTest.java:79)
+... Removed 26 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="filladdressInfoTest">
+                  </a> <!-- filladdressInfoTest -->
+                  <span class="method-name">filladdressInfoTest</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=74.0.3729.108)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-A3DICO7&apos;, ip: &apos;169.254.89.74&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\Sachin\AppData\Loc...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:60265}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.108, webStorageEnabled: true}
+Session ID: 1ab74b66cad4e9af7ba72741cf6c987d
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:106)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy9.sendKeys(Unknown Source)
+	at com.ghana.app.qa.pages.AddressInfoPage.PassAddressInfofield(AddressInfoPage.java:88)
+	at com.ghana.app.qa.testcases.AddressInfoPageTest.filladdressInfoTest(AddressInfoPageTest.java:91)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectFormerNationalityTest">
+                  </a> <!-- selectFormerNationalityTest -->
+                  <span class="method-name">selectFormerNationalityTest</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementNotVisibleException: element not interactable
+  (Session info: chrome=74.0.3729.108)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-A3DICO7&apos;, ip: &apos;169.254.89.74&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\Sachin\AppData\Loc...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:60265}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.108, webStorageEnabled: true}
+Session ID: 1ab74b66cad4e9af7ba72741cf6c987d
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at com.ghana.app.qa.pages.AddressInfoPage.selectFormerNaitonality(AddressInfoPage.java:75)
+	at com.ghana.app.qa.testcases.AddressInfoPageTest.selectFormerNationalityTest(AddressInfoPageTest.java:86)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Torenzo_WebSite-class-failed -->
+          <div class="suite-Torenzo_WebSite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.ghana.app.qa.testcases.SignUpPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="enterCaptchaFieldTest">
+                  </a> <!-- enterCaptchaFieldTest -->
+                  <span class="method-name">enterCaptchaFieldTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="launchAndGotoSignUP">
+                  </a> <!-- launchAndGotoSignUP -->
+                  <span class="method-name">launchAndGotoSignUP</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="passEmailIdTest">
+                  </a> <!-- passEmailIdTest -->
+                  <span class="method-name">passEmailIdTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="passPhoneNoTest">
+                  </a> <!-- passPhoneNoTest -->
+                  <span class="method-name">passPhoneNoTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="passReEmailIdTest">
+                  </a> <!-- passReEmailIdTest -->
+                  <span class="method-name">passReEmailIdTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectDateOfBirthTest">
+                  </a> <!-- selectDateOfBirthTest -->
+                  <span class="method-name">selectDateOfBirthTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectNationalityTest">
+                  </a> <!-- selectNationalityTest -->
+                  <span class="method-name">selectNationalityTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectPassportTypeTest">
+                  </a> <!-- selectPassportTypeTest -->
+                  <span class="method-name">selectPassportTypeTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectPortOfArrivalTest">
+                  </a> <!-- selectPortOfArrivalTest -->
+                  <span class="method-name">selectPortOfArrivalTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectVisaLocation">
+                  </a> <!-- selectVisaLocation -->
+                  <span class="method-name">selectVisaLocation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectVisaType">
+                  </a> <!-- selectVisaType -->
+                  <span class="method-name">selectVisaType</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Torenzo_WebSite-class-passed -->
+          <div class="suite-Torenzo_WebSite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.ghana.app.qa.testcases.PersonalInfoPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="clickOnGenderTest">
+                  </a> <!-- clickOnGenderTest -->
+                  <span class="method-name">clickOnGenderTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="fillSignUpFormTest">
+                  </a> <!-- fillSignUpFormTest -->
+                  <span class="method-name">fillSignUpFormTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getApplicationIdTest">
+                  </a> <!-- getApplicationIdTest -->
+                  <span class="method-name">getApplicationIdTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getApplicationPageTitleTest">
+                  </a> <!-- getApplicationPageTitleTest -->
+                  <span class="method-name">getApplicationPageTitleTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="passFirstNameTest">
+                  </a> <!-- passFirstNameTest -->
+                  <span class="method-name">passFirstNameTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="passLastNameTest">
+                  </a> <!-- passLastNameTest -->
+                  <span class="method-name">passLastNameTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="passMiddleNameTest">
+                  </a> <!-- passMiddleNameTest -->
+                  <span class="method-name">passMiddleNameTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="passPassportNumberTest">
+                  </a> <!-- passPassportNumberTest -->
+                  <span class="method-name">passPassportNumberTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="passPlaceOfBirthTest">
+                  </a> <!-- passPlaceOfBirthTest -->
+                  <span class="method-name">passPlaceOfBirthTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectPassExpiryDateTest">
+                  </a> <!-- selectPassExpiryDateTest -->
+                  <span class="method-name">selectPassExpiryDateTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectPassIssueDateTest">
+                  </a> <!-- selectPassIssueDateTest -->
+                  <span class="method-name">selectPassIssueDateTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyPersonalInfoTest">
+                  </a> <!-- verifyPersonalInfoTest -->
+                  <span class="method-name">verifyPersonalInfoTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Torenzo_WebSite-class-passed -->
+          <div class="suite-Torenzo_WebSite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.ghana.app.qa.testcases.EmergencyContactPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="SaveAndContinueAddressInfoTest">
+                  </a> <!-- SaveAndContinueAddressInfoTest -->
+                  <span class="method-name">SaveAndContinueAddressInfoTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="emergencyContactDetailsTest">
+                  </a> <!-- emergencyContactDetailsTest -->
+                  <span class="method-name">emergencyContactDetailsTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="emergencyProfessionDetailsTest">
+                  </a> <!-- emergencyProfessionDetailsTest -->
+                  <span class="method-name">emergencyProfessionDetailsTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="selectRelationTest">
+                  </a> <!-- selectRelationTest -->
+                  <span class="method-name">selectRelationTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="signUpAndFillAddressInfo">
+                  </a> <!-- signUpAndFillAddressInfo -->
+                  <span class="method-name">signUpAndFillAddressInfo</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Torenzo_WebSite-class-passed -->
+          <div class="suite-Torenzo_WebSite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.ghana.app.qa.testcases.UploadDocPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="getUploadDocTest">
+                  </a> <!-- getUploadDocTest -->
+                  <span class="method-name">getUploadDocTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="signUpAndFillTravelInfo">
+                  </a> <!-- signUpAndFillTravelInfo -->
+                  <span class="method-name">signUpAndFillTravelInfo</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Torenzo_WebSite-class-passed -->
+          <div class="suite-Torenzo_WebSite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.ghana.app.qa.testcases.TravelInfoPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="ContinueAndSaveEmergTest">
+                  </a> <!-- ContinueAndSaveEmergTest -->
+                  <span class="method-name">ContinueAndSaveEmergTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="PassSecondaryRefDetailsTest">
+                  </a> <!-- PassSecondaryRefDetailsTest -->
+                  <span class="method-name">PassSecondaryRefDetailsTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="clickOnIsApplicantPossessionRoundTicketTest">
+                  </a> <!-- clickOnIsApplicantPossessionRoundTicketTest -->
+                  <span class="method-name">clickOnIsApplicantPossessionRoundTicketTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="clickOnTravelByTest">
+                  </a> <!-- clickOnTravelByTest -->
+                  <span class="method-name">clickOnTravelByTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="clickPurpose_of_journeyTest">
+                  </a> <!-- clickPurpose_of_journeyTest -->
+                  <span class="method-name">clickPurpose_of_journeyTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="passDateOfDepartureTest">
+                  </a> <!-- passDateOfDepartureTest -->
+                  <span class="method-name">passDateOfDepartureTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="passPrimaryRefFirstnameTest">
+                  </a> <!-- passPrimaryRefFirstnameTest -->
+                  <span class="method-name">passPrimaryRefFirstnameTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="passPrimaryRefLastnameTest">
+                  </a> <!-- passPrimaryRefLastnameTest -->
+                  <span class="method-name">passPrimaryRefLastnameTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="passTicketNumberTest">
+                  </a> <!-- passTicketNumberTest -->
+                  <span class="method-name">passTicketNumberTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="pass_Primary_ref_addressTest">
+                  </a> <!-- pass_Primary_ref_addressTest -->
+                  <span class="method-name">pass_Primary_ref_addressTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="pass_primary_ref_cityTest">
+                  </a> <!-- pass_primary_ref_cityTest -->
+                  <span class="method-name">pass_primary_ref_cityTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="pass_primary_ref_countryTest">
+                  </a> <!-- pass_primary_ref_countryTest -->
+                  <span class="method-name">pass_primary_ref_countryTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="pass_primary_ref_phone_numberTest">
+                  </a> <!-- pass_primary_ref_phone_numberTest -->
+                  <span class="method-name">pass_primary_ref_phone_numberTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="pass_primary_ref_pincodeTest">
+                  </a> <!-- pass_primary_ref_pincodeTest -->
+                  <span class="method-name">pass_primary_ref_pincodeTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="pass_primary_ref_stateTest">
+                  </a> <!-- pass_primary_ref_stateTest -->
+                  <span class="method-name">pass_primary_ref_stateTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="signUpAndFillEmergInfo">
+                  </a> <!-- signUpAndFillEmergInfo -->
+                  <span class="method-name">signUpAndFillEmergInfo</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyCheckBoxTest">
+                  </a> <!-- verifyCheckBoxTest -->
+                  <span class="method-name">verifyCheckBoxTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Torenzo_WebSite-class-passed -->
+          <div class="suite-Torenzo_WebSite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.ghana.app.qa.testcases.ReviewApplicationPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="getTextAddressInfoTest">
+                  </a> <!-- getTextAddressInfoTest -->
+                  <span class="method-name">getTextAddressInfoTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getTextEmergencyContactTest">
+                  </a> <!-- getTextEmergencyContactTest -->
+                  <span class="method-name">getTextEmergencyContactTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getTextPersonalInfoTest">
+                  </a> <!-- getTextPersonalInfoTest -->
+                  <span class="method-name">getTextPersonalInfoTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getTextTravelInfoTest">
+                  </a> <!-- getTextTravelInfoTest -->
+                  <span class="method-name">getTextTravelInfoTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="signUpAndValidateReviewApp">
+                  </a> <!-- signUpAndValidateReviewApp -->
+                  <span class="method-name">signUpAndValidateReviewApp</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Torenzo_WebSite-class-passed -->
+          <div class="suite-Torenzo_WebSite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.ghana.app.qa.testcases.HomePageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyHomePageTitleTest">
+                  </a> <!-- verifyHomePageTitleTest -->
+                  <span class="method-name">verifyHomePageTitleTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyVisaCategoriesTest">
+                  </a> <!-- verifyVisaCategoriesTest -->
+                  <span class="method-name">verifyVisaCategoriesTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Torenzo_WebSite-class-passed -->
+          <div class="suite-Torenzo_WebSite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.ghana.app.qa.testcases.VisaPaymentPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="signUpAndPayment">
+                  </a> <!-- signUpAndPayment -->
+                  <span class="method-name">signUpAndPayment</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Torenzo_WebSite-class-passed -->
+          <div class="suite-Torenzo_WebSite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.ghana.app.qa.testcases.VisaCategoriesPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="clickOnVisaTypeTest">
+                  </a> <!-- clickOnVisaTypeTest -->
+                  <span class="method-name">clickOnVisaTypeTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getVisaCategoriesText">
+                  </a> <!-- getVisaCategoriesText -->
+                  <span class="method-name">getVisaCategoriesText</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateVisaPageTiltleTest">
+                  </a> <!-- validateVisaPageTiltleTest -->
+                  <span class="method-name">validateVisaPageTiltleTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Torenzo_WebSite-class-passed -->
+          <div class="suite-Torenzo_WebSite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.ghana.app.qa.testcases.AddressInfoPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="signUpAndFillPersonalInfo">
+                  </a> <!-- signUpAndFillPersonalInfo -->
+                  <span class="method-name">signUpAndFillPersonalInfo</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Torenzo_WebSite-class-passed -->
+        </div> <!-- panel Torenzo_WebSite -->
+        <div panel-name="test-xml-Torenzo_WebSite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">E:\SeleniumWorkSpace\GhanaWebApp\TestNGXML\TestNG.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite thread-count=&quot;3&quot; guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Torenzo WebSite&quot;&gt;
+  &lt;test thread-count=&quot;3&quot; name=&quot;TorenzoTest&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.ghana.app.qa.testcases.HomePageTest&quot;/&gt;
+      &lt;class name=&quot;com.ghana.app.qa.testcases.VisaCategoriesPageTest&quot;/&gt;
+      &lt;class name=&quot;com.ghana.app.qa.testcases.SignUpPageTest&quot;/&gt;
+      &lt;class name=&quot;com.ghana.app.qa.testcases.PersonalInfoPageTest&quot;/&gt;
+      &lt;class name=&quot;com.ghana.app.qa.testcases.AddressInfoPageTest&quot;/&gt;
+      &lt;class name=&quot;com.ghana.app.qa.testcases.EmergencyContactPageTest&quot;/&gt;
+      &lt;class name=&quot;com.ghana.app.qa.testcases.TravelInfoPageTest&quot;/&gt;
+      &lt;class name=&quot;com.ghana.app.qa.testcases.UploadDocPageTest&quot;/&gt;
+      &lt;class name=&quot;com.ghana.app.qa.testcases.ReviewApplicationPageTest&quot;/&gt;
+      &lt;class name=&quot;com.ghana.app.qa.testcases.VisaPaymentPageTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- TorenzoTest --&gt;
+&lt;/suite&gt; &lt;!-- Torenzo WebSite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Torenzo_WebSite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Torenzo WebSite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">TorenzoTest (10 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Torenzo_WebSite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Torenzo WebSite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Torenzo_WebSite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Torenzo WebSite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Torenzo_WebSite');
+function tableData_Torenzo_WebSite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(63);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'verifyClickOnSubmitBtnTest')
+data.setCell(0, 2, 'com.ghana.app.qa.testcases.VisaPaymentPageTest')
+data.setCell(0, 3, 132469);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'selectFormerNationalityTest')
+data.setCell(1, 2, 'com.ghana.app.qa.testcases.AddressInfoPageTest')
+data.setCell(1, 3, 120375);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'filladdressInfoTest')
+data.setCell(2, 2, 'com.ghana.app.qa.testcases.AddressInfoPageTest')
+data.setCell(2, 3, 120187);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'signUpAndPayment')
+data.setCell(3, 2, 'com.ghana.app.qa.testcases.VisaPaymentPageTest')
+data.setCell(3, 3, 60259);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'signUpAndValidateReviewApp')
+data.setCell(4, 2, 'com.ghana.app.qa.testcases.ReviewApplicationPageTest')
+data.setCell(4, 3, 56128);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'signUpAndFillTravelInfo')
+data.setCell(5, 2, 'com.ghana.app.qa.testcases.UploadDocPageTest')
+data.setCell(5, 3, 44533);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'signUpAndFillEmergInfo')
+data.setCell(6, 2, 'com.ghana.app.qa.testcases.TravelInfoPageTest')
+data.setCell(6, 3, 37775);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'fillSignUpFormTest')
+data.setCell(7, 2, 'com.ghana.app.qa.testcases.PersonalInfoPageTest')
+data.setCell(7, 3, 34822);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'signUpAndFillAddressInfo')
+data.setCell(8, 2, 'com.ghana.app.qa.testcases.EmergencyContactPageTest')
+data.setCell(8, 3, 33401);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'signUpAndFillPersonalInfo')
+data.setCell(9, 2, 'com.ghana.app.qa.testcases.AddressInfoPageTest')
+data.setCell(9, 3, 28934);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'launchAndGotoSignUP')
+data.setCell(10, 2, 'com.ghana.app.qa.testcases.SignUpPageTest')
+data.setCell(10, 3, 13906);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'clickOnVisaTypeTest')
+data.setCell(11, 2, 'com.ghana.app.qa.testcases.VisaCategoriesPageTest')
+data.setCell(11, 3, 7583);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'ContinueAndSaveEmergTest')
+data.setCell(12, 2, 'com.ghana.app.qa.testcases.TravelInfoPageTest')
+data.setCell(12, 3, 4778);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'enterCaptchaFieldTest')
+data.setCell(13, 2, 'com.ghana.app.qa.testcases.SignUpPageTest')
+data.setCell(13, 3, 4502);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'SaveAndContinueFromPersonalInfoTest')
+data.setCell(14, 2, 'com.ghana.app.qa.testcases.AddressInfoPageTest')
+data.setCell(14, 3, 4299);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'selectDateOfBirthTest')
+data.setCell(15, 2, 'com.ghana.app.qa.testcases.SignUpPageTest')
+data.setCell(15, 3, 3432);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'validateVisaPageTiltleTest')
+data.setCell(16, 2, 'com.ghana.app.qa.testcases.VisaCategoriesPageTest')
+data.setCell(16, 3, 2293);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'clickOnGenderTest')
+data.setCell(17, 2, 'com.ghana.app.qa.testcases.PersonalInfoPageTest')
+data.setCell(17, 3, 2201);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'verifyPersonalInfoTest')
+data.setCell(18, 2, 'com.ghana.app.qa.testcases.PersonalInfoPageTest')
+data.setCell(18, 3, 2097);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'getApplicationPageTitleTest')
+data.setCell(19, 2, 'com.ghana.app.qa.testcases.PersonalInfoPageTest')
+data.setCell(19, 3, 2029);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'PassSecondaryRefDetailsTest')
+data.setCell(20, 2, 'com.ghana.app.qa.testcases.TravelInfoPageTest')
+data.setCell(20, 3, 1735);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'emergencyProfessionDetailsTest')
+data.setCell(21, 2, 'com.ghana.app.qa.testcases.EmergencyContactPageTest')
+data.setCell(21, 3, 1679);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'getTextTravelInfoTest')
+data.setCell(22, 2, 'com.ghana.app.qa.testcases.ReviewApplicationPageTest')
+data.setCell(22, 3, 1458);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'getTextEmergencyContactTest')
+data.setCell(23, 2, 'com.ghana.app.qa.testcases.ReviewApplicationPageTest')
+data.setCell(23, 3, 913);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'emergencyContactDetailsTest')
+data.setCell(24, 2, 'com.ghana.app.qa.testcases.EmergencyContactPageTest')
+data.setCell(24, 3, 903);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'passDateOfDepartureTest')
+data.setCell(25, 2, 'com.ghana.app.qa.testcases.TravelInfoPageTest')
+data.setCell(25, 3, 722);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'verifyCheckBoxTest')
+data.setCell(26, 2, 'com.ghana.app.qa.testcases.TravelInfoPageTest')
+data.setCell(26, 3, 654);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'getTextAddressInfoTest')
+data.setCell(27, 2, 'com.ghana.app.qa.testcases.ReviewApplicationPageTest')
+data.setCell(27, 3, 642);
+data.setCell(28, 0, 28)
+data.setCell(28, 1, 'getUploadDocTest')
+data.setCell(28, 2, 'com.ghana.app.qa.testcases.UploadDocPageTest')
+data.setCell(28, 3, 603);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'selectPassIssueDateTest')
+data.setCell(29, 2, 'com.ghana.app.qa.testcases.PersonalInfoPageTest')
+data.setCell(29, 3, 475);
+data.setCell(30, 0, 30)
+data.setCell(30, 1, 'selectNationalityTest')
+data.setCell(30, 2, 'com.ghana.app.qa.testcases.SignUpPageTest')
+data.setCell(30, 3, 432);
+data.setCell(31, 0, 31)
+data.setCell(31, 1, 'pass_Primary_ref_addressTest')
+data.setCell(31, 2, 'com.ghana.app.qa.testcases.TravelInfoPageTest')
+data.setCell(31, 3, 422);
+data.setCell(32, 0, 32)
+data.setCell(32, 1, 'verifyVisaCategoriesTest')
+data.setCell(32, 2, 'com.ghana.app.qa.testcases.HomePageTest')
+data.setCell(32, 3, 421);
+data.setCell(33, 0, 33)
+data.setCell(33, 1, 'passReEmailIdTest')
+data.setCell(33, 2, 'com.ghana.app.qa.testcases.SignUpPageTest')
+data.setCell(33, 3, 397);
+data.setCell(34, 0, 34)
+data.setCell(34, 1, 'passEmailIdTest')
+data.setCell(34, 2, 'com.ghana.app.qa.testcases.SignUpPageTest')
+data.setCell(34, 3, 374);
+data.setCell(35, 0, 35)
+data.setCell(35, 1, 'SaveAndContinueAddressInfoTest')
+data.setCell(35, 2, 'com.ghana.app.qa.testcases.EmergencyContactPageTest')
+data.setCell(35, 3, 351);
+data.setCell(36, 0, 36)
+data.setCell(36, 1, 'selectPassExpiryDateTest')
+data.setCell(36, 2, 'com.ghana.app.qa.testcases.PersonalInfoPageTest')
+data.setCell(36, 3, 328);
+data.setCell(37, 0, 37)
+data.setCell(37, 1, 'selectRelationTest')
+data.setCell(37, 2, 'com.ghana.app.qa.testcases.EmergencyContactPageTest')
+data.setCell(37, 3, 306);
+data.setCell(38, 0, 38)
+data.setCell(38, 1, 'passPlaceOfBirthTest')
+data.setCell(38, 2, 'com.ghana.app.qa.testcases.PersonalInfoPageTest')
+data.setCell(38, 3, 291);
+data.setCell(39, 0, 39)
+data.setCell(39, 1, 'getTextPersonalInfoTest')
+data.setCell(39, 2, 'com.ghana.app.qa.testcases.ReviewApplicationPageTest')
+data.setCell(39, 3, 288);
+data.setCell(40, 0, 40)
+data.setCell(40, 1, 'passPhoneNoTest')
+data.setCell(40, 2, 'com.ghana.app.qa.testcases.SignUpPageTest')
+data.setCell(40, 3, 284);
+data.setCell(41, 0, 41)
+data.setCell(41, 1, 'passFirstNameTest')
+data.setCell(41, 2, 'com.ghana.app.qa.testcases.PersonalInfoPageTest')
+data.setCell(41, 3, 277);
+data.setCell(42, 0, 42)
+data.setCell(42, 1, 'pass_primary_ref_phone_numberTest')
+data.setCell(42, 2, 'com.ghana.app.qa.testcases.TravelInfoPageTest')
+data.setCell(42, 3, 276);
+data.setCell(43, 0, 43)
+data.setCell(43, 1, 'passPassportNumberTest')
+data.setCell(43, 2, 'com.ghana.app.qa.testcases.PersonalInfoPageTest')
+data.setCell(43, 3, 273);
+data.setCell(44, 0, 44)
+data.setCell(44, 1, 'pass_primary_ref_stateTest')
+data.setCell(44, 2, 'com.ghana.app.qa.testcases.TravelInfoPageTest')
+data.setCell(44, 3, 270);
+data.setCell(45, 0, 45)
+data.setCell(45, 1, 'passTicketNumberTest')
+data.setCell(45, 2, 'com.ghana.app.qa.testcases.TravelInfoPageTest')
+data.setCell(45, 3, 269);
+data.setCell(46, 0, 46)
+data.setCell(46, 1, 'clickPurpose_of_journeyTest')
+data.setCell(46, 2, 'com.ghana.app.qa.testcases.TravelInfoPageTest')
+data.setCell(46, 3, 260);
+data.setCell(47, 0, 47)
+data.setCell(47, 1, 'pass_primary_ref_cityTest')
+data.setCell(47, 2, 'com.ghana.app.qa.testcases.TravelInfoPageTest')
+data.setCell(47, 3, 252);
+data.setCell(48, 0, 48)
+data.setCell(48, 1, 'passPrimaryRefLastnameTest')
+data.setCell(48, 2, 'com.ghana.app.qa.testcases.TravelInfoPageTest')
+data.setCell(48, 3, 240);
+data.setCell(49, 0, 49)
+data.setCell(49, 1, 'clickOnIsApplicantPossessionRoundTicketTest')
+data.setCell(49, 2, 'com.ghana.app.qa.testcases.TravelInfoPageTest')
+data.setCell(49, 3, 239);
+data.setCell(50, 0, 50)
+data.setCell(50, 1, 'clickOnTravelByTest')
+data.setCell(50, 2, 'com.ghana.app.qa.testcases.TravelInfoPageTest')
+data.setCell(50, 3, 220);
+data.setCell(51, 0, 51)
+data.setCell(51, 1, 'selectVisaLocation')
+data.setCell(51, 2, 'com.ghana.app.qa.testcases.SignUpPageTest')
+data.setCell(51, 3, 192);
+data.setCell(52, 0, 52)
+data.setCell(52, 1, 'selectPortOfArrivalTest')
+data.setCell(52, 2, 'com.ghana.app.qa.testcases.SignUpPageTest')
+data.setCell(52, 3, 177);
+data.setCell(53, 0, 53)
+data.setCell(53, 1, 'passPrimaryRefFirstnameTest')
+data.setCell(53, 2, 'com.ghana.app.qa.testcases.TravelInfoPageTest')
+data.setCell(53, 3, 174);
+data.setCell(54, 0, 54)
+data.setCell(54, 1, 'selectVisaType')
+data.setCell(54, 2, 'com.ghana.app.qa.testcases.SignUpPageTest')
+data.setCell(54, 3, 171);
+data.setCell(55, 0, 55)
+data.setCell(55, 1, 'selectPassportTypeTest')
+data.setCell(55, 2, 'com.ghana.app.qa.testcases.SignUpPageTest')
+data.setCell(55, 3, 166);
+data.setCell(56, 0, 56)
+data.setCell(56, 1, 'pass_primary_ref_pincodeTest')
+data.setCell(56, 2, 'com.ghana.app.qa.testcases.TravelInfoPageTest')
+data.setCell(56, 3, 153);
+data.setCell(57, 0, 57)
+data.setCell(57, 1, 'passLastNameTest')
+data.setCell(57, 2, 'com.ghana.app.qa.testcases.PersonalInfoPageTest')
+data.setCell(57, 3, 152);
+data.setCell(58, 0, 58)
+data.setCell(58, 1, 'getVisaCategoriesText')
+data.setCell(58, 2, 'com.ghana.app.qa.testcases.VisaCategoriesPageTest')
+data.setCell(58, 3, 149);
+data.setCell(59, 0, 59)
+data.setCell(59, 1, 'passMiddleNameTest')
+data.setCell(59, 2, 'com.ghana.app.qa.testcases.PersonalInfoPageTest')
+data.setCell(59, 3, 143);
+data.setCell(60, 0, 60)
+data.setCell(60, 1, 'pass_primary_ref_countryTest')
+data.setCell(60, 2, 'com.ghana.app.qa.testcases.TravelInfoPageTest')
+data.setCell(60, 3, 129);
+data.setCell(61, 0, 61)
+data.setCell(61, 1, 'getApplicationIdTest')
+data.setCell(61, 2, 'com.ghana.app.qa.testcases.PersonalInfoPageTest')
+data.setCell(61, 3, 100);
+data.setCell(62, 0, 62)
+data.setCell(62, 1, 'verifyHomePageTitleTest')
+data.setCell(62, 2, 'com.ghana.app.qa.testcases.HomePageTest')
+data.setCell(62, 3, 45);
+window.suiteTableData['Torenzo_WebSite']= { tableData: data, tableDiv: 'times-div-Torenzo_WebSite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 12 minutes</span>
+              <div id="times-div-Torenzo_WebSite">
+              </div> <!-- times-div-Torenzo_WebSite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Torenzo_WebSite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Torenzo WebSite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Torenzo_WebSite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Torenzo_WebSite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.ghana.app.qa.testcases.HomePageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">verifyHomePageTitleTest</span>
+                <span class="method-start">15221 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyVisaCategoriesTest</span>
+                <span class="method-start">15270 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">15694 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.ghana.app.qa.testcases.VisaCategoriesPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">16411 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">validateVisaPageTiltleTest</span>
+                <span class="method-start">22761 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getVisaCategoriesText</span>
+                <span class="method-start">25054 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">clickOnVisaTypeTest</span>
+                <span class="method-start">25205 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">32789 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.ghana.app.qa.testcases.SignUpPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">33515 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">launchAndGotoSignUP</span>
+                <span class="method-start">40629 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">selectPassportTypeTest</span>
+                <span class="method-start">54538 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">selectNationalityTest</span>
+                <span class="method-start">54704 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">selectPortOfArrivalTest</span>
+                <span class="method-start">55136 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">selectVisaType</span>
+                <span class="method-start">55314 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">selectVisaLocation</span>
+                <span class="method-start">55487 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">passPhoneNoTest</span>
+                <span class="method-start">55681 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">passEmailIdTest</span>
+                <span class="method-start">55966 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">passReEmailIdTest</span>
+                <span class="method-start">56341 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">enterCaptchaFieldTest</span>
+                <span class="method-start">56738 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">selectDateOfBirthTest</span>
+                <span class="method-start">61244 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">64677 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.ghana.app.qa.testcases.PersonalInfoPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">65546 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">fillSignUpFormTest</span>
+                <span class="method-start">71775 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyPersonalInfoTest</span>
+                <span class="method-start">106598 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getApplicationPageTitleTest</span>
+                <span class="method-start">108695 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getApplicationIdTest</span>
+                <span class="method-start">110724 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">passFirstNameTest</span>
+                <span class="method-start">110826 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">passMiddleNameTest</span>
+                <span class="method-start">111104 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">passLastNameTest</span>
+                <span class="method-start">111248 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">passPassportNumberTest</span>
+                <span class="method-start">111401 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">clickOnGenderTest</span>
+                <span class="method-start">111675 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">selectPassIssueDateTest</span>
+                <span class="method-start">113879 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">selectPassExpiryDateTest</span>
+                <span class="method-start">114355 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">passPlaceOfBirthTest</span>
+                <span class="method-start">114685 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">114978 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.ghana.app.qa.testcases.AddressInfoPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">115794 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">signUpAndFillPersonalInfo</span>
+                <span class="method-start">123255 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">SaveAndContinueFromPersonalInfoTest</span>
+                <span class="method-start">152191 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">selectFormerNationalityTest</span>
+                <span class="method-start">156553 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">filladdressInfoTest</span>
+                <span class="method-start">276932 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">397121 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.ghana.app.qa.testcases.EmergencyContactPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">397813 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">signUpAndFillAddressInfo</span>
+                <span class="method-start">407885 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">SaveAndContinueAddressInfoTest</span>
+                <span class="method-start">441286 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">emergencyContactDetailsTest</span>
+                <span class="method-start">441639 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">selectRelationTest</span>
+                <span class="method-start">442543 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">emergencyProfessionDetailsTest</span>
+                <span class="method-start">442850 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">444530 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.ghana.app.qa.testcases.TravelInfoPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">445246 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">signUpAndFillEmergInfo</span>
+                <span class="method-start">462695 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">ContinueAndSaveEmergTest</span>
+                <span class="method-start">500471 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">clickOnIsApplicantPossessionRoundTicketTest</span>
+                <span class="method-start">505250 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">passDateOfDepartureTest</span>
+                <span class="method-start">505491 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">passTicketNumberTest</span>
+                <span class="method-start">506214 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">clickOnTravelByTest</span>
+                <span class="method-start">506484 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">clickPurpose_of_journeyTest</span>
+                <span class="method-start">506705 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">passPrimaryRefFirstnameTest</span>
+                <span class="method-start">506966 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">passPrimaryRefLastnameTest</span>
+                <span class="method-start">507142 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">pass_Primary_ref_addressTest</span>
+                <span class="method-start">507384 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">pass_primary_ref_pincodeTest</span>
+                <span class="method-start">507807 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">pass_primary_ref_cityTest</span>
+                <span class="method-start">507961 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">pass_primary_ref_stateTest</span>
+                <span class="method-start">508215 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">pass_primary_ref_countryTest</span>
+                <span class="method-start">508486 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">pass_primary_ref_phone_numberTest</span>
+                <span class="method-start">508617 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">PassSecondaryRefDetailsTest</span>
+                <span class="method-start">508895 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyCheckBoxTest</span>
+                <span class="method-start">510631 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">511286 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.ghana.app.qa.testcases.UploadDocPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">511991 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">signUpAndFillTravelInfo</span>
+                <span class="method-start">520885 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getUploadDocTest</span>
+                <span class="method-start">565419 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">566023 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.ghana.app.qa.testcases.ReviewApplicationPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">566767 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">signUpAndValidateReviewApp</span>
+                <span class="method-start">573040 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getTextPersonalInfoTest</span>
+                <span class="method-start">629170 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getTextAddressInfoTest</span>
+                <span class="method-start">629459 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getTextEmergencyContactTest</span>
+                <span class="method-start">630102 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getTextTravelInfoTest</span>
+                <span class="method-start">631016 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">632475 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.ghana.app.qa.testcases.VisaPaymentPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">633246 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">signUpAndPayment</span>
+                <span class="method-start">640534 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyClickOnSubmitBtnTest</span>
+                <span class="method-start">700797 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">833272 ms</span>
+              </div> <!-- configuration-class after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

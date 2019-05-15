@@ -105,7 +105,8 @@ public class TestBase {
 					option.addArguments("headless");
 					driver = new ChromeDriver(option);
 				} else {
-
+					WebDriverManager.chromedriver().setup();
+					driver = new ChromeDriver();
 
 				}
 			} else if (broweserName.equalsIgnoreCase("safari")) {
@@ -273,9 +274,10 @@ public class TestBase {
 
 				}
 				driver = new RemoteWebDriver(new URL(SauceLabURL), caps);
-			}
+			}	
 
-		
+
+	}
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
@@ -284,11 +286,6 @@ public class TestBase {
 		driver.get(prop.getProperty("GhanaWebURL"));    //---localhost
 		//driver.get(prop.getProperty("GhanaWebURL"));	
 		//driver.get(prop.getProperty("HCDLoginURL"));	
-		
-		
-
-
-	}
 }
 }
 

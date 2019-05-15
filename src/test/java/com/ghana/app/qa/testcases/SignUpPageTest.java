@@ -50,25 +50,24 @@ public class SignUpPageTest extends DriverInit {
 		signUpPage.selectNationality();
 
 	}
-	
+
 	@Test(priority = 8)
 	public void selectPortOfArrivalTest() throws InterruptedException, IOException {
 		signUpPage.selectPortOfArrival();
 
 	}
-	
+
 	@Test(priority = 9)
 	public void selectVisaType() throws InterruptedException, IOException {
 		signUpPage.selectVisaType();
 
 	}
+
 	@Test(priority = 10)
 	public void selectVisaLocation() throws InterruptedException, IOException {
 		signUpPage.selectVisaLocation();
 
 	}
-
-
 
 	@Test(priority = 11)
 	public void passPhoneNoTest() throws InterruptedException, IOException {
@@ -96,5 +95,5 @@ public class SignUpPageTest extends DriverInit {
 	public void selectDateOfBirthTest() throws InterruptedException, IOException {
 		Thread.sleep(3000);
 		signUpPage.selectDateOfBirth(birthDate);
-		}
+	}
 }

@@ -1,7 +1,7 @@
 package com.ghana.app.qa.testcases;
 
 import static com.ghana.app.qa.testdata.ConstantVariable.*;
-
+import static com.ghana.app.qa.util.TestUtil.*;
 import java.io.IOException;
 
 import org.testng.annotations.Test;
@@ -79,7 +79,7 @@ public class EmergencyContactPageTest extends DriverInit{
 	public void SaveAndContinueAddressInfoTest() throws InterruptedException, IOException {
 		addressInfoPage.clickSaveAndContinuebtn();
 		emergencyContactPage.getTextEmerPageTitle();
-		softAssertion.assertEquals(emergencyContactPage.getTextEmerPageTitle(), "Emergency Contact",
+		softAssertion.assertEquals(emergencyContactPage.getTextEmerPageTitle(), prop.getProperty("emergencyContactText"),
 				"it is not navigate to Emergency Contact page");
 		softAssertion.assertAll();
 	}

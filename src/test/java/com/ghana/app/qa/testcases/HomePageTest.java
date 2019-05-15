@@ -1,7 +1,7 @@
 package com.ghana.app.qa.testcases;
 
 import static org.testng.Assert.assertEquals;
-
+import static com.ghana.app.qa.util.TestUtil.*;
 import java.io.IOException;
 import java.net.MalformedURLException;
 
@@ -28,8 +28,8 @@ public class HomePageTest extends DriverInit {
 	public void verifyHomePageTitleTest() {
 		System.out.println("home page title   "
 				+ homePage.validateHomePageTitle());
-		Assert.assertEquals(homePage.validateHomePageTitle(), "Home",
-				"given title not match");
+		Assert.assertEquals(homePage.validateHomePageTitle(), prop.getProperty("homePageTitle"),
+				"We are navigate to HOme page");
 	}
 
 	@Test(priority = 1)
@@ -39,7 +39,7 @@ public class HomePageTest extends DriverInit {
 		//Thread.sleep(2000);
 		System.out.println("visa category heading title "+visaCategoriesPage.visaCategorisText());
 		visaCategoriesPage.visaCategorisText();
-		Assert.assertEquals(visaCategoriesPage.visaCategorisText(), "VISA CATEGORIES");
+		Assert.assertEquals(visaCategoriesPage.visaCategorisText(), prop.getProperty("vISACATEGORIESText"), "We are not navigate to visa categories page upon clicking on Apply Visa Button");
 		Assert.assertEquals(visaCategoriesPage.validateVisaTypeTitle(), "Visa Types", "Visa category page title not match");
 
 	}

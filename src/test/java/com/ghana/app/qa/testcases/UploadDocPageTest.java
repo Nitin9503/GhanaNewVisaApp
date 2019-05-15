@@ -2,10 +2,9 @@ package com.ghana.app.qa.testcases;
 
 import static com.ghana.app.qa.testdata.ConstantVariable.*;
 import java.io.IOException;
-
+import static com.ghana.app.qa.util.TestUtil.*;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-
 import com.ghana.app.qa.base.DriverInit;
 import com.ghana.app.qa.base.TestBase;
 
@@ -75,9 +74,6 @@ public class UploadDocPageTest extends DriverInit {
 		emergencyContactPage.emergencyProfessionDetails(profession, employer, employerAddress, emerPincode,
 				emerCityName, emerState, emerCountry, emerEmployerPhoneNumber);
 		emergencyContactPage.clickEmeContinueBtn();
-		travelInfoPage.getTextTravelInfoPagetitle();
-		softAssertion.assertEquals(travelInfoPage.getTextTravelInfoPagetitle(), "Travel Information",
-				"it is not navigate to travel info page");
 	// ----------------------Travel Info page
 	// Test----------------------------------//
 		travelInfoPage.clickOnIsApplicantPossessionRoundTicket();
@@ -115,7 +111,9 @@ public class UploadDocPageTest extends DriverInit {
 	@Test(priority = 55)
 	public void getUploadDocTest() throws InterruptedException, IOException {
 
+		softAssertion.assertEquals(uploadDocPage.getTextUploadDocPageTitle(), prop.getProperty("uploadDocumentsText"), "We are not navigate to Upload docuent page from Travel Infor");		
 		uploadDocPage.getUploadDoc();
+		softAssertion.assertAll();
 
 	}
 

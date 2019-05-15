@@ -2,7 +2,7 @@ package com.ghana.app.qa.testcases;
 
 import static com.ghana.app.qa.testdata.ConstantVariable.*;
 import static org.testng.Assert.assertEquals;
-
+import static com.ghana.app.qa.util.TestUtil.*;
 import java.io.IOException;
 
 import org.testng.Assert;
@@ -74,7 +74,7 @@ public class AddressInfoPageTest extends DriverInit {
 	public void SaveAndContinueFromPersonalInfoTest() throws InterruptedException, IOException {
 		personalInfoPage.clickOnSaveAndContinue();
 		addressInfoPage.getTextAddressInfoPageTitle();
-		softAssertion.assertEquals(addressInfoPage.getTextAddressInfoPageTitle(), "Address Information",
+		softAssertion.assertEquals(addressInfoPage.getTextAddressInfoPageTitle(), prop.getProperty("addressInformationText"),
 				"it is not navigate to address info page");
 		softAssertion.assertAll();
 

@@ -2,7 +2,7 @@ package com.ghana.app.qa.testcases;
 
 import static com.ghana.app.qa.testdata.ConstantVariable.*;
 import java.io.IOException;
-
+import static com.ghana.app.qa.util.TestUtil.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -35,25 +35,17 @@ public class PersonalInfoPageTest extends DriverInit {
 
 		signUpPage.selectNationality();
 		Thread.sleep(2000);
-
 		signUpPage.selectVisaType();
-
 		signUpPage.selectVisaLocation();
-
 		signUpPage.selectPortOfArrival();
-
 		signUpPage.passPhoneNo(phoneNumber);
 		signUpPage.passEmailId(emailId);
-
 		signUpPage.passReEmailId(emailId);
-
 		signUpPage.enterCaptchaField();
 		// signUpPage.continueBtn();
 		// signUpPage.cancelBtn();
-
 		signUpPage.selectDateOfBirth(birthDate);
 		// signUpPage.continueBtn();
-
 		signUpPage.continueBtn();
 
 	}
@@ -61,7 +53,7 @@ public class PersonalInfoPageTest extends DriverInit {
 	@Test(priority = 17)
 	public void verifyPersonalInfoTest() throws InterruptedException {
 		System.out.println("Hello in personal");
-		softAssertion.assertEquals(personalInfoPage.getTextPersonalInfoPageTitle(), "Personal Information",
+		softAssertion.assertEquals(personalInfoPage.getTextPersonalInfoPageTitle(), prop.getProperty("PersonalInformationText"),
 				"it is not match with personal info page title hence it is not navigated");
 		softAssertion.assertAll();
 	}
@@ -71,7 +63,7 @@ public class PersonalInfoPageTest extends DriverInit {
 	@Test(priority = 18)
 	public void getApplicationPageTitleTest() throws InterruptedException {
 		Thread.sleep(2000);
-		Assert.assertEquals(personalInfoPage.getApplicantPageTitle(), "Applicant Form");
+		Assert.assertEquals(personalInfoPage.getApplicantPageTitle(), prop.getProperty("applicantFormTitle"));
 		softAssertion.assertAll();
 	}
 

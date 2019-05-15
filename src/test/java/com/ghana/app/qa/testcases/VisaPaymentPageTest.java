@@ -1,7 +1,7 @@
 package com.ghana.app.qa.testcases;
 
 import static com.ghana.app.qa.testdata.ConstantVariable.*;
-
+import static com.ghana.app.qa.util.TestUtil.*;
 import java.io.IOException;
 
 import org.openqa.selenium.By;
@@ -81,8 +81,6 @@ public class VisaPaymentPageTest extends DriverInit {
 				emerCityName, emerState, emerCountry, emerEmployerPhoneNumber);
 		emergencyContactPage.clickEmeContinueBtn();
 		travelInfoPage.getTextTravelInfoPagetitle();
-		softAssertion.assertEquals(travelInfoPage.getTextTravelInfoPagetitle(), "Travel Information",
-				"it is not navigate to travel info page");
 	// ----------------------Travel Info page
 	// Test----------------------------------//
 		travelInfoPage.clickOnIsApplicantPossessionRoundTicket();
@@ -116,6 +114,8 @@ public class VisaPaymentPageTest extends DriverInit {
 	@Test(priority=62, description="Here verifying confirmation message and click on ok btn ")
 	public void verifyClickOnSubmitBtnTest() throws InterruptedException{
 		//visaPaymentPage.getTextsubmitBtn();	
+		softAssertion.assertEquals(visaPaymentPage.getTextPaymentPageTitle(), prop.getProperty("visaPaymentText"),
+				"it is not navigate to payment info page");	
 		visaPaymentPage.clickOnCheckoutBtn();
 		visaPaymentPage.passCardNo();
 		TestUtil.selectValuefromDropDown(visaPaymentPage.selectExpiryDateMonth(), month);
@@ -129,8 +129,7 @@ public class VisaPaymentPageTest extends DriverInit {
 		Thread.sleep(2000);
 		System.out.println("home page title"
 				+ homePage.validateHomePageTitle());
-		Assert.assertEquals(homePage.validateHomePageTitle(), "Home",
-				"given title not match nence it is not navigated to home page");
+		softAssertion.assertEquals(homePage.validateHomePageTitle(), prop.getProperty("homePageTitle"), "We are not navigate to Home page after payment");
 		System.out.println( "applicationID==>visa" +applicationID);
 		
 	}

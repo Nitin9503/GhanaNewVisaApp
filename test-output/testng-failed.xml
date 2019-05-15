@@ -5,7 +5,6 @@
     <classes>
       <class name="com.ghana.app.qa.testcases.VisaPaymentPageTest">
         <methods>
-          <include name="tearDown"/>
           <include name="setUp"/>
           <include name="verifyClickOnSubmitBtnTest"/>
         </methods>

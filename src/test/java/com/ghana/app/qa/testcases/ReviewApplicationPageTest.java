@@ -120,6 +120,8 @@ public class ReviewApplicationPageTest extends DriverInit {
 
 	@Test(priority = 57)
 	public void getTextPersonalInfoTest() throws InterruptedException, IOException {
+		softAssertion.assertEquals(reviewApplicationPage.getTextReviewPageTtle(), prop.getProperty("reviewApplicationText"), "We are not navigate to review Application page from upload document");
+		
 		System.out.println("applicationID==>Revie1" + applicationID);
 		// ------Personal info
 		softAssertion.assertEquals(reviewApplicationPage.getTextFromfirstLastName(), (firstName + " " + lastName),
@@ -192,36 +194,6 @@ public class ReviewApplicationPageTest extends DriverInit {
 		// Emergency contact
 		softAssertion.assertEquals(reviewApplicationPage.getTextFromEmerContactName(),
 				(emerContactName + " " + emerContactSurname), "Provided and Get address are not matched");
-
-		softAssertion.assertAll();
-
-		/*
-		 * @Test(priority = 50) public void getTextAddressInfoTest() throws
-		 * InterruptedException, IOException { //Address Info String
-		 * st=reviewApplicationPage.getTextFromfirstLastName(); String
-		 * st=reviewApplicationPage.getTextFromfirstLastName(); String
-		 * st=reviewApplicationPage.getTextFromfirstLastName(); String
-		 * st=reviewApplicationPage.getTextFromfirstLastName(); String
-		 * st=reviewApplicationPage.getTextFromfirstLastName(); String
-		 * st=reviewApplicationPage.getTextFromfirstLastName(); String
-		 * st=reviewApplicationPage.getTextFromfirstLastName(); String
-		 * st=reviewApplicationPage.getTextFromfirstLastName(); String
-		 * st=reviewApplicationPage.getTextFromfirstLastName(); String
-		 * st=reviewApplicationPage.getTextFromfirstLastName(); String
-		 * st=reviewApplicationPage.getTextFromfirstLastName(); String
-		 * st=reviewApplicationPage.getTextFromfirstLastName(); String
-		 * st=reviewApplicationPage.getTextFromfirstLastName(); String
-		 * st=reviewApplicationPage.getTextFromfirstLastName(); String
-		 * st=reviewApplicationPage.getTextFromfirstLastName(); String
-		 * st=reviewApplicationPage.getTextFromfirstLastName(); String
-		 * st=reviewApplicationPage.getTextFromfirstLastName(); String
-		 * st=reviewApplicationPage.getTextFromfirstLastName(); String
-		 * st=reviewApplicationPage.getTextFromfirstLastName(); String
-		 * st=reviewApplicationPage.getTextFromfirstLastName();
-		 * 
-		 * System.out.println(st);
-		 */
-
 		softAssertion.assertEquals(reviewApplicationPage.getTextFromEmerPhoneNumber(), emerPhoneNumber,
 				"Provided and Get emerPhoneNumber are not matched");
 

@@ -19,6 +19,21 @@ public class HCDDashboardPage extends TestBase {
 	@FindBy(xpath = "//ul[@class='list-group list-group-flush']")
 	List<WebElement> clickOnNewApplication;
 	
+	@FindBy(xpath = "//span[@id='spanMumbai']")
+	WebElement mumbaiApplicationCount;
+	
+	@FindBy(xpath = "//span[@id='spanInterview']")
+	WebElement hCDInterviewCount;
+	
+	@FindBy(xpath = "//span[@id='spanApproved']")
+	WebElement hCDApproveCount;
+	
+	@FindBy(xpath = "//span[@id='spanReject']")
+	WebElement hCDRejectCount;
+	
+	@FindBy(xpath = "//span[@id='spanReject']")
+	WebElement hCDFlaggedCount;
+	
 	
 	
 	public void clickOnNewApplication(){

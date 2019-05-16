@@ -12,7 +12,6 @@ public class HCDInterviewSchedule extends TestBase{
 	public HCDInterviewSchedule() throws IOException, InterruptedException {
 		PageFactory.initElements(driver, this);
 	}
-	
 	@FindBy(xpath = "//div[@id='InterviewModel']//h4[@class='modal-title'][contains(text(),'Confirmation')]")
 	WebElement confrmationPopTitleFromInterview;
 
@@ -49,37 +48,48 @@ public class HCDInterviewSchedule extends TestBase{
 	@FindBy(id = "time3")
 	WebElement timeThree;
 
+	@FindBy(xpath = "//div[@id='alertModel']//h4[@class='modal-title'][contains(text(),'Warning')]")
+	WebElement warningTitle;
+
+	@FindBy(xpath = "//label[contains(text(),'Please select all the Date & Time')]")
+	WebElement warningMessage;
+
+	@FindBy(xpath = "//div[@class='md-form']//button[@type='button'][contains(text(),'OK')]")
+	WebElement okButton;
 
 	public String getTextFromConfrmationPopTitleFromInterview() {
 		TestUtil.waitForElementToVisible(confrmationPopTitleFromInterview, 60);
 		return confrmationPopTitleFromInterview.getText();
 
 	}
+
 	public void clickOnOnline() {
 		radioButtonOnline.click();
 
 	}
+
 	public void clickOnOffline() {
 		radioButtonOffline.click();
 
 	}
+
 	public void cancelButtonFromInterviewConfirpop() {
 		TestUtil.waitForElemenToClick(cancelButtonFromInterviewConfirpop, 60);
 		cancelButtonFromInterviewConfirpop.click();
 
 	}
+
 	public void confirmButtonFromInterviewConfirpop() {
 		TestUtil.clickOnElement(confirmButtonFromInterviewConfirpop);
-	
+
 	}
-	
+
 	public void closeButtonFromInterviewConfirpop() {
 		TestUtil.waitForElemenToClick(closeButtonFromInterviewConfirpop, 60);
 		closeButtonFromInterviewConfirpop.click();
 
 	}
 
-	
 	public void passDate1(String Date) {
 		TestUtil.passDateInField("date1");
 		dateOne.sendKeys(Date);
@@ -105,8 +115,21 @@ public class HCDInterviewSchedule extends TestBase{
 		TestUtil.passDateInField("time2");
 		timeTwo.sendKeys(time);
 	}
+
 	public void passTime3(String time) {
 		TestUtil.passDateInField("time3");
 		timeThree.sendKeys(time);
+	}
+
+	public String getTextFromWarningPopup() {
+		return warningTitle.getText();
+	}
+
+	public String warningMessage() {
+		return warningMessage.getText();
+	}
+
+	public void clickOnOKButton() {
+		okButton.click();
 	}
 }

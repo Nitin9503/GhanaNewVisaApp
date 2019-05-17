@@ -32,7 +32,7 @@ public class SendAttachmentInEmail {
 	   String filename;		
        String image;
        DataSource fds;
-       String to = "sachin.patil.uk@gmail.com";
+       String to = "nitinthaokar9@gmail.com";
        String from = "patilkrishna668@gmail.com";
        final String username = "patilkrishna668@gmail.com";//change accordingly
 	   final String password = "9552619077";//change accordingly	
@@ -73,11 +73,11 @@ public class SendAttachmentInEmail {
 		         // first part (the html)
 		         BodyPart messageBodyPart1 = new MimeBodyPart();
 		    
-		         if(OSName.equalsIgnoreCase("Mac OS X")){
+		         if(OSName.equalsIgnoreCase("Mac")){
 		             image = driverPath+"/Screenshot/"+ screenshotName +".jpeg";
 			          messageBodyPart1.setContent(image, "text/html"); 
 		         }
-		         else if(OSName.equalsIgnoreCase("Windows")){
+		         else if(OSName.equalsIgnoreCase("Win")){
 		        	 
 			          image = driverPath+"\\Screenshot\\"+ screenshotName +".jpeg";
 			          messageBodyPart1.setContent(image, "text/html");	        	 
@@ -85,12 +85,12 @@ public class SendAttachmentInEmail {
 	        
 		         multipart1.addBodyPart(messageBodyPart1);
 		         messageBodyPart1 = new MimeBodyPart();
-		         if(OSName.equalsIgnoreCase("Mac OS X")){
+		         if(OSName.equalsIgnoreCase("Mac")){
 
 			    	  fds = new FileDataSource(driverPath+"/Screenshot/"+ screenshotName +".jpeg");
 			    	   messageBodyPart1.setDataHandler(new DataHandler(fds));
 		         }
-		         else if(OSName.equalsIgnoreCase("Windows")){
+		         else if(OSName.equalsIgnoreCase("Win")){
 
 			    	  fds = new FileDataSource(driverPath+"\\Screenshot\\"+ screenshotName +".jpeg");
 			    	   messageBodyPart1.setDataHandler(new DataHandler(fds)); 
@@ -146,13 +146,13 @@ public class SendAttachmentInEmail {
 		       multipart.addBodyPart(messageBodyPart);
 		       messageBodyPart = new MimeBodyPart();
 		       Thread.sleep(5000);	
-		       if(OSName.equalsIgnoreCase("Mac OS X")){
+		       if(OSName.equalsIgnoreCase("Mac")){
 		    		filename = driverPath+"/test-output/TorenzoWebSiteReport.html"; 
 			    	   DataSource source = new FileDataSource(filename);
 			    	   messageBodyPart.setDataHandler(new DataHandler(source));
 			    	     messageBodyPart.setFileName(filename);  
 		       }
-		       else if(OSName.equalsIgnoreCase("Windows")){
+		       else if(OSName.equalsIgnoreCase("Win")){
 		    		filename = driverPath+"\\test-output\\TorenzoWebSiteReport.html"; 
 			    	   DataSource source = new FileDataSource(filename);
 			    	   messageBodyPart.setDataHandler(new DataHandler(source));
@@ -184,13 +184,13 @@ public class SendAttachmentInEmail {
 			       multipart2.addBodyPart(messageBodyPart2);
 			       messageBodyPart2 = new MimeBodyPart();
 			       Thread.sleep(5000);
-			       if(OSName.equalsIgnoreCase("Mac OS X")){
+			       if(OSName.equalsIgnoreCase("Mac")){
 			    	   filename2 = driverPath+"/test-output/emailable-report.html";
 				  	     DataSource source = new FileDataSource(filename2);
 				 	    messageBodyPart2.setDataHandler(new DataHandler(source));
 				 	     messageBodyPart2.setFileName(filename2);   
 			       }
-			       else if(OSName.equalsIgnoreCase("Windows")){
+			       else if(OSName.equalsIgnoreCase("Win")){
 			    	   filename2 = driverPath+"\\test-output\\emailable-report.html";
 				  	     DataSource source = new FileDataSource(filename2);
 				 	    messageBodyPart2.setDataHandler(new DataHandler(source));

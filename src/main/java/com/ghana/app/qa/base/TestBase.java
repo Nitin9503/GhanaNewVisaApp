@@ -7,6 +7,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
+
 import static com.ghana.app.qa.util.TestUtil.prop;
 import static com.ghana.app.qa.util.TestUtil.USERNAME;
 import static com.ghana.app.qa.util.TestUtil.ACCESS_KEY;
@@ -15,6 +16,7 @@ import static com.ghana.app.qa.util.TestUtil.driver;
 import static com.ghana.app.qa.util.TestUtil.driverPath;
 import static com.ghana.app.qa.util.TestUtil.caps;
 import static com.ghana.app.qa.util.TestUtil.OSName;
+
 import org.apache.log4j.Logger;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.Keys;
@@ -32,12 +34,15 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
+
 import com.ghana.app.qa.util.TestUtil;
+
 import static com.ghana.app.qa.testdata.ConstantVariable.*;
 import io.github.bonigarcia.wdm.ChromeDriverManager;
 import io.github.bonigarcia.wdm.WebDriverManager;
-
+@Listeners(com.ghana.app.qa.listener.Listener.class)
 public class TestBase {
 	// public static String hubURL1 = "http://192.168.1.32:5566/wd/hub";
 	// Logger log = Logger.getLogger(TestBase.class) ;

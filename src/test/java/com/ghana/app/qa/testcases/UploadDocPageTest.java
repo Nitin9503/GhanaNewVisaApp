@@ -1,12 +1,19 @@
 package com.ghana.app.qa.testcases;
 
 import static com.ghana.app.qa.testdata.ConstantVariable.*;
+
 import java.io.IOException;
+
 import static com.ghana.app.qa.util.TestUtil.*;
+
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+
+import bsh.util.Util;
+
 import com.ghana.app.qa.base.DriverInit;
 import com.ghana.app.qa.base.TestBase;
+import com.ghana.app.qa.util.TestUtil;
 
 public class UploadDocPageTest extends DriverInit {
 

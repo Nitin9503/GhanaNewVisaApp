@@ -11,6 +11,7 @@ import org.apache.poi.hslf.model.Sheet;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
@@ -195,6 +196,10 @@ public class TestUtil extends TestBase {
 				return driver.findElement(By.id("foo"));
 			}
 		});
+	}
+	public static void HandleAlertPopup(){
+		Alert alert = driver.switchTo().alert();
+		alert.dismiss();
 	}
 
 }

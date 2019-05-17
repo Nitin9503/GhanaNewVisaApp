@@ -7,7 +7,6 @@
         <methods>
           <include name="setUp"/>
           <include name="verifyClickOnSubmitBtnTest"/>
-          <include name="signUpAndPayment"/>
         </methods>
       </class> <!-- com.ghana.app.qa.testcases.VisaPaymentPageTest -->
     </classes>

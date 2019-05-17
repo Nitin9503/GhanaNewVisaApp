@@ -116,6 +116,10 @@ public class ReviewApplicationPageTest extends DriverInit {
 		travelInfoPage.clickOnContinuebutton();
 		uploadDocPage.getUploadDoc();
 		uploadDocPage.clicksaveAndContiBtn();
+		Thread.sleep(1000);
+		 driver.switchTo().alert().dismiss();
+
+		//TestUtil.HandleAlertPopup();
 	}
 
 	@Test(priority = 57)

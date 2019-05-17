@@ -55,8 +55,6 @@ public class ConsulatedashBoardPage extends TestBase {
 	@FindBy(xpath = "//span[@id='spanFlagged']")
 	WebElement flaggedApplicationCount;
 	
-	
-
 	// Element of applicantion which is sent to HCD in CN side
 	@FindBy(xpath = "//div[@id='myModal1']//h4[@class='modal-title'][contains(text(),'Confirmation')]")
 	WebElement confirmationPop1;

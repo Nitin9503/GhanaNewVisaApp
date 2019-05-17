@@ -50,6 +50,67 @@ SoftAssert softAssertion = new SoftAssert();
 		softAssertion.assertAll();
 	}
 	
+	
+	@Test(priority = 129, description = "Click On Schedule Interview And Verify Title of Set Invterview pop window and Cancel")
+	public void clickOnInterviewScheduleAndcancel() throws InterruptedException {
+		hCDGeneralVerificationPage.clickOnScheduleInterview();
+		Thread.sleep(9000);
+		System.out.println("hCDInterviewSchedule.getTextFromConfrmationPopTitleFromInterview()"
+				+ hCDInterviewSchedule.getTextFromConfrmationPopTitleFromInterview());
+		softAssertion.assertEquals(hCDInterviewSchedule.getTextFromConfrmationPopTitleFromInterview(), prop.getProperty("confirmationFromInterviewScheduleTitle"),
+				"We are not navigate to Invterview schedule popup upon clicking on Schedule Interview FromDashBoard");
+		System.out.println("hCDInterviewSchedule.getTextFromConfrmationPopTitleFromInterview()"
+				+ hCDInterviewSchedule.getTextFromConfrmationPopTitleFromInterview());
+		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
+		hCDInterviewSchedule.cancelButtonFromInterviewConfirpop();
+		softAssertion.assertAll();
+
+	}
+
+	@Test(priority = 130, description = "Click On Schedule Interview And Verify Title of Set Invterview pop window and Close")
+	public void clickOnInterviewScheduleAndClose() throws InterruptedException {
+		Thread.sleep(3000);
+		hCDGeneralVerificationPage.clickOnScheduleInterview();
+		Thread.sleep(3000);
+		softAssertion.assertEquals(hCDInterviewSchedule.getTextFromConfrmationPopTitleFromInterview(), prop.getProperty("confirmationFromInterviewScheduleTitle"),
+				"We are not navigate to Invterview schedule popup upon clicking on Schedule Interview FromDashBoard");
+		Thread.sleep(3000);
+		hCDInterviewSchedule.closeButtonFromInterviewConfirpop();
+		softAssertion.assertAll();
+
+	}
+
+	@Test(priority = 131, description = "This test will verify validation of interview schedule(Empty field and click on Confirm button)")
+	public void validationForDateAndTimeField() throws InterruptedException {
+		Thread.sleep(3000);
+		hCDGeneralVerificationPage.clickOnScheduleInterview();
+		Thread.sleep(3000);		
+		softAssertion.assertEquals(hCDInterviewSchedule.getTextFromConfrmationPopTitleFromInterview(), prop.getProperty("confirmationFromInterviewScheduleTitle"),
+				"We are not navigate to Invterview schedule popup upon clicking on Schedule Interview FromDashBoard");
+		hCDInterviewSchedule.confirmButtonFromInterviewConfirpop();	
+		softAssertion.assertEquals(hCDInterviewSchedule.getTextFromWarningPopup(), prop.getProperty("interviewScheduleWarning"),
+				"Verifying the title text from Warning Popup");
+		softAssertion.assertEquals(hCDInterviewSchedule.warningMessage(), prop.getProperty("interviewScheduleWarningTextz"),
+				"Verifying the  text from Warning Popup");	
+		hCDInterviewSchedule.clickOnOKButton();
+		softAssertion.assertAll();
+		
+	}
+		@Test(priority = 131, description = "Click On Schedule Interview And Verify Title of Set Invterview pop window and Pass Date And Time")
+		public void passDateAndTimeInFiled() throws InterruptedException {
+		softAssertion.assertEquals(hCDInterviewSchedule.getTextFromConfrmationPopTitleFromInterview(), prop.getProperty("confirmationFromInterviewScheduleTitle"),
+				"We are not navigate to Invterview schedule popup upon clicking on Schedule Interview FromDashBoard");
+		hCDInterviewSchedule.passDate1("04/23/2019");
+		hCDInterviewSchedule.passDate2("04/23/2019");
+		hCDInterviewSchedule.passDate3("04/23/2019");
+		hCDInterviewSchedule.passTime1("12:00PM");
+		hCDInterviewSchedule.passTime2("02:00AM");
+		hCDInterviewSchedule.passTime3("03:00AM");
+		Thread.sleep(3000);
+		hCDInterviewSchedule.confirmButtonFromInterviewConfirpop();
+		softAssertion.assertAll();
+	}
+	
 	@Test(priority =108, description = "Application is verified and approved")
 	public void passComment() {
 		hCDDocumentVerificationPage.passComment(prop.getProperty("passCommentFromHCDSide"));

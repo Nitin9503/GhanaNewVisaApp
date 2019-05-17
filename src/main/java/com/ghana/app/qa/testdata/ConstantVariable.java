@@ -20,6 +20,8 @@ public class ConstantVariable {
 	public static String getTextFromRejectButtonFromCN = "";
 	public static String getTextFromFlagButtonFromCN = "";
 	public static String getTextFromApproveFromHCD = "";
+	public static String getTextFromRejectButtonFromHCD= "";
+	public static String getTextFromFlagButtonFromHCD = "";
 
 	// SignUp page
 	public static boolean selectedBoxOnSignUp;

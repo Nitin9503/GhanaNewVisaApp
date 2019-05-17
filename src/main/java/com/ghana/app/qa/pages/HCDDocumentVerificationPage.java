@@ -123,9 +123,16 @@ public class HCDDocumentVerificationPage extends TestBase {
 	@FindBy(xpath = "//div[@class='commentText']")
 	WebElement textFromPassComment;
 	
+	@FindBy(xpath = "//textarea[@id='txt_reason']")
+	WebElement textReason;
+	
 	@FindBy(xpath = "//button[contains(text(),'Previous')]")
 	WebElement previous;
 	
+	public void passInReason(String text){		
+		textReason.sendKeys(text);
+		
+	}
 	
 	public void previousButtonFromDocument(){		
 		previous.click();

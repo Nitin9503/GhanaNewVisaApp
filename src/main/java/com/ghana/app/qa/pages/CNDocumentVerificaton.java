@@ -21,6 +21,7 @@ public class CNDocumentVerificaton extends TestBase {
 	@FindBy(xpath = "//button[text()='Reject']")
 	 WebElement reject;
 
+	
 	@FindBy(xpath = "//button[text()='Approve']")
 	WebElement approve;
 	
@@ -116,9 +117,15 @@ public class CNDocumentVerificaton extends TestBase {
 	
 	@FindBy(xpath = "//h1[@class='card-title']")
 	WebElement documentVerificationText;
+		
+	@FindBy(xpath = "//textarea[@id='txt_reason']")
+	WebElement textReason;
+		
+	public void passInReason(String text){		
+		textReason.sendKeys(text);
+		
+	}
 	
-	
-
 	public String getTextDocumentVerification() {
 		return documentVerificationText.getText();
 
@@ -364,10 +371,14 @@ public class CNDocumentVerificaton extends TestBase {
 
 	}
 	public void getTextFromApproveButtonFromCN() {
-		String value = confirmFromApprove.getAttribute("value");
-		getTextFromApproveButtonFromCN = value.replaceAll(value, "HCG Application");
+		getTextFromApproveButtonFromCN = confirmFromApprove.getAttribute("value");
+		getTextFromApproveButtonFromCN = getTextFromApproveButtonFromCN.replaceAll(getTextFromApproveButtonFromCN, "HCG Application");
 	}
-
+	public void getTextFromRejectButtonFromCN() {
+		getTextFromRejectButtonFromCN = rejectFromRejectConfir.getAttribute("value");
+		getTextFromRejectButtonFromCN = getTextFromRejectButtonFromCN.replaceAll(getTextFromRejectButtonFromCN, "Rejected Application");
+	}
+	
 	public void clickOnFlagAndReject() {
 		flagAndReject.click();
 

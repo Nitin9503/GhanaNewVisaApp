@@ -35,6 +35,7 @@ public class PersonalInfoPageTest extends DriverInit {
 
 		signUpPage.selectNationality();
 		Thread.sleep(2000);
+		
 		signUpPage.selectVisaType();
 		signUpPage.selectVisaLocation();
 		signUpPage.selectPortOfArrival();

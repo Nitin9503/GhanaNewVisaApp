@@ -379,10 +379,16 @@ public class CNDocumentVerificaton extends TestBase {
 		getTextFromRejectButtonFromCN = getTextFromRejectButtonFromCN.replaceAll(getTextFromRejectButtonFromCN, "Rejected Application");
 	}
 	
+	public void getTextFromFlagButtonFromCN() {
+		getTextFromFlagButtonFromCN = flagAndReject.getAttribute("value");
+		getTextFromFlagButtonFromCN = getTextFromFlagButtonFromCN.replaceAll(getTextFromFlagButtonFromCN, "Flagged Application");
+
+	}
 	public void clickOnFlagAndReject() {
 		flagAndReject.click();
 
 	}
+	
 
 	public void clickOnCloseApprove() {
 		closeApprove.click();

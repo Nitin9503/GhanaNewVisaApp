@@ -184,8 +184,9 @@ public class TestUtil extends TestBase {
 	public static void dateAlter(String dateChange){
 		String str = new StringBuffer(dateChange).insert(dateChange.length()-6, "/").toString();
 		providedDate = new StringBuffer(str).insert(str.length()-4, "/").toString();
+		System.out.println("Birthdate==>" +providedDate);
+		System.out.println("Application id==>" +applicationID);
 	}
-	
 
 	public static void fluentWait(WebElement element) {
 		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(30, TimeUnit.SECONDS)

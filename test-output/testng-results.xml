@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
+<testng-results skipped="0" failed="1" ignored="0" total="9" passed="8">
   <reporter-output>
     <line>
       <![CDATA[Before executing suite at the begin Default suite]]>
@@ -14,44 +14,136 @@
       <![CDATA[Completed executing following method : DriverInit.setUp]]>
     </line>
     <line>
-      <![CDATA[About to begin executing following method : VisaPaymentPageTest.signUpAndPayment]]>
+      <![CDATA[About to begin executing following method : ConsulatePageFlagTest.signUpAndPayment]]>
     </line>
     <line>
-      <![CDATA[Completed executing following method : VisaPaymentPageTest.signUpAndPayment]]>
+      <![CDATA[Completed executing following method : ConsulatePageFlagTest.signUpAndPayment]]>
     </line>
     <line>
-      <![CDATA[About to begin executing following method : VisaPaymentPageTest.verifyClickOnSubmitBtnTest]]>
+      <![CDATA[About to begin executing following method : ConsulatePageFlagTest.loginIntoConsulate]]>
     </line>
     <line>
-      <![CDATA[Completed executing following method : VisaPaymentPageTest.verifyClickOnSubmitBtnTest]]>
+      <![CDATA[Completed executing following method : ConsulatePageFlagTest.loginIntoConsulate]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : ConsulatePageFlagTest.verifyTitleOfConsulateTitle]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : ConsulatePageFlagTest.verifyTitleOfConsulateTitle]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : ConsulatePageFlagTest.clickOnNewApplicationCN]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : ConsulatePageFlagTest.clickOnNewApplicationCN]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : ConsulatePageFlagTest.verfiyTitleOfCNDocumentVerificatonPageCN]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : ConsulatePageFlagTest.verfiyTitleOfCNDocumentVerificatonPageCN]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : ConsulatePageFlagTest.clickOnRejectAndVerifyPopText2CN]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : ConsulatePageFlagTest.clickOnRejectAndVerifyPopText2CN]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : ConsulatePageFlagTest.verifyApplicaInRejectApplicationBucket]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : ConsulatePageFlagTest.verifyApplicaInRejectApplicationBucket]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : ConsulatePageFlagTest.verifyApplicationSentToRejectBucketOpens]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : ConsulatePageFlagTest.verifyApplicationSentToRejectBucketOpens]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : ConsulatePageFlagTest.verifyCanceAndCrossButton]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : ConsulatePageFlagTest.verifyCanceAndCrossButton]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="306696" started-at="2019-05-17T11:47:38Z" finished-at="2019-05-17T11:52:45Z">
+  <suite name="Default suite" duration-ms="161198" started-at="2019-05-18T10:21:42Z" finished-at="2019-05-18T10:24:23Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="306696" started-at="2019-05-17T11:47:38Z" finished-at="2019-05-17T11:52:45Z">
-      <class name="com.ghana.app.qa.testcases.VisaPaymentPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ghana.app.qa.testcases.VisaPaymentPageTest@1990a65e]" name="setUp" is-config="true" duration-ms="6548" started-at="2019-05-17T11:47:38Z" finished-at="2019-05-17T11:47:45Z">
+    <test name="Default test" duration-ms="161198" started-at="2019-05-18T10:21:42Z" finished-at="2019-05-18T10:24:23Z">
+      <class name="com.ghana.app.qa.testcases.ConsulatePageFlagTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ghana.app.qa.testcases.ConsulatePageFlagTest@64485a47]" name="setUp" is-config="true" duration-ms="6107" started-at="2019-05-18T10:21:42Z" finished-at="2019-05-18T10:21:48Z">
           <reporter-output>
             <line>
               <![CDATA[Completed executing following method : DriverInit.setUp]]>
             </line>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="signUpAndPayment()[pri:61, instance:com.ghana.app.qa.testcases.VisaPaymentPageTest@1990a65e]" name="signUpAndPayment" duration-ms="30880" started-at="2019-05-17T11:47:45Z" finished-at="2019-05-17T11:48:16Z">
+        <test-method status="PASS" signature="signUpAndPayment()[pri:114, instance:com.ghana.app.qa.testcases.ConsulatePageFlagTest@64485a47]" name="signUpAndPayment" duration-ms="48915" started-at="2019-05-18T10:21:48Z" finished-at="2019-05-18T10:22:37Z">
           <reporter-output>
             <line>
-              <![CDATA[About to begin executing following method : VisaPaymentPageTest.signUpAndPayment]]>
+              <![CDATA[About to begin executing following method : ConsulatePageFlagTest.signUpAndPayment]]>
             </line>
             <line>
-              <![CDATA[Completed executing following method : VisaPaymentPageTest.signUpAndPayment]]>
+              <![CDATA[Completed executing following method : ConsulatePageFlagTest.signUpAndPayment]]>
             </line>
           </reporter-output>
         </test-method> <!-- signUpAndPayment -->
-        <test-method status="FAIL" signature="verifyClickOnSubmitBtnTest()[pri:62, instance:com.ghana.app.qa.testcases.VisaPaymentPageTest@1990a65e]" name="verifyClickOnSubmitBtnTest" duration-ms="256110" started-at="2019-05-17T11:48:16Z" description="Here verifying confirmation message and click on ok btn " finished-at="2019-05-17T11:52:32Z">
+        <test-method status="PASS" signature="loginIntoConsulate()[pri:115, instance:com.ghana.app.qa.testcases.ConsulatePageFlagTest@64485a47]" name="loginIntoConsulate" duration-ms="7642" started-at="2019-05-18T10:22:37Z" description="This test will verify login functinality with pass valid creadentials and click on Login button" finished-at="2019-05-18T10:22:45Z">
+          <reporter-output>
+            <line>
+              <![CDATA[About to begin executing following method : ConsulatePageFlagTest.loginIntoConsulate]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : ConsulatePageFlagTest.loginIntoConsulate]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- loginIntoConsulate -->
+        <test-method status="PASS" signature="verifyTitleOfConsulateTitle()[pri:116, instance:com.ghana.app.qa.testcases.ConsulatePageFlagTest@64485a47]" name="verifyTitleOfConsulateTitle" duration-ms="12" started-at="2019-05-18T10:22:45Z" description="This test will verify we navigated to Welcome To Ghana Embassy page upon cliclking on Login button" finished-at="2019-05-18T10:22:45Z">
+          <reporter-output>
+            <line>
+              <![CDATA[About to begin executing following method : ConsulatePageFlagTest.verifyTitleOfConsulateTitle]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : ConsulatePageFlagTest.verifyTitleOfConsulateTitle]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyTitleOfConsulateTitle -->
+        <test-method status="PASS" signature="clickOnNewApplicationCN()[pri:117, instance:com.ghana.app.qa.testcases.ConsulatePageFlagTest@64485a47]" name="clickOnNewApplicationCN" duration-ms="20181" started-at="2019-05-18T10:22:45Z" description="This test will verify we navigated to Welcome To Ghana Embassy page upon cliclking on Login button" finished-at="2019-05-18T10:23:05Z">
+          <reporter-output>
+            <line>
+              <![CDATA[About to begin executing following method : ConsulatePageFlagTest.clickOnNewApplicationCN]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : ConsulatePageFlagTest.clickOnNewApplicationCN]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- clickOnNewApplicationCN -->
+        <test-method status="PASS" signature="verfiyTitleOfCNDocumentVerificatonPageCN()[pri:118, instance:com.ghana.app.qa.testcases.ConsulatePageFlagTest@64485a47]" name="verfiyTitleOfCNDocumentVerificatonPageCN" duration-ms="886" started-at="2019-05-18T10:23:05Z" finished-at="2019-05-18T10:23:06Z">
+          <reporter-output>
+            <line>
+              <![CDATA[About to begin executing following method : ConsulatePageFlagTest.verfiyTitleOfCNDocumentVerificatonPageCN]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : ConsulatePageFlagTest.verfiyTitleOfCNDocumentVerificatonPageCN]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verfiyTitleOfCNDocumentVerificatonPageCN -->
+        <test-method status="PASS" signature="clickOnRejectAndVerifyPopText2CN()[pri:119, instance:com.ghana.app.qa.testcases.ConsulatePageFlagTest@64485a47]" name="clickOnRejectAndVerifyPopText2CN" duration-ms="942" started-at="2019-05-18T10:23:06Z" description="Click On Reject And Verify Pop Text and then click on Cross, Verify that on which page navigated" finished-at="2019-05-18T10:23:07Z">
+          <reporter-output>
+            <line>
+              <![CDATA[About to begin executing following method : ConsulatePageFlagTest.clickOnRejectAndVerifyPopText2CN]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : ConsulatePageFlagTest.clickOnRejectAndVerifyPopText2CN]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- clickOnRejectAndVerifyPopText2CN -->
+        <test-method status="FAIL" signature="verifyApplicaInRejectApplicationBucket()[pri:120, instance:com.ghana.app.qa.testcases.ConsulatePageFlagTest@64485a47]" name="verifyApplicaInRejectApplicationBucket" duration-ms="41238" started-at="2019-05-18T10:23:07Z" description="This test will verify whether application is sent to HCD side" finished-at="2019-05-18T10:23:48Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='modal-footer']//button[@type='button'][contains(text(),'Cancel')]"}
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='myModal']//h4[@class='modal-title'][contains(text(),'Confirmation')]"}
   (Session info: chrome=74.0.3729.157)
   (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
@@ -59,12 +151,12 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'TORENZO', ip: '192.168.1.21', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_151'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\TEJASH~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:65347}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.157, webStorageEnabled: true}
-Session ID: 63a5cbe4da5c1cdea044313ded9b40c9
-*** Element info: {Using=xpath, value=//div[@class='modal-footer']//button[@type='button'][contains(text(),'Cancel')]}]]>
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\TEJASH~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:58030}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.157, webStorageEnabled: true}
+Session ID: 7a83a82910c1b880c8c4716bba9aecfa
+*** Element info: {Using=xpath, value=//div[@id='myModal']//h4[@class='modal-title'][contains(text(),'Confirmation')]}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='modal-footer']//button[@type='button'][contains(text(),'Cancel')]"}
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='myModal']//h4[@class='modal-title'][contains(text(),'Confirmation')]"}
   (Session info: chrome=74.0.3729.157)
   (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
@@ -72,9 +164,9 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'TORENZO', ip: '192.168.1.21', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_151'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\TEJASH~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:65347}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.157, webStorageEnabled: true}
-Session ID: 63a5cbe4da5c1cdea044313ded9b40c9
-*** Element info: {Using=xpath, value=//div[@class='modal-footer']//button[@type='button'][contains(text(),'Cancel')]}
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\TEJASH~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:58030}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.157, webStorageEnabled: true}
+Session ID: 7a83a82910c1b880c8c4716bba9aecfa
+*** Element info: {Using=xpath, value=//div[@id='myModal']//h4[@class='modal-title'][contains(text(),'Confirmation')]}
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -93,9 +185,9 @@ at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at com.sun.proxy.$Proxy9.click(Unknown Source)
-at com.ghana.app.qa.pages.VisaPaymentPage.verifyConfirmationPop(VisaPaymentPage.java:123)
-at com.ghana.app.qa.testcases.VisaPaymentPageTest.verifyClickOnSubmitBtnTest(VisaPaymentPageTest.java:128)
+at com.sun.proxy.$Proxy9.getText(Unknown Source)
+at com.ghana.app.qa.pages.ConsulatedashBoardPage.confirmationPop2ApplicationSentToFlag(ConsulatedashBoardPage.java:234)
+at com.ghana.app.qa.testcases.ConsulatePageFlagTest.verifyApplicaInRejectApplicationBucket(ConsulatePageFlagTest.java:193)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -126,14 +218,34 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
             <line>
-              <![CDATA[About to begin executing following method : VisaPaymentPageTest.verifyClickOnSubmitBtnTest]]>
+              <![CDATA[About to begin executing following method : ConsulatePageFlagTest.verifyApplicaInRejectApplicationBucket]]>
             </line>
             <line>
-              <![CDATA[Completed executing following method : VisaPaymentPageTest.verifyClickOnSubmitBtnTest]]>
+              <![CDATA[Completed executing following method : ConsulatePageFlagTest.verifyApplicaInRejectApplicationBucket]]>
             </line>
           </reporter-output>
-        </test-method> <!-- verifyClickOnSubmitBtnTest -->
-      </class> <!-- com.ghana.app.qa.testcases.VisaPaymentPageTest -->
+        </test-method> <!-- verifyApplicaInRejectApplicationBucket -->
+        <test-method status="PASS" signature="verifyApplicationSentToRejectBucketOpens()[pri:121, instance:com.ghana.app.qa.testcases.ConsulatePageFlagTest@64485a47]" name="verifyApplicationSentToRejectBucketOpens" duration-ms="1176" started-at="2019-05-18T10:24:00Z" description="This test will verify whether application is opens upon clicing on Open button and also clicking back button navigates to Bucket" finished-at="2019-05-18T10:24:01Z">
+          <reporter-output>
+            <line>
+              <![CDATA[About to begin executing following method : ConsulatePageFlagTest.verifyApplicationSentToRejectBucketOpens]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : ConsulatePageFlagTest.verifyApplicationSentToRejectBucketOpens]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyApplicationSentToRejectBucketOpens -->
+        <test-method status="PASS" signature="verifyCanceAndCrossButton()[pri:122, instance:com.ghana.app.qa.testcases.ConsulatePageFlagTest@64485a47]" name="verifyCanceAndCrossButton" duration-ms="22411" started-at="2019-05-18T10:24:01Z" description="This test will verify whether application is opens upon clicing on Open button and also clicking back button navigates to Bucket" finished-at="2019-05-18T10:24:23Z">
+          <reporter-output>
+            <line>
+              <![CDATA[About to begin executing following method : ConsulatePageFlagTest.verifyCanceAndCrossButton]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : ConsulatePageFlagTest.verifyCanceAndCrossButton]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyCanceAndCrossButton -->
+      </class> <!-- com.ghana.app.qa.testcases.ConsulatePageFlagTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

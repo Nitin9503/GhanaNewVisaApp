@@ -95,7 +95,7 @@ public class ConsulatedashBoardPage extends TestBase {
 	@FindBy(xpath = "//div[@id='myModal2']//h4[@class='modal-title'][contains(text(),'Confirmation')]")
 	WebElement confirmationPop2;
 	
-	@FindBy(xpath = "//div[@id='myModal3']//h4[@class='modal-title'][contains(text(),'Confirmation')]")
+	@FindBy(xpath = "//div[@id='myModal']//h4[@class='modal-title'][contains(text(),'Confirmation')]")
 	WebElement confirmationPopFromFlag;
 	
 	@FindBy(xpath = "//div[@id='myModal2']//button[@type='button'][contains(text(),'Cancel')]")

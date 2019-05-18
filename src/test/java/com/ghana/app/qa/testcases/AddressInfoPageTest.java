@@ -3,6 +3,7 @@ package com.ghana.app.qa.testcases;
 import static com.ghana.app.qa.testdata.ConstantVariable.*;
 import static org.testng.Assert.assertEquals;
 import static com.ghana.app.qa.util.TestUtil.*;
+
 import java.io.IOException;
 
 import org.testng.Assert;
@@ -89,7 +90,8 @@ public class AddressInfoPageTest extends DriverInit {
 	@Test(priority = 31)
 	public void filladdressInfoTest() throws InterruptedException, IOException {
 		addressInfoPage.PassAddressInfofield(FlatNo, StreetName, Landmark, pinCode, cityName, stateName, countryName);
-
+		System.out.println("Birthdate==>" +providedDate);
+		System.out.println("Application id==>" +applicationID);
 	}
 
 

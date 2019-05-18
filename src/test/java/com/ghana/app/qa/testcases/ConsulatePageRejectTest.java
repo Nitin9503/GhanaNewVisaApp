@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -11,10 +12,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+
 import com.ghana.app.qa.base.DriverInit;
 import com.ghana.app.qa.pages.CNAddressInfo;
+
 import static com.ghana.app.qa.util.TestUtil.prop;
 import static com.ghana.app.qa.testdata.ConstantVariable.*;
+
 import com.ghana.app.qa.util.TestUtil;
 
 public class ConsulatePageRejectTest extends DriverInit {
@@ -119,7 +123,7 @@ public class ConsulatePageRejectTest extends DriverInit {
 		visaPaymentPage.clickOnSubmitbtn();
 		visaPaymentPage.clickOnOKtbtn();
 		visaPaymentPage.clickOnDonetbtn();
-		visaPaymentPage.verifyConfirmationPop();
+		//visaPaymentPage.verifyConfirmationPop();
 		Thread.sleep(2000);
 		System.out.println("home page title"
 				+ homePage.validateHomePageTitle());
@@ -367,9 +371,10 @@ public class ConsulatePageRejectTest extends DriverInit {
 		softAssertion.assertAll();
 	}
 	@Test(priority =110, description = "Click On Reject And Verify Pop Text and then click on Cross, Verify that on which page navigated")
-	public void clickOnRejectAndVerifyPopText2CN(){
+	public void clickOnRejectAndVerifyPopText2CN() throws InterruptedException{
+		Thread.sleep(3000);
 		cNDocumentVerificaton.clickOnReject();
-		cNDocumentVerificaton.passInReason(prop.getProperty(prop.getProperty("reasonOfrejectionCN")));
+		cNDocumentVerificaton.passInReason(prop.getProperty("reasonOfrejectionCN"));
 		cNDocumentVerificaton.getTextFromRejectButtonFromCN();
 		cNDocumentVerificaton.clickOnRejectFromRejectConfir();
 		softAssertion.assertEquals(highAndConsulateLoginPage.getTitleOfConsulate(), prop.getProperty("titleOfBucketPage"),
@@ -402,7 +407,7 @@ public class ConsulatePageRejectTest extends DriverInit {
 		softAssertion.assertEquals(applicantDashBoardPage.titleOfApplicationDetailsPage(), prop.getProperty("applicantDashboardTitle"),
 				"We are not navigate to Applicant Dashboard page upon clicking on New Application from Applicant Dashboard");
 		applicantDashBoardPage.clickOnBackButton();
-		softAssertion.assertEquals(highAndConsulateLoginPage.getTitleOfConsulate(), "Welcome To Ghana Embassy",
+		softAssertion.assertEquals(highAndConsulateLoginPage.getTitleOfConsulate(),  prop.getProperty("titleOfBucketPage"),
 				"We are not navigate to consulate dashboard page after enetering valid creadentials");
 		softAssertion.assertAll();
 		

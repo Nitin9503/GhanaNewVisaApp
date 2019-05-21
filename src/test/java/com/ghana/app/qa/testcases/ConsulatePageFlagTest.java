@@ -186,7 +186,7 @@ public class ConsulatePageFlagTest extends DriverInit {
 	public void verifyApplicaInRejectApplicationBucket() throws InterruptedException {
 		// check whether application removed from new application bucket and added in HCG application iin count
 		System.out.println("HEllllllllllllllllllllllOO");
-		System.out.println("getTextFromApproveButtonFromCN==>" +getTextFromFlagButtonFromCN);
+		System.out.println("getTextFromFlagButtonFromCN==>" +getTextFromFlagButtonFromCN);
 		softAssertion.assertEquals(consulatedashBoardPage.textFlaggedApplicationBucket(), getTextFromFlagButtonFromCN,
 				"We are not in Flagged Application bucket to check the application is present after Flagged by CN");		
 		TestUtil.clickOnElement();

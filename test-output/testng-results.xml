@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 <testng-results skipped="0" failed="2" ignored="0" total="16" passed="14">
 =======
 <testng-results skipped="0" failed="1" ignored="0" total="9" passed="8">
 >>>>>>> d431cf34496f5e28fcc3fbc057b2d6c3c2319536
+=======
+<testng-results skipped="0" failed="14" ignored="0" total="22" passed="8">
+>>>>>>> Stashed changes
   <reporter-output>
     <line>
       <![CDATA[Before executing suite at the begin Default suite]]>
@@ -18,6 +22,7 @@
       <![CDATA[Completed executing following method : DriverInit.setUp]]>
     </line>
     <line>
+<<<<<<< Updated upstream
 <<<<<<< HEAD
       <![CDATA[About to begin executing following method : PersonalInfoPageTest.fillSignUpFormTest]]>
     </line>
@@ -123,71 +128,613 @@
         <test-method status="PASS" signature="setUp()[pri:0, instance:com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest@42607a4f]" name="setUp" is-config="true" duration-ms="8131" started-at="2019-05-21T11:22:59Z" finished-at="2019-05-21T11:23:07Z">
 =======
       <![CDATA[About to begin executing following method : ConsulatePageFlagTest.signUpAndPayment]]>
+=======
+      <![CDATA[About to begin executing following method : HighCommissionPageApproveTest.signUpAndPayment]]>
+>>>>>>> Stashed changes
     </line>
     <line>
-      <![CDATA[Completed executing following method : ConsulatePageFlagTest.signUpAndPayment]]>
+      <![CDATA[Completed executing following method : HighCommissionPageApproveTest.signUpAndPayment]]>
     </line>
     <line>
-      <![CDATA[About to begin executing following method : ConsulatePageFlagTest.loginIntoConsulate]]>
+      <![CDATA[About to begin executing following method : HighCommissionPageApproveTest.getApproveFromCN]]>
     </line>
     <line>
-      <![CDATA[Completed executing following method : ConsulatePageFlagTest.loginIntoConsulate]]>
+      <![CDATA[Completed executing following method : HighCommissionPageApproveTest.getApproveFromCN]]>
     </line>
     <line>
-      <![CDATA[About to begin executing following method : ConsulatePageFlagTest.verifyTitleOfConsulateTitle]]>
+      <![CDATA[About to begin executing following method : HighCommissionPageApproveTest.loginIntoHighCommission]]>
     </line>
     <line>
-      <![CDATA[Completed executing following method : ConsulatePageFlagTest.verifyTitleOfConsulateTitle]]>
+      <![CDATA[Completed executing following method : HighCommissionPageApproveTest.loginIntoHighCommission]]>
     </line>
     <line>
-      <![CDATA[About to begin executing following method : ConsulatePageFlagTest.clickOnNewApplicationCN]]>
+      <![CDATA[About to begin executing following method : HighCommissionPageApproveTest.verifHighCommissionPageTitle]]>
     </line>
     <line>
-      <![CDATA[Completed executing following method : ConsulatePageFlagTest.clickOnNewApplicationCN]]>
+      <![CDATA[Completed executing following method : HighCommissionPageApproveTest.verifHighCommissionPageTitle]]>
     </line>
     <line>
-      <![CDATA[About to begin executing following method : ConsulatePageFlagTest.verfiyTitleOfCNDocumentVerificatonPageCN]]>
+      <![CDATA[About to begin executing following method : HighCommissionPageApproveTest.clickOnNewApplication]]>
     </line>
     <line>
-      <![CDATA[Completed executing following method : ConsulatePageFlagTest.verfiyTitleOfCNDocumentVerificatonPageCN]]>
+      <![CDATA[Completed executing following method : HighCommissionPageApproveTest.clickOnNewApplication]]>
     </line>
     <line>
-      <![CDATA[About to begin executing following method : ConsulatePageFlagTest.clickOnRejectAndVerifyPopText2CN]]>
+      <![CDATA[About to begin executing following method : HighCommissionPageApproveTest.getTextFromApplicantInformation]]>
     </line>
     <line>
-      <![CDATA[Completed executing following method : ConsulatePageFlagTest.clickOnRejectAndVerifyPopText2CN]]>
+      <![CDATA[Completed executing following method : HighCommissionPageApproveTest.getTextFromApplicantInformation]]>
     </line>
     <line>
-      <![CDATA[About to begin executing following method : ConsulatePageFlagTest.verifyApplicaInRejectApplicationBucket]]>
+      <![CDATA[About to begin executing following method : HighCommissionPageApproveTest.getTextFromAddressInformation]]>
     </line>
     <line>
-      <![CDATA[Completed executing following method : ConsulatePageFlagTest.verifyApplicaInRejectApplicationBucket]]>
+      <![CDATA[Completed executing following method : HighCommissionPageApproveTest.getTextFromAddressInformation]]>
     </line>
     <line>
-      <![CDATA[About to begin executing following method : ConsulatePageFlagTest.verifyApplicationSentToRejectBucketOpens]]>
+      <![CDATA[About to begin executing following method : HighCommissionPageApproveTest.getTextFromTravelInformation]]>
     </line>
     <line>
-      <![CDATA[Completed executing following method : ConsulatePageFlagTest.verifyApplicationSentToRejectBucketOpens]]>
+      <![CDATA[Completed executing following method : HighCommissionPageApproveTest.getTextFromTravelInformation]]>
     </line>
     <line>
-      <![CDATA[About to begin executing following method : ConsulatePageFlagTest.verifyCanceAndCrossButton]]>
+      <![CDATA[About to begin executing following method : HighCommissionPageApproveTest.verfiyTitleOfCNDocumentVerificatonPage]]>
     </line>
     <line>
-      <![CDATA[Completed executing following method : ConsulatePageFlagTest.verifyCanceAndCrossButton]]>
+      <![CDATA[Completed executing following method : HighCommissionPageApproveTest.verfiyTitleOfCNDocumentVerificatonPage]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : HighCommissionPageApproveTest.clickOnPreviousButtonAndVerifyTitleApplicantInformation]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : HighCommissionPageApproveTest.clickOnPreviousButtonAndVerifyTitleApplicantInformation]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : HighCommissionPageApproveTest.clickOnNextButtonAndVerifyTitleDocumentVerifi]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : HighCommissionPageApproveTest.clickOnNextButtonAndVerifyTitleDocumentVerifi]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : HighCommissionPageApproveTest.selectAllCheckBoxAndVerify]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : HighCommissionPageApproveTest.selectAllCheckBoxAndVerify]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : HighCommissionPageApproveTest.selectOneByOneCheckBoxAndVerify]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : HighCommissionPageApproveTest.selectOneByOneCheckBoxAndVerify]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : HighCommissionPageApproveTest.clickOnApproveAndVerifyPopText]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : HighCommissionPageApproveTest.clickOnApproveAndVerifyPopText]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : HighCommissionPageApproveTest.clickOnApproveAndVerifyPopText1]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : HighCommissionPageApproveTest.clickOnApproveAndVerifyPopText1]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : HighCommissionPageApproveTest.passComment]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : HighCommissionPageApproveTest.passComment]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : HighCommissionPageApproveTest.approveApplication]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : HighCommissionPageApproveTest.approveApplication]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : HighCommissionPageApproveTest.verifyApprovedApplicaIsInApproveBucketHCD]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : HighCommissionPageApproveTest.verifyApprovedApplicaIsInApproveBucketHCD]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : HighCommissionPageApproveTest.verifyApplicationSentOpens]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : HighCommissionPageApproveTest.verifyApplicationSentOpens]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : HighCommissionPageApproveTest.verifyCanceAndCrossButton]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : HighCommissionPageApproveTest.verifyCanceAndCrossButton]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : HighCommissionPageApproveTest.loginIntoConsulate]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : HighCommissionPageApproveTest.loginIntoConsulate]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : HighCommissionPageApproveTest.verifyApproveBucktInCN]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : HighCommissionPageApproveTest.verifyApproveBucktInCN]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="161198" started-at="2019-05-18T10:21:42Z" finished-at="2019-05-18T10:24:23Z">
+  <suite name="Default suite" duration-ms="399356" started-at="2019-05-21T11:33:35Z" finished-at="2019-05-21T11:40:14Z">
     <groups>
     </groups>
+<<<<<<< Updated upstream
     <test name="Default test" duration-ms="161198" started-at="2019-05-18T10:21:42Z" finished-at="2019-05-18T10:24:23Z">
       <class name="com.ghana.app.qa.testcases.ConsulatePageFlagTest">
         <test-method status="PASS" signature="setUp()[pri:0, instance:com.ghana.app.qa.testcases.ConsulatePageFlagTest@64485a47]" name="setUp" is-config="true" duration-ms="6107" started-at="2019-05-18T10:21:42Z" finished-at="2019-05-18T10:21:48Z">
 >>>>>>> d431cf34496f5e28fcc3fbc057b2d6c3c2319536
+=======
+    <test name="Default test" duration-ms="399356" started-at="2019-05-21T11:33:35Z" finished-at="2019-05-21T11:40:14Z">
+      <class name="com.ghana.app.qa.testcases.HighCommissionPageApproveTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ghana.app.qa.testcases.HighCommissionPageApproveTest@64485a47]" name="setUp" is-config="true" duration-ms="7138" started-at="2019-05-21T11:33:35Z" finished-at="2019-05-21T11:33:42Z">
           <reporter-output>
             <line>
               <![CDATA[Completed executing following method : DriverInit.setUp]]>
             </line>
           </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="signUpAndPayment()[pri:123, instance:com.ghana.app.qa.testcases.HighCommissionPageApproveTest@64485a47]" name="signUpAndPayment" duration-ms="48329" started-at="2019-05-21T11:33:42Z" finished-at="2019-05-21T11:34:31Z">
+          <reporter-output>
+            <line>
+              <![CDATA[About to begin executing following method : HighCommissionPageApproveTest.signUpAndPayment]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : HighCommissionPageApproveTest.signUpAndPayment]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- signUpAndPayment -->
+        <test-method status="PASS" signature="getApproveFromCN()[pri:124, instance:com.ghana.app.qa.testcases.HighCommissionPageApproveTest@64485a47]" name="getApproveFromCN" duration-ms="12569" started-at="2019-05-21T11:34:31Z" description="This test will approve the application from CN" finished-at="2019-05-21T11:34:43Z">
+          <reporter-output>
+            <line>
+              <![CDATA[About to begin executing following method : HighCommissionPageApproveTest.getApproveFromCN]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : HighCommissionPageApproveTest.getApproveFromCN]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- getApproveFromCN -->
+        <test-method status="PASS" signature="loginIntoHighCommission()[pri:125, instance:com.ghana.app.qa.testcases.HighCommissionPageApproveTest@64485a47]" name="loginIntoHighCommission" duration-ms="5179" started-at="2019-05-21T11:34:43Z" description="This test will verify login functinality of HighCommission with valid creadentials and click on Login button" finished-at="2019-05-21T11:34:48Z">
+          <reporter-output>
+            <line>
+              <![CDATA[About to begin executing following method : HighCommissionPageApproveTest.loginIntoHighCommission]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : HighCommissionPageApproveTest.loginIntoHighCommission]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- loginIntoHighCommission -->
+        <test-method status="PASS" signature="verifHighCommissionPageTitle()[pri:126, instance:com.ghana.app.qa.testcases.HighCommissionPageApproveTest@64485a47]" name="verifHighCommissionPageTitle" duration-ms="11" started-at="2019-05-21T11:34:48Z" description="This test will verify the title of HighCommission page after login" finished-at="2019-05-21T11:34:48Z">
+          <reporter-output>
+            <line>
+              <![CDATA[About to begin executing following method : HighCommissionPageApproveTest.verifHighCommissionPageTitle]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : HighCommissionPageApproveTest.verifHighCommissionPageTitle]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifHighCommissionPageTitle -->
+        <test-method status="PASS" signature="clickOnNewApplication()[pri:127, instance:com.ghana.app.qa.testcases.HighCommissionPageApproveTest@64485a47]" name="clickOnNewApplication" duration-ms="5832" started-at="2019-05-21T11:34:48Z" description="This test will verify we navigated to HCDGeneral Verification page upon cliclking on New Application" finished-at="2019-05-21T11:34:54Z">
+          <reporter-output>
+            <line>
+              <![CDATA[About to begin executing following method : HighCommissionPageApproveTest.clickOnNewApplication]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : HighCommissionPageApproveTest.clickOnNewApplication]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- clickOnNewApplication -->
+        <test-method status="PASS" signature="getTextFromApplicantInformation()[pri:128, instance:com.ghana.app.qa.testcases.HighCommissionPageApproveTest@64485a47]" name="getTextFromApplicantInformation" duration-ms="8080" started-at="2019-05-21T11:34:54Z" description="Here we are getting text from Applicant Information and comparing with Applicant filed data" finished-at="2019-05-21T11:35:02Z">
+          <reporter-output>
+            <line>
+              <![CDATA[About to begin executing following method : HighCommissionPageApproveTest.getTextFromApplicantInformation]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : HighCommissionPageApproveTest.getTextFromApplicantInformation]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- getTextFromApplicantInformation -->
+        <test-method status="PASS" signature="getTextFromAddressInformation()[pri:129, instance:com.ghana.app.qa.testcases.HighCommissionPageApproveTest@64485a47]" name="getTextFromAddressInformation" duration-ms="126" started-at="2019-05-21T11:35:02Z" description="Here we are getting text from Address Information and comparing with Applicant filed data" finished-at="2019-05-21T11:35:02Z">
+          <reporter-output>
+            <line>
+              <![CDATA[About to begin executing following method : HighCommissionPageApproveTest.getTextFromAddressInformation]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : HighCommissionPageApproveTest.getTextFromAddressInformation]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- getTextFromAddressInformation -->
+        <test-method status="FAIL" signature="getTextFromTravelInformation()[pri:130, instance:com.ghana.app.qa.testcases.HighCommissionPageApproveTest@64485a47]" name="getTextFromTravelInformation" duration-ms="242" started-at="2019-05-21T11:35:02Z" description="Here we are getting text from Travel Information and comparing with Applicant filed data" finished-at="2019-05-21T11:35:03Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+Provided and Get Landmark are not matched 2 expected [77436 Fairview Trail, Sekondi-Takoradi,Kumasi,Ashanti[4],Ghana,GA015] but found [77436 Fairview Trail, Sekondi-Takoradi]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+Provided and Get Landmark are not matched 2 expected [77436 Fairview Trail, Sekondi-Takoradi,Kumasi,Ashanti[4],Ghana,GA015] but found [77436 Fairview Trail, Sekondi-Takoradi]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+at com.ghana.app.qa.testcases.HighCommissionPageApproveTest.getTextFromTravelInformation(HighCommissionPageApproveTest.java:248)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+            <line>
+              <![CDATA[About to begin executing following method : HighCommissionPageApproveTest.getTextFromTravelInformation]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : HighCommissionPageApproveTest.getTextFromTravelInformation]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- getTextFromTravelInformation -->
+        <test-method status="FAIL" signature="verfiyTitleOfCNDocumentVerificatonPage()[pri:131, instance:com.ghana.app.qa.testcases.HighCommissionPageApproveTest@64485a47]" name="verfiyTitleOfCNDocumentVerificatonPage" duration-ms="631" started-at="2019-05-21T11:35:13Z" description="click On Document verification and verified the title of Document verification page" finished-at="2019-05-21T11:35:14Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+Provided and Get Landmark are not matched 2 expected [77436 Fairview Trail, Sekondi-Takoradi,Kumasi,Ashanti[4],Ghana,GA015] but found [77436 Fairview Trail, Sekondi-Takoradi]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+Provided and Get Landmark are not matched 2 expected [77436 Fairview Trail, Sekondi-Takoradi,Kumasi,Ashanti[4],Ghana,GA015] but found [77436 Fairview Trail, Sekondi-Takoradi]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+at com.ghana.app.qa.testcases.HighCommissionPageApproveTest.verfiyTitleOfCNDocumentVerificatonPage(HighCommissionPageApproveTest.java:257)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+            <line>
+              <![CDATA[About to begin executing following method : HighCommissionPageApproveTest.verfiyTitleOfCNDocumentVerificatonPage]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : HighCommissionPageApproveTest.verfiyTitleOfCNDocumentVerificatonPage]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verfiyTitleOfCNDocumentVerificatonPage -->
+        <test-method status="FAIL" signature="clickOnPreviousButtonAndVerifyTitleApplicantInformation()[pri:132, instance:com.ghana.app.qa.testcases.HighCommissionPageApproveTest@64485a47]" name="clickOnPreviousButtonAndVerifyTitleApplicantInformation" duration-ms="546" started-at="2019-05-21T11:35:25Z" description="This test will verify whether we navigate to applicant info page upon clicking on previous button from Document verification page" finished-at="2019-05-21T11:35:26Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+Provided and Get Landmark are not matched 2 expected [77436 Fairview Trail, Sekondi-Takoradi,Kumasi,Ashanti[4],Ghana,GA015] but found [77436 Fairview Trail, Sekondi-Takoradi]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+Provided and Get Landmark are not matched 2 expected [77436 Fairview Trail, Sekondi-Takoradi,Kumasi,Ashanti[4],Ghana,GA015] but found [77436 Fairview Trail, Sekondi-Takoradi]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+at com.ghana.app.qa.testcases.HighCommissionPageApproveTest.clickOnPreviousButtonAndVerifyTitleApplicantInformation(HighCommissionPageApproveTest.java:265)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+            <line>
+              <![CDATA[About to begin executing following method : HighCommissionPageApproveTest.clickOnPreviousButtonAndVerifyTitleApplicantInformation]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : HighCommissionPageApproveTest.clickOnPreviousButtonAndVerifyTitleApplicantInformation]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- clickOnPreviousButtonAndVerifyTitleApplicantInformation -->
+        <test-method status="FAIL" signature="clickOnNextButtonAndVerifyTitleDocumentVerifi()[pri:133, instance:com.ghana.app.qa.testcases.HighCommissionPageApproveTest@64485a47]" name="clickOnNextButtonAndVerifyTitleDocumentVerifi" duration-ms="540" started-at="2019-05-21T11:35:37Z" description="This test will verify whether we navigate to Document verification page upon clicking on next button from applicant info page " finished-at="2019-05-21T11:35:37Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+Provided and Get Landmark are not matched 2 expected [77436 Fairview Trail, Sekondi-Takoradi,Kumasi,Ashanti[4],Ghana,GA015] but found [77436 Fairview Trail, Sekondi-Takoradi]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+Provided and Get Landmark are not matched 2 expected [77436 Fairview Trail, Sekondi-Takoradi,Kumasi,Ashanti[4],Ghana,GA015] but found [77436 Fairview Trail, Sekondi-Takoradi]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+at com.ghana.app.qa.testcases.HighCommissionPageApproveTest.clickOnNextButtonAndVerifyTitleDocumentVerifi(HighCommissionPageApproveTest.java:272)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+            <line>
+              <![CDATA[About to begin executing following method : HighCommissionPageApproveTest.clickOnNextButtonAndVerifyTitleDocumentVerifi]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : HighCommissionPageApproveTest.clickOnNextButtonAndVerifyTitleDocumentVerifi]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- clickOnNextButtonAndVerifyTitleDocumentVerifi -->
+        <test-method status="FAIL" signature="selectAllCheckBoxAndVerify()[pri:134, instance:com.ghana.app.qa.testcases.HighCommissionPageApproveTest@64485a47]" name="selectAllCheckBoxAndVerify" duration-ms="4805" started-at="2019-05-21T11:35:48Z" description="This test will verify whether check boxes is selected or not on Document verification" finished-at="2019-05-21T11:35:53Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+Provided and Get Landmark are not matched 2 expected [77436 Fairview Trail, Sekondi-Takoradi,Kumasi,Ashanti[4],Ghana,GA015] but found [77436 Fairview Trail, Sekondi-Takoradi]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+Provided and Get Landmark are not matched 2 expected [77436 Fairview Trail, Sekondi-Takoradi,Kumasi,Ashanti[4],Ghana,GA015] but found [77436 Fairview Trail, Sekondi-Takoradi]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+at com.ghana.app.qa.testcases.HighCommissionPageApproveTest.selectAllCheckBoxAndVerify(HighCommissionPageApproveTest.java:286)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+            <line>
+              <![CDATA[About to begin executing following method : HighCommissionPageApproveTest.selectAllCheckBoxAndVerify]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : HighCommissionPageApproveTest.selectAllCheckBoxAndVerify]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- selectAllCheckBoxAndVerify -->
+        <test-method status="FAIL" signature="selectOneByOneCheckBoxAndVerify()[pri:135, instance:com.ghana.app.qa.testcases.HighCommissionPageApproveTest@64485a47]" name="selectOneByOneCheckBoxAndVerify" duration-ms="3394" started-at="2019-05-21T11:36:04Z" description="This test will verify whether check boxes is selected (one by one)or not on Document verification" finished-at="2019-05-21T11:36:07Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+Provided and Get Landmark are not matched 2 expected [77436 Fairview Trail, Sekondi-Takoradi,Kumasi,Ashanti[4],Ghana,GA015] but found [77436 Fairview Trail, Sekondi-Takoradi]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+Provided and Get Landmark are not matched 2 expected [77436 Fairview Trail, Sekondi-Takoradi,Kumasi,Ashanti[4],Ghana,GA015] but found [77436 Fairview Trail, Sekondi-Takoradi]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+at com.ghana.app.qa.testcases.HighCommissionPageApproveTest.selectOneByOneCheckBoxAndVerify(HighCommissionPageApproveTest.java:298)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+            <line>
+              <![CDATA[About to begin executing following method : HighCommissionPageApproveTest.selectOneByOneCheckBoxAndVerify]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : HighCommissionPageApproveTest.selectOneByOneCheckBoxAndVerify]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- selectOneByOneCheckBoxAndVerify -->
+        <test-method status="FAIL" signature="clickOnApproveAndVerifyPopText()[pri:136, instance:com.ghana.app.qa.testcases.HighCommissionPageApproveTest@64485a47]" name="clickOnApproveAndVerifyPopText" duration-ms="768" started-at="2019-05-21T11:36:18Z" description="Click On Approve And Verify Pop Text and then click on Cancel, Verify that on which page navigated" finished-at="2019-05-21T11:36:19Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+Provided and Get Landmark are not matched 2 expected [77436 Fairview Trail, Sekondi-Takoradi,Kumasi,Ashanti[4],Ghana,GA015] but found [77436 Fairview Trail, Sekondi-Takoradi]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+Provided and Get Landmark are not matched 2 expected [77436 Fairview Trail, Sekondi-Takoradi,Kumasi,Ashanti[4],Ghana,GA015] but found [77436 Fairview Trail, Sekondi-Takoradi]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+at com.ghana.app.qa.testcases.HighCommissionPageApproveTest.clickOnApproveAndVerifyPopText(HighCommissionPageApproveTest.java:309)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+            <line>
+              <![CDATA[About to begin executing following method : HighCommissionPageApproveTest.clickOnApproveAndVerifyPopText]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : HighCommissionPageApproveTest.clickOnApproveAndVerifyPopText]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- clickOnApproveAndVerifyPopText -->
+        <test-method status="FAIL" signature="clickOnApproveAndVerifyPopText1()[pri:137, instance:com.ghana.app.qa.testcases.HighCommissionPageApproveTest@64485a47]" name="clickOnApproveAndVerifyPopText1" duration-ms="6709" started-at="2019-05-21T11:36:30Z" description="Click On Approve And Verify Pop Text and then click on Cross, Verify that on which page navigated" finished-at="2019-05-21T11:36:37Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+Provided and Get Landmark are not matched 2 expected [77436 Fairview Trail, Sekondi-Takoradi,Kumasi,Ashanti[4],Ghana,GA015] but found [77436 Fairview Trail, Sekondi-Takoradi]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+Provided and Get Landmark are not matched 2 expected [77436 Fairview Trail, Sekondi-Takoradi,Kumasi,Ashanti[4],Ghana,GA015] but found [77436 Fairview Trail, Sekondi-Takoradi]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+at com.ghana.app.qa.testcases.HighCommissionPageApproveTest.clickOnApproveAndVerifyPopText1(HighCommissionPageApproveTest.java:323)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+>>>>>>> Stashed changes
+          <reporter-output>
+            <line>
+              <![CDATA[About to begin executing following method : HighCommissionPageApproveTest.clickOnApproveAndVerifyPopText1]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : HighCommissionPageApproveTest.clickOnApproveAndVerifyPopText1]]>
+            </line>
+          </reporter-output>
+<<<<<<< Updated upstream
         </test-method> <!-- setUp -->
 <<<<<<< HEAD
         <test-method status="PASS" signature="fillSignUpFormTest()[pri:16, instance:com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest@42607a4f]" name="fillSignUpFormTest" duration-ms="15336" started-at="2019-05-21T11:23:07Z" finished-at="2019-05-21T11:23:23Z">
@@ -378,6 +925,174 @@ at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invok
 at com.sun.proxy.$Proxy9.getText(Unknown Source)
 at com.ghana.app.qa.pages.PartiallyFilledApplicationPage.getErrorMessage(PartiallyFilledApplicationPage.java:73)
 at com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest.PartiallyFilledTest(PartiallyFilledApplicatlionTest.java:110)
+=======
+        </test-method> <!-- clickOnApproveAndVerifyPopText1 -->
+        <test-method status="FAIL" signature="passComment()[pri:138, instance:com.ghana.app.qa.testcases.HighCommissionPageApproveTest@64485a47]" name="passComment" duration-ms="898" started-at="2019-05-21T11:36:47Z" description="Application is verified and approved" finished-at="2019-05-21T11:36:48Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+Provided and Get Landmark are not matched 2 expected [77436 Fairview Trail, Sekondi-Takoradi,Kumasi,Ashanti[4],Ghana,GA015] but found [77436 Fairview Trail, Sekondi-Takoradi]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+Provided and Get Landmark are not matched 2 expected [77436 Fairview Trail, Sekondi-Takoradi,Kumasi,Ashanti[4],Ghana,GA015] but found [77436 Fairview Trail, Sekondi-Takoradi]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+at com.ghana.app.qa.testcases.HighCommissionPageApproveTest.passComment(HighCommissionPageApproveTest.java:332)
+>>>>>>> Stashed changes
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+<<<<<<< Updated upstream
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+            <line>
+              <![CDATA[About to begin executing following method : PartiallyFilledApplicatlionTest.PartiallyFilledTest]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : PartiallyFilledApplicatlionTest.PartiallyFilledTest]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- PartiallyFilledTest -->
+        <test-method status="FAIL" signature="AlreadySubmittedPartiallyFilledTest()[pri:61, instance:com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest@42607a4f]" name="AlreadySubmittedPartiallyFilledTest" duration-ms="120058" started-at="2019-05-21T11:25:42Z" finished-at="2019-05-21T11:27:42Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//button[contains(text(),'Partially/Filled Application')]"}
+  (Session info: chrome=74.0.3729.157)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+=======
+        <test-method status="PASS" signature="signUpAndPayment()[pri:114, instance:com.ghana.app.qa.testcases.ConsulatePageFlagTest@64485a47]" name="signUpAndPayment" duration-ms="48915" started-at="2019-05-18T10:21:48Z" finished-at="2019-05-18T10:22:37Z">
+=======
+          </exception> <!-- java.lang.AssertionError -->
+>>>>>>> Stashed changes
+          <reporter-output>
+            <line>
+              <![CDATA[About to begin executing following method : HighCommissionPageApproveTest.passComment]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : HighCommissionPageApproveTest.passComment]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- passComment -->
+        <test-method status="FAIL" signature="approveApplication()[pri:139, instance:com.ghana.app.qa.testcases.HighCommissionPageApproveTest@64485a47]" name="approveApplication" duration-ms="8906" started-at="2019-05-21T11:37:00Z" description="Click On Approve And Verify Pop Text and then click on Cancel, Verify that on which page navigated" finished-at="2019-05-21T11:37:08Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+Provided and Get Landmark are not matched 2 expected [77436 Fairview Trail, Sekondi-Takoradi,Kumasi,Ashanti[4],Ghana,GA015] but found [77436 Fairview Trail, Sekondi-Takoradi]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+Provided and Get Landmark are not matched 2 expected [77436 Fairview Trail, Sekondi-Takoradi,Kumasi,Ashanti[4],Ghana,GA015] but found [77436 Fairview Trail, Sekondi-Takoradi]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+at com.ghana.app.qa.testcases.HighCommissionPageApproveTest.approveApplication(HighCommissionPageApproveTest.java:346)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+            <line>
+              <![CDATA[About to begin executing following method : HighCommissionPageApproveTest.approveApplication]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : HighCommissionPageApproveTest.approveApplication]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- approveApplication -->
+        <test-method status="FAIL" signature="verifyApprovedApplicaIsInApproveBucketHCD()[pri:140, instance:com.ghana.app.qa.testcases.HighCommissionPageApproveTest@64485a47]" name="verifyApprovedApplicaIsInApproveBucketHCD" duration-ms="33069" started-at="2019-05-21T11:37:19Z" description="This test will verify Approved application by HCD Whether it is in Approved Bucket in HCD" finished-at="2019-05-21T11:37:52Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//input[@value='Approve']"}
+  (Session info: chrome=74.0.3729.157)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'TORENZO', ip: '192.168.1.21', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\TEJASH~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:53978}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.157, webStorageEnabled: true}
+Session ID: 2bbe2e752b5c898ac71db9e32d5c9581
+*** Element info: {Using=xpath, value=//input[@value='Approve']}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@value='Approve']"}
+  (Session info: chrome=74.0.3729.157)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'TORENZO', ip: '192.168.1.21', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\TEJASH~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:53978}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.157, webStorageEnabled: true}
+Session ID: 2bbe2e752b5c898ac71db9e32d5c9581
+*** Element info: {Using=xpath, value=//input[@value='Approve']}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at com.sun.proxy.$Proxy9.getAttribute(Unknown Source)
+at com.ghana.app.qa.pages.HCDDocumentVerificationPage.getTextconfirmFromApproveHCD(HCDDocumentVerificationPage.java:426)
+at com.ghana.app.qa.testcases.HighCommissionPageApproveTest.verifyApprovedApplicaIsInApproveBucketHCD(HighCommissionPageApproveTest.java:354)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -408,125 +1123,40 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
             <line>
-              <![CDATA[About to begin executing following method : PartiallyFilledApplicatlionTest.PartiallyFilledTest]]>
+              <![CDATA[About to begin executing following method : HighCommissionPageApproveTest.verifyApprovedApplicaIsInApproveBucketHCD]]>
             </line>
             <line>
-              <![CDATA[Completed executing following method : PartiallyFilledApplicatlionTest.PartiallyFilledTest]]>
+              <![CDATA[Completed executing following method : HighCommissionPageApproveTest.verifyApprovedApplicaIsInApproveBucketHCD]]>
             </line>
           </reporter-output>
-        </test-method> <!-- PartiallyFilledTest -->
-        <test-method status="FAIL" signature="AlreadySubmittedPartiallyFilledTest()[pri:61, instance:com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest@42607a4f]" name="AlreadySubmittedPartiallyFilledTest" duration-ms="120058" started-at="2019-05-21T11:25:42Z" finished-at="2019-05-21T11:27:42Z">
+        </test-method> <!-- verifyApprovedApplicaIsInApproveBucketHCD -->
+        <test-method status="FAIL" signature="verifyApplicationSentOpens()[pri:141, instance:com.ghana.app.qa.testcases.HighCommissionPageApproveTest@64485a47]" name="verifyApplicationSentOpens" duration-ms="42152" started-at="2019-05-21T11:38:02Z" description="This test will verify whether application is opens upon clicing on Open button and also clicking back button navigates to Bucket" finished-at="2019-05-21T11:38:45Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//button[contains(text(),'Partially/Filled Application')]"}
-  (Session info: chrome=74.0.3729.157)
-  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-=======
-        <test-method status="PASS" signature="signUpAndPayment()[pri:114, instance:com.ghana.app.qa.testcases.ConsulatePageFlagTest@64485a47]" name="signUpAndPayment" duration-ms="48915" started-at="2019-05-18T10:21:48Z" finished-at="2019-05-18T10:22:37Z">
-          <reporter-output>
-            <line>
-              <![CDATA[About to begin executing following method : ConsulatePageFlagTest.signUpAndPayment]]>
-            </line>
-            <line>
-              <![CDATA[Completed executing following method : ConsulatePageFlagTest.signUpAndPayment]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- signUpAndPayment -->
-        <test-method status="PASS" signature="loginIntoConsulate()[pri:115, instance:com.ghana.app.qa.testcases.ConsulatePageFlagTest@64485a47]" name="loginIntoConsulate" duration-ms="7642" started-at="2019-05-18T10:22:37Z" description="This test will verify login functinality with pass valid creadentials and click on Login button" finished-at="2019-05-18T10:22:45Z">
-          <reporter-output>
-            <line>
-              <![CDATA[About to begin executing following method : ConsulatePageFlagTest.loginIntoConsulate]]>
-            </line>
-            <line>
-              <![CDATA[Completed executing following method : ConsulatePageFlagTest.loginIntoConsulate]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- loginIntoConsulate -->
-        <test-method status="PASS" signature="verifyTitleOfConsulateTitle()[pri:116, instance:com.ghana.app.qa.testcases.ConsulatePageFlagTest@64485a47]" name="verifyTitleOfConsulateTitle" duration-ms="12" started-at="2019-05-18T10:22:45Z" description="This test will verify we navigated to Welcome To Ghana Embassy page upon cliclking on Login button" finished-at="2019-05-18T10:22:45Z">
-          <reporter-output>
-            <line>
-              <![CDATA[About to begin executing following method : ConsulatePageFlagTest.verifyTitleOfConsulateTitle]]>
-            </line>
-            <line>
-              <![CDATA[Completed executing following method : ConsulatePageFlagTest.verifyTitleOfConsulateTitle]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- verifyTitleOfConsulateTitle -->
-        <test-method status="PASS" signature="clickOnNewApplicationCN()[pri:117, instance:com.ghana.app.qa.testcases.ConsulatePageFlagTest@64485a47]" name="clickOnNewApplicationCN" duration-ms="20181" started-at="2019-05-18T10:22:45Z" description="This test will verify we navigated to Welcome To Ghana Embassy page upon cliclking on Login button" finished-at="2019-05-18T10:23:05Z">
-          <reporter-output>
-            <line>
-              <![CDATA[About to begin executing following method : ConsulatePageFlagTest.clickOnNewApplicationCN]]>
-            </line>
-            <line>
-              <![CDATA[Completed executing following method : ConsulatePageFlagTest.clickOnNewApplicationCN]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- clickOnNewApplicationCN -->
-        <test-method status="PASS" signature="verfiyTitleOfCNDocumentVerificatonPageCN()[pri:118, instance:com.ghana.app.qa.testcases.ConsulatePageFlagTest@64485a47]" name="verfiyTitleOfCNDocumentVerificatonPageCN" duration-ms="886" started-at="2019-05-18T10:23:05Z" finished-at="2019-05-18T10:23:06Z">
-          <reporter-output>
-            <line>
-              <![CDATA[About to begin executing following method : ConsulatePageFlagTest.verfiyTitleOfCNDocumentVerificatonPageCN]]>
-            </line>
-            <line>
-              <![CDATA[Completed executing following method : ConsulatePageFlagTest.verfiyTitleOfCNDocumentVerificatonPageCN]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- verfiyTitleOfCNDocumentVerificatonPageCN -->
-        <test-method status="PASS" signature="clickOnRejectAndVerifyPopText2CN()[pri:119, instance:com.ghana.app.qa.testcases.ConsulatePageFlagTest@64485a47]" name="clickOnRejectAndVerifyPopText2CN" duration-ms="942" started-at="2019-05-18T10:23:06Z" description="Click On Reject And Verify Pop Text and then click on Cross, Verify that on which page navigated" finished-at="2019-05-18T10:23:07Z">
-          <reporter-output>
-            <line>
-              <![CDATA[About to begin executing following method : ConsulatePageFlagTest.clickOnRejectAndVerifyPopText2CN]]>
-            </line>
-            <line>
-              <![CDATA[Completed executing following method : ConsulatePageFlagTest.clickOnRejectAndVerifyPopText2CN]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- clickOnRejectAndVerifyPopText2CN -->
-        <test-method status="FAIL" signature="verifyApplicaInRejectApplicationBucket()[pri:120, instance:com.ghana.app.qa.testcases.ConsulatePageFlagTest@64485a47]" name="verifyApplicaInRejectApplicationBucket" duration-ms="41238" started-at="2019-05-18T10:23:07Z" description="This test will verify whether application is sent to HCD side" finished-at="2019-05-18T10:23:48Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='myModal']//h4[@class='modal-title'][contains(text(),'Confirmation')]"}
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//label[contains(text(),'This application is already sent to High Commsion')]"}
   (Session info: chrome=74.0.3729.157)
   (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
->>>>>>> d431cf34496f5e28fcc3fbc057b2d6c3c2319536
 Command duration or timeout: 0 milliseconds
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'TORENZO', ip: '192.168.1.21', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_151'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-<<<<<<< HEAD
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\NIKHIL~1.SON\AppDa...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:51092}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.157, webStorageEnabled: true}
-Session ID: 80e69e24d37effa752d935c19a307ce3
-*** Element info: {Using=xpath, value=//button[contains(text(),'Partially/Filled Application')]}]]>
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\TEJASH~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:53978}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.157, webStorageEnabled: true}
+Session ID: 2bbe2e752b5c898ac71db9e32d5c9581
+*** Element info: {Using=xpath, value=//label[contains(text(),'This application is already sent to High Commsion')]}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[contains(text(),'Partially/Filled Application')]"}
-  (Session info: chrome=74.0.3729.157)
-  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-=======
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\TEJASH~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:58030}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.157, webStorageEnabled: true}
-Session ID: 7a83a82910c1b880c8c4716bba9aecfa
-*** Element info: {Using=xpath, value=//div[@id='myModal']//h4[@class='modal-title'][contains(text(),'Confirmation')]}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='myModal']//h4[@class='modal-title'][contains(text(),'Confirmation')]"}
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//label[contains(text(),'This application is already sent to High Commsion')]"}
   (Session info: chrome=74.0.3729.157)
   (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
->>>>>>> d431cf34496f5e28fcc3fbc057b2d6c3c2319536
 Command duration or timeout: 0 milliseconds
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'TORENZO', ip: '192.168.1.21', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_151'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-<<<<<<< HEAD
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\NIKHIL~1.SON\AppDa...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:51092}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.157, webStorageEnabled: true}
-Session ID: 80e69e24d37effa752d935c19a307ce3
-*** Element info: {Using=xpath, value=//button[contains(text(),'Partially/Filled Application')]}
-=======
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\TEJASH~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:58030}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.157, webStorageEnabled: true}
-Session ID: 7a83a82910c1b880c8c4716bba9aecfa
-*** Element info: {Using=xpath, value=//div[@id='myModal']//h4[@class='modal-title'][contains(text(),'Confirmation')]}
->>>>>>> d431cf34496f5e28fcc3fbc057b2d6c3c2319536
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\TEJASH~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:53978}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.157, webStorageEnabled: true}
+Session ID: 2bbe2e752b5c898ac71db9e32d5c9581
+*** Element info: {Using=xpath, value=//label[contains(text(),'This application is already sent to High Commsion')]}
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -545,6 +1175,182 @@ at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at com.sun.proxy.$Proxy9.getText(Unknown Source)
+at com.ghana.app.qa.pages.ConsulatedashBoardPage.textFromPop1PopApplicationSentToHCD(ConsulatedashBoardPage.java:222)
+at com.ghana.app.qa.testcases.HighCommissionPageApproveTest.verifyApplicationSentOpens(HighCommissionPageApproveTest.java:371)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+            <line>
+              <![CDATA[About to begin executing following method : HighCommissionPageApproveTest.verifyApplicationSentOpens]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : HighCommissionPageApproveTest.verifyApplicationSentOpens]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyApplicationSentOpens -->
+        <test-method status="FAIL" signature="verifyCanceAndCrossButton()[pri:142, instance:com.ghana.app.qa.testcases.HighCommissionPageApproveTest@64485a47]" name="verifyCanceAndCrossButton" duration-ms="22336" started-at="2019-05-21T11:38:55Z" description="This test will verify whether application is opens upon clicing on Open button and also clicking back button navigates to Bucket" finished-at="2019-05-21T11:39:17Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+Provided and Get Landmark are not matched 2 expected [77436 Fairview Trail, Sekondi-Takoradi,Kumasi,Ashanti[4],Ghana,GA015] but found [77436 Fairview Trail, Sekondi-Takoradi],
+Confirmation popup is not displayed upon clicking on Application which is sent to Approve Bucket expected [Confirmation] but found []]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+Provided and Get Landmark are not matched 2 expected [77436 Fairview Trail, Sekondi-Takoradi,Kumasi,Ashanti[4],Ghana,GA015] but found [77436 Fairview Trail, Sekondi-Takoradi],
+Confirmation popup is not displayed upon clicking on Application which is sent to Approve Bucket expected [Confirmation] but found []
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+at com.ghana.app.qa.testcases.HighCommissionPageApproveTest.verifyCanceAndCrossButton(HighCommissionPageApproveTest.java:397)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+            <line>
+              <![CDATA[About to begin executing following method : HighCommissionPageApproveTest.verifyCanceAndCrossButton]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : HighCommissionPageApproveTest.verifyCanceAndCrossButton]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyCanceAndCrossButton -->
+        <test-method status="PASS" signature="loginIntoConsulate()[pri:143, instance:com.ghana.app.qa.testcases.HighCommissionPageApproveTest@64485a47]" name="loginIntoConsulate" duration-ms="5796" started-at="2019-05-21T11:39:28Z" description="This test will verify login functinality with pass valid creadentials and click on Login button" finished-at="2019-05-21T11:39:34Z">
+          <reporter-output>
+            <line>
+              <![CDATA[About to begin executing following method : HighCommissionPageApproveTest.loginIntoConsulate]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : HighCommissionPageApproveTest.loginIntoConsulate]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- loginIntoConsulate -->
+        <test-method status="FAIL" signature="verifyApproveBucktInCN()[pri:144, instance:com.ghana.app.qa.testcases.HighCommissionPageApproveTest@64485a47]" name="verifyApproveBucktInCN" duration-ms="30167" started-at="2019-05-21T11:39:34Z" description="This test will verify whether application is sent to CN side from HCD side and application present in Approve Bucket" finished-at="2019-05-21T11:40:04Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//input[@value='Approve']"}
+  (Session info: chrome=74.0.3729.157)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+>>>>>>> d431cf34496f5e28fcc3fbc057b2d6c3c2319536
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'TORENZO', ip: '192.168.1.21', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\NIKHIL~1.SON\AppDa...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:51092}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.157, webStorageEnabled: true}
+Session ID: 80e69e24d37effa752d935c19a307ce3
+*** Element info: {Using=xpath, value=//button[contains(text(),'Partially/Filled Application')]}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[contains(text(),'Partially/Filled Application')]"}
+  (Session info: chrome=74.0.3729.157)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+=======
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\TEJASH~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:58030}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.157, webStorageEnabled: true}
+Session ID: 7a83a82910c1b880c8c4716bba9aecfa
+*** Element info: {Using=xpath, value=//div[@id='myModal']//h4[@class='modal-title'][contains(text(),'Confirmation')]}]]>
+=======
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\TEJASH~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:53978}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.157, webStorageEnabled: true}
+Session ID: 2bbe2e752b5c898ac71db9e32d5c9581
+*** Element info: {Using=xpath, value=//input[@value='Approve']}]]>
+>>>>>>> Stashed changes
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@value='Approve']"}
+  (Session info: chrome=74.0.3729.157)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+>>>>>>> d431cf34496f5e28fcc3fbc057b2d6c3c2319536
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'TORENZO', ip: '192.168.1.21', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\NIKHIL~1.SON\AppDa...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:51092}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.157, webStorageEnabled: true}
+Session ID: 80e69e24d37effa752d935c19a307ce3
+*** Element info: {Using=xpath, value=//button[contains(text(),'Partially/Filled Application')]}
+=======
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\TEJASH~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:58030}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.157, webStorageEnabled: true}
+Session ID: 7a83a82910c1b880c8c4716bba9aecfa
+*** Element info: {Using=xpath, value=//div[@id='myModal']//h4[@class='modal-title'][contains(text(),'Confirmation')]}
+>>>>>>> d431cf34496f5e28fcc3fbc057b2d6c3c2319536
+=======
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\TEJASH~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:53978}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.157, webStorageEnabled: true}
+Session ID: 2bbe2e752b5c898ac71db9e32d5c9581
+*** Element info: {Using=xpath, value=//input[@value='Approve']}
+>>>>>>> Stashed changes
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 at com.sun.proxy.$Proxy9.click(Unknown Source)
 at com.ghana.app.qa.pages.PartiallyFilledApplicationPage.clickOnpartialFilledTab(PartiallyFilledApplicationPage.java:47)
@@ -554,6 +1360,11 @@ at com.sun.proxy.$Proxy9.getText(Unknown Source)
 at com.ghana.app.qa.pages.ConsulatedashBoardPage.confirmationPop2ApplicationSentToFlag(ConsulatedashBoardPage.java:234)
 at com.ghana.app.qa.testcases.ConsulatePageFlagTest.verifyApplicaInRejectApplicationBucket(ConsulatePageFlagTest.java:193)
 >>>>>>> d431cf34496f5e28fcc3fbc057b2d6c3c2319536
+=======
+at com.sun.proxy.$Proxy9.getAttribute(Unknown Source)
+at com.ghana.app.qa.pages.HCDDocumentVerificationPage.getTextconfirmFromApproveHCD(HCDDocumentVerificationPage.java:426)
+at com.ghana.app.qa.testcases.HighCommissionPageApproveTest.verifyApproveBucktInCN(HighCommissionPageApproveTest.java:416)
+>>>>>>> Stashed changes
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -596,35 +1407,20 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 =======
           <reporter-output>
             <line>
-              <![CDATA[About to begin executing following method : ConsulatePageFlagTest.verifyApplicaInRejectApplicationBucket]]>
+              <![CDATA[About to begin executing following method : HighCommissionPageApproveTest.verifyApproveBucktInCN]]>
             </line>
             <line>
-              <![CDATA[Completed executing following method : ConsulatePageFlagTest.verifyApplicaInRejectApplicationBucket]]>
+              <![CDATA[Completed executing following method : HighCommissionPageApproveTest.verifyApproveBucktInCN]]>
             </line>
           </reporter-output>
-        </test-method> <!-- verifyApplicaInRejectApplicationBucket -->
-        <test-method status="PASS" signature="verifyApplicationSentToRejectBucketOpens()[pri:121, instance:com.ghana.app.qa.testcases.ConsulatePageFlagTest@64485a47]" name="verifyApplicationSentToRejectBucketOpens" duration-ms="1176" started-at="2019-05-18T10:24:00Z" description="This test will verify whether application is opens upon clicing on Open button and also clicking back button navigates to Bucket" finished-at="2019-05-18T10:24:01Z">
-          <reporter-output>
-            <line>
-              <![CDATA[About to begin executing following method : ConsulatePageFlagTest.verifyApplicationSentToRejectBucketOpens]]>
-            </line>
-            <line>
-              <![CDATA[Completed executing following method : ConsulatePageFlagTest.verifyApplicationSentToRejectBucketOpens]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- verifyApplicationSentToRejectBucketOpens -->
-        <test-method status="PASS" signature="verifyCanceAndCrossButton()[pri:122, instance:com.ghana.app.qa.testcases.ConsulatePageFlagTest@64485a47]" name="verifyCanceAndCrossButton" duration-ms="22411" started-at="2019-05-18T10:24:01Z" description="This test will verify whether application is opens upon clicing on Open button and also clicking back button navigates to Bucket" finished-at="2019-05-18T10:24:23Z">
-          <reporter-output>
-            <line>
-              <![CDATA[About to begin executing following method : ConsulatePageFlagTest.verifyCanceAndCrossButton]]>
-            </line>
-            <line>
-              <![CDATA[Completed executing following method : ConsulatePageFlagTest.verifyCanceAndCrossButton]]>
-            </line>
-          </reporter-output>
+<<<<<<< Updated upstream
         </test-method> <!-- verifyCanceAndCrossButton -->
       </class> <!-- com.ghana.app.qa.testcases.ConsulatePageFlagTest -->
 >>>>>>> d431cf34496f5e28fcc3fbc057b2d6c3c2319536
+=======
+        </test-method> <!-- verifyApproveBucktInCN -->
+      </class> <!-- com.ghana.app.qa.testcases.HighCommissionPageApproveTest -->
+>>>>>>> Stashed changes
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

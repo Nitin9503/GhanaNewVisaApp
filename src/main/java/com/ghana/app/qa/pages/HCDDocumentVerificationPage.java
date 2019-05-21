@@ -1,12 +1,16 @@
 package com.ghana.app.qa.pages;
 
 import static com.ghana.app.qa.testdata.ConstantVariable.*;
+
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+
+import static com.ghana.app.qa.util.TestUtil.prop;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
 import com.ghana.app.qa.base.TestBase;
 import com.ghana.app.qa.util.TestUtil;
 public class HCDDocumentVerificationPage extends TestBase {
@@ -411,12 +415,16 @@ public class HCDDocumentVerificationPage extends TestBase {
 	public void clickOnConfirmFromApprove() throws InterruptedException {
 		Thread.sleep(3000);
 		TestUtil.clickOnElement(confirmFromApprove);	
-
+	}
+	public void getTextFromApproveButtonPop() throws InterruptedException {
+		Thread.sleep(3000);
+		getTextFromApproveFromHCD =  confirmFromApprove.getAttribute("value");
+		getTextFromApproveFromHCD.replaceAll(getTextFromApproveFromHCD, prop.getProperty("approvedApplicationsBucket"));
 	}
 	
 	public void getTextconfirmFromApproveHCD() throws InterruptedException {
 		getTextFromApproveFromHCD = confirmFromApprove.getAttribute("value");
-		getTextFromApproveFromHCD = getTextFromApproveFromHCD.replaceAll(getTextFromApproveFromHCD, "Approved Applications");
+		getTextFromApproveFromHCD.replaceAll(getTextFromApproveFromHCD, "Approved Applications");
 		
 	
 

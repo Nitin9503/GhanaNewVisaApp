@@ -1,5 +1,7 @@
 package com.ghana.app.qa.pages;
 
+import static com.ghana.app.qa.testdata.ConstantVariable.getTextFromApproveButtonFromCN;
+
 import java.io.IOException;
 import java.util.List;
 
@@ -112,7 +114,7 @@ public class HCDDashboardPage extends TestBase {
 	public String getTextApprovedApplicationsBucket() {
 		return textapprovedApplicationsBucket.getText();
 	}
-
+	
 	public String getTextInterviewBucket() {
 		return textInterviewBucket.getText();
 	}
@@ -145,6 +147,7 @@ public class HCDDashboardPage extends TestBase {
 			
 		Thread.sleep(3000);
 		return confirmationPop1.getText();
+	
 	}
 
 	public void crossButtonPopApproveBucket() {

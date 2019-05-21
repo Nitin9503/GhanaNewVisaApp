@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>14/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri May 17 12:01:52 IST 2019</td>
+<td>Started on:</td><td>Tue May 21 16:52:59 IST 2019</td>
 </tr>
-<tr><td>Total time:</td><td>39 seconds (39012 ms)</td>
+<tr><td>Total time:</td><td>292 seconds (292131 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,31 +75,32 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.ghana.app.qa.testcases.VisaPaymentPageTest.signUpAndPayment()'><b>signUpAndPayment</b><br>Test class: com.ghana.app.qa.testcases.VisaPaymentPageTest<br/>
-<a href="#Output-709133385" onClick='toggleBox("Output-709133385", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest.AlreadySubmittedPartiallyFilledTest()'><b>AlreadySubmittedPartiallyFilledTest</b><br>Test class: com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest<br/>
+<a href="#Output-103433239" onClick='toggleBox("Output-103433239", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-709133385" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-709133385">
-About to begin executing following method : VisaPaymentPageTest.signUpAndPayment<br/>
-Completed executing following method : VisaPaymentPageTest.signUpAndPayment<br/>
+<a href="#Output-103433239" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-103433239">
+About to begin executing following method : PartiallyFilledApplicatlionTest.AlreadySubmittedPartiallyFilledTest<br/>
+Completed executing following method : PartiallyFilledApplicatlionTest.AlreadySubmittedPartiallyFilledTest<br/>
 </div>
 </td>
-<td><div><pre>org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : image src : /uploaded_Doc/76B84241B61C/Passport-size-photo.jpg}
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[contains(text(),&apos;Partially/Filled Application&apos;)]&quot;}
   (Session info: chrome=74.0.3729.157)
   (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds: null
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;NAMET5&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_171&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\NIKHIL~1.SON\AppDa...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:49862}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.157, webStorageEnabled: true}
-Session ID: 1230585dc967f33871c3e793987c30e1
-*** Element info: {Using=id, value=applicant_review_application_form_btn}
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\NIKHIL~1.SON\AppDa...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:51092}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.157, webStorageEnabled: true}
+Session ID: 80e69e24d37effa752d935c19a307ce3
+*** Element info: {Using=xpath, value=//button[contains(text(),&apos;Partially/Filled Application&apos;)]}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
 	at java.lang.reflect.Constructor.newInstance(Unknown Source)
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:172)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
 	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
 	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
 	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
@@ -107,14 +108,14 @@ Session ID: 1230585dc967f33871c3e793987c30e1
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 	at com.sun.proxy.$Proxy9.click(Unknown Source)
-	at com.ghana.app.qa.pages.ReviewApplicationPage.clickOnContinuebutton(ReviewApplicationPage.java:414)
-	at com.ghana.app.qa.testcases.VisaPaymentPageTest.signUpAndPayment(VisaPaymentPageTest.java:109)
+	at com.ghana.app.qa.pages.PartiallyFilledApplicationPage.clickOnpartialFilledTab(PartiallyFilledApplicationPage.java:47)
+	at com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest.AlreadySubmittedPartiallyFilledTest(PartiallyFilledApplicatlionTest.java:91)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -140,23 +141,24 @@ Session ID: 1230585dc967f33871c3e793987c30e1
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace709133385", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace709133385'><pre>org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : image src : /uploaded_Doc/76B84241B61C/Passport-size-photo.jpg}
+</pre></div><a href='#' onClick='toggleBox("stack-trace103433239", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace103433239'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[contains(text(),&apos;Partially/Filled Application&apos;)]&quot;}
   (Session info: chrome=74.0.3729.157)
   (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds: null
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;NAMET5&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_171&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\NIKHIL~1.SON\AppDa...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:49862}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.157, webStorageEnabled: true}
-Session ID: 1230585dc967f33871c3e793987c30e1
-*** Element info: {Using=id, value=applicant_review_application_form_btn}
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\NIKHIL~1.SON\AppDa...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:51092}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.157, webStorageEnabled: true}
+Session ID: 80e69e24d37effa752d935c19a307ce3
+*** Element info: {Using=xpath, value=//button[contains(text(),&apos;Partially/Filled Application&apos;)]}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
 	at java.lang.reflect.Constructor.newInstance(Unknown Source)
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:172)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
 	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
 	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
 	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
@@ -164,14 +166,14 @@ Session ID: 1230585dc967f33871c3e793987c30e1
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 	at com.sun.proxy.$Proxy9.click(Unknown Source)
-	at com.ghana.app.qa.pages.ReviewApplicationPage.clickOnContinuebutton(ReviewApplicationPage.java:414)
-	at com.ghana.app.qa.testcases.VisaPaymentPageTest.signUpAndPayment(VisaPaymentPageTest.java:109)
+	at com.ghana.app.qa.pages.PartiallyFilledApplicationPage.clickOnpartialFilledTab(PartiallyFilledApplicationPage.java:47)
+	at com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest.AlreadySubmittedPartiallyFilledTest(PartiallyFilledApplicatlionTest.java:91)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -198,34 +200,35 @@ Session ID: 1230585dc967f33871c3e793987c30e1
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>30</td>
-<td>com.ghana.app.qa.testcases.VisaPaymentPageTest@18bf3d14</td></tr>
+<td>120</td>
+<td>com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest@42607a4f</td></tr>
 <tr>
-<td title='com.ghana.app.qa.testcases.VisaPaymentPageTest.verifyClickOnSubmitBtnTest()'><b>verifyClickOnSubmitBtnTest</b><br>Test class: com.ghana.app.qa.testcases.VisaPaymentPageTest<br>Test method: Here verifying confirmation message and click on ok btn <br/>
-<a href="#Output-865744496" onClick='toggleBox("Output-865744496", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest.PartiallyFilledTest()'><b>PartiallyFilledTest</b><br>Test class: com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest<br/>
+<a href="#Output-822359325" onClick='toggleBox("Output-822359325", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-865744496" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-865744496">
-About to begin executing following method : VisaPaymentPageTest.verifyClickOnSubmitBtnTest<br/>
-Completed executing following method : VisaPaymentPageTest.verifyClickOnSubmitBtnTest<br/>
+<a href="#Output-822359325" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-822359325">
+About to begin executing following method : PartiallyFilledApplicatlionTest.PartiallyFilledTest<br/>
+Completed executing following method : PartiallyFilledApplicatlionTest.PartiallyFilledTest<br/>
 </div>
 </td>
-<td><div><pre>org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : image src : /uploaded_Doc/76B84241B61C/Passport-size-photo.jpg}
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;alert alert-danger alert-dismissible&apos;]&quot;}
   (Session info: chrome=74.0.3729.157)
   (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds: null
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;NAMET5&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_171&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\NIKHIL~1.SON\AppDa...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:49862}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.157, webStorageEnabled: true}
-Session ID: 1230585dc967f33871c3e793987c30e1
-*** Element info: {Using=xpath, value=//h5[contains(text(),&apos;Visa Payment&apos;)]}
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\NIKHIL~1.SON\AppDa...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:51092}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.157, webStorageEnabled: true}
+Session ID: 80e69e24d37effa752d935c19a307ce3
+*** Element info: {Using=xpath, value=//div[@class=&apos;alert alert-danger alert-dismissible&apos;]}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
 	at java.lang.reflect.Constructor.newInstance(Unknown Source)
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:172)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
 	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
 	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
 	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
@@ -239,8 +242,8 @@ Session ID: 1230585dc967f33871c3e793987c30e1
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 	at com.sun.proxy.$Proxy9.getText(Unknown Source)
-	at com.ghana.app.qa.pages.VisaPaymentPage.getTextPaymentPageTitle(VisaPaymentPage.java:62)
-	at com.ghana.app.qa.testcases.VisaPaymentPageTest.verifyClickOnSubmitBtnTest(VisaPaymentPageTest.java:117)
+	at com.ghana.app.qa.pages.PartiallyFilledApplicationPage.getErrorMessage(PartiallyFilledApplicationPage.java:73)
+	at com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest.PartiallyFilledTest(PartiallyFilledApplicatlionTest.java:110)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -266,23 +269,24 @@ Session ID: 1230585dc967f33871c3e793987c30e1
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace865744496", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace865744496'><pre>org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : image src : /uploaded_Doc/76B84241B61C/Passport-size-photo.jpg}
+</pre></div><a href='#' onClick='toggleBox("stack-trace822359325", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace822359325'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;alert alert-danger alert-dismissible&apos;]&quot;}
   (Session info: chrome=74.0.3729.157)
   (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds: null
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;NAMET5&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_171&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\NIKHIL~1.SON\AppDa...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:49862}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.157, webStorageEnabled: true}
-Session ID: 1230585dc967f33871c3e793987c30e1
-*** Element info: {Using=xpath, value=//h5[contains(text(),&apos;Visa Payment&apos;)]}
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\NIKHIL~1.SON\AppDa...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:51092}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.157, webStorageEnabled: true}
+Session ID: 80e69e24d37effa752d935c19a307ce3
+*** Element info: {Using=xpath, value=//div[@class=&apos;alert alert-danger alert-dismissible&apos;]}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
 	at java.lang.reflect.Constructor.newInstance(Unknown Source)
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:172)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
 	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
 	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
 	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
@@ -296,8 +300,8 @@ Session ID: 1230585dc967f33871c3e793987c30e1
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 	at com.sun.proxy.$Proxy9.getText(Unknown Source)
-	at com.ghana.app.qa.pages.VisaPaymentPage.getTextPaymentPageTitle(VisaPaymentPage.java:62)
-	at com.ghana.app.qa.testcases.VisaPaymentPageTest.verifyClickOnSubmitBtnTest(VisaPaymentPageTest.java:117)
+	at com.ghana.app.qa.pages.PartiallyFilledApplicationPage.getErrorMessage(PartiallyFilledApplicationPage.java:73)
+	at com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest.PartiallyFilledTest(PartiallyFilledApplicatlionTest.java:110)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -324,8 +328,198 @@ Session ID: 1230585dc967f33871c3e793987c30e1
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
+<td>121</td>
+<td>com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest@42607a4f</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest.NegativePartiallyFilledTest()'><b>NegativePartiallyFilledTest</b><br>Test class: com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest<br/>
+<a href="#Output-1704600661" onClick='toggleBox("Output-1704600661", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1704600661" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1704600661">
+About to begin executing following method : PartiallyFilledApplicatlionTest.NegativePartiallyFilledTest<br/>
+Completed executing following method : PartiallyFilledApplicatlionTest.NegativePartiallyFilledTest<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest@42607a4f</td></tr>
+<tr>
+<td title='com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest.PartiallyFilledAppliTest()'><b>PartiallyFilledAppliTest</b><br>Test class: com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest<br/>
+<a href="#Output-205810452" onClick='toggleBox("Output-205810452", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-205810452" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-205810452">
+About to begin executing following method : PartiallyFilledApplicatlionTest.PartiallyFilledAppliTest<br/>
+Completed executing following method : PartiallyFilledApplicatlionTest.PartiallyFilledAppliTest<br/>
+</div>
+</td>
+<td></td>
 <td>0</td>
-<td>com.ghana.app.qa.testcases.VisaPaymentPageTest@18bf3d14</td></tr>
+<td>com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest@42607a4f</td></tr>
+<tr>
+<td title='com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest.clickOnGenderTest()'><b>clickOnGenderTest</b><br>Test class: com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest<br/>
+<a href="#Output-46627301" onClick='toggleBox("Output-46627301", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-46627301" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-46627301">
+About to begin executing following method : PersonalInfoPageTest.clickOnGenderTest<br/>
+Completed executing following method : PersonalInfoPageTest.clickOnGenderTest<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest@42607a4f</td></tr>
+<tr>
+<td title='com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest.fillSignUpFormTest()'><b>fillSignUpFormTest</b><br>Test class: com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest<br/>
+<a href="#Output-85415531" onClick='toggleBox("Output-85415531", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-85415531" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-85415531">
+About to begin executing following method : PersonalInfoPageTest.fillSignUpFormTest<br/>
+Completed executing following method : PersonalInfoPageTest.fillSignUpFormTest<br/>
+</div>
+</td>
+<td></td>
+<td>15</td>
+<td>com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest@42607a4f</td></tr>
+<tr>
+<td title='com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest.getApplicationIdTest()'><b>getApplicationIdTest</b><br>Test class: com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest<br/>
+<a href="#Output-1729734072" onClick='toggleBox("Output-1729734072", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1729734072" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1729734072">
+About to begin executing following method : PersonalInfoPageTest.getApplicationIdTest<br/>
+Completed executing following method : PersonalInfoPageTest.getApplicationIdTest<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest@42607a4f</td></tr>
+<tr>
+<td title='com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest.getApplicationPageTitleTest()'><b>getApplicationPageTitleTest</b><br>Test class: com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest<br/>
+<a href="#Output-773296871" onClick='toggleBox("Output-773296871", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-773296871" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-773296871">
+About to begin executing following method : PersonalInfoPageTest.getApplicationPageTitleTest<br/>
+Completed executing following method : PersonalInfoPageTest.getApplicationPageTitleTest<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest@42607a4f</td></tr>
+<tr>
+<td title='com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest.passFirstNameTest()'><b>passFirstNameTest</b><br>Test class: com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest<br/>
+<a href="#Output-824357143" onClick='toggleBox("Output-824357143", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-824357143" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-824357143">
+About to begin executing following method : PersonalInfoPageTest.passFirstNameTest<br/>
+Completed executing following method : PersonalInfoPageTest.passFirstNameTest<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest@42607a4f</td></tr>
+<tr>
+<td title='com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest.passLastNameTest()'><b>passLastNameTest</b><br>Test class: com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest<br/>
+<a href="#Output-1775120226" onClick='toggleBox("Output-1775120226", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1775120226" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1775120226">
+About to begin executing following method : PersonalInfoPageTest.passLastNameTest<br/>
+Completed executing following method : PersonalInfoPageTest.passLastNameTest<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest@42607a4f</td></tr>
+<tr>
+<td title='com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest.passMiddleNameTest()'><b>passMiddleNameTest</b><br>Test class: com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest<br/>
+<a href="#Output-10885570" onClick='toggleBox("Output-10885570", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-10885570" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-10885570">
+About to begin executing following method : PersonalInfoPageTest.passMiddleNameTest<br/>
+Completed executing following method : PersonalInfoPageTest.passMiddleNameTest<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest@42607a4f</td></tr>
+<tr>
+<td title='com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest.passPassportNumberTest()'><b>passPassportNumberTest</b><br>Test class: com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest<br/>
+<a href="#Output-1917161212" onClick='toggleBox("Output-1917161212", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1917161212" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1917161212">
+About to begin executing following method : PersonalInfoPageTest.passPassportNumberTest<br/>
+Completed executing following method : PersonalInfoPageTest.passPassportNumberTest<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest@42607a4f</td></tr>
+<tr>
+<td title='com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest.passPlaceOfBirthTest()'><b>passPlaceOfBirthTest</b><br>Test class: com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest<br/>
+<a href="#Output-1842952737" onClick='toggleBox("Output-1842952737", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1842952737" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1842952737">
+About to begin executing following method : PersonalInfoPageTest.passPlaceOfBirthTest<br/>
+Completed executing following method : PersonalInfoPageTest.passPlaceOfBirthTest<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest@42607a4f</td></tr>
+<tr>
+<td title='com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest.selectPassExpiryDateTest()'><b>selectPassExpiryDateTest</b><br>Test class: com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest<br/>
+<a href="#Output-271422148" onClick='toggleBox("Output-271422148", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-271422148" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-271422148">
+About to begin executing following method : PersonalInfoPageTest.selectPassExpiryDateTest<br/>
+Completed executing following method : PersonalInfoPageTest.selectPassExpiryDateTest<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest@42607a4f</td></tr>
+<tr>
+<td title='com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest.selectPassIssueDateTest()'><b>selectPassIssueDateTest</b><br>Test class: com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest<br/>
+<a href="#Output-1564078808" onClick='toggleBox("Output-1564078808", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1564078808" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1564078808">
+About to begin executing following method : PersonalInfoPageTest.selectPassIssueDateTest<br/>
+Completed executing following method : PersonalInfoPageTest.selectPassIssueDateTest<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest@42607a4f</td></tr>
+<tr>
+<td title='com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest.verifyPersonalInfoTest()'><b>verifyPersonalInfoTest</b><br>Test class: com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest<br/>
+<a href="#Output-1472012329" onClick='toggleBox("Output-1472012329", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1472012329" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1472012329">
+About to begin executing following method : PersonalInfoPageTest.verifyPersonalInfoTest<br/>
+Completed executing following method : PersonalInfoPageTest.verifyPersonalInfoTest<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest@42607a4f</td></tr>
 </table><p>
 </body>
 </html>

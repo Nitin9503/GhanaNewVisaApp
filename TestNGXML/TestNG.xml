@@ -14,9 +14,7 @@
 			<class name="com.ghana.app.qa.testcases.UploadDocPageTest"></class>
 			<class name="com.ghana.app.qa.testcases.ReviewApplicationPageTest"></class>
 			<class name="com.ghana.app.qa.testcases.VisaPaymentPageTest"></class>
-
-
-		</classes>
+       </classes>
 
 	</test>
 </suite>

@@ -20,11 +20,128 @@ SoftAssert softAssertion = new SoftAssert();
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	@Test(priority = 63)
+	public void signUpAndPayment() throws InterruptedException, IOException {
+		homePage.clickOnApplyVisa();
+		visaCategoriesPage.clickOnVisaType();
+		signUpPage.clickOnCheckBoxes();
+		signUpPage.verifyCheckBoxIsSelected();
+		System.out.println("selectedBoxOnSignUp2==>" + selectedBoxOnSignUp);
+		// softAssertion.assertTrue(selectedBoxOnSignUp,
+		// "Check boxes are not selected from SignUp page");
+		signUpPage.selectRadioButton();
+		signUpPage.verifyRadioButtonSelected();
+		// softAssertion.assertTrue(selectedRadioButtonOnSignUp,
+		// "Check boxes are not selected from SignUp page");
+		signUpPage.SelectPassportType();
+		signUpPage.selectNationality();
+		Thread.sleep(2000);
+		signUpPage.selectPortOfArrival();
+		signUpPage.selectVisaType();
+		signUpPage.selectVisaLocation();
+		signUpPage.passPhoneNo(phoneNumber);
+		signUpPage.passEmailId(emailId);
+		signUpPage.passReEmailId(emailId);
+		signUpPage.enterCaptchaField();
+		// signUpPage.continueBtn();
+		// signUpPage.cancelBtn();
+		signUpPage.selectDateOfBirth(birthDate);
+		// signUpPage.continueBtn();
+		signUpPage.continueBtn();
+
+		// ----------------------Personal info page
+		// Test----------------------------------//
+		Thread.sleep(2000);
+		applicationID = personalInfoPage.getApplicationId();
+		System.out.println(applicationID);
+		personalInfoPage.passFirstName(firstName);
+		personalInfoPage.passMiddleName(middleName);
+		personalInfoPage.passLastName(lastName);
+		personalInfoPage.passPassportNumber(passportNumber);
+		personalInfoPage.clickOnGender();
+		personalInfoPage.verifiedGenderSelected();
+		softAssertion.assertTrue(genderRadioButton, "Gender Radio button is not selected");
+		softAssertion.assertAll();
+		personalInfoPage.selectPassIssueDate(passportIssuedDate);
+		personalInfoPage.selectPassExpiryDate(passportExpiryDate);
+		personalInfoPage.passPlaceOfBirth(birthPlace);
+		personalInfoPage.clickOnSaveAndContinue();
+		// ----------------------Address Info page
+		// Test----------------------------------//
+		addressInfoPage.selectFormerNaitonality();
+		addressInfoPage.PassAddressInfofield(FlatNo, StreetName, Landmark, pinCode, cityName, stateName, countryName);
+		addressInfoPage.clickSaveAndContinuebtn();
+		emergencyContactPage.emergencyContactDetails(emerContactName, emerContactSurname, emerPhoneNumber);
+		emergencyContactPage.selectRelation();
+		emergencyContactPage.emergencyProfessionDetails(profession, employer, employerAddress, emerPincode,
+				emerCityName, emerState, emerCountry, emerEmployerPhoneNumber);
+		emergencyContactPage.clickEmeContinueBtn();
+		travelInfoPage.getTextTravelInfoPagetitle();
+	// ----------------------Travel Info page
+	// Test----------------------------------//
+		travelInfoPage.clickOnIsApplicantPossessionRoundTicket();
+		travelInfoPage.passDateOfDeparture(dateOfDeparture);
+		travelInfoPage.clickOnContinuebutton();
+		travelInfoPage.passTicketNumber(ticketNumber);
+		travelInfoPage.clickOnTravelBy();
+		travelInfoPage.clickPurpose_of_journey();
+		travelInfoPage.passPrimaryRefFirstname(priFirstName);
+		travelInfoPage.passPrimaryRefLastname(priLastName);
+		travelInfoPage.pass_Primary_ref_address(primaryAddress);
+		travelInfoPage.pass_primary_ref_pincode(primaryPinCode);
+		travelInfoPage.pass_primary_ref_city(primaryCity);
+		travelInfoPage.pass_primary_ref_state(primaryState);
+		travelInfoPage.pass_primary_ref_country(primaryCountry);
+		travelInfoPage.pass_primary_ref_phone_number(primaryRefrencePhoneNo);
+		travelInfoPage.PassSecondaryRefDetails(secFirstName, secLastName, secondaryAddress, secondaryPinCode,
+				secondaryCity, secondaryState, secondaryCountry, secondaryRefrencePhoneNo);
+		travelInfoPage.clickOnByPhoneCheckbox();
+		travelInfoPage.clickOnByTextMessageCheckbox();
+		travelInfoPage.clickOnByEmailCheckbox();
+		travelInfoPage.passOtherWayToReach("Skype");
+		travelInfoPage.clickOnContinuebutton();
+		uploadDocPage.getUploadDoc();
+		uploadDocPage.clicksaveAndContiBtn();
+		reviewApplicationPage.clickOnContinuebutton();
+		System.out.println("applicationID==>Revie2" + applicationID);
+		//visaPaymentPage.getTextsubmitBtn();	
+		visaPaymentPage.clickOnCheckoutBtn();
+		visaPaymentPage.passCardNo();
+		TestUtil.selectValuefromDropDown(visaPaymentPage.selectExpiryDateMonth(), month);
+		TestUtil.selectValuefromDropDown(visaPaymentPage.selectExpiryDateYear(), year);
+		visaPaymentPage.passCvvNo();
+		visaPaymentPage.clickOnMakePaymentBtn();
+		visaPaymentPage.clickOnSubmitbtn();
+		visaPaymentPage.clickOnOKtbtn();
+		visaPaymentPage.clickOnDonetbtn();
+		visaPaymentPage.verifyConfirmationPop();
+		Thread.sleep(2000);
+		System.out.println("home page title"
+				+ homePage.validateHomePageTitle());
+		softAssertion.assertEquals(homePage.validateHomePageTitle(), prop.getProperty("homePageTitle"), "We are not navigate to Home page after payment");
+		System.out.println( "applicationID==>visa" +applicationID);
+		TestUtil.toOpenNewTab();
+		TestUtil.toSwitchBetweenWindows(1);
+		driver.get(prop.getProperty("HCDLoginURL"));	
+		highAndConsulateLoginPage.passUserName(prop.getProperty("UserNameCN"));
+		highAndConsulateLoginPage.passPassword(prop.getProperty("PassWordCN"));
+		highAndConsulateLoginPage.clickOnLoginButton();
+		System.out.println( "applicationIDCN==>" +applicationID);
+	}	
+
+	@Test(priority = 65 , description = "This test will approve the application from CN")
+	public void getApproveFromCN() throws InterruptedException{
+		TestUtil.clickOnElement();
+		applicantDashBoardPage.clickOnDocumentVeri();
+		cNDocumentVerificaton.selectAllCheckBoxes();
+		cNDocumentVerificaton.clickOnApprove();
+		cNDocumentVerificaton.clickOnConfirmFromApprove();
+		
+	}
 	
 	@Test(priority = 102, description = "This test will verify login functinality of HighCommission with valid creadentials and click on Login button")
 	public void loginIntoHighCommission() throws InterruptedException {
-		Thread.sleep(5000);
-		
+		Thread.sleep(5000);	
 		TestUtil.toOpenNewTab();
 		TestUtil.toSwitchBetweenWindows(1);	
 		driver.get(prop.getProperty("HCDLoginURL"));
@@ -99,8 +216,7 @@ SoftAssert softAssertion = new SoftAssert();
 		softAssertion.assertEquals(hCDApplicantInfoPage.getTextRefContact1HCD(), (primaryRefrencePhoneNo),
 				"Provided and Get Passport Number are not matched");
 		System.out.println("Text from HCD==>"  +hCDApplicantInfoPage.getTextRefAddress1HCD());
-		System.out.println("Text From Applicant++" +primaryAddress + "," + primaryCity + "," + primaryState + "," + primaryCountry + "," + primaryPinCode);
-		
+		System.out.println("Text From Applicant++" +primaryAddress + "," + primaryCity + "," + primaryState + "," + primaryCountry + "," + primaryPinCode);	
 		
 		softAssertion.assertEquals(hCDApplicantInfoPage.getTextRefAddress1HCD(),
 				(primaryAddress + "," + primaryCity + "," + primaryState + "," + primaryCountry + "," + primaryPinCode),
@@ -128,16 +244,6 @@ SoftAssert softAssertion = new SoftAssert();
 		softAssertion.assertAll();
 		
 	}
-	@Test(priority =108, description = "Application is verified and approved")
-	public void passComment() {
-		hCDDocumentVerificationPage.passComment(prop.getProperty("passCommentFromHCDSide"));
-		hCDDocumentVerificationPage.addCooment();
-		hCDDocumentVerificationPage.getTextFromAddedComment();
-		softAssertion.assertEquals(hCDDocumentVerificationPage.getTextFromAddedComment(), prop.getProperty("passCommentFromHCDSide"),
-				"Latest passed comment is not matched after getting text from comment section");
-		softAssertion.assertAll();
-	}
-
 	
 	@Test(priority = 123 , description = "click On Document verification and verified the title of Document verification page")
 	public void verfiyTitleOfCNDocumentVerificatonPage() throws InterruptedException {
@@ -162,67 +268,7 @@ SoftAssert softAssertion = new SoftAssert();
 		softAssertion.assertAll();
 	
 	}
-	
-	@Test(priority = 129, description = "Click On Schedule Interview And Verify Title of Set Invterview pop window and Cancel")
-	public void clickOnInterviewScheduleAndcancel() throws InterruptedException {
-		hCDGeneralVerificationPage.clickOnScheduleInterview();
-		Thread.sleep(9000);
-		System.out.println("hCDInterviewSchedule.getTextFromConfrmationPopTitleFromInterview()"
-				+ hCDInterviewSchedule.getTextFromConfrmationPopTitleFromInterview());
-		softAssertion.assertEquals(hCDInterviewSchedule.getTextFromConfrmationPopTitleFromInterview(), prop.getProperty("confirmationFromInterviewScheduleTitle"),
-				"We are not navigate to Invterview schedule popup upon clicking on Schedule Interview FromDashBoard");
-		System.out.println("hCDInterviewSchedule.getTextFromConfrmationPopTitleFromInterview()"
-				+ hCDInterviewSchedule.getTextFromConfrmationPopTitleFromInterview());
-		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
-		hCDInterviewSchedule.cancelButtonFromInterviewConfirpop();
-		softAssertion.assertAll();
 
-	}
-
-	@Test(priority = 130, description = "Click On Schedule Interview And Verify Title of Set Invterview pop window and Close")
-	public void clickOnInterviewScheduleAndClose() throws InterruptedException {
-		Thread.sleep(3000);
-		hCDGeneralVerificationPage.clickOnScheduleInterview();
-		Thread.sleep(3000);
-		softAssertion.assertEquals(hCDInterviewSchedule.getTextFromConfrmationPopTitleFromInterview(), prop.getProperty("confirmationFromInterviewScheduleTitle"),
-				"We are not navigate to Invterview schedule popup upon clicking on Schedule Interview FromDashBoard");
-		Thread.sleep(3000);
-		hCDInterviewSchedule.closeButtonFromInterviewConfirpop();
-		softAssertion.assertAll();
-
-	}
-
-	@Test(priority = 131, description = "This test will verify validation of interview schedule(Empty field and click on Confirm button)")
-	public void validationForDateAndTimeField() throws InterruptedException {
-		Thread.sleep(3000);
-		hCDGeneralVerificationPage.clickOnScheduleInterview();
-		Thread.sleep(3000);		
-		softAssertion.assertEquals(hCDInterviewSchedule.getTextFromConfrmationPopTitleFromInterview(), prop.getProperty("confirmationFromInterviewScheduleTitle"),
-				"We are not navigate to Invterview schedule popup upon clicking on Schedule Interview FromDashBoard");
-		hCDInterviewSchedule.confirmButtonFromInterviewConfirpop();	
-		softAssertion.assertEquals(hCDInterviewSchedule.getTextFromWarningPopup(), prop.getProperty("interviewScheduleWarning"),
-				"Verifying the title text from Warning Popup");
-		softAssertion.assertEquals(hCDInterviewSchedule.warningMessage(), prop.getProperty("interviewScheduleWarningTextz"),
-				"Verifying the  text from Warning Popup");	
-		hCDInterviewSchedule.clickOnOKButton();
-		softAssertion.assertAll();
-		
-	}
-		@Test(priority = 131, description = "Click On Schedule Interview And Verify Title of Set Invterview pop window and Pass Date And Time")
-		public void passDateAndTimeInFiled() throws InterruptedException {
-		softAssertion.assertEquals(hCDInterviewSchedule.getTextFromConfrmationPopTitleFromInterview(), prop.getProperty("confirmationFromInterviewScheduleTitle"),
-				"We are not navigate to Invterview schedule popup upon clicking on Schedule Interview FromDashBoard");
-		hCDInterviewSchedule.passDate1("04/23/2019");
-		hCDInterviewSchedule.passDate2("04/23/2019");
-		hCDInterviewSchedule.passDate3("04/23/2019");
-		hCDInterviewSchedule.passTime1("12:00PM");
-		hCDInterviewSchedule.passTime2("02:00AM");
-		hCDInterviewSchedule.passTime3("03:00AM");
-		Thread.sleep(3000);
-		hCDInterviewSchedule.confirmButtonFromInterviewConfirpop();
-		softAssertion.assertAll();
-	}
-	
 	@Test(priority = 126  , description = "This test will verify whether check boxes is selected or not on Document verification")
 	public void selectAllCheckBoxAndVerify() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);	
@@ -272,7 +318,15 @@ SoftAssert softAssertion = new SoftAssert();
 		
 			softAssertion.assertAll();
 		}
-	
+		@Test(priority =108, description = "Application is verified and approved")
+		public void passComment() {
+			hCDDocumentVerificationPage.passComment(prop.getProperty("passCommentFromHCDSide"));
+			hCDDocumentVerificationPage.addCooment();
+			hCDDocumentVerificationPage.getTextFromAddedComment();
+			softAssertion.assertEquals(hCDDocumentVerificationPage.getTextFromAddedComment(), prop.getProperty("passCommentFromHCDSide"),
+					"Latest passed comment is not matched after getting text from comment section");
+			softAssertion.assertAll();
+		}
 	
 	@Test(priority = 132, description = "Click On Approve And Verify Pop Text and then click on Cancel, Verify that on which page navigated")
 	public void approveApplication() throws InterruptedException {
@@ -285,41 +339,90 @@ SoftAssert softAssertion = new SoftAssert();
 				hCDDashboardPage.titleofHCDDashBoard(), prop.getProperty("titleOfBucketPage"),
 				"We are not navigate to High Commission dashboard page after enetering valid creadentials");
 		softAssertion.assertAll();
-		
-		
+			
 	}
 	@Test(priority = 133, description = "This test will verify Approved application by HCD Whether it is in Approved Bucket in HCD")
 	public void verifyApprovedApplicaIsInApproveBucketHCD() throws InterruptedException {
 		Thread.sleep(3000);	
+		softAssertion.assertEquals(hCDDashboardPage.getTextApprovedApplicationsBucket(), getTextFromApproveFromHCD,
+				"We are not in HCG Application bucket to check the application is present after approved by CN");		
 		softAssertion.assertEquals(TestUtil.getTextFromApplicationID(), applicationID,
 				"Application is not matched with each other so it did not click on Application");
 		TestUtil.clickOnElement();
 		softAssertion.assertAll();
-		TestUtil.toCloseNewTab();
+	//	TestUtil.toCloseNewTab();
+		
 	}
-	@Test(priority = 134, description = "This test will verify whether application is in Approve bucket of CN after got approve from HCD")
-	public void verifyApplicationInApproveBucketInCN() throws InterruptedException {
-		System.out.println("Last");
-		Thread.sleep(3000);	
+	@Test(priority = 88, description = "This test will verify whether application is opens upon clicing on Open button and also clicking back button navigates to Bucket")
+	public void verifyApplicationSentOpens() throws InterruptedException {
+		hCDDashboardPage.getTextConfirmationPopApproveBucket();
+		System.out.println("consulatedashBoardPage.confirmationPopApplicationSentToHCD();;==>" +hCDDashboardPage.getTextConfirmationPopApproveBucket());
+		softAssertion.assertEquals(hCDDashboardPage.getTextConfirmationPopApproveBucket(), prop.getProperty("confirmationFromRejectAndApprovePopup"),
+				"Confirmation popup is not displayed upon clicking on Application which is sent to Approve Bucket");
+		System.out.println("consulatedashBoardPage.textFromPop1PopApplicationSentToHCD();==>" +consulatedashBoardPage.textFromPop1PopApplicationSentToHCD());
+		hCDDashboardPage.clickOnOpenButtonFromApproveHCDBucket();
+		softAssertion.assertEquals(hCDApplicantInfoPage.getTitleOfHCDGGeneralVerifi(), prop.getProperty("hCDGeneralVerificationTitle"),
+				"We are not navigate to Applicant Dashboard page upon clicking on New Application from Applicant Dashboard");
+		hCDApplicantInfoPage.clickOnBackButton();
+		softAssertion.assertEquals(hCDDashboardPage.titleofHCDDashBoard(), prop.getProperty("titleOfBucketPage"),
+				"We are not navigate to HCD dashboard page after clicking on back button from Applicant Dashboard at HCD");
+		softAssertion.assertAll();
+		
+	}
+	
+	@Test(priority = 89, description = "This test will verify whether application is opens upon clicing on Open button and also clicking back button navigates to Bucket")
+	public void verifyCanceAndCrossButton() throws InterruptedException {
+		Thread.sleep(3000);
+		TestUtil.clickOnElement();
+		Thread.sleep(3000);
+		hCDDashboardPage.crossButtonPopApproveBucket();
+		softAssertion.assertEquals(hCDDashboardPage.titleofHCDDashBoard(), prop.getProperty("titleOfBucketPage"),
+				"We are not navigate to consulate dashboard page after enetering valid creadentials");
+		Thread.sleep(3000);
+		TestUtil.clickOnElement();
+		Thread.sleep(3000);		
+		hCDDashboardPage.cancelButtonPopApproveBucket();	
+		softAssertion.assertEquals(hCDDashboardPage.titleofHCDDashBoard(), prop.getProperty("titleOfBucketPage"),
+				"We are not navigate to consulate dashboard page after enetering valid creadentials");
+		System.out.println("2222");
+		softAssertion.assertAll();
+		System.out.println("Passed");	
+		TestUtil.toCloseNewTab();	
+	}
+	
+	@Test(priority = 64, description = "This test will verify login functinality with pass valid creadentials and click on Login button")
+	public void loginIntoConsulate() throws InterruptedException {
+		Thread.sleep(5000);		
 		TestUtil.toOpenNewTab();
-		TestUtil.toSwitchBetweenWindows(1);	
-		driver.get(prop.getProperty("HCDLoginURL"));
+		TestUtil.toSwitchBetweenWindows(1);
+		driver.get(prop.getProperty("HCDLoginURL"));	
 		highAndConsulateLoginPage.passUserName(prop.getProperty("UserNameCN"));
 		highAndConsulateLoginPage.passPassword(prop.getProperty("PassWordCN"));
 		highAndConsulateLoginPage.clickOnLoginButton();
-		Thread.sleep(3000);	
-		hCDDocumentVerificationPage.getTextFromApprovePopButton();
-		System.out.println("getTextFromApproveFromHCD==>" +getTextFromApproveFromHCD);
-		System.out.println("consulatedashBoardPage.textApprovedApplicationsBucket()==>" +consulatedashBoardPage.textApprovedApplicationsBucket());
-		softAssertion.assertEquals(consulatedashBoardPage.textApprovedApplicationsBucket(), getTextFromApproveFromHCD,
-				"Application is not present in Approved Application from HCD ");
-		softAssertion.assertEquals(TestUtil.getTextFromApplicationID(), applicationID,
-				"Application is not matched with each other so it did not click on Application");
+		System.out.println( "applicationIDCN==>" +applicationID);
+
+	}
+	@Test(priority = 87, description = "This test will verify whether application is sent to HCD side")
+	public void verifyApplicaInHCGApplicationBucket() throws InterruptedException {
+		// check whether application removed from new application bucket and added in HCG application iin count
+		hCDDashboardPage.getTextConfirmationPopApproveBucket();
+		System.out.println("getTextFromApproveButtonFromCN==>" +getTextFromApproveButtonFromCN);
+		softAssertion.assertEquals(consulatedashBoardPage.textHCGApplicationBucket(), getTextFromApproveButtonFromCN,
+				"We are not in HCG Application bucket to check the application is present after approved by CN");		
 		TestUtil.clickOnElement();
-		softAssertion.assertEquals(applicantDashBoardPage.titleOfApplicationDetailsPage(), "Applicant Dashboard",
-				"We are not navigate to Applicant Dashboard page upon clicking on New Application from Applicant Dashboard");
+		consulatedashBoardPage.confirmationPopApplicationSentToHCD();
+		System.out.println("consulatedashBoardPage.confirmationPopApplicationSentToHCD();;==>" +consulatedashBoardPage.confirmationPopApplicationSentToHCD());
+		softAssertion.assertEquals(consulatedashBoardPage.confirmationPopApplicationSentToHCD(), prop.getProperty("confirmationFromRejectAndApprovePopup"),
+				"Confirmation popup is not displayed upon clicking on Application which is sent to HCD side");
+		System.out.println("consulatedashBoardPage.textFromPop1PopApplicationSentToHCD();==>" +consulatedashBoardPage.textFromPop1PopApplicationSentToHCD());
+		//softAssertion.assertEquals(consulatedashBoardPage.textFromPop1PopApplicationSentToHCD(), "This application is already sent to High Commsion for"
+			//	+"confirmation, Are you sure you want to open this?",
+			//	"Application is not sent to HCD side(Checked in Bucket) even after approved the application");
+	
 		softAssertion.assertAll();
 	}
+	
+
 	
 }
 

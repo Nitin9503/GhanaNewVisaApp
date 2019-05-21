@@ -76,13 +76,13 @@ public class CNDocumentVerificaton extends TestBase {
 	@FindBy(xpath = "//div[5]//img[1]")
 	private WebElement photoCopyOfDraft;
 
-	@FindBy(xpath = "//div[6]//img[1]")
+	@FindBy(xpath = "//div[@class='main-panel']//div[5]//img[1]")
 	private WebElement idProofOfReference;
 
 	@FindBy(xpath = "//div[7]//img[1]")
 	WebElement originalInvitationLetter;
 
-	@FindBy(xpath = "//div[8]//img[1]")
+	@FindBy(xpath = "//div[7]//img[1]")
 	WebElement proofOfTransitValidVisa;
 
 	@FindBy(xpath = "//h4[text()='Confirmed air ticket']")
@@ -379,10 +379,16 @@ public class CNDocumentVerificaton extends TestBase {
 		getTextFromRejectButtonFromCN = getTextFromRejectButtonFromCN.replaceAll(getTextFromRejectButtonFromCN, "Rejected Application");
 	}
 	
+	public void getTextFromFlagButtonFromCN() {
+		getTextFromFlagButtonFromCN = flagAndReject.getAttribute("value");
+		getTextFromFlagButtonFromCN = getTextFromFlagButtonFromCN.replaceAll(getTextFromFlagButtonFromCN, "Flagged Application");
+
+	}
 	public void clickOnFlagAndReject() {
 		flagAndReject.click();
 
 	}
+	
 
 	public void clickOnCloseApprove() {
 		closeApprove.click();

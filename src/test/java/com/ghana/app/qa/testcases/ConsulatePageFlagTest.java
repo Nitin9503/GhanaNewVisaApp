@@ -25,7 +25,7 @@ public class ConsulatePageFlagTest extends DriverInit {
 
 	}
 	
-	@Test(priority = 61)
+	@Test(priority = 114)
 	public void signUpAndPayment() throws InterruptedException, IOException {
 		homePage.clickOnApplyVisa();
 		visaCategoriesPage.clickOnVisaType();
@@ -119,7 +119,6 @@ public class ConsulatePageFlagTest extends DriverInit {
 		visaPaymentPage.clickOnSubmitbtn();
 		visaPaymentPage.clickOnOKtbtn();
 		visaPaymentPage.clickOnDonetbtn();
-		visaPaymentPage.verifyConfirmationPop();
 		Thread.sleep(2000);
 		System.out.println("home page title"
 				+ homePage.validateHomePageTitle());
@@ -127,7 +126,7 @@ public class ConsulatePageFlagTest extends DriverInit {
 		System.out.println( "applicationID==>visa" +applicationID);
 	}	
 
-	@Test(priority = 62, description = "This test will verify login functinality with pass valid creadentials and click on Login button")
+	@Test(priority = 115, description = "This test will verify login functinality with pass valid creadentials and click on Login button")
 	public void loginIntoConsulate() throws InterruptedException {
 		Thread.sleep(5000);		
 		TestUtil.toOpenNewTab();
@@ -140,7 +139,7 @@ public class ConsulatePageFlagTest extends DriverInit {
 
 	}
 
-	@Test(priority = 63 , description = "This test will verify we navigated to Welcome To Ghana Embassy page upon cliclking on Login button")
+	@Test(priority = 116 , description = "This test will verify we navigated to Welcome To Ghana Embassy page upon cliclking on Login button")
 	public void verifyTitleOfConsulateTitle() {
 		softAssertion.assertEquals(highAndConsulateLoginPage.getTitleOfConsulate(), prop.getProperty("titleOfBucketPage"),
 				"We are not navigate to consulate dashboard page after enetering valid creadentials");	
@@ -148,7 +147,7 @@ public class ConsulatePageFlagTest extends DriverInit {
 		softAssertion.assertAll();
 	}  
 
-	@Test(priority = 64 ,description = "This test will verify we navigated to Welcome To Ghana Embassy page upon cliclking on Login button" )
+	@Test(priority = 117, description = "This test will verify we navigated to Welcome To Ghana Embassy page upon cliclking on Login button" )
 	public void clickOnNewApplicationCN() throws InterruptedException {
 		System.out.println("HI2");
 		Thread.sleep(3000);	
@@ -164,52 +163,67 @@ public class ConsulatePageFlagTest extends DriverInit {
 		softAssertion.assertAll();
 	}
 	
-	@Test(priority = 65)
+	@Test(priority = 118)
 	public void verfiyTitleOfCNDocumentVerificatonPageCN() throws InterruptedException {
 		applicantDashBoardPage.clickOnDocumentVeri();
 		softAssertion.assertEquals(cNDocumentVerificaton.titleOfCNDocumentVerificatonPage(), prop.getProperty("documentVerificationTitle"),
 				"We are not navigate to Document Verification page upon clicking on Document Verification from Applicant Dashboard");
 		softAssertion.assertAll();
 	}
+
+	@Test(priority =119, description = "Click On Reject And Verify Pop Text and then click on Cross, Verify that on which page navigated")
+	public void clickOnRejectAndVerifyPopText2CN(){
+		cNDocumentVerificaton.clickOnReject();
+		cNDocumentVerificaton.passInReason(prop.getProperty("reasonOfFlagCN"));
+		cNDocumentVerificaton.getTextFromFlagButtonFromCN();
+		cNDocumentVerificaton.clickOnFlagAndReject();
+		softAssertion.assertEquals(highAndConsulateLoginPage.getTitleOfConsulate(), prop.getProperty("titleOfBucketPage"),
+				"We are not navigate to consulate dashboard page after enetering valid creadentials");			
+		softAssertion.assertAll();
 	
-	@Test(priority = 89)
-	public void selectAllCheckBoxAndVerifyCN() throws InterruptedException {
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);	
-		cNDocumentVerificaton.selectAllCheckBoxes();
-		cNDocumentVerificaton.verifyAllCheckBox();
-		System.out.println("selectedBoxDoc" +selectedBoxDocAll);
-		softAssertion.assertTrue(selectedBoxDocAll,
-				"Check Boxes is not selected upon clicking on [Select All Check] only select all button from Document Verification page");		
-		softAssertion.assertTrue(selectedCheckBoxOnDocSingle,
-				"All check Boxes is not selected upon clicking on [Select All Check] from Document Verification page");
+	}
+	@Test(priority = 120, description = "This test will verify whether application is sent to HCD side")
+	public void verifyApplicaInRejectApplicationBucket() throws InterruptedException {
+		// check whether application removed from new application bucket and added in HCG application iin count
+		System.out.println("HEllllllllllllllllllllllOO");
+		System.out.println("getTextFromApproveButtonFromCN==>" +getTextFromFlagButtonFromCN);
+		softAssertion.assertEquals(consulatedashBoardPage.textFlaggedApplicationBucket(), getTextFromFlagButtonFromCN,
+				"We are not in Flagged Application bucket to check the application is present after Flagged by CN");		
+		TestUtil.clickOnElement();
+		consulatedashBoardPage.confirmationPop2ApplicationSentToFlag();
+		System.out.println("consulatedashBoardPage.confirmationPop2ApplicationSentToFlag();;==>" +consulatedashBoardPage.confirmationPop2ApplicationSentToFlag());
+		softAssertion.assertEquals(consulatedashBoardPage.confirmationPop2ApplicationSentToFlag(), prop.getProperty("confirmationFromRejectAndApprovePopup"),
+				"Confirmation popup is not displayed upon clicking on Application which is sent to Flag bucket");
+		System.out.println("consulatedashBoardPage.textFromPop1PopApplicationSentToHCD();==>" +consulatedashBoardPage.textFromPop2ApplicationSentToRejected());
+		//softAssertion.assertEquals(consulatedashBoardPage.textFromPop1PopApplicationSentToHCD(), "This application is already sent to High Commsion for"
+			//	+"confirmation, Are you sure you want to open this?",
+			//	"Application is not sent to HCD side(Checked in Bucket) even after approved the application");	
 		softAssertion.assertAll();
 	}
-	@Test(priority = 90)
-	public void selectOneByOneCheckBoxAndVerifyCN() throws InterruptedException {
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		cNDocumentVerificaton.selectAllCheckBoxes();
-		cNDocumentVerificaton.selectOneByOneCheckBox();
-		System.out.println("selectedBoxDoc" +selectedCheckBoxOnDocSingle);
-		cNDocumentVerificaton.verifyOneByOneCheckBox();
-		System.out.println("selectedBoxDoc" +selectedCheckBoxOnDocSingle);
-		softAssertion.assertTrue(selectedCheckBoxOnDocSingle,
-				"Check Boxes is not selected upon clicking on [One By One Check] from Document Verification page");
+	
+	@Test(priority = 121, description = "This test will verify whether application is opens upon clicing on Open button and also clicking back button navigates to Bucket")
+	public void verifyApplicationSentToRejectBucketOpens() throws InterruptedException {
+		consulatedashBoardPage.clickOnOpenButtonFromFlagApplication();
+		softAssertion.assertEquals(applicantDashBoardPage.titleOfApplicationDetailsPage(), prop.getProperty("applicantDashboardTitle"),
+				"We are not navigate to Applicant Dashboard page upon clicking on New Application from Applicant Dashboard");
+		applicantDashBoardPage.clickOnBackButton();
+		softAssertion.assertEquals(highAndConsulateLoginPage.getTitleOfConsulate(),  prop.getProperty("titleOfBucketPage"),
+				"We are not navigate to consulate dashboard page after enetering valid creadentials");
 		softAssertion.assertAll();
+		
 	}
-	
-	
-	@Test(priority = 101, description = "This test will verify whether application is opens upon clicing on Open button and also clicking back button navigates to Bucket")
+	@Test(priority = 122, description = "This test will verify whether application is opens upon clicing on Open button and also clicking back button navigates to Bucket")
 	public void verifyCanceAndCrossButton() throws InterruptedException {
 		Thread.sleep(3000);
 		TestUtil.clickOnElement();
 		Thread.sleep(3000);
-		consulatedashBoardPage.crossButton1PopApplicationSentToHCD();
+		consulatedashBoardPage.crossButtonFromFlagBucket();
 		softAssertion.assertEquals(highAndConsulateLoginPage.getTitleOfConsulate(), prop.getProperty("titleOfBucketPage"),
 				"We are not navigate to consulate dashboard page after enetering valid creadentials");
 		Thread.sleep(3000);
 		TestUtil.clickOnElement();
 		Thread.sleep(3000);		
-		consulatedashBoardPage.cancelButton1PopApplicationSentToHCD();	
+		consulatedashBoardPage.cancelButtonFromFlag();	
 		softAssertion.assertEquals(highAndConsulateLoginPage.getTitleOfConsulate(), prop.getProperty("titleOfBucketPage"),
 				"We are not navigate to consulate dashboard page after enetering valid creadentials");
 		System.out.println("2222");

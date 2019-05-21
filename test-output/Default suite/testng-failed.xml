@@ -3,6 +3,7 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest">
         <methods>
           <include name="AlreadySubmittedPartiallyFilledTest"/>
@@ -10,6 +11,14 @@
           <include name="setUp"/>
         </methods>
       </class> <!-- com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest -->
+=======
+      <class name="com.ghana.app.qa.testcases.ConsulatePageFlagTest">
+        <methods>
+          <include name="verifyApplicaInRejectApplicationBucket"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.ghana.app.qa.testcases.ConsulatePageFlagTest -->
+>>>>>>> d431cf34496f5e28fcc3fbc057b2d6c3c2319536
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

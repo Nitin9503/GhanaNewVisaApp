@@ -410,7 +410,14 @@ public class HCDDocumentVerificationPage extends TestBase {
 
 	public void clickOnConfirmFromApprove() throws InterruptedException {
 		Thread.sleep(3000);
-		TestUtil.clickOnElement(confirmFromApprove);
+		TestUtil.clickOnElement(confirmFromApprove);	
+
+	}
+	
+	public void getTextconfirmFromApproveHCD() throws InterruptedException {
+		getTextFromApproveFromHCD = confirmFromApprove.getAttribute("value");
+		getTextFromApproveFromHCD = getTextFromApproveFromHCD.replaceAll(getTextFromApproveFromHCD, "Approved Applications");
+		
 	
 
 	}

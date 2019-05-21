@@ -32,10 +32,10 @@ public class TakeScreenshot extends TestBase {
 		TakesScreenshot screenshot = (TakesScreenshot) driver;
 		File src = screenshot.getScreenshotAs(OutputType.FILE);
 
-		if (OSName.equalsIgnoreCase("Windows")) {
+		if (OSName.equalsIgnoreCase("Win")) {
 			FileUtils.copyFile(src, new File(".\\Screenshot\\" + screenshotName + ".jpeg"));
 
-		} else if (OSName.equalsIgnoreCase("Mac OS X")) {
+		} else if (OSName.equalsIgnoreCase("Mac")) {
 
 			FileUtils.copyFile(src, new File("./Screenshot/" + screenshotName + ".jpeg"));
 		}

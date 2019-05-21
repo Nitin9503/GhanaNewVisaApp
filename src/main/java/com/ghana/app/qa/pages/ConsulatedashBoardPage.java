@@ -55,8 +55,6 @@ public class ConsulatedashBoardPage extends TestBase {
 	@FindBy(xpath = "//span[@id='spanFlagged']")
 	WebElement flaggedApplicationCount;
 	
-	
-
 	// Element of applicantion which is sent to HCD in CN side
 	@FindBy(xpath = "//div[@id='myModal1']//h4[@class='modal-title'][contains(text(),'Confirmation')]")
 	WebElement confirmationPop1;
@@ -64,12 +62,18 @@ public class ConsulatedashBoardPage extends TestBase {
 	@FindBy(xpath = "//div[@id='myModal1']//button[@type='button'][contains(text(),'×')]")
 	WebElement crossButton1;
 	
+	@FindBy(xpath = "//div[@id='myModal3']//button[@class='close'][contains(text(),'×')]")
+	WebElement crossButtonFlag;
+	
 	@FindBy(xpath = "//div[@id='myModal2']//button[@class='close'][contains(text(),'×')]")
 	WebElement crossButtonFromRejectBucket;
 	
 	@FindBy(xpath = "//div[@id='myModal1']//button[@type='button'][contains(text(),'Cancel')]")
 	WebElement cancelButton1;
 	
+	@FindBy(xpath = "//div[@id='myModal3']//button[@class='btn btn-danger mr-2'][contains(text(),'Cancel')]")
+	WebElement cancelButtonFromFlag;
+
 	@FindBy(xpath = "//div[@id='myModal2']//button[@class='btn btn-danger mr-2'][contains(text(),'Cancel')]")
 	WebElement cancelButtonRejectBucket;
 	
@@ -81,13 +85,19 @@ public class ConsulatedashBoardPage extends TestBase {
 	
 	@FindBy(xpath = "//div[@id='myModal2']//input[@name='approve']")
 	WebElement openButtonFromRejectBucket;
-
+	
+	@FindBy(xpath = "//div[@id='myModal3']//input[@name='approve']")
+	WebElement openButtonFromFlagBucket;
+	
 	@FindBy(xpath = "//label[contains(text(),'This application is already sent to High Commsion')]")
 	WebElement textFromPop1;
 
 	@FindBy(xpath = "//div[@id='myModal2']//h4[@class='modal-title'][contains(text(),'Confirmation')]")
 	WebElement confirmationPop2;
-
+	
+	@FindBy(xpath = "//div[@id='myModal']//h4[@class='modal-title'][contains(text(),'Confirmation')]")
+	WebElement confirmationPopFromFlag;
+	
 	@FindBy(xpath = "//div[@id='myModal2']//button[@type='button'][contains(text(),'Cancel')]")
 	WebElement cancelButton2;
 	
@@ -157,6 +167,13 @@ public class ConsulatedashBoardPage extends TestBase {
 		TestUtil.clickOnElement(crossButton1);
 	
 	}
+	public void crossButtonFromFlagBucket() {
+		TestUtil.clickOnElement(crossButtonFlag);
+	
+	}
+	
+	
+	
 	public void crossButtonPopApplicationSentToRejectBucket() {
 		TestUtil.clickOnElement(crossButtonFromRejectBucket);
 	
@@ -167,6 +184,11 @@ public class ConsulatedashBoardPage extends TestBase {
         TestUtil.clickOnElement(cancelButton1);
 		
 	}
+	public void cancelButtonFromFlag() {
+        TestUtil.clickOnElement(cancelButton1);
+		
+	}
+	
 	public void cancelButtonRejectBucketCN() {
         TestUtil.clickOnElement(cancelButtonRejectBucket);
 		
@@ -178,6 +200,13 @@ public class ConsulatedashBoardPage extends TestBase {
 		//TestUtil.clickOnElement(openButton1);
 	
 	}
+	public void clickOnOpenButtonFromFlagApplication() {
+		//waitForElementToVisible
+		TestUtil.waitForElementToVisible(openButtonFromFlagBucket, 30);
+		//TestUtil.clickOnElement(openButton1);
+	
+	}
+	
 	
 	
 	
@@ -199,6 +228,13 @@ public class ConsulatedashBoardPage extends TestBase {
 		 Thread.sleep(3000);
 		return confirmationPop2.getText();
 	}
+	
+	public String confirmationPop2ApplicationSentToFlag() throws InterruptedException {
+		 Thread.sleep(3000);
+		return confirmationPopFromFlag.getText();
+	}
+	
+	
 	public void crossButton2PopApplicationSentToHCD() {
 		TestUtil.clickOnElement(crossButton2);
 	

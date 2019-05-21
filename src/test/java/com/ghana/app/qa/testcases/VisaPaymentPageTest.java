@@ -114,6 +114,7 @@ public class VisaPaymentPageTest extends DriverInit {
 	@Test(priority=62, description="Here verifying confirmation message and click on ok btn ")
 	public void verifyClickOnSubmitBtnTest() throws InterruptedException{
 		//visaPaymentPage.getTextsubmitBtn();	
+		System.out.println( "verifyClickOnSubmitBtnTest1");
 		softAssertion.assertEquals(visaPaymentPage.getTextPaymentPageTitle(), prop.getProperty("visaPaymentText"),
 				"it is not navigate to payment info page");	
 		visaPaymentPage.clickOnCheckoutBtn();
@@ -121,16 +122,18 @@ public class VisaPaymentPageTest extends DriverInit {
 		TestUtil.selectValuefromDropDown(visaPaymentPage.selectExpiryDateMonth(), month);
 		TestUtil.selectValuefromDropDown(visaPaymentPage.selectExpiryDateYear(), year);
 		visaPaymentPage.passCvvNo();
+		System.out.println( "verifyClickOnSubmitBtnTest2");
 		visaPaymentPage.clickOnMakePaymentBtn();
 		visaPaymentPage.clickOnSubmitbtn();
 		visaPaymentPage.clickOnOKtbtn();
 		visaPaymentPage.clickOnDonetbtn();
-		visaPaymentPage.verifyConfirmationPop();
+		//visaPaymentPage.verifyConfirmationPop();
 		Thread.sleep(2000);
+		System.out.println( "verifyClickOnSubmitBtnTest3");
 		System.out.println("home page title"
 				+ homePage.validateHomePageTitle());
 		softAssertion.assertEquals(homePage.validateHomePageTitle(), prop.getProperty("homePageTitle"), "We are not navigate to Home page after payment");
-		System.out.println( "applicationID==>visa" +applicationID);
+		System.out.println( "visa applicationID after payment==>" +applicationID);
 		
 	}
 

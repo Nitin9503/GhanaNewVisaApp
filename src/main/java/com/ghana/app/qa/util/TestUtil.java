@@ -11,6 +11,7 @@ import org.apache.poi.hslf.model.Sheet;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
@@ -183,8 +184,9 @@ public class TestUtil extends TestBase {
 	public static void dateAlter(String dateChange){
 		String str = new StringBuffer(dateChange).insert(dateChange.length()-6, "/").toString();
 		providedDate = new StringBuffer(str).insert(str.length()-4, "/").toString();
+		System.out.println("Birthdate==>" +providedDate);
+		System.out.println("Application id==>" +applicationID);
 	}
-	
 
 	public static void fluentWait(WebElement element) {
 		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(30, TimeUnit.SECONDS)
@@ -195,6 +197,10 @@ public class TestUtil extends TestBase {
 				return driver.findElement(By.id("foo"));
 			}
 		});
+	}
+	public static void HandleAlertPopup(){
+		Alert alert = driver.switchTo().alert();
+		alert.dismiss();
 	}
 
 }

@@ -49,7 +49,188 @@ SoftAssert softAssertion = new SoftAssert();
 				"We are not navigate to HCDGeneral Verification page upon clicking on New Application from HCD Dashboard");
 		softAssertion.assertAll();
 	}
-	
+	@Test(priority = 109, description = "click On Confirm Air Ticket and verified window is opened or Not and then close window using close button and navigate to Document Verification page")
+	public void clickOnConfirmedAirTicketWindowClose() throws InterruptedException {
+		Thread.sleep(2000);
+		hCDDocumentVerificationPage.clickOnConfirmAirTicket();
+		softAssertion.assertEquals(hCDDocumentVerificationPage.titleOfConfirmedAirTicketWindow(), prop.getProperty("confirmedairticketTitle"),
+				"Confirmed air ticket window is displayed upon clikcing on Confirmed air ticket tab from Attached Docuement section(Confirmed air ticket)");
+		Thread.sleep(2000);
+		hCDDocumentVerificationPage.closeButtonToCloseWindow1();
+		softAssertion.assertEquals(hCDDocumentVerificationPage.getTextDocumentVerification(),  prop.getProperty("hCDGeneralVerificationTitle"),
+				"Document Verification page is not displayed upon clicking on Close button from Confirmed Air Ticket Window");
+		softAssertion.assertAll();
+		System.out.println("1");
+	}	
+
+	@Test(priority = 110, description = "click On Confirm Air Ticket and verified window is opened or Not and then close window using (X) button and navigate to Document Verification page  ")
+	public void clickOnConfirmedAirTicketWindow() throws InterruptedException {
+		Thread.sleep(2000);
+		hCDDocumentVerificationPage.clickOnConfirmAirTicket();
+		softAssertion.assertEquals(hCDDocumentVerificationPage.titleOfConfirmedAirTicketWindow(), prop.getProperty("confirmedairticketTitle"),
+				"Confirmed air ticket window is displayed upon clikcing on Confirmed air ticket tab from Attached Docuement section(Confirmed air ticket)");
+		Thread.sleep(2000);
+		hCDDocumentVerificationPage.crossButtonToCloseWindow();
+		softAssertion.assertEquals(hCDDocumentVerificationPage.getTextDocumentVerification(),  prop.getProperty("hCDGeneralVerificationTitle"),
+				"Document Verification page is not displayed upon clicking on Close button from Confirmed Air Ticket Window");
+		softAssertion.assertAll();
+		System.out.println("2");
+	}
+
+	@Test(priority = 111, description = "click On Photo and verified window is opened or Not and then close window using close button and navigate to Document Verification page")
+	public void clickOnOnPhotoClose() throws InterruptedException {
+		Thread.sleep(2000);
+		hCDDocumentVerificationPage.clickOnPhoto();
+		softAssertion.assertEquals(hCDDocumentVerificationPage.titleOfRecentPhotoWindow(), prop.getProperty("RecentpassportsizephotoTitle"),
+				"Recent passport size photo window is displayed upon clikcing on Confirmed air ticket tab from Attached Docuement section(Recent passport size photo)");
+		hCDDocumentVerificationPage.closeButtonToCloseWindow2();
+		softAssertion.assertEquals(hCDDocumentVerificationPage.getTextDocumentVerification(),  prop.getProperty("hCDGeneralVerificationTitle"),
+				"Document Verification page is not displayed upon clicking on Close button from Recent passport size photo");
+		softAssertion.assertAll();
+		System.out.println("4");
+	}
+
+	@Test(priority = 112, description = "click On Photo and verified window is opened or Not and then close window using (X) button and navigate to Document Verification page")
+	public void clickOnOnPhoto() throws InterruptedException {
+		Thread.sleep(2000);
+		hCDDocumentVerificationPage.clickOnPhoto();
+		softAssertion.assertEquals(hCDDocumentVerificationPage.titleOfRecentPhotoWindow(), prop.getProperty("RecentpassportsizephotoTitle"),
+				"Recent passport size photo window is displayed upon clikcing on Confirmed air ticket tab from Attached Docuement section(Recent passport size photo)");
+		hCDDocumentVerificationPage.crossButtonToCloseWindow();
+		softAssertion.assertEquals(hCDDocumentVerificationPage.getTextDocumentVerification(), prop.getProperty("hCDGeneralVerificationTitle"),
+				"Document Verification page is not displayed upon clicking on Close button from Recent passport size photo");
+		softAssertion.assertAll();
+		System.out.println("3");
+	}
+
+	@Test(priority = 113, description = "click On Yellow Fever vaccination and verified window is opened or Not and then close window using close button and navigate to Document Verification page")
+	public void clickOnYellowFevervaccinationClose() throws InterruptedException {
+		Thread.sleep(2000);
+		hCDDocumentVerificationPage.clickOnYellowFevervaccination();
+		softAssertion.assertEquals(hCDDocumentVerificationPage.titleOfYellowFeverWindow(), prop.getProperty("yellowfevervaccinationTitle"),
+				"Yellow fever vaccination window is displayed upon clikcing on Confirmed air ticket tab from Attached Docuement section(Yellow fever vaccination)");
+		hCDDocumentVerificationPage.closeButtonToCloseWindow3();
+		softAssertion.assertEquals(hCDDocumentVerificationPage.getTextDocumentVerification(), prop.getProperty("hCDGeneralVerificationTitle"),
+				"Document Verification page is not displayed upon clicking on Close button from Yellow fever vaccination");
+		softAssertion.assertAll();
+	}
+
+	@Test(priority = 114, description = "click On Yellow Fever vaccination and verified window is opened or Not and then close window using (X) button and navigate to Document Verification page")
+	public void clickOnYellowFevervaccination() throws InterruptedException {
+		Thread.sleep(2000);
+		hCDDocumentVerificationPage.clickOnYellowFevervaccination();
+		softAssertion.assertEquals(hCDDocumentVerificationPage.titleOfYellowFeverWindow(), prop.getProperty("yellowfevervaccinationTitle"),
+				"Yellow fever vaccination window is displayed upon clikcing on Confirmed air ticket tab from Attached Docuement section(Yellow fever vaccination)");
+		hCDDocumentVerificationPage.crossButtonToCloseWindow();
+		softAssertion.assertEquals(hCDDocumentVerificationPage.getTextDocumentVerification(), prop.getProperty("hCDGeneralVerificationTitle"),
+				"Document Verification page is not displayed upon clicking on Close button from Yellow fever vaccination");
+		softAssertion.assertAll();
+	}
+
+	@Test(priority = 115, description = "click On Covering Letter and verified window is opened or Not and then close window using close button and navigate to Document Verification page")
+	public void clickOnCoveringLetterClose() throws InterruptedException {
+		Thread.sleep(2000);
+		hCDDocumentVerificationPage.clickOnCoveringLetter();
+		softAssertion.assertEquals(hCDDocumentVerificationPage.titleOfCoveringLetterWindow(), prop.getProperty("coveringletterTitle"),
+				"Covering letter window is displayed upon clikcing on Confirmed air ticket tab from Attached Docuement section(Covering letter)");
+		hCDDocumentVerificationPage.closeButtonToCloseWindow4();
+		softAssertion.assertEquals(hCDDocumentVerificationPage.getTextDocumentVerification(), prop.getProperty("hCDGeneralVerificationTitle"),
+				"Document Verification page is not displayed upon clicking on Close button from Document Verification");
+		softAssertion.assertAll();
+
+	}
+
+	@Test(priority = 116, description = "click On Covering Letter and verified window is opened or Not and then close window using (X) button and navigate to Document Verification page")
+	public void clickOnCoveringLetter() throws InterruptedException {
+		Thread.sleep(2000);
+		hCDDocumentVerificationPage.clickOnCoveringLetter();
+		softAssertion.assertEquals(hCDDocumentVerificationPage.titleOfCoveringLetterWindow(), prop.getProperty("coveringletterTitle"),
+				"Covering letter window is displayed upon clikcing on Confirmed air ticket tab from Attached Docuement section(Covering letter)");
+		hCDDocumentVerificationPage.crossButtonToCloseWindow();
+		softAssertion.assertEquals(hCDDocumentVerificationPage.getTextDocumentVerification(), prop.getProperty("hCDGeneralVerificationTitle"),
+				"Document Verification page is not displayed upon clicking on Close button from Document Verification");
+		softAssertion.assertAll();
+
+	}
+
+
+	@Test(priority = 117, description = "click On Id Proof Reference and verified window is opened or Not and then close window using close button and navigate to Document Verification page")
+	public void clickOnIdProofReferenceClose() throws InterruptedException {
+		Thread.sleep(2000);
+		hCDDocumentVerificationPage.clickOnIdProofReference();
+		softAssertion.assertEquals(hCDDocumentVerificationPage.titleOfIDProofOfReferenceWindow(), prop.getProperty("iDproofofreferenceTitle"),
+				"ID proof of reference window is displayed upon clikcing on Confirmed air ticket tab from Attached Docuement section(ID proof of reference)");
+		Thread.sleep(2000);
+		hCDDocumentVerificationPage.closeButtonToCloseWindow6();
+		softAssertion.assertEquals(hCDDocumentVerificationPage.getTextDocumentVerification(), prop.getProperty("hCDGeneralVerificationTitle"),
+				"Document Verification page is not displayed upon clicking on Close button from ID proof of reference");
+		softAssertion.assertAll();
+	}
+
+	@Test(priority = 118, description = "click On Id Proof Reference and verified window is opened or Not and then close window using (X) button and navigate to Document Verification page")
+	public void clickOnIdProofReference() throws InterruptedException {
+		Thread.sleep(2000);
+		hCDDocumentVerificationPage.clickOnIdProofReference();
+		softAssertion.assertEquals(hCDDocumentVerificationPage.titleOfIDProofOfReferenceWindow(), prop.getProperty("iDproofofreferenceTitle"),
+				"ID proof of reference window is displayed upon clikcing on Confirmed air ticket tab from Attached Docuement section(ID proof of reference)");
+		Thread.sleep(2000);
+		hCDDocumentVerificationPage.crossButtonToCloseWindow();
+		softAssertion.assertEquals(hCDDocumentVerificationPage.getTextDocumentVerification(), prop.getProperty("hCDGeneralVerificationTitle"),
+				"Document Verification page is not displayed upon clicking on Close button from ID proof of reference");
+		softAssertion.assertAll();
+	}
+
+	@Test(priority = 119, description = "click On Original Invitation Letter and verified window is opened or Not and then close window using close button and navigate to Document Verification page")
+	public void clickOnOriginalInvitationLetterClose() throws InterruptedException {
+		Thread.sleep(2000);
+		hCDDocumentVerificationPage.clickOnOriginalInvitationLetter();
+		softAssertion.assertEquals(hCDDocumentVerificationPage.titleOfOriginalInvitationLetterWindow(),
+				prop.getProperty("originalinvitationletterTitle"),
+				"Original invitation letter window is displayed upon clikcing on Confirmed air ticket tab from Attached Docuement section(Original invitation letter)");
+		hCDDocumentVerificationPage.closeButtonToCloseWindow7();
+		softAssertion.assertEquals(hCDDocumentVerificationPage.getTextDocumentVerification(), prop.getProperty("hCDGeneralVerificationTitle"),
+				"Document Verification page is not displayed upon clicking on Close button from Document Verification");
+		softAssertion.assertAll();
+	}
+
+	@Test(priority = 120, description = "click On Original Invitation Letter and verified window is opened or Not and then close window using (X) button and navigate to Document Verification page")
+	public void clickOnOriginalInvitationLetter() throws InterruptedException {
+		Thread.sleep(2000);
+		hCDDocumentVerificationPage.clickOnOriginalInvitationLetter();
+		softAssertion.assertEquals(hCDDocumentVerificationPage.titleOfOriginalInvitationLetterWindow(),
+				prop.getProperty("originalinvitationletterTitle"),
+				"Original invitation letter window is displayed upon clikcing on Confirmed air ticket tab from Attached Docuement section(Original invitation letter)");
+		hCDDocumentVerificationPage.crossButtonToCloseWindow();
+		softAssertion.assertEquals(hCDDocumentVerificationPage.getTextDocumentVerification(), prop.getProperty("hCDGeneralVerificationTitle"),
+				"Document Verification page is not displayed upon clicking on Close button from Document Verification");
+		softAssertion.assertAll();
+	}
+
+	@Test(priority = 121, description = "click On Proof Of Transit Visa and verified window is opened or Not and then close window using close button and navigate to Document Verification page")
+	public void clickOnProofOfTransitVisaClose() throws InterruptedException {
+		Thread.sleep(2000);
+		hCDDocumentVerificationPage.clickOnProofOfTransitVisa();
+		softAssertion.assertEquals(hCDDocumentVerificationPage.titleOfProofOfTransitValidVisaWindow(),
+				prop.getProperty("proofoftransitvalidvisaTitle"),
+				"Proof of transit valid visa window is displayed upon clikcing on Confirmed air ticket tab from Attached Docuement section(Proof of transit valid visa)");
+		hCDDocumentVerificationPage.closeButtonToCloseWindow8();
+		softAssertion.assertEquals(hCDDocumentVerificationPage.getTextDocumentVerification(), prop.getProperty("hCDGeneralVerificationTitle"),
+				"Document Verification page is not displayed upon clicking on Close button from Proof of transit valid visa");
+		softAssertion.assertAll();
+	}
+
+	@Test(priority = 122, description = "click On Proof Of Transit Visa and verified window is opened or Not and then close window using (X) button and navigate to Document Verification page")
+	public void clickOnProofOfTransitVisa() throws InterruptedException {
+		Thread.sleep(2000);
+		hCDDocumentVerificationPage.clickOnProofOfTransitVisa();
+		softAssertion.assertEquals(hCDDocumentVerificationPage.titleOfProofOfTransitValidVisaWindow(),
+				prop.getProperty("proofoftransitvalidvisaTitle"),
+				"Proof of transit valid visa window is displayed upon clikcing on Confirmed air ticket tab from Attached Docuement section(Proof of transit valid visa)");
+		hCDDocumentVerificationPage.crossButtonToCloseWindow();
+		softAssertion.assertEquals(hCDDocumentVerificationPage.getTextDocumentVerification(), prop.getProperty("hCDGeneralVerificationTitle"),
+				"Document Verification page is not displayed upon clicking on Close button from Proof of transit valid visa");
+		softAssertion.assertAll();
+	}
 	@Test(priority =108, description = "Application is verified and approved")
 	public void passComment() {
 		hCDDocumentVerificationPage.passComment(prop.getProperty("passCommentFromHCDSide"));

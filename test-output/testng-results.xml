@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <testng-results skipped="0" failed="13" ignored="0" total="16" passed="3">
   <reporter-output>
     <line>
@@ -1036,6 +1037,10 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 =======
 <testng-results skipped="0" failed="0" ignored="0" total="0" passed="0">
   <reporter-output>
+=======
+<testng-results skipped="0" failed="0" ignored="0" total="0" passed="0">
+  <reporter-output>
+>>>>>>> Stashed changes
   </reporter-output>
   <suite name="Default suite" duration-ms="5" started-at="2019-05-21T12:40:00Z" finished-at="2019-05-21T12:40:00Z">
     <groups>

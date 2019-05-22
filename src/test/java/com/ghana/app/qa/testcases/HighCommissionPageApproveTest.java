@@ -23,7 +23,7 @@ SoftAssert softAssertion = new SoftAssert();
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	@Test(priority = 123)
+	@Test(priority = 1)
 	public void signUpAndPayment() throws InterruptedException, IOException {
 		homePage.clickOnApplyVisa();
 		visaCategoriesPage.clickOnVisaType();
@@ -131,7 +131,7 @@ SoftAssert softAssertion = new SoftAssert();
 		System.out.println( "applicationID CN==>" +applicationID);
 	}	
 
-	@Test(priority = 124 , description = "This test will approve the application from CN")
+	@Test(priority = 2 , description = "This test will approve the application from CN")
 	public void getApproveFromCN() throws InterruptedException{
 		TestUtil.clickOnElement();
 		applicantDashBoardPage.clickOnDocumentVeri();
@@ -143,7 +143,7 @@ SoftAssert softAssertion = new SoftAssert();
 		Thread.sleep(3000);
 	}
 	
-	@Test(priority = 125, description = "This test will verify login functinality of HighCommission with valid creadentials and click on Login button")
+	@Test(priority = 3, description = "This test will verify login functinality of HighCommission with valid creadentials and click on Login button")
 	public void loginIntoHighCommission() throws InterruptedException {
 		Thread.sleep(3000);	
 		TestUtil.toOpenNewTab();
@@ -154,14 +154,14 @@ SoftAssert softAssertion = new SoftAssert();
 		highAndConsulateLoginPage.clickOnLoginButton();
 	}
 	
-	@Test(priority=126, description = "This test will verify the title of HighCommission page after login" )
+	@Test(priority=4, description = "This test will verify the title of HighCommission page after login" )
 	public void verifHighCommissionPageTitle(){
 		softAssertion.assertEquals(		
 				hCDDashboardPage.titleofHCDDashBoard(), prop.getProperty("titleOfBucketPage"),
 				"We are not navigate to High Commission dashboard page after enetering valid creadentials");
 		softAssertion.assertAll();
 	}
-	@Test(priority = 127 ,description = "This test will verify we navigated to HCDGeneral Verification page upon cliclking on New Application" )
+	@Test(priority = 5, description = "This test will verify we navigated to HCDGeneral Verification page upon cliclking on New Application" )
 	public void clickOnNewApplication() throws InterruptedException {
 		//hCDDashboardPage.clickOnNewApplication();
 		// Get count of application from mumbai consulate and approve bucket and then perform verification
@@ -170,7 +170,7 @@ SoftAssert softAssertion = new SoftAssert();
 				"We are not navigate to HCDGeneral Verification page upon clicking on New Application from HCD Dashboard");
 		softAssertion.assertAll();
 	}
-	@Test(priority = 128, description = "Here we are getting text from Applicant Information and comparing with Applicant filed data")
+	@Test(priority = 6, description = "Here we are getting text from Applicant Information and comparing with Applicant filed data")
 	public void getTextFromApplicantInformation() throws InterruptedException {
 		Thread.sleep(2000);
 	//	hCDDocumentVerificationPage.previousButtonFromDocument();
@@ -191,7 +191,7 @@ SoftAssert softAssertion = new SoftAssert();
 		softAssertion.assertAll();
 	}
 	
-	@Test(priority = 129, description = "Here we are getting text from Address Information and comparing with Applicant filed data")
+	@Test(priority = 7, description = "Here we are getting text from Address Information and comparing with Applicant filed data")
 	public void getTextFromAddressInformation() throws InterruptedException {
 
 		softAssertion.assertEquals(hCDApplicantInfoPage.getTextEmailIdHCD(), (emailId),
@@ -212,7 +212,7 @@ SoftAssert softAssertion = new SoftAssert();
 	
 	}
 
-	@Test(priority = 130, description = "Here we are getting text from Travel Information and comparing with Applicant filed data")
+	@Test(priority = 8, description = "Here we are getting text from Travel Information and comparing with Applicant filed data")
 	public void getTextFromTravelInformation() throws InterruptedException {
 
 		softAssertion.assertEquals(hCDApplicantInfoPage.getTextRefName1HCD(), (priFirstName + " " +priLastName),
@@ -249,7 +249,7 @@ SoftAssert softAssertion = new SoftAssert();
 		
 	}
 	
-	@Test(priority = 131 , description = "click On Document verification and verified the title of Document verification page")
+	@Test(priority = 9 , description = "click On Document verification and verified the title of Document verification page")
 	public void verfiyTitleOfCNDocumentVerificatonPage() throws InterruptedException {
 		hCDGeneralVerificationPage.clickOnDocumentVeri();
 		softAssertion.assertEquals(hCDGeneralVerificationPage.titleOfCNDocumentVerificatonPage(), prop.getProperty("HCDDoccumentVerificationTitle"),
@@ -257,14 +257,14 @@ SoftAssert softAssertion = new SoftAssert();
 		softAssertion.assertAll();
 	}
 	
-	@Test(priority = 132, description = "This test will verify whether we navigate to applicant info page upon clicking on previous button from Document verification page")
+	@Test(priority = 10, description = "This test will verify whether we navigate to applicant info page upon clicking on previous button from Document verification page")
 	public void clickOnPreviousButtonAndVerifyTitleApplicantInformation() throws InterruptedException {
 		hCDDocumentVerificationPage.previousButtonFromDocument();
 		softAssertion.assertEquals(hCDApplicantInfoPage.getTitleOfHCDGGeneralVerifi(), prop.getProperty("hCDGeneralVerificationTitle"),
 				"We are not navigate to HCDGeneral Verification page upon clicking on Previous Button from Applicant Information");
 		softAssertion.assertAll();
 	}
-	@Test(priority = 133, description = "This test will verify whether we navigate to Document verification page upon clicking on next button from applicant info page ")
+	@Test(priority = 11, description = "This test will verify whether we navigate to Document verification page upon clicking on next button from applicant info page ")
 	public void clickOnNextButtonAndVerifyTitleDocumentVerifi() throws InterruptedException {
 		hCDGeneralVerificationPage.clickOnnNxtButton();
 		softAssertion.assertEquals(hCDGeneralVerificationPage.titleOfCNDocumentVerificatonPage(), prop.getProperty("HCDDoccumentVerificationTitle"),
@@ -273,7 +273,7 @@ SoftAssert softAssertion = new SoftAssert();
 	
 	}
 
-	@Test(priority = 134  , description = "This test will verify whether check boxes is selected or not on Document verification")
+	@Test(priority = 12 , description = "This test will verify whether check boxes is selected or not on Document verification")
 	public void selectAllCheckBoxAndVerify() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);	
 		hCDDocumentVerificationPage.selectAllCheckBoxes();
@@ -285,7 +285,7 @@ SoftAssert softAssertion = new SoftAssert();
 				"All check Boxes is not selected upon clicking on [Select All Check] from Document Verification page");
 		softAssertion.assertAll();
 	}
-	@Test(priority = 135, description = "This test will verify whether check boxes is selected (one by one)or not on Document verification")
+	@Test(priority = 13, description = "This test will verify whether check boxes is selected (one by one)or not on Document verification")
 	public void selectOneByOneCheckBoxAndVerify() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		hCDDocumentVerificationPage.selectAllCheckBoxes();
@@ -298,7 +298,7 @@ SoftAssert softAssertion = new SoftAssert();
 		softAssertion.assertAll();
 	}
 
-		@Test(priority = 136, description = "Click On Approve And Verify Pop Text and then click on Cancel, Verify that on which page navigated")
+		@Test(priority = 14, description = "Click On Approve And Verify Pop Text and then click on Cancel, Verify that on which page navigated")
 		public void clickOnApproveAndVerifyPopText() throws InterruptedException {
 			hCDDocumentVerificationPage.clickOnApprove();
 			softAssertion.assertEquals(hCDDocumentVerificationPage.getTextFromAcceptConfirmationPop(), prop.getProperty("confirmationFromRejectAndApprovePopup"),
@@ -309,7 +309,7 @@ SoftAssert softAssertion = new SoftAssert();
 			softAssertion.assertAll();
 		}
 
-		@Test(priority = 137, description = "Click On Approve And Verify Pop Text and then click on Cross, Verify that on which page navigated")
+		@Test(priority = 15, description = "Click On Approve And Verify Pop Text and then click on Cross, Verify that on which page navigated")
 		public void clickOnApproveAndVerifyPopText1() throws InterruptedException {
 			Thread.sleep(3000);
 			hCDDocumentVerificationPage.clickOnApprove();
@@ -322,7 +322,7 @@ SoftAssert softAssertion = new SoftAssert();
 		
 			softAssertion.assertAll();
 		}
-		@Test(priority =138, description = "Application is verified and approved")
+		@Test(priority =16, description = "Application is verified and approved")
 		public void passComment() {
 			hCDDocumentVerificationPage.passComment(prop.getProperty("passCommentFromHCDSide"));
 			hCDDocumentVerificationPage.addCooment();
@@ -332,7 +332,7 @@ SoftAssert softAssertion = new SoftAssert();
 			softAssertion.assertAll();
 		}
 	
-	@Test(priority = 139, description = "Click On Approve And Verify Pop Text and then click on Cancel, Verify that on which page navigated")
+	@Test(priority = 17, description = "Click On Approve And Verify Pop Text and then click on Cancel, Verify that on which page navigated")
 	public void approveApplication() throws InterruptedException {
 		hCDDocumentVerificationPage.selectAllCheckBoxes();	
 		System.out.println("approveApplication");
@@ -346,7 +346,7 @@ SoftAssert softAssertion = new SoftAssert();
 		softAssertion.assertAll();
 			
 	}
-	@Test(priority = 140, description = "This test will verify Approved application by HCD Whether it is in Approved Bucket in HCD")
+	@Test(priority = 18, description = "This test will verify Approved application by HCD Whether it is in Approved Bucket in HCD")
 	public void verifyApprovedApplicaIsInApproveBucketHCD() throws InterruptedException {
 		Thread.sleep(3000);	
 		System.out.println("getTextFromApproveFromHCD==>" +getTextFromApproveFromHCD);
@@ -361,7 +361,7 @@ SoftAssert softAssertion = new SoftAssert();
 	//	TestUtil.toCloseNewTab();
 		
 	}
-	@Test(priority = 141, description = "This test will verify whether application is opens upon clicing on Open button and also clicking back button navigates to Bucket")
+	@Test(priority = 19, description = "This test will verify whether application is opens upon clicing on Open button and also clicking back button navigates to Bucket")
 	public void verifyApplicationSentOpens() throws InterruptedException {
 		Thread.sleep(3000);
 		hCDDashboardPage.getTextConfirmationPopApproveBucket();
@@ -379,7 +379,7 @@ SoftAssert softAssertion = new SoftAssert();
 		
 	}
 	
-	@Test(priority = 142, description = "This test will verify whether application is opens upon clicing on Open button and also clicking back button navigates to Bucket")
+	@Test(priority = 20, description = "This test will verify whether application is opens upon clicing on Open button and also clicking back button navigates to Bucket")
 	public void verifyCanceAndCrossButton() throws InterruptedException {
 		Thread.sleep(3000);
 		TestUtil.clickOnElement();
@@ -399,7 +399,7 @@ SoftAssert softAssertion = new SoftAssert();
 		TestUtil.toCloseNewTab();	
 	}
 	
-	@Test(priority = 143, description = "This test will verify login functinality with pass valid creadentials and click on Login button")
+	@Test(priority = 21, description = "This test will verify login functinality with pass valid creadentials and click on Login button")
 	public void loginIntoConsulate() throws InterruptedException {
 		Thread.sleep(5000);		
 		TestUtil.toOpenNewTab();
@@ -411,7 +411,7 @@ SoftAssert softAssertion = new SoftAssert();
 		System.out.println( "applicationIDCN==>" +applicationID);
 
 	}
-	@Test(priority = 144, description = "This test will verify whether application is sent to CN side from HCD side and application present in Approve Bucket")
+	@Test(priority = 22, description = "This test will verify whether application is sent to CN side from HCD side and application present in Approve Bucket")
 	public void verifyApproveBucktInCN() throws InterruptedException{	
 		hCDDocumentVerificationPage.getTextconfirmFromApproveHCD();
 		softAssertion.assertEquals(consulatedashBoardPage.textApprovedApplicationsBucket(), getTextFromApproveFromHCD,

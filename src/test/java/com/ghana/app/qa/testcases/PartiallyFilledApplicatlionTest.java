@@ -1,67 +1,23 @@
 package com.ghana.app.qa.testcases;
+import static com.ghana.app.qa.testdata.ConstantVariable.*;
 
-import static com.ghana.app.qa.testdata.ConstantVariable.FlatNo;
-import static com.ghana.app.qa.testdata.ConstantVariable.Landmark;
-import static com.ghana.app.qa.testdata.ConstantVariable.StreetName;
-import static com.ghana.app.qa.testdata.ConstantVariable.applicationID;
-import static com.ghana.app.qa.testdata.ConstantVariable.birthDate;
-import static com.ghana.app.qa.testdata.ConstantVariable.birthPlace;
-import static com.ghana.app.qa.testdata.ConstantVariable.cityName;
-import static com.ghana.app.qa.testdata.ConstantVariable.countryName;
-import static com.ghana.app.qa.testdata.ConstantVariable.dateOfDeparture;
-import static com.ghana.app.qa.testdata.ConstantVariable.emailId;
-import static com.ghana.app.qa.testdata.ConstantVariable.emerCityName;
-import static com.ghana.app.qa.testdata.ConstantVariable.emerContactName;
-import static com.ghana.app.qa.testdata.ConstantVariable.emerContactSurname;
-import static com.ghana.app.qa.testdata.ConstantVariable.emerCountry;
-import static com.ghana.app.qa.testdata.ConstantVariable.emerEmployerPhoneNumber;
-import static com.ghana.app.qa.testdata.ConstantVariable.emerPhoneNumber;
-import static com.ghana.app.qa.testdata.ConstantVariable.emerPincode;
-import static com.ghana.app.qa.testdata.ConstantVariable.emerState;
-import static com.ghana.app.qa.testdata.ConstantVariable.employer;
-import static com.ghana.app.qa.testdata.ConstantVariable.employerAddress;
-import static com.ghana.app.qa.testdata.ConstantVariable.firstName;
-import static com.ghana.app.qa.testdata.ConstantVariable.lastName;
-import static com.ghana.app.qa.testdata.ConstantVariable.month;
-import static com.ghana.app.qa.testdata.ConstantVariable.nationalityName;
-import static com.ghana.app.qa.testdata.ConstantVariable.passportExpiryDate;
-import static com.ghana.app.qa.testdata.ConstantVariable.passportIssuedDate;
-import static com.ghana.app.qa.testdata.ConstantVariable.passportNumber;
-import static com.ghana.app.qa.testdata.ConstantVariable.phoneNumber;
-import static com.ghana.app.qa.testdata.ConstantVariable.pinCode;
-import static com.ghana.app.qa.testdata.ConstantVariable.priFirstName;
-import static com.ghana.app.qa.testdata.ConstantVariable.priLastName;
-import static com.ghana.app.qa.testdata.ConstantVariable.primaryAddress;
-import static com.ghana.app.qa.testdata.ConstantVariable.primaryCity;
-import static com.ghana.app.qa.testdata.ConstantVariable.primaryCountry;
-import static com.ghana.app.qa.testdata.ConstantVariable.primaryPinCode;
-import static com.ghana.app.qa.testdata.ConstantVariable.primaryRefrencePhoneNo;
-import static com.ghana.app.qa.testdata.ConstantVariable.primaryState;
-import static com.ghana.app.qa.testdata.ConstantVariable.profession;
-import static com.ghana.app.qa.testdata.ConstantVariable.secFirstName;
-import static com.ghana.app.qa.testdata.ConstantVariable.secLastName;
-import static com.ghana.app.qa.testdata.ConstantVariable.secondaryAddress;
-import static com.ghana.app.qa.testdata.ConstantVariable.secondaryCity;
-import static com.ghana.app.qa.testdata.ConstantVariable.secondaryCountry;
-import static com.ghana.app.qa.testdata.ConstantVariable.secondaryPinCode;
-import static com.ghana.app.qa.testdata.ConstantVariable.secondaryRefrencePhoneNo;
-import static com.ghana.app.qa.testdata.ConstantVariable.secondaryState;
-import static com.ghana.app.qa.testdata.ConstantVariable.stateName;
-import static com.ghana.app.qa.testdata.ConstantVariable.ticketNumber;
-import static com.ghana.app.qa.testdata.ConstantVariable.year;
 import static com.ghana.app.qa.util.TestUtil.prop;
 import static com.ghana.app.qa.util.TestUtil.providedDate;
 import static org.testng.Assert.assertEquals;
 
 import java.io.IOException;
 
+import org.openqa.selenium.Alert;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
+import com.ghana.app.qa.base.DriverInit;
 import com.ghana.app.qa.util.TestUtil;
 
-public class PartiallyFilledApplicatlionTest extends PersonalInfoPageTest{
+public class PartiallyFilledApplicatlionTest extends DriverInit{
 
+	SoftAssert softAssertion= new SoftAssert();
 	public PartiallyFilledApplicatlionTest() throws IOException,
 			InterruptedException {
 		super();
@@ -163,7 +119,7 @@ public class PartiallyFilledApplicatlionTest extends PersonalInfoPageTest{
 		visaPaymentPage.clickOnSubmitbtn();
 		visaPaymentPage.clickOnOKtbtn();
 		visaPaymentPage.clickOnDonetbtn();
-		visaPaymentPage.verifyConfirmationPop();
+		//visaPaymentPage.verifyConfirmationPop();
 		Thread.sleep(2000);
 		System.out.println("home page title"
 				+ homePage.validateHomePageTitle());
@@ -173,6 +129,17 @@ public class PartiallyFilledApplicatlionTest extends PersonalInfoPageTest{
 
 		//Assert.assertEquals(partiallyfilledPage.getErrorMessage().substring(2), expected);
 		
+	}
+	public void verifyWithEmptyField() throws InterruptedException{
+		partiallyFilledApplicationPage.selectDOB(birthDate);
+		String capchatext = partiallyFilledApplicationPage.getCaptchaText();
+		System.out.println(capchatext);
+		partiallyFilledApplicationPage.passCaptchaText(capchatext);
+		partiallyFilledApplicationPage.clickOnsubmitbtn();
+		 Alert simpleAlert = driver.switchTo().alert();
+		 String alertText = simpleAlert.getText();
+		 System.out.println("Alert text is " + alertText);
+		 
 	}
 	
 }

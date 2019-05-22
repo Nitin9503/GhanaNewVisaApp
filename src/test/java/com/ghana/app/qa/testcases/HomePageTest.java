@@ -24,7 +24,7 @@ public class HomePageTest extends DriverInit {
 	}
 	
 
-   @Test(priority = 0)
+   @Test(priority = 1)
 	public void verifyHomePageTitleTest() {
 		System.out.println("home page title   "
 				+ homePage.validateHomePageTitle());
@@ -32,7 +32,7 @@ public class HomePageTest extends DriverInit {
 				"We are navigate to HOme page");
 	}
 
-	@Test(priority = 1)
+	@Test(priority = 2)
 	public void verifyVisaCategoriesTest() throws IOException,
 			InterruptedException {
 		homePage.clickOnApplyVisa();

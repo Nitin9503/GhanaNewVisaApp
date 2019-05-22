@@ -18,7 +18,7 @@ public class TravelInfoPageTest extends DriverInit {
 		// TODO Auto-generated constructor stub
 	}
 
-	@Test(priority = 37)
+	@Test(priority = 1)
 	public void signUpAndFillEmergInfo() throws InterruptedException, IOException {
 		homePage.clickOnApplyVisa();
 		visaCategoriesPage.clickOnVisaType();
@@ -79,7 +79,7 @@ public class TravelInfoPageTest extends DriverInit {
 
 	}
 
-	@Test(priority = 38)
+	@Test(priority = 2)
 	public void ContinueAndSaveEmergTest() throws InterruptedException, IOException {
 		emergencyContactPage.clickEmeContinueBtn();
 		travelInfoPage.getTextTravelInfoPagetitle();
@@ -90,93 +90,93 @@ public class TravelInfoPageTest extends DriverInit {
 
 	// ----------------------Travel Info page
 	// Test----------------------------------//
-	@Test(priority = 39)
+	@Test(priority = 3)
 	public void clickOnIsApplicantPossessionRoundTicketTest() throws InterruptedException, IOException {
 		travelInfoPage.clickOnIsApplicantPossessionRoundTicket();
 
 	}
 
-	@Test(priority = 40)
+	@Test(priority = 4)
 	public void passDateOfDepartureTest() throws InterruptedException, IOException {
 		travelInfoPage.passDateOfDeparture(dateOfDeparture);
 		travelInfoPage.clickOnContinuebutton();
 	}
 
-	@Test(priority = 41)
+	@Test(priority = 5)
 	public void passTicketNumberTest() throws InterruptedException, IOException {
 		travelInfoPage.passTicketNumber(ticketNumber);
 
 	}
 
-	@Test(priority = 42)
+	@Test(priority = 6)
 	public void clickOnTravelByTest() throws InterruptedException, IOException {
 		travelInfoPage.clickOnTravelBy();
 
 	}
 
-	@Test(priority = 43)
+	@Test(priority = 7)
 	public void clickPurpose_of_journeyTest() throws InterruptedException, IOException {
 		travelInfoPage.clickPurpose_of_journey();
 
 	}
 
-	@Test(priority = 44)
+	@Test(priority = 8)
 	public void passPrimaryRefFirstnameTest() throws InterruptedException, IOException {
 		travelInfoPage.passPrimaryRefFirstname(priFirstName);
 
 	}
 
-	@Test(priority = 45)
+	@Test(priority = 9)
 	public void passPrimaryRefLastnameTest() throws InterruptedException, IOException {
 		travelInfoPage.passPrimaryRefLastname(priLastName);
 
 	}
 
-	@Test(priority = 46)
+	@Test(priority = 10)
 	public void pass_Primary_ref_addressTest() throws InterruptedException, IOException {
 		travelInfoPage.pass_Primary_ref_address(primaryAddress);
 
 	}
 
-	@Test(priority = 47)
+	@Test(priority = 11)
 	public void pass_primary_ref_pincodeTest() throws InterruptedException, IOException {
 		travelInfoPage.pass_primary_ref_pincode(primaryPinCode);
 
 	}
 
-	@Test(priority = 48)
+	@Test(priority = 12)
 	public void pass_primary_ref_cityTest() throws InterruptedException, IOException {
 		travelInfoPage.pass_primary_ref_city(primaryCity);
 
 	}
 
-	@Test(priority = 49)
+	@Test(priority = 13)
 	public void pass_primary_ref_stateTest() throws InterruptedException, IOException {
 		travelInfoPage.pass_primary_ref_state(primaryState);
 
 	}
 
-	@Test(priority = 50)
+	@Test(priority = 14)
 	public void pass_primary_ref_countryTest() throws InterruptedException, IOException {
 		travelInfoPage.pass_primary_ref_country(primaryCountry);
 
 	}
 
-	@Test(priority = 51)
+	@Test(priority = 15)
 	public void pass_primary_ref_phone_numberTest() throws InterruptedException, IOException {
 
 		travelInfoPage.pass_primary_ref_phone_number(primaryRefrencePhoneNo);
 
 	}
 
-	@Test(priority = 52)
+	@Test(priority = 16)
 	public void PassSecondaryRefDetailsTest() throws InterruptedException, IOException {
 		travelInfoPage.PassSecondaryRefDetails(secFirstName, secLastName, secondaryAddress, secondaryPinCode,
 				secondaryCity, secondaryState, secondaryCountry, secondaryRefrencePhoneNo);
 
 	}
 
-	@Test(priority = 53)
+	@Test(priority = 17)
 	public void verifyCheckBoxTest() throws InterruptedException, IOException {
 		travelInfoPage.clickOnByPhoneCheckbox();
 		System.out.println("travelInfoPage.verifyByPhoneCheckbox()" + travelInfoPage.verifyByPhoneCheckbox());

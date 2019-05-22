@@ -18,7 +18,7 @@ public class PersonalInfoPageTest extends DriverInit {
 
 	}
 
-	@Test(priority = 16)
+	@Test(priority = 1)
 	public void fillSignUpFormTest() throws InterruptedException, IOException {
 		homePage.clickOnApplyVisa();
 		visaCategoriesPage.clickOnVisaType();
@@ -51,7 +51,7 @@ public class PersonalInfoPageTest extends DriverInit {
 
 	}
 
-	@Test(priority = 17)
+	@Test(priority = 2)
 	public void verifyPersonalInfoTest() throws InterruptedException {
 		System.out.println("Hello in personal");
 		softAssertion.assertEquals(personalInfoPage.getTextPersonalInfoPageTitle(), prop.getProperty("PersonalInformationText"),
@@ -61,44 +61,44 @@ public class PersonalInfoPageTest extends DriverInit {
 
 	// ----------------------Personal info page
 	// Test----------------------------------//
-	@Test(priority = 18)
+	@Test(priority = 3)
 	public void getApplicationPageTitleTest() throws InterruptedException {
 		Thread.sleep(2000);
 		Assert.assertEquals(personalInfoPage.getApplicantPageTitle(), prop.getProperty("applicantFormTitle"));
 		softAssertion.assertAll();
 	}
 
-	@Test(priority = 19)
+	@Test(priority = 4)
 	public void getApplicationIdTest() throws InterruptedException {
 		applicationID = personalInfoPage.getApplicationId();
 		System.out.println(applicationID);
 	}
 
-	@Test(priority = 20)
+	@Test(priority = 5)
 	public void passFirstNameTest() throws InterruptedException, IOException {
 		personalInfoPage.passFirstName(firstName);
 
 	}
 
-	@Test(priority = 21)
+	@Test(priority = 6)
 	public void passMiddleNameTest() throws InterruptedException, IOException {
 		System.out.println("enter midill");
 		personalInfoPage.passMiddleName(middleName);
 		System.out.println("enter done");
 	}
 
-	@Test(priority = 22)
+	@Test(priority = 7)
 	public void passLastNameTest() throws InterruptedException, IOException {
 		personalInfoPage.passLastName(lastName);
 
 	}
 
-	@Test(priority = 23)
+	@Test(priority = 8)
 	public void passPassportNumberTest() throws InterruptedException, IOException {
 		personalInfoPage.passPassportNumber(passportNumber);
 
 	}
-	@Test(priority = 24)
+	@Test(priority = 9)
 	public void clickOnGenderTest() throws InterruptedException, IOException {
 		personalInfoPage.clickOnGender();
 		personalInfoPage.verifiedGenderSelected();
@@ -106,19 +106,19 @@ public class PersonalInfoPageTest extends DriverInit {
 		softAssertion.assertAll();
 	}
 
-	@Test(priority = 25)
+	@Test(priority = 10)
 	public void selectPassIssueDateTest() throws InterruptedException, IOException {
 		personalInfoPage.selectPassIssueDate(passportIssuedDate);
 
 	}
 
-	@Test(priority = 26)
+	@Test(priority = 11)
 	public void selectPassExpiryDateTest() throws InterruptedException, IOException {
 		personalInfoPage.selectPassExpiryDate(passportExpiryDate);
 
 	}
 
-	@Test(priority = 27)
+	@Test(priority = 12)
 	public void passPlaceOfBirthTest() throws InterruptedException, IOException {
 		personalInfoPage.passPlaceOfBirth(birthPlace);
 

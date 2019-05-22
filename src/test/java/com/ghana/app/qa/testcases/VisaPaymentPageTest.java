@@ -22,7 +22,7 @@ public class VisaPaymentPageTest extends DriverInit {
 		// TODO Auto-generated constructor stub
 	}
 	
-	@Test(priority = 61)
+	@Test(priority = 1)
 	public void signUpAndPayment() throws InterruptedException, IOException {
 		homePage.clickOnApplyVisa();
 		visaCategoriesPage.clickOnVisaType();
@@ -111,7 +111,7 @@ public class VisaPaymentPageTest extends DriverInit {
 
 	}
 
-	@Test(priority=62, description="Here verifying confirmation message and click on ok btn ")
+	@Test(priority=2, description="Here verifying confirmation message and click on ok btn ")
 	public void verifyClickOnSubmitBtnTest() throws InterruptedException{
 		//visaPaymentPage.getTextsubmitBtn();	
 		System.out.println( "verifyClickOnSubmitBtnTest1");

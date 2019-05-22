@@ -25,7 +25,7 @@ public class ConsulatePageFlagTest extends DriverInit {
 
 	}
 	
-	@Test(priority = 114)
+	@Test(priority = 1)
 	public void signUpAndPayment() throws InterruptedException, IOException {
 		homePage.clickOnApplyVisa();
 		visaCategoriesPage.clickOnVisaType();
@@ -126,7 +126,7 @@ public class ConsulatePageFlagTest extends DriverInit {
 		System.out.println( "applicationID==>visa" +applicationID);
 	}	
 
-	@Test(priority = 115, description = "This test will verify login functinality with pass valid creadentials and click on Login button")
+	@Test(priority = 2, description = "This test will verify login functinality with pass valid creadentials and click on Login button")
 	public void loginIntoConsulate() throws InterruptedException {
 		Thread.sleep(5000);		
 		TestUtil.toOpenNewTab();
@@ -139,7 +139,7 @@ public class ConsulatePageFlagTest extends DriverInit {
 
 	}
 
-	@Test(priority = 116 , description = "This test will verify we navigated to Welcome To Ghana Embassy page upon cliclking on Login button")
+	@Test(priority = 3 , description = "This test will verify we navigated to Welcome To Ghana Embassy page upon cliclking on Login button")
 	public void verifyTitleOfConsulateTitle() {
 		softAssertion.assertEquals(highAndConsulateLoginPage.getTitleOfConsulate(), prop.getProperty("titleOfBucketPage"),
 				"We are not navigate to consulate dashboard page after enetering valid creadentials");	
@@ -147,7 +147,7 @@ public class ConsulatePageFlagTest extends DriverInit {
 		softAssertion.assertAll();
 	}  
 
-	@Test(priority = 117, description = "This test will verify we navigated to Welcome To Ghana Embassy page upon cliclking on Login button" )
+	@Test(priority = 4, description = "This test will verify we navigated to Welcome To Ghana Embassy page upon cliclking on Login button" )
 	public void clickOnNewApplicationCN() throws InterruptedException {
 		System.out.println("HI2");
 		Thread.sleep(3000);	
@@ -163,7 +163,7 @@ public class ConsulatePageFlagTest extends DriverInit {
 		softAssertion.assertAll();
 	}
 	
-	@Test(priority = 118)
+	@Test(priority = 5)
 	public void verfiyTitleOfCNDocumentVerificatonPageCN() throws InterruptedException {
 		applicantDashBoardPage.clickOnDocumentVeri();
 		softAssertion.assertEquals(cNDocumentVerificaton.titleOfCNDocumentVerificatonPage(), prop.getProperty("documentVerificationTitle"),
@@ -171,7 +171,7 @@ public class ConsulatePageFlagTest extends DriverInit {
 		softAssertion.assertAll();
 	}
 
-	@Test(priority =119, description = "Click On Reject And Verify Pop Text and then click on Cross, Verify that on which page navigated")
+	@Test(priority =6, description = "Click On Reject And Verify Pop Text and then click on Cross, Verify that on which page navigated")
 	public void clickOnRejectAndVerifyPopText2CN(){
 		cNDocumentVerificaton.clickOnReject();
 		cNDocumentVerificaton.passInReason(prop.getProperty("reasonOfFlagCN"));
@@ -182,7 +182,7 @@ public class ConsulatePageFlagTest extends DriverInit {
 		softAssertion.assertAll();
 	
 	}
-	@Test(priority = 120, description = "This test will verify whether application is sent to HCD side")
+	@Test(priority = 7, description = "This test will verify whether application is sent to HCD side")
 	public void verifyApplicaInRejectApplicationBucket() throws InterruptedException {
 		// check whether application removed from new application bucket and added in HCG application iin count
 		System.out.println("HEllllllllllllllllllllllOO");
@@ -201,7 +201,7 @@ public class ConsulatePageFlagTest extends DriverInit {
 		softAssertion.assertAll();
 	}
 	
-	@Test(priority = 121, description = "This test will verify whether application is opens upon clicing on Open button and also clicking back button navigates to Bucket")
+	@Test(priority = 8, description = "This test will verify whether application is opens upon clicing on Open button and also clicking back button navigates to Bucket")
 	public void verifyApplicationSentToRejectBucketOpens() throws InterruptedException {
 		consulatedashBoardPage.clickOnOpenButtonFromFlagApplication();
 		softAssertion.assertEquals(applicantDashBoardPage.titleOfApplicationDetailsPage(), prop.getProperty("applicantDashboardTitle"),
@@ -212,7 +212,7 @@ public class ConsulatePageFlagTest extends DriverInit {
 		softAssertion.assertAll();
 		
 	}
-	@Test(priority = 122, description = "This test will verify whether application is opens upon clicing on Open button and also clicking back button navigates to Bucket")
+	@Test(priority = 9, description = "This test will verify whether application is opens upon clicing on Open button and also clicking back button navigates to Bucket")
 	public void verifyCanceAndCrossButton() throws InterruptedException {
 		Thread.sleep(3000);
 		TestUtil.clickOnElement();

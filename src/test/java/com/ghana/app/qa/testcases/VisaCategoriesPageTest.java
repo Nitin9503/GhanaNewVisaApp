@@ -20,7 +20,7 @@ public class VisaCategoriesPageTest extends DriverInit {
 		super();
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 0)
 	public void validateVisaPageTiltleTest() throws IOException, InterruptedException {
 		homePage.clickOnApplyVisa();
 		Thread.sleep(2000);
@@ -30,7 +30,7 @@ public class VisaCategoriesPageTest extends DriverInit {
 
 	}
 
-	@Test(priority = 3)
+	@Test(priority = 1)
 	public void getVisaCategoriesText() throws IOException, InterruptedException {
 		// Thread.sleep(2000);
 		System.out.println("visa Page Title is  " + visaCategoriesPage.visaCategorisText());
@@ -39,7 +39,7 @@ public class VisaCategoriesPageTest extends DriverInit {
 
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 2)
 	public void clickOnVisaTypeTest() throws IOException, InterruptedException {
 		visaCategoriesPage.clickOnVisaType();
 		System.out.println("sign up page title is " + signUpPage.validateSignUpPageTitle());

@@ -3,22 +3,37 @@
 <suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [Torenzo WebSite]">
   <test thread-count="3" name="TorenzoTest(failed)">
     <classes>
-      <class name="com.ghana.app.qa.testcases.VisaPaymentPageTest">
+      <class name="com.ghana.app.qa.testcases.SignUpPageTest">
         <methods>
+          <include name="passReEmailIdTest"/>
+          <include name="selectDateOfBirthTest"/>
+          <include name="passPhoneNoTest"/>
+          <include name="tearDown"/>
+          <include name="enterCaptchaFieldTest"/>
+          <include name="selectPortOfArrivalTest"/>
+          <include name="setUp"/>
+          <include name="passEmailIdTest"/>
+          <include name="selectVisaLocation"/>
+          <include name="selectNationalityTest"/>
+          <include name="selectPassportTypeTest"/>
+          <include name="selectVisaType"/>
+        </methods>
+      </class> <!-- com.ghana.app.qa.testcases.SignUpPageTest -->
+      <class name="com.ghana.app.qa.testcases.VisaCategoriesPageTest">
+        <methods>
+          <include name="getVisaCategoriesText"/>
+          <include name="clickOnVisaTypeTest"/>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="verifyClickOnSubmitBtnTest"/>
         </methods>
-      </class> <!-- com.ghana.app.qa.testcases.VisaPaymentPageTest -->
-      <class name="com.ghana.app.qa.testcases.AddressInfoPageTest">
+      </class> <!-- com.ghana.app.qa.testcases.VisaCategoriesPageTest -->
+      <class name="com.ghana.app.qa.testcases.HomePageTest">
         <methods>
+          <include name="verifyVisaCategoriesTest"/>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="filladdressInfoTest"/>
-          <include name="selectFormerNationalityTest"/>
-          <include name="SaveAndContinueFromPersonalInfoTest"/>
         </methods>
-      </class> <!-- com.ghana.app.qa.testcases.AddressInfoPageTest -->
+      </class> <!-- com.ghana.app.qa.testcases.HomePageTest -->
     </classes>
   </test> <!-- TorenzoTest(failed) -->
 </suite> <!-- Failed suite [Torenzo WebSite] -->

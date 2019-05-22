@@ -1,45 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [Torenzo WebSite]">
+  <test thread-count="3" name="TorenzoTest(failed)">
     <classes>
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-      <class name="com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest">
+      <class name="com.ghana.app.qa.testcases.SignUpPageTest">
         <methods>
-          <include name="AlreadySubmittedPartiallyFilledTest"/>
-          <include name="PartiallyFilledTest"/>
+          <include name="passReEmailIdTest"/>
+          <include name="selectDateOfBirthTest"/>
+          <include name="passPhoneNoTest"/>
+          <include name="tearDown"/>
+          <include name="enterCaptchaFieldTest"/>
+          <include name="selectPortOfArrivalTest"/>
+          <include name="setUp"/>
+          <include name="passEmailIdTest"/>
+          <include name="selectVisaLocation"/>
+          <include name="selectNationalityTest"/>
+          <include name="selectPassportTypeTest"/>
+          <include name="selectVisaType"/>
+        </methods>
+      </class> <!-- com.ghana.app.qa.testcases.SignUpPageTest -->
+      <class name="com.ghana.app.qa.testcases.VisaCategoriesPageTest">
+        <methods>
+          <include name="getVisaCategoriesText"/>
+          <include name="clickOnVisaTypeTest"/>
+          <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.ghana.app.qa.testcases.PartiallyFilledApplicatlionTest -->
-=======
-      <class name="com.ghana.app.qa.testcases.ConsulatePageFlagTest">
-=======
-      <class name="com.ghana.app.qa.testcases.HighCommissionPageApproveTest">
->>>>>>> Stashed changes
+      </class> <!-- com.ghana.app.qa.testcases.VisaCategoriesPageTest -->
+      <class name="com.ghana.app.qa.testcases.HomePageTest">
         <methods>
-          <include name="clickOnApproveAndVerifyPopText1"/>
-          <include name="clickOnPreviousButtonAndVerifyTitleApplicantInformation"/>
-          <include name="verifyCanceAndCrossButton"/>
-          <include name="verifyApproveBucktInCN"/>
-          <include name="clickOnNextButtonAndVerifyTitleDocumentVerifi"/>
-          <include name="verifyApprovedApplicaIsInApproveBucketHCD"/>
-          <include name="getTextFromTravelInformation"/>
-          <include name="selectAllCheckBoxAndVerify"/>
-          <include name="selectOneByOneCheckBoxAndVerify"/>
-          <include name="approveApplication"/>
-          <include name="passComment"/>
-          <include name="clickOnApproveAndVerifyPopText"/>
+          <include name="verifyVisaCategoriesTest"/>
+          <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="verifyApplicationSentOpens"/>
-          <include name="verfiyTitleOfCNDocumentVerificatonPage"/>
         </methods>
-<<<<<<< Updated upstream
-      </class> <!-- com.ghana.app.qa.testcases.ConsulatePageFlagTest -->
->>>>>>> d431cf34496f5e28fcc3fbc057b2d6c3c2319536
-=======
-      </class> <!-- com.ghana.app.qa.testcases.HighCommissionPageApproveTest -->
->>>>>>> Stashed changes
+      </class> <!-- com.ghana.app.qa.testcases.HomePageTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- TorenzoTest(failed) -->
+</suite> <!-- Failed suite [Torenzo WebSite] -->

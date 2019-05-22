@@ -47,30 +47,26 @@ public class TestBase {
 	// public static String hubURL1 = "http://192.168.1.32:5566/wd/hub";
 	// Logger log = Logger.getLogger(TestBase.class) ;
 	// E:\SeleniumWorkSpace\torenzowebsite\TorenzoWebSite\FileDriver\chromedriver.exe
+	
 	public static WebDriver driver;
 
 	public TestBase() throws IOException, InterruptedException {
 		driverPath = System.getProperty("user.dir");
 		System.out.println("path==>" + driverPath);
-		OSName = System.getProperty("os.name");
-		
+		OSName = System.getProperty("os.name");		
 		OSName = OSName.substring(0,3);
 
 			if (OSName.equalsIgnoreCase("Mac")) {
 				System.out.println(OSName);
 				prop = new Properties();
-				FileInputStream fis = new FileInputStream(
-						driverPath + "/src/main/java/com/ghana/app/qa/config/config.properties");
+				FileInputStream fis = new FileInputStream("./src/main/java/com/ghana/app/qa/config/config.properties");
 				prop.load(fis);
-				System.out.println(OSName);
 			} else if (OSName.equalsIgnoreCase("Win")) {
 				System.out.println(OSName);
 				prop = new Properties();
 				System.out.println(OSName);
-				FileInputStream fis = new FileInputStream(
-						driverPath + "\\src\\main\\java\\com\\ghana\\app\\qa\\config\\config.properties");
+				FileInputStream fis = new FileInputStream(".\\src\\main\\java\\com\\ghana\\app\\qa\\config\\config.properties");
 				prop.load(fis);
-				System.out.println(OSName);		
 			}
 		}
 	
@@ -287,9 +283,8 @@ public class TestBase {
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
-
-		driver.get(prop.getProperty("GhanaWebLocalURL"));    //---localhost
-		//driver.get(prop.getProperty("GhanaWebURL"));	
+		//driver.get(prop.getProperty("GhanaWebLocalURL"));    //---localhost
+		driver.get(prop.getProperty("GhanaWebURL"));	
 		//driver.get(prop.getProperty("HCDLoginURL"));	
 }
 }

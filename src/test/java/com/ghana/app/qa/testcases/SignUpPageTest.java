@@ -22,7 +22,7 @@ public class SignUpPageTest extends DriverInit {
 		// TODO Auto-generated constructor stub
 	}
 
-	@Test(priority = 5)
+	@Test(priority = 0)
 	public void launchAndGotoSignUP() throws InterruptedException, IOException {
 		homePage.clickOnApplyVisa();
 		visaCategoriesPage.clickOnVisaType();
@@ -40,58 +40,58 @@ public class SignUpPageTest extends DriverInit {
 		softAssertion.assertAll();
 	}
 
-	@Test(priority = 6)
+	@Test(priority = 1)
 	public void selectPassportTypeTest() throws InterruptedException, IOException {
 		signUpPage.SelectPassportType();
 	}
 
-	@Test(priority = 7)
+	@Test(priority = 2)
 	public void selectNationalityTest() throws InterruptedException, IOException {
 		signUpPage.selectNationality();
 
 	}
 
-	@Test(priority = 8)
+	@Test(priority = 3)
 	public void selectPortOfArrivalTest() throws InterruptedException, IOException {
 		signUpPage.selectPortOfArrival();
 
 	}
 
-	@Test(priority = 9)
+	@Test(priority = 4)
 	public void selectVisaType() throws InterruptedException, IOException {
 		signUpPage.selectVisaType();
 
 	}
 
-	@Test(priority = 10)
+	@Test(priority = 5)
 	public void selectVisaLocation() throws InterruptedException, IOException {
 		signUpPage.selectVisaLocation();
 
 	}
 
-	@Test(priority = 11)
+	@Test(priority = 6)
 	public void passPhoneNoTest() throws InterruptedException, IOException {
 		signUpPage.passPhoneNo(phoneNumber);
 	}
 
-	@Test(priority = 12)
+	@Test(priority = 7)
 	public void passEmailIdTest() throws InterruptedException, IOException {
 		signUpPage.passEmailId(emailId);
 	}
 
-	@Test(priority = 13)
+	@Test(priority = 8)
 	public void passReEmailIdTest() throws InterruptedException, IOException {
 		signUpPage.passReEmailId(emailId);
 	}
 
-	@Test(priority = 14)
+	@Test(priority = 9)
 	public void enterCaptchaFieldTest() throws InterruptedException, IOException {
 		signUpPage.enterCaptchaField();
 		// signUpPage.continueBtn();
 		// signUpPage.cancelBtn();
 	}
 
-	@Test(priority = 15)
+	@Test(priority = 10)
 	public void selectDateOfBirthTest() throws InterruptedException, IOException {
 		Thread.sleep(3000);
 		signUpPage.selectDateOfBirth(birthDate);

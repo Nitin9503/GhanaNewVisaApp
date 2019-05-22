@@ -18,7 +18,7 @@ public class EmergencyContactPageTest extends DriverInit{
 		// TODO Auto-generated constructor stub
 	}
 
-	@Test(priority = 32)
+	@Test(priority = 1)
 	public void signUpAndFillAddressInfo() throws InterruptedException, IOException {
 		homePage.clickOnApplyVisa();
 		visaCategoriesPage.clickOnVisaType();
@@ -75,7 +75,7 @@ public class EmergencyContactPageTest extends DriverInit{
 		addressInfoPage.PassAddressInfofield(FlatNo, StreetName, Landmark, pinCode, cityName, stateName, countryName);
 	}
 	
-	@Test(priority = 33)
+	@Test(priority = 2)
 	public void SaveAndContinueAddressInfoTest() throws InterruptedException, IOException {
 		addressInfoPage.clickSaveAndContinuebtn();
 		emergencyContactPage.getTextEmerPageTitle();
@@ -83,19 +83,19 @@ public class EmergencyContactPageTest extends DriverInit{
 				"it is not navigate to Emergency Contact page");
 		softAssertion.assertAll();
 	}
-	@Test(priority = 34)
+	@Test(priority = 3)
 	public void emergencyContactDetailsTest() throws InterruptedException, IOException {
 		emergencyContactPage.emergencyContactDetails(emerContactName, emerContactSurname, emerPhoneNumber);
 
 	}
 
-	@Test(priority = 35)
+	@Test(priority = 4)
 	public void selectRelationTest() throws InterruptedException, IOException {
 		emergencyContactPage.selectRelation();
 
 	}
 
-	@Test(priority = 36)
+	@Test(priority = 5)
 	public void emergencyProfessionDetailsTest() throws InterruptedException, IOException {
 		emergencyContactPage.emergencyProfessionDetails(profession, employer, employerAddress, emerPincode,
 				emerCityName, emerState, emerCountry, emerEmployerPhoneNumber);

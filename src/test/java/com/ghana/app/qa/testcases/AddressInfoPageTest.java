@@ -21,7 +21,7 @@ public class AddressInfoPageTest extends DriverInit {
 		// TODO Auto-generated constructor stub
 	}
 
-	@Test(priority = 28)
+	@Test(priority = 1)
 	public void signUpAndFillPersonalInfo() throws InterruptedException, IOException {
 		homePage.clickOnApplyVisa();
 		visaCategoriesPage.clickOnVisaType();
@@ -71,7 +71,7 @@ public class AddressInfoPageTest extends DriverInit {
 
 	}
 	
-	@Test(priority = 29)
+	@Test(priority = 2)
 	public void SaveAndContinueFromPersonalInfoTest() throws InterruptedException, IOException {
 		personalInfoPage.clickOnSaveAndContinue();
 		addressInfoPage.getTextAddressInfoPageTitle();
@@ -82,12 +82,12 @@ public class AddressInfoPageTest extends DriverInit {
 	}
 	// ----------------------Address Info page
 	// Test----------------------------------//
-	@Test(priority = 30)
+	@Test(priority = 3)
 	public void selectFormerNationalityTest() throws InterruptedException, IOException {
 		addressInfoPage.selectFormerNaitonality();
 		}
 
-	@Test(priority = 31)
+	@Test(priority = 4)
 	public void filladdressInfoTest() throws InterruptedException, IOException {
 		addressInfoPage.PassAddressInfofield(FlatNo, StreetName, Landmark, pinCode, cityName, stateName, countryName);
 		System.out.println("Birthdate==>" +providedDate);

@@ -21,7 +21,7 @@ public class ReviewApplicationPageTest extends DriverInit {
 		// TODO Auto-generated constructor stub
 	}
 
-	@Test(priority = 56)
+	@Test(priority = 1)
 	public void signUpAndValidateReviewApp() throws InterruptedException, IOException {
 		homePage.clickOnApplyVisa();
 		visaCategoriesPage.clickOnVisaType();
@@ -122,7 +122,7 @@ public class ReviewApplicationPageTest extends DriverInit {
 		//TestUtil.HandleAlertPopup();
 	}
 
-	@Test(priority = 57)
+	@Test(priority = 2)
 	public void getTextPersonalInfoTest() throws InterruptedException, IOException {
 		softAssertion.assertEquals(reviewApplicationPage.getTextReviewPageTtle(), prop.getProperty("reviewApplicationText"), "We are not navigate to review Application page from upload document");
 		
@@ -155,7 +155,7 @@ public class ReviewApplicationPageTest extends DriverInit {
 
 	}
 
-	@Test(priority = 58)
+	@Test(priority = 3)
 	public void getTextAddressInfoTest() throws InterruptedException, IOException {
 		// Address Info
 		softAssertion.assertEquals(reviewApplicationPage.getTextFromAddress(),
@@ -193,7 +193,7 @@ public class ReviewApplicationPageTest extends DriverInit {
 
 	}
 
-	@Test(priority = 59)
+	@Test(priority = 4)
 	public void getTextEmergencyContactTest() throws InterruptedException, IOException {
 		// Emergency contact
 		softAssertion.assertEquals(reviewApplicationPage.getTextFromEmerContactName(),
@@ -229,7 +229,7 @@ public class ReviewApplicationPageTest extends DriverInit {
 
 	}
 
-	@Test(priority = 60)
+	@Test(priority = 5)
 	public void getTextTravelInfoTest() throws InterruptedException, IOException {
 		// Travel Info
 		TestUtil.dateAlter(dateOfDeparture);

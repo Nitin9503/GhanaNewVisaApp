@@ -23,7 +23,7 @@ public class UploadDocPageTest extends DriverInit {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	@Test(priority = 54)
+	@Test(priority = 1)
 	public void signUpAndFillTravelInfo() throws InterruptedException, IOException {
 		homePage.clickOnApplyVisa();
 		visaCategoriesPage.clickOnVisaType();
@@ -115,7 +115,7 @@ public class UploadDocPageTest extends DriverInit {
 		travelInfoPage.clickOnContinuebutton();
 	}
 
-	@Test(priority = 55)
+	@Test(priority = 2)
 	public void getUploadDocTest() throws InterruptedException, IOException {
 
 		softAssertion.assertEquals(uploadDocPage.getTextUploadDocPageTitle(), prop.getProperty("uploadDocumentsText"), "We are not navigate to Upload docuent page from Travel Infor");		

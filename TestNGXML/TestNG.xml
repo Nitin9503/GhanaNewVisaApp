@@ -3,15 +3,15 @@
 
 	<test name="TorenzoTest">
 		<classes>
-			<class name="com.ghana.app.qa.testcases.HomePageTest"></class>
+			<!-- <class name="com.ghana.app.qa.testcases.HomePageTest"></class>
 			<class name="com.ghana.app.qa.testcases.VisaCategoriesPageTest"></class>
 			<class name="com.ghana.app.qa.testcases.SignUpPageTest"></class>
-			<!--  <class name="com.ghana.app.qa.testcases.PersonalInfoPageTest"></class>
+			  <class name="com.ghana.app.qa.testcases.PersonalInfoPageTest"></class>
 			<class name="com.ghana.app.qa.testcases.AddressInfoPageTest"></class>
 			<class name="com.ghana.app.qa.testcases.EmergencyContactPageTest"></class>
-			<class name="com.ghana.app.qa.testcases.TravelInfoPageTest"></class>
+			<class name="com.ghana.app.qa.testcases.TravelInfoPageTest"></class> -->
 			<class name="com.ghana.app.qa.testcases.UploadDocPageTest"></class>
-			<class name="com.ghana.app.qa.testcases.ReviewApplicationPageTest"></class>
+			<!--<class name="com.ghana.app.qa.testcases.ReviewApplicationPageTest"></class>
 			<class name="com.ghana.app.qa.testcases.VisaPaymentPageTest"></class>
 			<class name="com.ghana.app.qa.testcases.VisaPaymentPageTest"></class>  -->
 		</classes>

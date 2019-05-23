@@ -23,13 +23,13 @@ public class PartiallyFilledApplicatlionTest extends DriverInit{
 		super();
 		
 	}
-	@Test(priority=58)
+	@Test(priority=13)
 	public void PartiallyFilledAppliTest() throws InterruptedException{
 		personalInfoPage.clickOnSaveAndContinue();
 		partiallyFilledApplicationPage.clickOnHomepageLinktext();
 		Assert.assertEquals(driver.getTitle(), "Home", "it is navigated on home page");
 	}
-	@Test(priority=59)
+	@Test(priority=14)
 	public void NegativePartiallyFilledTest() throws InterruptedException{
 		partiallyFilledApplicationPage.clickOnpartialFilledTab();
 		partiallyFilledApplicationPage.passApplicationId("3434242244242");
@@ -42,20 +42,8 @@ public class PartiallyFilledApplicatlionTest extends DriverInit{
 		Assert.assertEquals(partiallyFilledApplicationPage.getErrorMessage().substring(2), "Error! Incorrect Application ID or Date of Birth.");
 		partiallyFilledApplicationPage.clickclosebtn();
 	}
-	@Test(priority=61)
-	public void AlreadySubmittedPartiallyFilledTest() throws InterruptedException{
-		partiallyFilledApplicationPage.clickOnpartialFilledTab();
-		partiallyFilledApplicationPage.passApplicationId(applicationID);
-		partiallyFilledApplicationPage.selectDOB(birthDate);
-		String capchatext = partiallyFilledApplicationPage.getCaptchaText();
-		System.out.println(capchatext);
-		partiallyFilledApplicationPage.passCaptchaText(capchatext);
-		partiallyFilledApplicationPage.clickOnsubmitbtn();
-		System.out.println(partiallyFilledApplicationPage.getErrorMessage().substring(2));
-		Assert.assertEquals(partiallyFilledApplicationPage.getErrorMessage().substring(2), "Error! Your application is submiited for verification, Please check status.");
-		partiallyFilledApplicationPage.clickclosebtn();
-	}
-	@Test(priority=60)
+
+	@Test(priority=15)
 	public void PartiallyFilledTest() throws InterruptedException{
 		partiallyFilledApplicationPage.passApplicationId(applicationID);
 	    partiallyFilledApplicationPage.selectDOB(birthDate);
@@ -130,6 +118,20 @@ public class PartiallyFilledApplicatlionTest extends DriverInit{
 		//Assert.assertEquals(partiallyfilledPage.getErrorMessage().substring(2), expected);
 		
 	}
+	@Test(priority=16)
+	public void AlreadySubmittedPartiallyFilledTest() throws InterruptedException{
+		partiallyFilledApplicationPage.clickOnpartialFilledTab();
+		partiallyFilledApplicationPage.passApplicationId(applicationID);
+		partiallyFilledApplicationPage.selectDOB(birthDate);
+		String capchatext = partiallyFilledApplicationPage.getCaptchaText();
+		System.out.println(capchatext);
+		partiallyFilledApplicationPage.passCaptchaText(capchatext);
+		partiallyFilledApplicationPage.clickOnsubmitbtn();
+		System.out.println(partiallyFilledApplicationPage.getErrorMessage().substring(2));
+		Assert.assertEquals(partiallyFilledApplicationPage.getErrorMessage().substring(2), "Error! Your application is submiited for verification, Please check status.");
+		partiallyFilledApplicationPage.clickclosebtn();
+	}
+	@Test(priority=17)
 	public void verifyWithEmptyField() throws InterruptedException{
 		partiallyFilledApplicationPage.selectDOB(birthDate);
 		String capchatext = partiallyFilledApplicationPage.getCaptchaText();

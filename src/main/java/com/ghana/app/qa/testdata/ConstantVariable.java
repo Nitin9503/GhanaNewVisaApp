@@ -141,4 +141,6 @@ public class ConstantVariable {
 	public static String HCDFLAGApplicationCount = "";
 	public static String HCDINTERApplicationCount = "";
 
+	//Visa Status page
+	public static String ApplicationStatus="";
 }

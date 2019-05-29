@@ -31,8 +31,11 @@ public class PartiallyFilledApplicationPage extends TestBase{
 	@FindBy(xpath="//label[@id='text_captcha']")
 	WebElement textCaptcha;
 	
-	@FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']")
-	WebElement errorMessage;
+	@FindBy(xpath="//p[@id='txt_error1']")
+	WebElement errorMessage1;
+	
+	@FindBy(xpath="//p[@id='txt_error2']")
+	WebElement errorMessage2;
 	
 	@FindBy(xpath="//input[@id='txt_captcha_prt']")
 	WebElement textCaptchaFiled;
@@ -69,8 +72,12 @@ public class PartiallyFilledApplicationPage extends TestBase{
 		textCaptchaFiled.sendKeys(captchaTexts);
 		
 	}
-	public String getErrorMessage(){
-		return errorMessage.getText();
+	public String getErrorMessage1(){
+		return errorMessage1.getText();
+		
+	}
+	public String getErrorMessage2(){
+		return errorMessage2.getText();
 		
 	}
 	public void clickOnsubmitbtn(){

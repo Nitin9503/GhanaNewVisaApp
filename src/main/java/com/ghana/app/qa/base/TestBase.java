@@ -42,7 +42,7 @@ import com.ghana.app.qa.util.TestUtil;
 import static com.ghana.app.qa.testdata.ConstantVariable.*;
 import io.github.bonigarcia.wdm.ChromeDriverManager;
 import io.github.bonigarcia.wdm.WebDriverManager;
-@Listeners(com.ghana.app.qa.listener.Listener.class)
+//@Listeners(com.ghana.app.qa.listener.Listener.class)
 public class TestBase {
 	// public static String hubURL1 = "http://192.168.1.32:5566/wd/hub";
 	// Logger log = Logger.getLogger(TestBase.class) ;
@@ -93,6 +93,7 @@ public class TestBase {
 					// "/usr/local/bin/geckodriver");
 					// System.setProperty("webdriver.firefox.marionette",
 					// "false");
+			
 					WebDriverManager.firefoxdriver().setup();
 					driver = new FirefoxDriver();
 				}
@@ -204,9 +205,10 @@ public class TestBase {
 			}
 			else if (broweserName.equalsIgnoreCase("chrome")) {
 				//System.setProperty("webdriver.chrome.driver",driverPath+"\\FileDriver\\chromedriver.exe" );
+				ChromeOptions options = new ChromeOptions();
+				options.addArguments("--disable-infobars");
 				WebDriverManager.chromedriver().setup();
-
-				driver = new ChromeDriver();
+				driver = new ChromeDriver(options);
 			}
 
 			else if (broweserName.equalsIgnoreCase("IE")) {
@@ -283,8 +285,8 @@ public class TestBase {
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
-		//driver.get(prop.getProperty("GhanaWebLocalURL"));    //---localhost
-		driver.get(prop.getProperty("GhanaWebURL"));	
+		driver.get(prop.getProperty("GhanaWebLocalURL"));    //---localhost
+		//driver.get(prop.getProperty("GhanaWebURL"));	
 		//driver.get(prop.getProperty("HCDLoginURL"));	
 }
 }

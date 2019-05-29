@@ -49,13 +49,13 @@ public class ConstantVariable {
 													// Kolkata, )
 	public static String selectFormerNationlity = "None";
 
-	public static String firstName = "Rahul";
+	public static String firstName = "Prasanna";
 	public static String middleName = "Vinod";
-	public static String lastName = "Patil";
-	public static String birthDate = "22102009";
+	public static String lastName = "Shinde";
+	public static String birthDate = "25092006";
 
-	public static String birthPlace = "Sangamner";
-	public static String passportNumber = "A12345BA00";
+	public static String birthPlace = "Bhandara";
+	public static String passportNumber = "PS1234";
 	public static String passportIssuedDate = "29102018";
 	public static String passportExpiryDate = "29102020";
 	public static String selectAddressType = "Permanent Address"; // Present

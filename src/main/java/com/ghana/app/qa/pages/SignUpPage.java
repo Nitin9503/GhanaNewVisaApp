@@ -150,6 +150,7 @@ public class SignUpPage extends TestBase {
 
 	public void passPhoneNo(String phoneNo) {
 		PhoneNumber.sendKeys(phoneNo);
+		
 	}
 
 	public void selectDateOfBirth(String birthDate) throws InterruptedException {

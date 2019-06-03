@@ -117,9 +117,6 @@ public class ReviewApplicationPageTest extends DriverInit {
 		uploadDocPage.getUploadDoc();
 		uploadDocPage.clicksaveAndContiBtn();
 		Thread.sleep(1000);
-		 driver.switchTo().alert().dismiss();
-
-		//TestUtil.HandleAlertPopup();
 	}
 
 	@Test(priority = 2)

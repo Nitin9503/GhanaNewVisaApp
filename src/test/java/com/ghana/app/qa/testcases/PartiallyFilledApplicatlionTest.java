@@ -15,7 +15,7 @@ import org.testng.asserts.SoftAssert;
 import com.ghana.app.qa.base.DriverInit;
 import com.ghana.app.qa.util.TestUtil;
 
-public class PartiallyFilledApplicatlionTest extends DriverInit{
+public class PartiallyFilledApplicatlionTest extends PersonalInfoPageTest{
 
 	SoftAssert softAssertion= new SoftAssert();
 	public PartiallyFilledApplicatlionTest() throws IOException,
@@ -38,8 +38,8 @@ public class PartiallyFilledApplicatlionTest extends DriverInit{
 		System.out.println(capchatext);
 		partiallyFilledApplicationPage.passCaptchaText(capchatext);
 		partiallyFilledApplicationPage.clickOnsubmitbtn();
-		System.out.println(partiallyFilledApplicationPage.getErrorMessage().substring(2));
-		Assert.assertEquals(partiallyFilledApplicationPage.getErrorMessage().substring(2), "Error! Incorrect Application ID or Date of Birth.");
+		System.out.println(partiallyFilledApplicationPage.getErrorMessage1());
+		Assert.assertEquals(partiallyFilledApplicationPage.getErrorMessage1(), "Error! Incorrect Application ID or Date of Birth.");
 		partiallyFilledApplicationPage.clickclosebtn();
 	}
 
@@ -127,8 +127,8 @@ public class PartiallyFilledApplicatlionTest extends DriverInit{
 		System.out.println(capchatext);
 		partiallyFilledApplicationPage.passCaptchaText(capchatext);
 		partiallyFilledApplicationPage.clickOnsubmitbtn();
-		System.out.println(partiallyFilledApplicationPage.getErrorMessage().substring(2));
-		Assert.assertEquals(partiallyFilledApplicationPage.getErrorMessage().substring(2), "Error! Your application is submiited for verification, Please check status.");
+		System.out.println(partiallyFilledApplicationPage.getErrorMessage2());
+		Assert.assertEquals(partiallyFilledApplicationPage.getErrorMessage2(), "Error! Your application is submiited for verification, Please check status.");
 		partiallyFilledApplicationPage.clickclosebtn();
 	}
 	@Test(priority=17)
@@ -138,10 +138,10 @@ public class PartiallyFilledApplicatlionTest extends DriverInit{
 		System.out.println(capchatext);
 		partiallyFilledApplicationPage.passCaptchaText(capchatext);
 		partiallyFilledApplicationPage.clickOnsubmitbtn();
-		 Alert simpleAlert = driver.switchTo().alert();
+		/* Alert simpleAlert = driver.switchTo().alert();
 		 String alertText = simpleAlert.getText();
 		 System.out.println("Alert text is " + alertText);
-		 
+		 */
 	}
 	
 }

@@ -1,13 +1,11 @@
 package com.ghana.app.qa.testcases;
 
-import static com.ghana.app.qa.testdata.ConstantVariable.birthDate;
-import static com.ghana.app.qa.testdata.ConstantVariable.emailId;
-import static com.ghana.app.qa.testdata.ConstantVariable.phoneNumber;
-import static com.ghana.app.qa.testdata.ConstantVariable.selectedBoxOnSignUp;
-
+import static com.ghana.app.qa.testdata.ConstantVariable.*;
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.util.ArrayList;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -36,37 +34,55 @@ public class SignUpPageTest extends DriverInit {
 		signUpPage.verifyRadioButtonSelected();
 		// softAssertion.assertTrue(selectedRadioButtonOnSignUp,
 		// "Check boxes are not selected from SignUp page");
-
 		softAssertion.assertAll();
 	}
 
 	@Test(priority = 1)
-	public void selectPassportTypeTest() throws InterruptedException, IOException {
+	public void selectPassportTypeTest() throws InterruptedException, IOException {	
 		signUpPage.SelectPassportType();
+		Assert.assertEquals(totalPassportTypeInReq, signUpPage.sizePassportType(), "Passport values are not matched when compare the requirement conutry and get value from application");
+		Assert.assertEquals(passPortType, signUpPage.getTextPassportTypeName(), "Passport selected values is not displayed when selected from drop down and comapare with test data");
+		ArrayList<String> expectedPassport = new ArrayList<String>();
+	
+		
+		System.out.println("Verification done for passport type");
 	}
 
 	@Test(priority = 2)
 	public void selectNationalityTest() throws InterruptedException, IOException {
 		signUpPage.selectNationality();
-
+		Assert.assertEquals(signUpPage.totalCountryCount(), totalCountryListInReq,
+				"Countries values are not matched when compare the requirement conutry and get value from application");
+		Assert.assertEquals(nationalityName, signUpPage.getFromSelectedNationality(), "Nationality selected values is not displayed when selected from drop down and comapare with test data");
+		System.out.println("Verification done for selectNationalityTest ");
 	}
 
 	@Test(priority = 3)
 	public void selectPortOfArrivalTest() throws InterruptedException, IOException {
 		signUpPage.selectPortOfArrival();
+		Assert.assertEquals(signUpPage.totalPortArrival(), totalPortArrivalInReq,
+				"Total port of arrival values are not matched when compare the requirement conutry and get value from application");
+		Assert.assertEquals(portOfArrival, signUpPage.getTextFromPortofArrival(), "Port Of Arrival selected values is not displayed when selected from drop down and comapare with test data");
+		System.out.println("Verification done for selectPortOfArrivalTest");
 
 	}
 
 	@Test(priority = 4)
 	public void selectVisaType() throws InterruptedException, IOException {
 		signUpPage.selectVisaType();
-
+		Assert.assertEquals(signUpPage.totalVisaFeeCountActual(), totalVisaTypeExpecteed,
+				"Total visa fee values are not matched when compare the requirement and get value from application");
+		Assert.assertEquals(signUpPage.getTextFromVisaType(), visaFees,  "Port Of Arrival selected values is not displayed when selected from drop down and comapare with test data");
+		System.out.println("Verification done for selectVisaType");
 	}
 
 	@Test(priority = 5)
 	public void selectVisaLocation() throws InterruptedException, IOException {
 		signUpPage.selectVisaLocation();
-
+		Assert.assertEquals(signUpPage.totalVisaLocationActual(), totalVisaLocationExpected,
+				"Total Visa Location values are not matched when compare the requirement and get value from application");
+		Assert.assertEquals(signUpPage.getTextFromSelectVisaLocation(), VisaLocations,  "Visa Location selected values is not displayed when selected from drop down and comapare with test data");
+		System.out.println("Verification done for selectVisaLocation");
 	}
 
 	@Test(priority = 6)

@@ -27,21 +27,29 @@ public class ConstantVariable {
 	public static boolean selectedBoxOnSignUp;
 	public static boolean selectedRadioButtonOnSignUp;
 
+
 	public static boolean genderRadioButton;
 
-	// signUp Page
-	public static String passPortType = "Diplomatic"; // Ordinary, Official,
-														// Diplomatic, Service,
-														// Special
+	//TestData
+	public static String passPortType = "Special"; // Ordinary, Official,Diplomatic, Service,Special
+													
+	//TestData
+	public static int totalPassportTypeInReq=5;
+	public static int totalCountryListInReq=250;
+	public static int totalPortArrivalInReq=2;
+	public static int totalVisaTypeExpecteed=7;
+	public static int totalVisaLocationExpected=3;
 	public static String nationalityName = "India"; // India,
-	public static String portOfArrival = "Kotoka Accra Airport"; // Ghana
-																	// Airport
+	public static String portOfArrival = "Kotoka Accra Airport";
+
+	//public   String[] expecPassportType = {"Diplomatic", "Offical", "Ordinary", "Service", "Special"};
+	
 	// Personal info
 
 	// **Review Application page **Single entry(3 months) visa INR.8500.0
 
 	// Personal info
-	public static String visaFees = "Single entry(3 months) visa INR.8500.0";
+	public static String visaFees = "transit visa fees1 INR.2000.0";
 	// (Single entry(3 months) visa Rs.8500.0, Multiple entry(6 months) visa
 	// Rs.17000.0, Multiple entry(12 months) visa Rs.25500.0, Transit (single)
 	// visa Rs.4200.0, Transit (multiple) visa Rs.6500.0)

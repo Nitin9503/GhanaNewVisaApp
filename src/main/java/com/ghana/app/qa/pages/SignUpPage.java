@@ -1,6 +1,7 @@
 package com.ghana.app.qa.pages;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import static com.ghana.app.qa.testdata.ConstantVariable.*;
@@ -19,6 +20,7 @@ import com.ghana.app.qa.util.TestUtil;
 
 public class SignUpPage extends TestBase {
 
+	// public ArrayList<String> passportype;
 	public SignUpPage() throws IOException, InterruptedException {
 		PageFactory.initElements(driver, this);
 	}
@@ -27,24 +29,46 @@ public class SignUpPage extends TestBase {
 	@FindBy(xpath = "//span[text()='Passport Type']")
 	public static WebElement PassportType;
 
-	@FindBy(id = "Official")
+	@FindBy(xpath = "//ul[@id='passport_type']//li")
+	List<WebElement> totalPassportType;
+
+	@FindBy(id = "passport_type")
 	// Diplomatic, Service, Special, Ordinary
 	WebElement PassportTypeName;
 
 	@FindBy(xpath = "//span[text()='Nationality']")
 	WebElement Nationality;
 
+	@FindBy(id = "nationality")
+	WebElement getTextnationality;
+
+	@FindBy(xpath = "//ul[@id='ul_nationality']//li")
+	List<WebElement> countrys;
+
 	@FindBy(xpath = "//ul[@id='ul_nationality']//li[text()='India']")
 	WebElement selectNationality;
 
 	@FindBy(xpath = "//span[text()='Select Visa Type']")
-	WebElement clickvisaFees;//
+	WebElement clickvisaFees;
+
+	@FindBy(xpath = "//ul[@id='ul_visa_type']//li")
+	List<WebElement> totalVisaFees;
+
+	@FindBy(id = "visa_type")
+	WebElement getTextSelectedVisaFees;
 
 	@FindBy(xpath = "//form[@id='applicant_personal_info_form']//span[text()='Single entry(3 months) visa Rs.8500.0']")
 	WebElement selectVisaFees;//
 
 	@FindBy(xpath = "//span[text()='Select Visa Location']")
-	WebElement visaLocation;//
+	WebElement visaLocation;
+
+	@FindBy(id = "div_visa_location")
+	WebElement selectVisaLocation;
+
+	@FindBy(xpath = "//ul[@id='ul_visa_location']//li")
+	List<WebElement> VisaLocationCount;
+
 	// @FindBy(xpath =
 	// "//ul[@id='img_category_options']//span[text()='Mumbai']")
 	@FindBy(xpath = "//form[@id='applicant_personal_info_form']//span[text()='Mumbai']")
@@ -55,6 +79,12 @@ public class SignUpPage extends TestBase {
 
 	@FindBy(xpath = "//span[text()='Port of Arrival']")
 	WebElement PortofArrival;
+
+	@FindBy(id = "port_of_arrival")
+	WebElement getTextPortofArrival;
+
+	@FindBy(xpath = "//ul[@id='portArrival']//li")
+	List<WebElement> totalPortOfArrival;
 
 	@FindBy(xpath = "//ul[@id='img_category_options']//li[text()='Ghana Airport']")
 	WebElement selectPortofArrival;
@@ -83,7 +113,7 @@ public class SignUpPage extends TestBase {
 	@FindBy(xpath = "//input[@id='customRadio3']")
 	WebElement visaTypeCheckBox;
 
-	@FindBy(xpath = "//input[@id='usercaptchacode']") // input[@id='usercaptchacode']
+	@FindBy(xpath = "//input[@id='usercaptchacode']")
 	WebElement usercaptchacode;
 	@FindBy(id = "text_captcha")
 	WebElement usercaptatext;
@@ -113,39 +143,122 @@ public class SignUpPage extends TestBase {
 
 	public void SelectPassportType() {
 		TestUtil.actionClassMethod(PassportType);
-		driver.findElement(By.xpath("//li[@id='" + passPortType + "']")).click();
-		// PassportTypeName.click();
+		System.out.println("Total size of passport type==>" + sizePassportType());
+		ArrayList<String> passNo = new ArrayList<String>();
+		for (WebElement PassportType : totalPassportType) {
+			System.out.println("print the value of passport tyep=>" + PassportType.getText());
+		
+			System.out.println("Values from Arraylist hooo==>" +passNo);
+
+			passNo.add(PassportType.getText());
+		
+
+			if (PassportType.getText().equalsIgnoreCase(passPortType)) {
+				PassportType.click();
+				System.out.println("See which passport type is selected str 1 selected=>" + getTextPassportTypeName());
+			}
+		}
+		 System.out.println("Values from Arraylist==>" +passNo.get(0));
+
+	}
+
+	public String getTextPassportTypeName() {
+		return PassportTypeName.getText();
+	}
+
+	public int sizePassportType() {
+		return totalPassportType.size();
 	}
 
 	public void selectNationality() throws InterruptedException {
+		Thread.sleep(3000);
 		TestUtil.actionClassMethod(Nationality);
-		nationalitySearchField.sendKeys(nationalityName);
-		driver.findElement(By.xpath("//li[text()='" + nationalityName + "']")).click();
+		System.out.println("Total countries are=>" + countrys.size());
+		for (WebElement country : countrys) {
+			if (country.getText().equalsIgnoreCase(nationalityName)) {
+				country.click();
+				Thread.sleep(5000);
+				System.out.println("See which country str 1 selected=>" + getFromSelectedNationality());
+				break;
+			}
+		}
+	}
 
-		// Thread.sleep(2000);
-		// selectNationality.click();
+	public String getFromSelectedNationality() {
 
+		return getTextnationality.getText();
+	}
+
+	public int totalCountryCount() {
+		return countrys.size();
 	}
 
 	public void selectVisaType() throws InterruptedException {
 		TestUtil.actionClassMethod(clickvisaFees);
-		driver.findElement(By.xpath("//li[contains(text(),'" + visaFees + "')]")).click();
+		System.out.println("Total visa fee count=>>" + totalVisaFees.size());
+		for (WebElement visaFee : totalVisaFees) {
+			Thread.sleep(2000);
+			System.out.println("Total visa fee printed=>>" + visaFee.getText());
+			if (visaFee.getText().equalsIgnoreCase(visaFees)) {
+				visaFee.click();
+				Thread.sleep(5000);
+			}
+		}
+	}
 
+	public String getTextFromVisaType() {
+		return getTextSelectedVisaFees.getText();
+
+	}
+
+	public int totalVisaFeeCountActual() {
+		return totalVisaFees.size();
 	}
 
 	public void selectVisaLocation() throws InterruptedException {
-
 		TestUtil.actionClassMethod(visaLocation);
-		driver.findElement(By.xpath("//li[contains(text(),'" + VisaLocations + "')]")).click();
+		System.out.println("Total visa count ==>" + totalVisaLocationActual());
+		for (WebElement visa : VisaLocationCount) {
+			System.out.println("Visa Location ==>" + visa.getText());
+			if (visa.getText().equalsIgnoreCase(VisaLocations)) {
+				visa.click();
+				Thread.sleep(5000);
+				System.out.println("Text from selected visa location=======>" + getTextFromSelectVisaLocation());
+			}
+
+		}
+	}
+
+	public String getTextFromSelectVisaLocation() {
+		return selectVisaLocation.getText();
+	}
+
+	public int totalVisaLocationActual() {
+		return VisaLocationCount.size();
+	}
+
+	public void selectPortOfArrival() throws InterruptedException {
+		TestUtil.actionClassMethod(PortofArrival);
+		System.out.println("totalPortOfArrival => " + totalPortOfArrival.size());
+		for (WebElement portOfArrivale : totalPortOfArrival) {
+			System.out.println("totalPortOfArrival get Text => " + portOfArrivale.getText());
+			if (portOfArrivale.getText().equalsIgnoreCase(portOfArrival)) {
+				portOfArrivale.click();
+				Thread.sleep(5000);
+				System.out.println("See which port of arrival type is selected==>" + getTextFromPortofArrival());
+
+				break;
+			}
+		}
 
 	}
 
-	public void selectPortOfArrival() {
-		TestUtil.actionClassMethod(PortofArrival);
-		driver.findElement(By.xpath("//li[text()='" + portOfArrival + "']")).click();
-		// li[text()='Kotoka Accra Airport']
-		// selectPortofArrival.click();
+	public String getTextFromPortofArrival() {
+		return getTextPortofArrival.getText();
+	}
 
+	public int totalPortArrival() {
+		return totalPortOfArrival.size();
 	}
 
 	public void passPhoneNo(String phoneNo) {

@@ -53,7 +53,7 @@ public class SignUpPageWithNegativePageTest extends DriverInit {
 		// "Check boxes are not selected from SignUp page");
         softAssertion.assertAll();
 		signUpPage.continueBtn();
-		phone_number
+		//phone_number
 	}
 	/*@Test(priority = 2)
 	public void sellctAllcheckboxesAnd() throws InterruptedException,

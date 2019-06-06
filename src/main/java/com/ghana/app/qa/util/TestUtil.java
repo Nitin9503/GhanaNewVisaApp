@@ -1,5 +1,6 @@
 package com.ghana.app.qa.util;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -11,6 +12,8 @@ import org.apache.poi.hslf.model.Sheet;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -203,4 +206,27 @@ public class TestUtil extends TestBase {
 		alert.dismiss();
 	}
 
+	public static String readDataFromExcellString(int sheetName, int row_number,
+			int colomn_number) throws IOException, InterruptedException {
+		File src = new File(
+				"E:\\VisaProject\\GhanaNewVisaApp\\src\\main\\java\\com\\ghana\\app\\qa\\testdata\\GhanaVisaTestData1.xlsx");
+		FileInputStream fis = new FileInputStream(src);
+		XSSFWorkbook workbook = new XSSFWorkbook(fis);
+		XSSFSheet sheet = workbook.getSheetAt(sheetName);
+	//	System.out.println("===========>"+sheet.getRow(row_number).getCell(colomn_number).getStringCellValue());
+		return sheet.getRow(row_number).getCell(colomn_number).getStringCellValue();
+	}
+	public static String readDataFromExcellNumeric(int sheetName, int row_number,
+			int colomn_number) throws IOException {
+		File src = new File(
+				"E:\\VisaProject\\GhanaNewVisaApp\\src\\main\\java\\com\\ghana\\app\\qa\\testdata\\GhanaVisaTestData1.xlsx");
+		FileInputStream fis = new FileInputStream(src);
+		XSSFWorkbook workbook = new XSSFWorkbook(fis);
+		XSSFSheet sheet = workbook.getSheetAt(sheetName);
+		System.out.println("Mobile number ===>"+String.valueOf(sheet.getRow(row_number).getCell(colomn_number).getNumericCellValue()));
+		return String.valueOf(sheet.getRow(row_number).getCell(colomn_number).getNumericCellValue());
+
+		
+
+	}
 }

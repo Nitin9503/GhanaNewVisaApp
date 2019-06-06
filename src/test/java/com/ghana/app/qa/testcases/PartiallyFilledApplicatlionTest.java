@@ -15,7 +15,7 @@ import org.testng.asserts.SoftAssert;
 import com.ghana.app.qa.base.DriverInit;
 import com.ghana.app.qa.util.TestUtil;
 
-public class PartiallyFilledApplicatlionTest extends PersonalInfoPageTest{
+public class PartiallyFilledApplicatlionTest extends DriverInit{
 
 	SoftAssert softAssertion= new SoftAssert();
 	public PartiallyFilledApplicatlionTest() throws IOException,
@@ -118,6 +118,7 @@ public class PartiallyFilledApplicatlionTest extends PersonalInfoPageTest{
 		//Assert.assertEquals(partiallyfilledPage.getErrorMessage().substring(2), expected);
 		
 	}
+
 	@Test(priority=16)
 	public void AlreadySubmittedPartiallyFilledTest() throws InterruptedException{
 		partiallyFilledApplicationPage.clickOnpartialFilledTab();
@@ -132,16 +133,19 @@ public class PartiallyFilledApplicatlionTest extends PersonalInfoPageTest{
 		partiallyFilledApplicationPage.clickclosebtn();
 	}
 	@Test(priority=17)
+
 	public void verifyWithEmptyField() throws InterruptedException{
 		partiallyFilledApplicationPage.selectDOB(birthDate);
 		String capchatext = partiallyFilledApplicationPage.getCaptchaText();
 		System.out.println(capchatext);
 		partiallyFilledApplicationPage.passCaptchaText(capchatext);
 		partiallyFilledApplicationPage.clickOnsubmitbtn();
+
 		/* Alert simpleAlert = driver.switchTo().alert();
 		 String alertText = simpleAlert.getText();
 		 System.out.println("Alert text is " + alertText);
 		 */
+
 	}
 	
 }

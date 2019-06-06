@@ -5,9 +5,10 @@
     <classes>
       <class name="com.ghana.app.qa.testcases.VisaStatusPageTest">
         <methods>
+          <include name="verifyVisastatusTab"/>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="verifyVisastatuswithValidData"/>
+          <include name="verifyVisastatuswithInValidData"/>
         </methods>
       </class> <!-- com.ghana.app.qa.testcases.VisaStatusPageTest -->
     </classes>

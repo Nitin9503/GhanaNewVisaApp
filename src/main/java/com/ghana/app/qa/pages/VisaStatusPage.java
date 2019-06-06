@@ -16,11 +16,18 @@ public class VisaStatusPage extends TestBase{
 		
 	}
     
+	
+	@FindBy (xpath="//input[@id='txt_stat_error']")
+	WebElement StatusErrorMsg1;
+	
 	@FindBy (xpath="//button[contains(text(),'Visa Status')]")
 	WebElement visastatusBtn;
 	
+	@FindBy (xpath="//h5[@id='txt_refId']")
+	WebElement vstatusRefId;
+	
 	@FindBy (xpath="//input[@id='txt_appn_id']")
-	WebElement vstatusApplicationId;
+	WebElement vstatusApplicantId;
 	
 	
 	@FindBy (xpath="//input[@id='dateofbirth']")
@@ -44,6 +51,7 @@ public class VisaStatusPage extends TestBase{
 	@FindBy (xpath="//span[@id='txt_fname']")
     WebElement firstLastName;
 	
+	
 	//span[contains(text(),'Approved & Forward')]
 	
 	
@@ -53,7 +61,7 @@ public class VisaStatusPage extends TestBase{
 	}
 	
 	public void passApplicationId(String appliId){
-		vstatusApplicationId.sendKeys(appliId);
+		vstatusApplicantId.sendKeys(appliId);
 	}
 	
 	public void selectDateofbirth(String DOB){
@@ -73,10 +81,16 @@ public class VisaStatusPage extends TestBase{
 		vstatusContinueBtn.click();
 	}
 	
+	public String getStatusErrorMsg1(){
+	    return StatusErrorMsg1.getText();
+	}
 	public void clickonVsCancelBtn(){
 		vstatusCancelBtn.click();
 	}
 	
+	public String getApplRefId(){
+		return vstatusRefId.getText();
+	}
 	public String getApplicationStatustext(){
 		return applicationStatustext.getText();
 	}

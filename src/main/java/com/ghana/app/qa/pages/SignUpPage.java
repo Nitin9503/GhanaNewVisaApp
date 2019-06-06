@@ -141,7 +141,7 @@ public class SignUpPage extends TestBase {
 		return driver.getTitle();
 	}
 
-	public void SelectPassportType() {
+	public void SelectPassportType() throws IOException, InterruptedException {
 		TestUtil.actionClassMethod(PassportType);
 		System.out.println("Total size of passport type==>" + sizePassportType());
 		ArrayList<String> passNo = new ArrayList<String>();
@@ -149,11 +149,8 @@ public class SignUpPage extends TestBase {
 			System.out.println("print the value of passport tyep=>" + PassportType.getText());
 		
 			System.out.println("Values from Arraylist hooo==>" +passNo);
-
 			passNo.add(PassportType.getText());
-		
-
-			if (PassportType.getText().equalsIgnoreCase(passPortType)) {
+			if (PassportType.getText().equalsIgnoreCase(TestUtil.readDataFromExcellString(5, 6, 0))) {
 				PassportType.click();
 				System.out.println("See which passport type is selected str 1 selected=>" + getTextPassportTypeName());
 			}
@@ -170,12 +167,12 @@ public class SignUpPage extends TestBase {
 		return totalPassportType.size();
 	}
 
-	public void selectNationality() throws InterruptedException {
+	public void selectNationality() throws InterruptedException, IOException {
 		Thread.sleep(3000);
 		TestUtil.actionClassMethod(Nationality);
 		System.out.println("Total countries are=>" + countrys.size());
 		for (WebElement country : countrys) {
-			if (country.getText().equalsIgnoreCase(nationalityName)) {
+			if (country.getText().equalsIgnoreCase(TestUtil.readDataFromExcellString(5, 7, 0))) {
 				country.click();
 				Thread.sleep(5000);
 				System.out.println("See which country str 1 selected=>" + getFromSelectedNationality());
@@ -193,13 +190,13 @@ public class SignUpPage extends TestBase {
 		return countrys.size();
 	}
 
-	public void selectVisaType() throws InterruptedException {
+	public void selectVisaType() throws InterruptedException, IOException {
 		TestUtil.actionClassMethod(clickvisaFees);
 		System.out.println("Total visa fee count=>>" + totalVisaFees.size());
 		for (WebElement visaFee : totalVisaFees) {
 			Thread.sleep(2000);
 			System.out.println("Total visa fee printed=>>" + visaFee.getText());
-			if (visaFee.getText().equalsIgnoreCase(visaFees)) {
+			if (visaFee.getText().equalsIgnoreCase(TestUtil.readDataFromExcellString(5, 9, 0))) {
 				visaFee.click();
 				Thread.sleep(5000);
 			}
@@ -215,12 +212,12 @@ public class SignUpPage extends TestBase {
 		return totalVisaFees.size();
 	}
 
-	public void selectVisaLocation() throws InterruptedException {
+	public void selectVisaLocation() throws InterruptedException, IOException {
 		TestUtil.actionClassMethod(visaLocation);
 		System.out.println("Total visa count ==>" + totalVisaLocationActual());
 		for (WebElement visa : VisaLocationCount) {
 			System.out.println("Visa Location ==>" + visa.getText());
-			if (visa.getText().equalsIgnoreCase(VisaLocations)) {
+			if (visa.getText().equalsIgnoreCase(TestUtil.readDataFromExcellString(5, 10, 0))) {
 				visa.click();
 				Thread.sleep(5000);
 				System.out.println("Text from selected visa location=======>" + getTextFromSelectVisaLocation());
@@ -237,12 +234,12 @@ public class SignUpPage extends TestBase {
 		return VisaLocationCount.size();
 	}
 
-	public void selectPortOfArrival() throws InterruptedException {
+	public void selectPortOfArrival() throws InterruptedException, IOException {
 		TestUtil.actionClassMethod(PortofArrival);
 		System.out.println("totalPortOfArrival => " + totalPortOfArrival.size());
 		for (WebElement portOfArrivale : totalPortOfArrival) {
 			System.out.println("totalPortOfArrival get Text => " + portOfArrivale.getText());
-			if (portOfArrivale.getText().equalsIgnoreCase(portOfArrival)) {
+			if (portOfArrivale.getText().equalsIgnoreCase(TestUtil.readDataFromExcellString(5, 8, 0))) {
 				portOfArrivale.click();
 				Thread.sleep(5000);
 				System.out.println("See which port of arrival type is selected==>" + getTextFromPortofArrival());
@@ -261,9 +258,11 @@ public class SignUpPage extends TestBase {
 		return totalPortOfArrival.size();
 	}
 
-	public void passPhoneNo(String phoneNo) {
-		PhoneNumber.sendKeys(phoneNo);
-		
+	public void passPhoneNo(String phoneNo) throws IOException, InterruptedException {
+		PhoneNumber.sendKeys(phoneNo);	
+	}
+	public String getTextFromPhoneFiled() throws IOException, InterruptedException {
+		return PhoneNumber.getText();	
 	}
 
 	public void selectDateOfBirth(String birthDate) throws InterruptedException {
@@ -273,13 +272,22 @@ public class SignUpPage extends TestBase {
 
 	}
 
-	public void passEmailId(String EmailId) {
+	public void passEmailId(String EmailId) throws InterruptedException {
+		
 		emailId.sendKeys(EmailId);// nitinthaokar9@gmail.com
+	}
+	public String getTextFromEmailField() throws InterruptedException {
+		Thread.sleep(3000);
+		return emailId.getText();
 	}
 
 	public void passReEmailId(String EmailId) {
 		TestUtil.actionClassMethod(reenterEmailId);
 		reenterEmailId.sendKeys(EmailId);
+	}
+	public String getTextFromReEmailField() throws InterruptedException {
+		Thread.sleep(3000);
+		return reenterEmailId.getText();
 	}
 
 	public void visaTypeRadioBtn() {
@@ -356,6 +364,9 @@ public class SignUpPage extends TestBase {
 
 		}
 
+	}
+	public String titleOfTheSignUPPage(){
+		return driver.getTitle();
 	}
 
 }

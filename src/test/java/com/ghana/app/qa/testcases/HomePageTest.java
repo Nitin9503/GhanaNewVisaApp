@@ -2,6 +2,7 @@ package com.ghana.app.qa.testcases;
 
 import static org.testng.Assert.assertEquals;
 import static com.ghana.app.qa.util.TestUtil.*;
+
 import java.io.IOException;
 import java.net.MalformedURLException;
 
@@ -15,6 +16,7 @@ import com.ghana.app.qa.base.DriverInit;
 import com.ghana.app.qa.base.TestBase;
 import com.ghana.app.qa.pages.HomePage;
 import com.ghana.app.qa.pages.VisaCategoriesPage;
+import com.ghana.app.qa.util.TestUtil;
 
 public class HomePageTest extends DriverInit {
 
@@ -23,12 +25,11 @@ public class HomePageTest extends DriverInit {
 
 	}
 	
-
    @Test(priority = 1)
-	public void verifyHomePageTitleTest() {
-		System.out.println("home page title   "
+	public void verifyHomePageTitleTest() throws IOException, InterruptedException {
+	   System.out.println("home page title==>"
 				+ homePage.validateHomePageTitle());
-		Assert.assertEquals(homePage.validateHomePageTitle(), prop.getProperty("homePageTitle"),
+		Assert.assertEquals(homePage.validateHomePageTitle(), TestUtil.readDataFromExcellString(5, 1, 0),
 				"We are navigate to HOme page");
 	}
 
@@ -36,12 +37,11 @@ public class HomePageTest extends DriverInit {
 	public void verifyVisaCategoriesTest() throws IOException,
 			InterruptedException {
 		homePage.clickOnApplyVisa();
-		//Thread.sleep(2000);
-		System.out.println("visa category heading title "+visaCategoriesPage.visaCategorisText());
+		System.out.println("=====================>"+TestUtil.readDataFromExcellString(5, 2, 0));
 		visaCategoriesPage.visaCategorisText();
-		Assert.assertEquals(visaCategoriesPage.visaCategorisText(), prop.getProperty("vISACATEGORIESText"), "We are not navigate to visa categories page upon clicking on Apply Visa Button");
-		Assert.assertEquals(visaCategoriesPage.validateVisaTypeTitle(), "Visa Types", "Visa category page title not match");
-
+		Assert.assertEquals(visaCategoriesPage.visaCategorisText(), TestUtil.readDataFromExcellString(5, 4, 0), "We are not navigate to visa categories page upon clicking on Apply Visa Button");
+		Assert.assertEquals(visaCategoriesPage.validateVisaTypeTitle(), TestUtil.readDataFromExcellString(5, 3, 0), "Visa category page title not match");
+	
 	}
 
 	

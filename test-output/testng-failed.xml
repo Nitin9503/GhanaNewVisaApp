@@ -3,17 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.ghana.app.qa.testcases.VisaStatusPageTest">
+      <class name="com.ghana.app.qa.testcases.SignUpPageTest">
         <methods>
-          <include name="tearDown"/>
+          <include name="passReEmailIdTest"/>
+          <include name="passPhoneNoTest"/>
           <include name="setUp"/>
-          <include name="verifyVisastatuswithValidData"/>
+          <include name="passEmailIdTest"/>
         </methods>
-<<<<<<< HEAD
       </class> <!-- com.ghana.app.qa.testcases.SignUpPageTest -->
-=======
-      </class> <!-- com.ghana.app.qa.testcases.VisaStatusPageTest -->
->>>>>>> d7aa21fc9053d7c4ed77e70f387f5e9613b81159
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -31,6 +31,7 @@ public class HomePageTest extends DriverInit {
 				+ homePage.validateHomePageTitle());
 		Assert.assertEquals(homePage.validateHomePageTitle(), TestUtil.readDataFromExcellString(5, 1, 0),
 				"We are navigate to HOme page");
+		TestUtil.writeStringValue(5, 1, 1);
 	}
 
 	@Test(priority = 2)
@@ -40,8 +41,9 @@ public class HomePageTest extends DriverInit {
 		System.out.println("=====================>"+TestUtil.readDataFromExcellString(5, 2, 0));
 		visaCategoriesPage.visaCategorisText();
 		Assert.assertEquals(visaCategoriesPage.visaCategorisText(), TestUtil.readDataFromExcellString(5, 4, 0), "We are not navigate to visa categories page upon clicking on Apply Visa Button");
+		TestUtil.writeStringValue(5, 4, 1);
 		Assert.assertEquals(visaCategoriesPage.validateVisaTypeTitle(), TestUtil.readDataFromExcellString(5, 3, 0), "Visa category page title not match");
-	
+		TestUtil.writeStringValue(5, 3, 1);
 	}
 
 	

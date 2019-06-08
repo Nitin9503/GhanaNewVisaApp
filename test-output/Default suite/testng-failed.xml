@@ -5,17 +5,10 @@
     <classes>
       <class name="com.ghana.app.qa.testcases.SignUpPageTest">
         <methods>
-<<<<<<< HEAD
-          <include name="verifyVisastatusTab"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="verifyVisastatuswithInValidData"/>
-=======
           <include name="passReEmailIdTest"/>
           <include name="passPhoneNoTest"/>
           <include name="setUp"/>
           <include name="passEmailIdTest"/>
->>>>>>> 1981cb255eb85f7ba8512e09af99d6c34aa9154a
         </methods>
       </class> <!-- com.ghana.app.qa.testcases.SignUpPageTest -->
     </classes>

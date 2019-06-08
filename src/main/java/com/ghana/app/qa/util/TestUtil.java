@@ -3,10 +3,13 @@ package com.ghana.app.qa.util;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
+
+import static com.ghana.app.qa.base.DriverInit.*;
 
 import org.apache.poi.hslf.model.Sheet;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
@@ -92,11 +95,9 @@ public class TestUtil extends TestBase {
 		js.executeScript("window.close()");
 
 	}
-
 	public static void toSwitchBetweenWindows(int i) {
 		ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
 		driver.switchTo().window(tabs.get(i));
-
 	}
 
 	public static void typeText(WebElement element, String value) {
@@ -117,9 +118,7 @@ public class TestUtil extends TestBase {
 		Thread.sleep(5000);
 		WebElement ele = driver.findElement(By.xpath("//strong[contains(text(),'" + applicationID + "')]"));
 		return ele.getText();
-
 	}
-
 	public static void selectValuefromDropDown(WebElement element, String  month) {
 		Select sel = new Select(element);
 		sel.selectByVisibleText(month);
@@ -169,10 +168,6 @@ public class TestUtil extends TestBase {
 
 	public static void datePickerMethod(WebElement element) {
 		((JavascriptExecutor) driver).executeScript("document.getElementById(element).removeAttribute('readonly',0);"); // Enables
-																														// the
-																														// from
-																														// date
-																														// box
 
 	}
 
@@ -207,26 +202,30 @@ public class TestUtil extends TestBase {
 	}
 
 	public static String readDataFromExcellString(int sheetName, int row_number,
-			int colomn_number) throws IOException, InterruptedException {
-		File src = new File(
-				"E:\\VisaProject\\GhanaNewVisaApp\\src\\main\\java\\com\\ghana\\app\\qa\\testdata\\GhanaVisaTestData1.xlsx");
-		FileInputStream fis = new FileInputStream(src);
-		XSSFWorkbook workbook = new XSSFWorkbook(fis);
+			int colomn_number) throws IOException, InterruptedException {	
 		XSSFSheet sheet = workbook.getSheetAt(sheetName);
 	//	System.out.println("===========>"+sheet.getRow(row_number).getCell(colomn_number).getStringCellValue());
 		return sheet.getRow(row_number).getCell(colomn_number).getStringCellValue();
 	}
 	public static String readDataFromExcellNumeric(int sheetName, int row_number,
 			int colomn_number) throws IOException {
-		File src = new File(
-				"E:\\VisaProject\\GhanaNewVisaApp\\src\\main\\java\\com\\ghana\\app\\qa\\testdata\\GhanaVisaTestData1.xlsx");
+		XSSFSheet sheet = workbook.getSheetAt(sheetName);
+		//System.out.println("Mobile number ===>"+String.valueOf(sheet.getRow(row_number).getCell(colomn_number).getNumericCellValue()));
+		return String.valueOf(sheet.getRow(row_number).getCell(colomn_number).getNumericCellValue());
+	}
+	public static void writeStringValue(int sheetName, int row_number,
+			int colomn_number) throws IOException {
+		File src  = new File(".//src//main//java//com//ghana//app//qa//testdata//GhanaVisaTestData1.xlsx");
 		FileInputStream fis = new FileInputStream(src);
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
 		XSSFSheet sheet = workbook.getSheetAt(sheetName);
-		System.out.println("Mobile number ===>"+String.valueOf(sheet.getRow(row_number).getCell(colomn_number).getNumericCellValue()));
-		return String.valueOf(sheet.getRow(row_number).getCell(colomn_number).getNumericCellValue());
-
+		sheet.getRow(row_number).createCell(colomn_number).setCellValue("PASS");
 		
-
+		FileOutputStream fos = new FileOutputStream(".//src//main//java//com//ghana//app//qa//testdata//GhanaVisaTestData1.xlsx");
+		workbook.write(fos);
+		fos.close();
+		//System.out.println("Mobile number ===>"+String.valueOf(sheet.getRow(row_number).getCell(colomn_number).getNumericCellValue()));
+		
+		//return String.valueOf(sheet.getRow(row_number).getCell(colomn_number).getNumericCellValue());
 	}
 }

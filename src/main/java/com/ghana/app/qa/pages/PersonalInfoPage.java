@@ -70,11 +70,18 @@ public class PersonalInfoPage extends TestBase {
 	public void passFirstName(String firstName) {
 		firstname.sendKeys(firstName);
 	}
+	public String getTextFromFirstName() throws InterruptedException {
+		Thread.sleep(2000);
+		return firstname.getAttribute("value");
+	}
 
 	public void passMiddleName(String middleName) {
 		middlename.sendKeys(middleName);
 	}
-	
+	public String getTextFromMiddleName() throws InterruptedException {
+		Thread.sleep(2000);
+		return middlename.getAttribute("value");
+	}
 	
 	
 	public void passLastName(String lastName) {

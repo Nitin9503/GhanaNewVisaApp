@@ -1,331 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<testng-results skipped="0" failed="2" total="2" passed="0">
+<testng-results skipped="0" failed="0" total="12" passed="12">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="250167" started-at="2019-05-30T06:22:07Z" finished-at="2019-05-30T06:26:17Z">
+  <suite name="Default suite" duration-ms="81551" started-at="2019-06-08T07:10:58Z" finished-at="2019-06-08T07:12:19Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="250167" started-at="2019-05-30T06:22:07Z" finished-at="2019-05-30T06:26:17Z">
-      <class name="com.ghana.app.qa.testcases.VisaStatusPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ghana.app.qa.testcases.VisaStatusPageTest@210366b4]" name="setUp" is-config="true" duration-ms="9316" started-at="2019-05-30T11:52:07Z" finished-at="2019-05-30T11:52:17Z">
+    <test name="Default test" duration-ms="81551" started-at="2019-06-08T07:10:58Z" finished-at="2019-06-08T07:12:19Z">
+      <class name="com.ghana.app.qa.testcases.PersonalInfoPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ghana.app.qa.testcases.PersonalInfoPageTest@65b3f4a4]" name="setUp" is-config="true" duration-ms="8672" started-at="2019-06-08T12:40:58Z" finished-at="2019-06-08T12:41:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="verifyVisastatusTab()[pri:57, instance:com.ghana.app.qa.testcases.VisaStatusPageTest@210366b4]" name="verifyVisastatusTab" duration-ms="120064" started-at="2019-05-30T11:52:17Z" finished-at="2019-05-30T11:54:17Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//button[contains(text(),'Visa Status')]"}
-  (Session info: chrome=74.0.3729.169)
-  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'NAMET5', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_171'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\NIKHIL~1.SON\AppDa...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:51535}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.169, webStorageEnabled: true}
-Session ID: 9162bcdae02af4e007280a803077ab1f
-*** Element info: {Using=xpath, value=//button[contains(text(),'Visa Status')]}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[contains(text(),'Visa Status')]"}
-  (Session info: chrome=74.0.3729.169)
-  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'NAMET5', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_171'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\NIKHIL~1.SON\AppDa...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:51535}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.169, webStorageEnabled: true}
-Session ID: 9162bcdae02af4e007280a803077ab1f
-*** Element info: {Using=xpath, value=//button[contains(text(),'Visa Status')]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy9.click(Unknown Source)
-	at com.ghana.app.qa.pages.VisaStatusPage.verifyClickonVisaStatusBtn(VisaStatusPage.java:60)
-	at com.ghana.app.qa.testcases.VisaStatusPageTest.verifyVisastatusTab(VisaStatusPageTest.java:25)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:100)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:811)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1137)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:749)
-	at org.testng.TestRunner.run(TestRunner.java:603)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:368)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:363)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:321)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:270)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1284)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1209)
-	at org.testng.TestNG.runSuites(TestNG.java:1124)
-	at org.testng.TestNG.run(TestNG.java:1096)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method status="PASS" signature="fillSignUpFormTest()[pri:1, instance:com.ghana.app.qa.testcases.PersonalInfoPageTest@65b3f4a4]" name="fillSignUpFormTest" duration-ms="60130" started-at="2019-06-08T12:41:06Z" finished-at="2019-06-08T12:42:07Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyVisastatusTab -->
-        <test-method status="FAIL" signature="verifyVisastatuswithInValidData()[pri:59, instance:com.ghana.app.qa.testcases.VisaStatusPageTest@210366b4]" name="verifyVisastatuswithInValidData" duration-ms="120041" started-at="2019-05-30T11:54:17Z" finished-at="2019-05-30T11:56:17Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//button[contains(text(),'Visa Status')]"}
-  (Session info: chrome=74.0.3729.169)
-  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'NAMET5', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_171'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\NIKHIL~1.SON\AppDa...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:51535}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.169, webStorageEnabled: true}
-Session ID: 9162bcdae02af4e007280a803077ab1f
-*** Element info: {Using=xpath, value=//button[contains(text(),'Visa Status')]}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[contains(text(),'Visa Status')]"}
-  (Session info: chrome=74.0.3729.169)
-  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'NAMET5', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_171'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\NIKHIL~1.SON\AppDa...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:51535}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.169, webStorageEnabled: true}
-Session ID: 9162bcdae02af4e007280a803077ab1f
-*** Element info: {Using=xpath, value=//button[contains(text(),'Visa Status')]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy9.click(Unknown Source)
-	at com.ghana.app.qa.pages.VisaStatusPage.verifyClickonVisaStatusBtn(VisaStatusPage.java:60)
-	at com.ghana.app.qa.testcases.VisaStatusPageTest.verifyVisastatuswithInValidData(VisaStatusPageTest.java:54)
-=======
-<testng-results skipped="0" failed="3" total="12" passed="9">
-  <reporter-output>
-  </reporter-output>
-  <suite name="Default suite" duration-ms="76374" started-at="2019-06-06T08:25:00Z" finished-at="2019-06-06T08:26:17Z">
-    <groups>
-    </groups>
-    <test name="Default test" duration-ms="76374" started-at="2019-06-06T08:25:00Z" finished-at="2019-06-06T08:26:17Z">
-      <class name="com.ghana.app.qa.testcases.SignUpPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ghana.app.qa.testcases.SignUpPageTest@eec5a4a]" name="setUp" is-config="true" duration-ms="6631" started-at="2019-06-06T13:55:00Z" finished-at="2019-06-06T13:55:07Z">
+        </test-method> <!-- fillSignUpFormTest -->
+        <test-method status="PASS" signature="verifyPersonalInfoTest()[pri:2, instance:com.ghana.app.qa.testcases.PersonalInfoPageTest@65b3f4a4]" name="verifyPersonalInfoTest" duration-ms="2175" started-at="2019-06-08T12:42:07Z" finished-at="2019-06-08T12:42:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="launchAndGotoSignUP()[pri:1, instance:com.ghana.app.qa.testcases.SignUpPageTest@eec5a4a]" name="launchAndGotoSignUP" duration-ms="1483" started-at="2019-06-06T13:55:07Z" finished-at="2019-06-06T13:55:09Z">
+        </test-method> <!-- verifyPersonalInfoTest -->
+        <test-method status="PASS" signature="getApplicationPageTitleTest()[pri:3, instance:com.ghana.app.qa.testcases.PersonalInfoPageTest@65b3f4a4]" name="getApplicationPageTitleTest" duration-ms="2147" started-at="2019-06-08T12:42:09Z" finished-at="2019-06-08T12:42:11Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- launchAndGotoSignUP -->
-        <test-method status="PASS" signature="verifyTitleSignUpPage()[pri:2, instance:com.ghana.app.qa.testcases.SignUpPageTest@eec5a4a]" name="verifyTitleSignUpPage" duration-ms="8227" started-at="2019-06-06T13:55:09Z" finished-at="2019-06-06T13:55:17Z">
+        </test-method> <!-- getApplicationPageTitleTest -->
+        <test-method status="PASS" signature="getApplicationIdTest()[pri:4, instance:com.ghana.app.qa.testcases.PersonalInfoPageTest@65b3f4a4]" name="getApplicationIdTest" duration-ms="258" started-at="2019-06-08T12:42:11Z" finished-at="2019-06-08T12:42:11Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyTitleSignUpPage -->
-        <test-method status="PASS" signature="selectPassportTypeTest()[pri:3, instance:com.ghana.app.qa.testcases.SignUpPageTest@eec5a4a]" name="selectPassportTypeTest" duration-ms="1342" started-at="2019-06-06T13:55:17Z" finished-at="2019-06-06T13:55:18Z">
+        </test-method> <!-- getApplicationIdTest -->
+        <test-method status="PASS" signature="passFirstNameTest()[pri:5, instance:com.ghana.app.qa.testcases.PersonalInfoPageTest@65b3f4a4]" name="passFirstNameTest" duration-ms="2453" started-at="2019-06-08T12:42:11Z" finished-at="2019-06-08T12:42:14Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- selectPassportTypeTest -->
-        <test-method status="PASS" signature="selectPortOfArrivalTest()[pri:3, instance:com.ghana.app.qa.testcases.SignUpPageTest@eec5a4a]" name="selectPortOfArrivalTest" duration-ms="5583" started-at="2019-06-06T13:55:18Z" finished-at="2019-06-06T13:55:24Z">
+        </test-method> <!-- passFirstNameTest -->
+        <test-method status="PASS" signature="passMiddleNameTest()[pri:6, instance:com.ghana.app.qa.testcases.PersonalInfoPageTest@65b3f4a4]" name="passMiddleNameTest" duration-ms="2405" started-at="2019-06-08T12:42:14Z" finished-at="2019-06-08T12:42:16Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- selectPortOfArrivalTest -->
-        <test-method status="PASS" signature="selectNationalityTest()[pri:4, instance:com.ghana.app.qa.testcases.SignUpPageTest@eec5a4a]" name="selectNationalityTest" duration-ms="13554" started-at="2019-06-06T13:55:24Z" finished-at="2019-06-06T13:55:37Z">
+        </test-method> <!-- passMiddleNameTest -->
+        <test-method status="PASS" signature="passLastNameTest()[pri:7, instance:com.ghana.app.qa.testcases.PersonalInfoPageTest@65b3f4a4]" name="passLastNameTest" duration-ms="149" started-at="2019-06-08T12:42:16Z" finished-at="2019-06-08T12:42:16Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- selectNationalityTest -->
-        <test-method status="PASS" signature="selectVisaType()[pri:4, instance:com.ghana.app.qa.testcases.SignUpPageTest@eec5a4a]" name="selectVisaType" duration-ms="19640" started-at="2019-06-06T13:55:37Z" finished-at="2019-06-06T13:55:57Z">
+        </test-method> <!-- passLastNameTest -->
+        <test-method status="PASS" signature="passPassportNumberTest()[pri:8, instance:com.ghana.app.qa.testcases.PersonalInfoPageTest@65b3f4a4]" name="passPassportNumberTest" duration-ms="142" started-at="2019-06-08T12:42:16Z" finished-at="2019-06-08T12:42:16Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- selectVisaType -->
-        <test-method status="PASS" signature="selectVisaLocation()[pri:5, instance:com.ghana.app.qa.testcases.SignUpPageTest@eec5a4a]" name="selectVisaLocation" duration-ms="5391" started-at="2019-06-06T13:55:57Z" finished-at="2019-06-06T13:56:02Z">
+        </test-method> <!-- passPassportNumberTest -->
+        <test-method status="PASS" signature="clickOnGenderTest()[pri:9, instance:com.ghana.app.qa.testcases.PersonalInfoPageTest@65b3f4a4]" name="clickOnGenderTest" duration-ms="2209" started-at="2019-06-08T12:42:16Z" finished-at="2019-06-08T12:42:19Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- selectVisaLocation -->
-        <test-method status="FAIL" signature="passPhoneNoTest()[pri:6, instance:com.ghana.app.qa.testcases.SignUpPageTest@eec5a4a]" name="passPhoneNoTest" duration-ms="321" started-at="2019-06-06T13:56:02Z" finished-at="2019-06-06T13:56:03Z">
-          <exception class="java.lang.IllegalStateException">
-            <message>
-              <![CDATA[Cannot get a text value from a numeric cell]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException: Cannot get a text value from a numeric cell
-	at org.apache.poi.xssf.usermodel.XSSFCell.typeMismatch(XSSFCell.java:845)
-	at org.apache.poi.xssf.usermodel.XSSFCell.getRichStringCellValue(XSSFCell.java:294)
-	at org.apache.poi.xssf.usermodel.XSSFCell.getStringCellValue(XSSFCell.java:246)
-	at com.ghana.app.qa.util.TestUtil.readDataFromExcellString(TestUtil.java:217)
-	at com.ghana.app.qa.testcases.SignUpPageTest.passPhoneNoTest(SignUpPageTest.java:98)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:100)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:811)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1137)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:749)
-	at org.testng.TestRunner.run(TestRunner.java:603)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:368)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:363)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:321)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:270)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1284)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1209)
-	at org.testng.TestNG.runSuites(TestNG.java:1124)
-	at org.testng.TestNG.run(TestNG.java:1096)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
+        </test-method> <!-- clickOnGenderTest -->
+        <test-method status="PASS" signature="selectPassIssueDateTest()[pri:10, instance:com.ghana.app.qa.testcases.PersonalInfoPageTest@65b3f4a4]" name="selectPassIssueDateTest" duration-ms="287" started-at="2019-06-08T12:42:19Z" finished-at="2019-06-08T12:42:19Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- passPhoneNoTest -->
-        <test-method status="FAIL" signature="passEmailIdTest()[pri:7, instance:com.ghana.app.qa.testcases.SignUpPageTest@eec5a4a]" name="passEmailIdTest" duration-ms="3419" started-at="2019-06-06T13:56:03Z" finished-at="2019-06-06T13:56:06Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Pass Email-Id and get Email-Id is not matched while comparing from TestData expected [sachin.patil.uk@gmail.com] but found []]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Pass Email-Id and get Email-Id is not matched while comparing from TestData expected [sachin.patil.uk@gmail.com] but found []
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
-	at org.testng.Assert.assertEquals(Assert.java:116)
-	at org.testng.Assert.assertEquals(Assert.java:190)
-	at com.ghana.app.qa.testcases.SignUpPageTest.passEmailIdTest(SignUpPageTest.java:104)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:100)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:811)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1137)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:749)
-	at org.testng.TestRunner.run(TestRunner.java:603)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:368)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:363)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:321)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:270)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1284)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1209)
-	at org.testng.TestNG.runSuites(TestNG.java:1124)
-	at org.testng.TestNG.run(TestNG.java:1096)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        </test-method> <!-- selectPassIssueDateTest -->
+        <test-method status="PASS" signature="selectPassExpiryDateTest()[pri:11, instance:com.ghana.app.qa.testcases.PersonalInfoPageTest@65b3f4a4]" name="selectPassExpiryDateTest" duration-ms="282" started-at="2019-06-08T12:42:19Z" finished-at="2019-06-08T12:42:19Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- passEmailIdTest -->
-        <test-method status="FAIL" signature="passReEmailIdTest()[pri:8, instance:com.ghana.app.qa.testcases.SignUpPageTest@eec5a4a]" name="passReEmailIdTest" duration-ms="3365" started-at="2019-06-06T13:56:06Z" finished-at="2019-06-06T13:56:09Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Pass Email-Id and get Email-Id is not matched while comparing from TestData expected [sachin.patil.uk@gmail.com] but found []]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Pass Email-Id and get Email-Id is not matched while comparing from TestData expected [sachin.patil.uk@gmail.com] but found []
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
-	at org.testng.Assert.assertEquals(Assert.java:116)
-	at org.testng.Assert.assertEquals(Assert.java:190)
-	at com.ghana.app.qa.testcases.SignUpPageTest.passReEmailIdTest(SignUpPageTest.java:110)
->>>>>>> 1981cb255eb85f7ba8512e09af99d6c34aa9154a
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:100)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:811)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1137)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:749)
-	at org.testng.TestRunner.run(TestRunner.java:603)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:368)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:363)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:321)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:270)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1284)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1209)
-	at org.testng.TestNG.runSuites(TestNG.java:1124)
-	at org.testng.TestNG.run(TestNG.java:1096)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        </test-method> <!-- selectPassExpiryDateTest -->
+        <test-method status="PASS" signature="passPlaceOfBirthTest()[pri:12, instance:com.ghana.app.qa.testcases.PersonalInfoPageTest@65b3f4a4]" name="passPlaceOfBirthTest" duration-ms="173" started-at="2019-06-08T12:42:19Z" finished-at="2019-06-08T12:42:19Z">
           <reporter-output>
           </reporter-output>
-<<<<<<< HEAD
-        </test-method> <!-- verifyVisastatuswithInValidData -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ghana.app.qa.testcases.VisaStatusPageTest@210366b4]" name="tearDown" is-config="true" duration-ms="700" started-at="2019-05-30T11:56:17Z" finished-at="2019-05-30T11:56:17Z">
-=======
-        </test-method> <!-- passReEmailIdTest -->
-        <test-method status="PASS" signature="enterCaptchaFieldTest()[pri:9, instance:com.ghana.app.qa.testcases.SignUpPageTest@eec5a4a]" name="enterCaptchaFieldTest" duration-ms="4179" started-at="2019-06-06T13:56:09Z" finished-at="2019-06-06T13:56:14Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- enterCaptchaFieldTest -->
-        <test-method status="PASS" signature="selectDateOfBirthTest()[pri:10, instance:com.ghana.app.qa.testcases.SignUpPageTest@eec5a4a]" name="selectDateOfBirthTest" duration-ms="3197" started-at="2019-06-06T13:56:14Z" finished-at="2019-06-06T13:56:17Z">
->>>>>>> 1981cb255eb85f7ba8512e09af99d6c34aa9154a
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- selectDateOfBirthTest -->
-      </class> <!-- com.ghana.app.qa.testcases.SignUpPageTest -->
+        </test-method> <!-- passPlaceOfBirthTest -->
+      </class> <!-- com.ghana.app.qa.testcases.PersonalInfoPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -262,13 +262,19 @@ public class SignUpPage extends TestBase {
 		PhoneNumber.sendKeys(phoneNo);	
 	}
 	public String getTextFromPhoneFiled() throws IOException, InterruptedException {
-		return PhoneNumber.getText();	
+		Thread.sleep(2000);
+		return PhoneNumber.getAttribute("value");	
 	}
 
 	public void selectDateOfBirth(String birthDate) throws InterruptedException {
 
 		TestUtil.actionClassMethod(dateofbirth);
 		dateofbirth.sendKeys(birthDate);
+
+	}
+	public String getBirthDate() throws InterruptedException {
+		Thread.sleep(2000);
+		return dateofbirth.getAttribute("value");
 
 	}
 
@@ -278,7 +284,7 @@ public class SignUpPage extends TestBase {
 	}
 	public String getTextFromEmailField() throws InterruptedException {
 		Thread.sleep(3000);
-		return emailId.getText();
+		return emailId.getAttribute("value");
 	}
 
 	public void passReEmailId(String EmailId) {
@@ -286,8 +292,8 @@ public class SignUpPage extends TestBase {
 		reenterEmailId.sendKeys(EmailId);
 	}
 	public String getTextFromReEmailField() throws InterruptedException {
-		Thread.sleep(3000);
-		return reenterEmailId.getText();
+		Thread.sleep(2000);
+		return reenterEmailId.getAttribute("value");
 	}
 
 	public void visaTypeRadioBtn() {

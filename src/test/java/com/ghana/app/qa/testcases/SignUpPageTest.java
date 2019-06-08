@@ -6,6 +6,11 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.ArrayList;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -18,8 +23,7 @@ public class SignUpPageTest extends DriverInit {
 	SoftAssert softAssertion = new SoftAssert();
 
 	public SignUpPageTest() throws IOException, InterruptedException {
-		super();
-		// TODO Auto-generated constructor stub
+		super();		
 	}
 
 	@Test(priority = 1)
@@ -32,6 +36,7 @@ public class SignUpPageTest extends DriverInit {
 	public void verifyTitleSignUpPage() throws InterruptedException, IOException {	
 		System.out.println("======================>" + TestUtil.readDataFromExcellString(5, 5, 0));
 		Assert.assertEquals(signUpPage.titleOfTheSignUPPage(), TestUtil.readDataFromExcellString(5, 5, 0));
+		TestUtil. writeStringValue(5, 5,1);
 		Thread.sleep(2000);
 		signUpPage.clickOnCheckBoxes();
 		signUpPage.verifyCheckBoxIsSelected();
@@ -50,6 +55,7 @@ public class SignUpPageTest extends DriverInit {
 		signUpPage.SelectPassportType();
 		Assert.assertEquals(totalPassportTypeInReq, signUpPage.sizePassportType(), "Passport values are not matched when compare the requirement conutry and get value from application");
 		Assert.assertEquals(TestUtil.readDataFromExcellString(5, 6, 0), signUpPage.getTextPassportTypeName(), "Passport selected values is not displayed when selected from drop down and comapare with test data");
+		TestUtil. writeStringValue(5, 6,1);
 		ArrayList<String> expectedPassport = new ArrayList<String>();	
 		System.out.println("Verification done for passport type");
 	}
@@ -60,6 +66,7 @@ public class SignUpPageTest extends DriverInit {
 		Assert.assertEquals(signUpPage.totalCountryCount(), totalCountryListInReq,
 				"Countries values are not matched when compare the requirement conutry and get value from application");
 		Assert.assertEquals(TestUtil.readDataFromExcellString(5, 7, 0), signUpPage.getFromSelectedNationality(), "Nationality selected values is not displayed when selected from drop down and comapare with test data");
+		TestUtil. writeStringValue(5, 7,1);
 		System.out.println("Verification done for selectNationalityTest ");
 	}
 
@@ -69,8 +76,8 @@ public class SignUpPageTest extends DriverInit {
 		Assert.assertEquals(signUpPage.totalPortArrival(), totalPortArrivalInReq,
 				"Total port of arrival values are not matched when compare the requirement conutry and get value from application");
 		Assert.assertEquals(TestUtil.readDataFromExcellString(5, 8, 0), signUpPage.getTextFromPortofArrival(), "Port Of Arrival selected values is not displayed when selected from drop down and comapare with test data");
+		TestUtil. writeStringValue(5, 8,1);
 		System.out.println("Verification done for selectPortOfArrivalTest");
-
 	}
 
 	@Test(priority = 4)
@@ -79,6 +86,7 @@ public class SignUpPageTest extends DriverInit {
 		Assert.assertEquals(signUpPage.totalVisaFeeCountActual(), totalVisaTypeExpecteed,
 				"Total visa fee values are not matched when compare the requirement and get value from application");
 		Assert.assertEquals(signUpPage.getTextFromVisaType(), TestUtil.readDataFromExcellString(5, 9, 0),  "Port Of Arrival selected values is not displayed when selected from drop down and comapare with test data");
+		TestUtil. writeStringValue(5, 9,1);
 		System.out.println("Verification done for selectVisaType");
 	}
 
@@ -87,28 +95,33 @@ public class SignUpPageTest extends DriverInit {
 		signUpPage.selectVisaLocation();
 		Assert.assertEquals(signUpPage.totalVisaLocationActual(), totalVisaLocationExpected,
 				"Total Visa Location values are not matched when compare the requirement and get value from application");
-		Assert.assertEquals(signUpPage.getTextFromSelectVisaLocation(), TestUtil.readDataFromExcellString(5, 10, 0),  "Visa Location selected values is not displayed when selected from drop down and comapare with test data");
-		
+		Assert.assertEquals(signUpPage.getTextFromSelectVisaLocation(), TestUtil.readDataFromExcellString(5, 10, 0),  "Visa Location selected values is not displayed when selected from drop down and comapare with test data");	
+		TestUtil. writeStringValue(5, 10,1);
 		System.out.println("Verification done for selectVisaLocation");
 	}
-
 	@Test(priority = 6)
 	public void passPhoneNoTest() throws InterruptedException, IOException {
-		signUpPage.passPhoneNo(TestUtil.readDataFromExcellNumeric(5, 11, 0));
+		System.out.println("Mobile number==>" +TestUtil.readDataFromExcellString(5, 11, 0));
+		signUpPage.passPhoneNo(TestUtil.readDataFromExcellString(5, 11, 0));
 		Assert.assertEquals(signUpPage.getTextFromPhoneFiled(), TestUtil.readDataFromExcellString(5, 11, 0),  "Pass phone number and get phone number is not matched while comparing from TestData");
+		TestUtil. writeStringValue(5, 11,1);
+		System.out.println("Verification done for passPhoneNoTest");
 	}
 
 	@Test(priority = 7)
 	public void passEmailIdTest() throws InterruptedException, IOException {
 		signUpPage.passEmailId(TestUtil.readDataFromExcellString(5, 12, 0));
 		Assert.assertEquals(signUpPage.getTextFromEmailField(), TestUtil.readDataFromExcellString(5, 12, 0),  "Pass Email-Id and get Email-Id is not matched while comparing from TestData");
+		TestUtil. writeStringValue(5, 12,1);
+		System.out.println("Verification done for passEmailIdTest");
 	}
 
 	@Test(priority = 8)
 	public void passReEmailIdTest() throws InterruptedException, IOException {
 		signUpPage.passReEmailId(TestUtil.readDataFromExcellString(5, 13, 0));
 		Assert.assertEquals(signUpPage.getTextFromReEmailField(), TestUtil.readDataFromExcellString(5, 13, 0),  "Pass Email-Id and get Email-Id is not matched while comparing from TestData");
-
+		TestUtil. writeStringValue(5, 13,1);
+		System.out.println("Verification done for passReEmailIdTest");
 	}
 
 	@Test(priority = 9)
@@ -117,10 +130,13 @@ public class SignUpPageTest extends DriverInit {
 		// signUpPage.continueBtn();
 		// signUpPage.cancelBtn();
 	}
-
 	@Test(priority = 10)
 	public void selectDateOfBirthTest() throws InterruptedException, IOException {
 		Thread.sleep(3000);
-		signUpPage.selectDateOfBirth(birthDate);
+		System.out.println("Birth date====>"+TestUtil.readDataFromExcellString(5, 14, 0));
+		signUpPage.selectDateOfBirth(TestUtil.readDataFromExcellString(5, 14, 0));
+		Assert.assertEquals(signUpPage.getBirthDate(), TestUtil.readDataFromExcellString(5, 14, 0),  "Pass Birth date and get Birth date  is not matched while comparing from TestData");
+		TestUtil. writeStringValue(5, 14,1);
+		System.out.println("Verification done for selectDateOfBirthTest");
 	}
 }

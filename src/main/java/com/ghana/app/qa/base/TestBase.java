@@ -1,5 +1,6 @@
 package com.ghana.app.qa.base;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -18,6 +19,7 @@ import static com.ghana.app.qa.util.TestUtil.caps;
 import static com.ghana.app.qa.util.TestUtil.OSName;
 
 import org.apache.log4j.Logger;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.Platform;
@@ -49,13 +51,25 @@ public class TestBase {
 	// E:\SeleniumWorkSpace\torenzowebsite\TorenzoWebSite\FileDriver\chromedriver.exe
 	
 	public static WebDriver driver;
-
+   File src;
+   public static XSSFWorkbook workbook;
+   
 	public TestBase() throws IOException, InterruptedException {
 		driverPath = System.getProperty("user.dir");
 		System.out.println("path==>" + driverPath);
-		OSName = System.getProperty("os.name");		
-		OSName = OSName.substring(0,3);
-
+		OSName = System.getProperty("os.name").substring(0,3);
+	
+		if (OSName.equalsIgnoreCase("Mac")) {
+			 src = new File(
+					".\\src\\main\\java\\com\\ghana\\app\\qa\\testdata\\GhanaVisaTestData1.xlsx");
+		} else if (OSName.equalsIgnoreCase("Win")) {
+			 src = new File(
+					"./src/main/java/com/ghana/app/qa/testdata/GhanaVisaTestData1.xlsx");		
+		}
+			
+		FileInputStream fis1 = new FileInputStream(src);
+		 workbook = new XSSFWorkbook(fis1);
+	
 			if (OSName.equalsIgnoreCase("Mac")) {
 				System.out.println(OSName);
 				prop = new Properties();

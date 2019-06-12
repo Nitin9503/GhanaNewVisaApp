@@ -88,11 +88,17 @@ public class PersonalInfoPage extends TestBase {
 		lastname.sendKeys(lastName);
 		// return lastname.getText();
 	}
-
+	public String getTextFromLastName() throws InterruptedException {
+		Thread.sleep(2000);
+		return lastname.getAttribute("value");
+	}
 	public void passPassportNumber(String passportNumber) {
 		passport_number.sendKeys(passportNumber);
 	}
-
+	public String getTextFrompassPortNumber() throws InterruptedException {
+		Thread.sleep(2000);
+		return passport_number.getAttribute("value");
+	}
 	public void clickOnGender() {
 		TestUtil.actionClassMethod(gender);
 	}
@@ -113,6 +119,10 @@ public class PersonalInfoPage extends TestBase {
 		date_of_issued.sendKeys(PassIssueDate); // Enter date in required format
 	}
 
+	public String getTextFromPassIssueDate() throws InterruptedException {
+		Thread.sleep(2000);
+		return date_of_issued.getAttribute("value");
+	}
 	public void selectPassExpiryDate(String PassExpiryDate) throws InterruptedException {
 		/*
 		 * ((JavascriptExecutor) driver) .executeScript(
@@ -123,11 +133,17 @@ public class PersonalInfoPage extends TestBase {
 		date_of_expiry.sendKeys(PassExpiryDate); // Enter date in required
 													// format
 	}
-
+	public String getTextFromPassExpiryDate() throws InterruptedException {
+		Thread.sleep(2000);
+		return date_of_expiry.getAttribute("value");
+	}
 	public void passPlaceOfBirth(String birthPlace) {
 		birth_place.sendKeys(birthPlace);
 	}
-
+	public String getTextFromPassPlaceOfBirth() throws InterruptedException {
+		Thread.sleep(2000);
+		return birth_place.getAttribute("value");
+	}
 	public void clickOnSaveAndContinue() {
 		saveAndContinue.click();
 	}

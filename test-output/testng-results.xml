@@ -2,60 +2,60 @@
 <testng-results skipped="0" failed="0" total="12" passed="12">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="81551" started-at="2019-06-08T07:10:58Z" finished-at="2019-06-08T07:12:19Z">
+  <suite name="Default suite" duration-ms="103221" started-at="2019-06-11T06:23:34Z" finished-at="2019-06-11T06:25:17Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="81551" started-at="2019-06-08T07:10:58Z" finished-at="2019-06-08T07:12:19Z">
+    <test name="Default test" duration-ms="103221" started-at="2019-06-11T06:23:34Z" finished-at="2019-06-11T06:25:17Z">
       <class name="com.ghana.app.qa.testcases.PersonalInfoPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ghana.app.qa.testcases.PersonalInfoPageTest@65b3f4a4]" name="setUp" is-config="true" duration-ms="8672" started-at="2019-06-08T12:40:58Z" finished-at="2019-06-08T12:41:06Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ghana.app.qa.testcases.PersonalInfoPageTest@186f8716]" name="setUp" is-config="true" duration-ms="13045" started-at="2019-06-11T11:53:34Z" finished-at="2019-06-11T11:53:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="fillSignUpFormTest()[pri:1, instance:com.ghana.app.qa.testcases.PersonalInfoPageTest@65b3f4a4]" name="fillSignUpFormTest" duration-ms="60130" started-at="2019-06-08T12:41:06Z" finished-at="2019-06-08T12:42:07Z">
+        <test-method status="PASS" signature="fillSignUpFormTest()[pri:1, instance:com.ghana.app.qa.testcases.PersonalInfoPageTest@186f8716]" name="fillSignUpFormTest" duration-ms="60729" started-at="2019-06-11T11:53:47Z" finished-at="2019-06-11T11:54:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fillSignUpFormTest -->
-        <test-method status="PASS" signature="verifyPersonalInfoTest()[pri:2, instance:com.ghana.app.qa.testcases.PersonalInfoPageTest@65b3f4a4]" name="verifyPersonalInfoTest" duration-ms="2175" started-at="2019-06-08T12:42:07Z" finished-at="2019-06-08T12:42:09Z">
+        <test-method status="PASS" signature="verifyPersonalInfoTest()[pri:2, instance:com.ghana.app.qa.testcases.PersonalInfoPageTest@186f8716]" name="verifyPersonalInfoTest" duration-ms="2304" started-at="2019-06-11T11:54:47Z" finished-at="2019-06-11T11:54:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyPersonalInfoTest -->
-        <test-method status="PASS" signature="getApplicationPageTitleTest()[pri:3, instance:com.ghana.app.qa.testcases.PersonalInfoPageTest@65b3f4a4]" name="getApplicationPageTitleTest" duration-ms="2147" started-at="2019-06-08T12:42:09Z" finished-at="2019-06-08T12:42:11Z">
+        <test-method status="PASS" signature="getApplicationPageTitleTest()[pri:3, instance:com.ghana.app.qa.testcases.PersonalInfoPageTest@186f8716]" name="getApplicationPageTitleTest" duration-ms="2126" started-at="2019-06-11T11:54:50Z" finished-at="2019-06-11T11:54:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getApplicationPageTitleTest -->
-        <test-method status="PASS" signature="getApplicationIdTest()[pri:4, instance:com.ghana.app.qa.testcases.PersonalInfoPageTest@65b3f4a4]" name="getApplicationIdTest" duration-ms="258" started-at="2019-06-08T12:42:11Z" finished-at="2019-06-08T12:42:11Z">
+        <test-method status="PASS" signature="getApplicationIdTest()[pri:4, instance:com.ghana.app.qa.testcases.PersonalInfoPageTest@186f8716]" name="getApplicationIdTest" duration-ms="160" started-at="2019-06-11T11:54:52Z" finished-at="2019-06-11T11:54:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getApplicationIdTest -->
-        <test-method status="PASS" signature="passFirstNameTest()[pri:5, instance:com.ghana.app.qa.testcases.PersonalInfoPageTest@65b3f4a4]" name="passFirstNameTest" duration-ms="2453" started-at="2019-06-08T12:42:11Z" finished-at="2019-06-08T12:42:14Z">
+        <test-method status="PASS" signature="passFirstNameTest()[pri:5, instance:com.ghana.app.qa.testcases.PersonalInfoPageTest@186f8716]" name="passFirstNameTest" duration-ms="2443" started-at="2019-06-11T11:54:52Z" finished-at="2019-06-11T11:54:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- passFirstNameTest -->
-        <test-method status="PASS" signature="passMiddleNameTest()[pri:6, instance:com.ghana.app.qa.testcases.PersonalInfoPageTest@65b3f4a4]" name="passMiddleNameTest" duration-ms="2405" started-at="2019-06-08T12:42:14Z" finished-at="2019-06-08T12:42:16Z">
+        <test-method status="PASS" signature="passMiddleNameTest()[pri:6, instance:com.ghana.app.qa.testcases.PersonalInfoPageTest@186f8716]" name="passMiddleNameTest" duration-ms="2358" started-at="2019-06-11T11:54:55Z" finished-at="2019-06-11T11:54:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- passMiddleNameTest -->
-        <test-method status="PASS" signature="passLastNameTest()[pri:7, instance:com.ghana.app.qa.testcases.PersonalInfoPageTest@65b3f4a4]" name="passLastNameTest" duration-ms="149" started-at="2019-06-08T12:42:16Z" finished-at="2019-06-08T12:42:16Z">
+        <test-method status="PASS" signature="passLastNameTest()[pri:7, instance:com.ghana.app.qa.testcases.PersonalInfoPageTest@186f8716]" name="passLastNameTest" duration-ms="2250" started-at="2019-06-11T11:54:57Z" finished-at="2019-06-11T11:54:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- passLastNameTest -->
-        <test-method status="PASS" signature="passPassportNumberTest()[pri:8, instance:com.ghana.app.qa.testcases.PersonalInfoPageTest@65b3f4a4]" name="passPassportNumberTest" duration-ms="142" started-at="2019-06-08T12:42:16Z" finished-at="2019-06-08T12:42:16Z">
+        <test-method status="PASS" signature="passPassportNumberTest()[pri:8, instance:com.ghana.app.qa.testcases.PersonalInfoPageTest@186f8716]" name="passPassportNumberTest" duration-ms="2344" started-at="2019-06-11T11:54:59Z" finished-at="2019-06-11T11:55:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- passPassportNumberTest -->
-        <test-method status="PASS" signature="clickOnGenderTest()[pri:9, instance:com.ghana.app.qa.testcases.PersonalInfoPageTest@65b3f4a4]" name="clickOnGenderTest" duration-ms="2209" started-at="2019-06-08T12:42:16Z" finished-at="2019-06-08T12:42:19Z">
+        <test-method status="PASS" signature="clickOnGenderTest()[pri:9, instance:com.ghana.app.qa.testcases.PersonalInfoPageTest@186f8716]" name="clickOnGenderTest" duration-ms="2261" started-at="2019-06-11T11:55:01Z" finished-at="2019-06-11T11:55:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickOnGenderTest -->
-        <test-method status="PASS" signature="selectPassIssueDateTest()[pri:10, instance:com.ghana.app.qa.testcases.PersonalInfoPageTest@65b3f4a4]" name="selectPassIssueDateTest" duration-ms="287" started-at="2019-06-08T12:42:19Z" finished-at="2019-06-08T12:42:19Z">
+        <test-method status="PASS" signature="selectPassIssueDateTest()[pri:10, instance:com.ghana.app.qa.testcases.PersonalInfoPageTest@186f8716]" name="selectPassIssueDateTest" duration-ms="5421" started-at="2019-06-11T11:55:04Z" finished-at="2019-06-11T11:55:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectPassIssueDateTest -->
-        <test-method status="PASS" signature="selectPassExpiryDateTest()[pri:11, instance:com.ghana.app.qa.testcases.PersonalInfoPageTest@65b3f4a4]" name="selectPassExpiryDateTest" duration-ms="282" started-at="2019-06-08T12:42:19Z" finished-at="2019-06-08T12:42:19Z">
+        <test-method status="PASS" signature="selectPassExpiryDateTest()[pri:11, instance:com.ghana.app.qa.testcases.PersonalInfoPageTest@186f8716]" name="selectPassExpiryDateTest" duration-ms="5447" started-at="2019-06-11T11:55:09Z" finished-at="2019-06-11T11:55:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectPassExpiryDateTest -->
-        <test-method status="PASS" signature="passPlaceOfBirthTest()[pri:12, instance:com.ghana.app.qa.testcases.PersonalInfoPageTest@65b3f4a4]" name="passPlaceOfBirthTest" duration-ms="173" started-at="2019-06-08T12:42:19Z" finished-at="2019-06-08T12:42:19Z">
+        <test-method status="PASS" signature="passPlaceOfBirthTest()[pri:12, instance:com.ghana.app.qa.testcases.PersonalInfoPageTest@186f8716]" name="passPlaceOfBirthTest" duration-ms="2264" started-at="2019-06-11T11:55:15Z" finished-at="2019-06-11T11:55:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- passPlaceOfBirthTest -->

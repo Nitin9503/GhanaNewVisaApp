@@ -28,7 +28,7 @@ public class SignUpPage extends TestBase {
 	// elements from signup page
 	@FindBy(xpath = "//span[text()='Passport Type']")
 	public static WebElement PassportType;
-
+    
 	@FindBy(xpath = "//ul[@id='passport_type']//li")
 	List<WebElement> totalPassportType;
 

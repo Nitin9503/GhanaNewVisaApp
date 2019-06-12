@@ -50,16 +50,16 @@ public class PersonalInfoPageTest extends DriverInit {
 		signUpPage.selectDateOfBirth(birthDate);
 		// signUpPage.continueBtn();
 		signUpPage.continueBtn();
-		TestUtil. writeStringValue(5, 15,1);
+		TestUtil. writeStringValue(6, 1,1);
 
 	}
 
 	@Test(priority = 2)
 	public void verifyPersonalInfoTest() throws InterruptedException, IOException {
 		System.out.println("Hello in personal");
-		Assert.assertEquals(personalInfoPage.getTextPersonalInfoPageTitle(), TestUtil.readDataFromExcellString(5, 16, 0),
+		Assert.assertEquals(personalInfoPage.getTextPersonalInfoPageTitle(), TestUtil.readDataFromExcellString(6, 2, 0),
 				"it is not match with personal info page title hence it is not navigated");
-		TestUtil. writeStringValue(5, 16,1);
+		TestUtil. writeStringValue(6, 2,1);
 	}
 
 	// ----------------------Personal info page
@@ -67,40 +67,46 @@ public class PersonalInfoPageTest extends DriverInit {
 	@Test(priority = 3)
 	public void getApplicationPageTitleTest() throws InterruptedException, IOException {
 		Thread.sleep(2000);
-		Assert.assertEquals(personalInfoPage.getApplicantPageTitle(), TestUtil.readDataFromExcellString(5, 17, 0), "Title of personal info page is not matched when match with Test Data");
-		TestUtil.writeStringValue(5, 17, 1);
+		Assert.assertEquals(personalInfoPage.getApplicantPageTitle(), TestUtil.readDataFromExcellString(6, 3, 0), "Title of personal info page is not matched when match with Test Data");
+		TestUtil.writeStringValue(6, 3, 1);
 	}
 
 	@Test(priority = 4)
 	public void getApplicationIdTest() throws InterruptedException, IOException   {
 		applicationID = personalInfoPage.getApplicationId();
 		System.out.println(applicationID);
-		TestUtil.writeStringValue(5, 18, 1);
+		TestUtil.writeStringValue(6, 4, 1);
 	}
 
 	@Test(priority = 5)
 	public void passFirstNameTest() throws InterruptedException, IOException {
-		personalInfoPage.passFirstName(TestUtil.readDataFromExcellString(5, 19, 0));
-		Assert.assertEquals(personalInfoPage.getTextFromFirstName(), TestUtil.readDataFromExcellString(5, 19, 0), "First name is not matched when match with Test Data");
-		TestUtil.writeStringValue(5, 19, 1);
+		personalInfoPage.passFirstName(TestUtil.readDataFromExcellString(6, 5, 0));
+		Assert.assertEquals(personalInfoPage.getTextFromFirstName(), TestUtil.readDataFromExcellString(6, 5, 0), "First name is not matched when match with Test Data");
+		TestUtil.writeStringValue(6, 5, 1);
 	}
 
 	@Test(priority = 6)
 	public void passMiddleNameTest() throws InterruptedException, IOException {
-		personalInfoPage.passMiddleName(TestUtil.readDataFromExcellString(5, 20, 0));
-		Assert.assertEquals(personalInfoPage.getTextFromMiddleName(), TestUtil.readDataFromExcellString(5, 20, 0), "Middle name is not matched when match with Test Data");
-		TestUtil.writeStringValue(5, 20, 1);
+		personalInfoPage.passMiddleName(TestUtil.readDataFromExcellString(6, 6, 0));
+		Assert.assertEquals(personalInfoPage.getTextFromMiddleName(), TestUtil.readDataFromExcellString(6, 6, 0), "Middle name is not matched when match with Test Data");
+		TestUtil.writeStringValue(6, 6, 1);
 	}
 
 	@Test(priority = 7)
 	public void passLastNameTest() throws InterruptedException, IOException {
-		personalInfoPage.passLastName(lastName);
+	
+		personalInfoPage.passLastName(TestUtil.readDataFromExcellString(6, 7, 0));
+		Assert.assertEquals(personalInfoPage.getTextFromLastName(), TestUtil.readDataFromExcellString(6, 7, 0), "Last name is not matched when match with Test Data");
+		TestUtil.writeStringValue(6, 7, 1);
 
 	}
 
 	@Test(priority = 8)
 	public void passPassportNumberTest() throws InterruptedException, IOException {
-		personalInfoPage.passPassportNumber(passportNumber);
+		//personalInfoPage.passPassportNumber(passportNumber);
+		personalInfoPage.passPassportNumber(TestUtil.readDataFromExcellString(6, 8, 0));
+		Assert.assertEquals(personalInfoPage.getTextFrompassPortNumber(), TestUtil.readDataFromExcellString(6, 8, 0), "PassPort Number is not matched when match with Test Data");
+		TestUtil.writeStringValue(6, 8, 1);
 
 	}
 	@Test(priority = 9)
@@ -113,20 +119,32 @@ public class PersonalInfoPageTest extends DriverInit {
 
 	@Test(priority = 10)
 	public void selectPassIssueDateTest() throws InterruptedException, IOException {
-		personalInfoPage.selectPassIssueDate(passportIssuedDate);
-
+		//personalInfoPage.selectPassIssueDate(passportIssuedDate);
+		Thread.sleep(3000);
+		System.out.println("Passport Issue date====>"+TestUtil.readDataFromExcellString(6, 9, 0));
+		personalInfoPage.selectPassIssueDate(TestUtil.readDataFromExcellString(6, 9, 0));
+		Assert.assertEquals(personalInfoPage.getTextFromPassIssueDate(), TestUtil.readDataFromExcellString(6, 9, 0),  "Pass passport issue date and get Birth date  is not matched while comparing from TestData");
+		TestUtil. writeStringValue(6, 9,1);
+		System.out.println("Verification done for selectpassPortIssueTest");
 	}
 
 	@Test(priority = 11)
 	public void selectPassExpiryDateTest() throws InterruptedException, IOException {
-		personalInfoPage.selectPassExpiryDate(passportExpiryDate);
-
+		//personalInfoPage.selectPassExpiryDate(passportExpiryDate);
+		Thread.sleep(3000);
+		System.out.println("Passport Expiry date====>"+TestUtil.readDataFromExcellString(6, 10, 0));
+		personalInfoPage.selectPassExpiryDate(TestUtil.readDataFromExcellString(6, 10, 0));
+		Assert.assertEquals(personalInfoPage.getTextFromPassExpiryDate(), TestUtil.readDataFromExcellString(6, 10, 0),  "Pass passport Expiry date and get Birth date  is not matched while comparing from TestData");
+		TestUtil. writeStringValue(6, 10,1);
+		System.out.println("Verification done for selectpassPortExpiryTest");
 	}
 
 	@Test(priority = 12)
 	public void passPlaceOfBirthTest() throws InterruptedException, IOException {
-		personalInfoPage.passPlaceOfBirth(birthPlace);
-
+	//personalInfoPage.passPlaceOfBirth(birthPlace);
+		personalInfoPage.passPlaceOfBirth(TestUtil.readDataFromExcellString(6, 11, 0));
+		Assert.assertEquals(personalInfoPage.getTextFromPassPlaceOfBirth(), TestUtil.readDataFromExcellString(6, 11, 0), "Place of Birth is not matched when match with Test Data");
+		TestUtil.writeStringValue(6, 11, 1);
 	}
 
 }

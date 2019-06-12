@@ -163,7 +163,7 @@ public class TestUtil extends TestBase {
 	public static void actionClassMethod(WebElement element) {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(element).click().perform();
-
+        
 	}
 
 	public static void datePickerMethod(WebElement element) {

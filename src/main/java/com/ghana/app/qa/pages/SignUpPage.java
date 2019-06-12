@@ -146,13 +146,12 @@ public class SignUpPage extends TestBase {
 		System.out.println("Total size of passport type==>" + sizePassportType());
 		ArrayList<String> passNo = new ArrayList<String>();
 		for (WebElement PassportType : totalPassportType) {
-			System.out.println("print the value of passport tyep=>" + PassportType.getText());
-		
-			System.out.println("Values from Arraylist hooo==>" +passNo);
+			//System.out.println("print the value of passport tyep=>" + PassportType.getText());
+			//System.out.println("Values from Arraylist hooo==>" +passNo);
 			passNo.add(PassportType.getText());
 			if (PassportType.getText().equalsIgnoreCase(TestUtil.readDataFromExcellString(5, 6, 0))) {
 				PassportType.click();
-				System.out.println("See which passport type is selected str 1 selected=>" + getTextPassportTypeName());
+				//System.out.println("See which passport type is selected str 1 selected=>" + getTextPassportTypeName());
 			}
 		}
 		 System.out.println("Values from Arraylist==>" +passNo.get(0));
@@ -195,7 +194,7 @@ public class SignUpPage extends TestBase {
 		System.out.println("Total visa fee count=>>" + totalVisaFees.size());
 		for (WebElement visaFee : totalVisaFees) {
 			Thread.sleep(2000);
-			System.out.println("Total visa fee printed=>>" + visaFee.getText());
+			//System.out.println("Total visa fee printed=>>" + visaFee.getText());
 			if (visaFee.getText().equalsIgnoreCase(TestUtil.readDataFromExcellString(5, 9, 0))) {
 				visaFee.click();
 				Thread.sleep(5000);
@@ -220,7 +219,7 @@ public class SignUpPage extends TestBase {
 			if (visa.getText().equalsIgnoreCase(TestUtil.readDataFromExcellString(5, 10, 0))) {
 				visa.click();
 				Thread.sleep(5000);
-				System.out.println("Text from selected visa location=======>" + getTextFromSelectVisaLocation());
+				//System.out.println("Text from selected visa location=======>" + getTextFromSelectVisaLocation());
 			}
 
 		}
@@ -238,11 +237,11 @@ public class SignUpPage extends TestBase {
 		TestUtil.actionClassMethod(PortofArrival);
 		System.out.println("totalPortOfArrival => " + totalPortOfArrival.size());
 		for (WebElement portOfArrivale : totalPortOfArrival) {
-			System.out.println("totalPortOfArrival get Text => " + portOfArrivale.getText());
+			//System.out.println("totalPortOfArrival get Text => " + portOfArrivale.getText());
 			if (portOfArrivale.getText().equalsIgnoreCase(TestUtil.readDataFromExcellString(5, 8, 0))) {
 				portOfArrivale.click();
 				Thread.sleep(5000);
-				System.out.println("See which port of arrival type is selected==>" + getTextFromPortofArrival());
+			//	System.out.println("See which port of arrival type is selected==>" + getTextFromPortofArrival());
 
 				break;
 			}

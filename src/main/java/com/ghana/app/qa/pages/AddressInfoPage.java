@@ -3,6 +3,7 @@ package com.ghana.app.qa.pages;
 import static com.ghana.app.qa.testdata.ConstantVariable.visaFees;
 
 import java.io.IOException;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -24,10 +25,22 @@ public class AddressInfoPage extends TestBase {
 	// elements from address information page
 	@FindBy(xpath = "//h5[contains(text(),'Address Information')]")
 	WebElement addressInfoPageTitle;
+
 	@FindBy(xpath = "//span[text()='Former Nationality']")
 	WebElement FormerNationality;
+
+	@FindBy(xpath = "//select[@id='sel_formar']")
+	WebElement getTextfromFormerNationality;
+
+	@FindBy(xpath = "//span[@class='sel__box__options sel--superman']")
+	List<WebElement> TotalFormerNationality;
+
 	@FindBy(xpath = "//input[@id='former_nationality_search']")
 	WebElement former_nationality_search;
+
+	@FindBy(xpath = "//div[@class='selfrm sel--superman active']")
+	WebElement formaerNationalty;
+
 	@FindBy(xpath = "//div[@id='nav-address']//span[text()='None']")
 	WebElement former_nationality_click;
 	@FindBy(xpath = "//input[@id='nationalityText']")
@@ -40,10 +53,13 @@ public class AddressInfoPage extends TestBase {
 	// manage address
 	@FindBy(xpath = "//input[@id='flat_no']")
 	WebElement flat_no;
+
 	@FindBy(xpath = "//input[@id='street']")
 	WebElement street;
+
 	@FindBy(xpath = "//input[@id='landmark']")
 	WebElement landmark;
+
 	@FindBy(xpath = "//input[@id='pincode']")
 	WebElement pincode;
 	@FindBy(xpath = "//input[@id='city']")
@@ -52,8 +68,16 @@ public class AddressInfoPage extends TestBase {
 	WebElement state;
 	@FindBy(xpath = "//input[@id='mailing_country']")
 	WebElement mailing_country;
+	
 	@FindBy(xpath = "//span[text()='Address Type']")
 	WebElement AddressType;
+	
+	@FindBy(xpath = "//div[@class='sel sel--superman active']//span[@class='sel__box__options sel__box__options--superman']")
+	List<WebElement> totalAddressType;
+	
+	@FindBy(xpath = "//select[@id='sel_addresstype']")
+	WebElement getTextAddressType;
+	
 	@FindBy(xpath = "//span[text()='Present Address']")
 	WebElement PresentAddress;
 	@FindBy(xpath = "//div[@id='nav-address']//input[@value='Previous']")
@@ -65,43 +89,133 @@ public class AddressInfoPage extends TestBase {
 	@FindBy(xpath = "//input[@id='emergency_lastname']")
 	WebElement emergency_lastname;
 
-	public String getTextAddressInfoPageTitle() throws InterruptedException{
+	public String getTextAddressInfoPageTitle() throws InterruptedException {
 		Thread.sleep(2000);
 		return addressInfoPageTitle.getText();
-		
+
 	}
-	public void selectFormerNaitonality() throws InterruptedException {
+
+	public void selectFormerNaitonality() throws InterruptedException,
+			IOException {
 		TestUtil.actionClassMethod(FormerNationality);
-		driver.findElement(By.xpath("//div[@id='nav-address']//span[text()='"+selectFormerNationlity+"']")).click();
-		//former_nationality_search.sendKeys("India");
-		//Thread.sleep(2000);sel_formar
-		//former_nationality_click.click();
-		/*Select oSelect = new Select(driver.findElement(By.id("sel_formar")));
-		Thread.sleep(2000);
-		oSelect.selectByVisibleText(selectFormerNationlity);*/
+		System.out.println("Element ========================>"
+				+ TotalFormerNationality.size());
+		for (WebElement formarNaionality : TotalFormerNationality) {
+			if (formarNaionality.getText().equalsIgnoreCase(
+					TestUtil.readDataFromExcellString(7, 3, 0))) {
+				formarNaionality.click();
+			}
+
+		}
 
 	}
 
-	public void PassAddressInfofield(String FlatNo, String StreetName,
-			String Landmark, String Pincode, String Cityname, String State,
-			String CountryName) {
+	public String getTextFromFormaernationaltity() throws InterruptedException {
+		Thread.sleep(2000);
+		return getTextfromFormerNationality.getAttribute("value");
+	}
+
+	public void passFlatNumber(String FlatNo) throws InterruptedException {
 		flat_no.sendKeys(FlatNo);
+		Thread.sleep(3000);
+		System.out.println("Flat number===>>>>>>"
+				+ flat_no.getAttribute("value"));
+	}
+
+	public String getTextFlatNumber() throws InterruptedException {
+		Thread.sleep(2000);
+		return flat_no.getAttribute("value");
+
+	}
+
+	public void passStreetName(String StreetName) {
 		street.sendKeys(StreetName);
+	}
+
+	public String geTextStreetName() throws InterruptedException {
+		Thread.sleep(2000);
+		return street.getAttribute("value");
+	}
+
+	public void passLandmark(String Landmark) {
 		landmark.sendKeys(Landmark);
+	}
+
+	public String getTextLandmark() throws InterruptedException {
+		Thread.sleep(2000);
+		return landmark.getAttribute("value");
+	}
+
+	public void passPincode(String Pincode) {
+	
 		pincode.sendKeys(Pincode);
+	}
+
+	public String getTextPincode() throws InterruptedException {
+		Thread.sleep(2000);
+		return pincode.getAttribute("value");
+
+	}
+
+	public void passCityName(String Cityname) {
 		city.sendKeys(Cityname);
+	}
+	public String getTextCityName() throws InterruptedException {
+		Thread.sleep(2000);
+		return city.getAttribute("value");
+	}
+
+	public void passStateName(String State) {
 		state.sendKeys(State);
+	}
+	public String getTextStateName() throws InterruptedException {
+		Thread.sleep(2000);
+		return state.getAttribute("value");
+	}
+	
+	public void passCountryName(String CountryName) {
 		mailing_country.sendKeys(CountryName);
-		
+	}
+	public String getTextCountryName() throws InterruptedException {
+		Thread.sleep(2000);
+		return mailing_country.getAttribute("value");
+	}
+	
+	public void selectAddressType() throws IOException, InterruptedException {
 		TestUtil.actionClassMethod(AddressType);
-		driver.findElement(
+		System.out.println("Total address type===>"+ totalAddressType.size());
+		for (WebElement addressType : totalAddressType){
+			System.out.println("Total address type===>"+ addressType.getText());
+			if(addressType.getText().equalsIgnoreCase(TestUtil.readDataFromExcellString(7, 11, 0))){
+				addressType.click();
+			}
+		}
+
+	}
+	public String getTextFromAddressType() throws InterruptedException{
+		Thread.sleep(2000);
+		return getTextAddressType.getAttribute("value");
+	}
+
+	public void clickSaveAndContinuebtn() {
+		saveContinueBtn.click();
+
+	}
+}
+
+
+/*driver.findElement(
 				By.xpath("//span[contains(text(),'" + selectAddressType + "')]"))
 				.click();
-
-	}
-   public void clickSaveAndContinuebtn(){
-	   saveContinueBtn.click();
-	   
-	
-}
-}
+ * public void PassAddressInfofield(String FlatNo, String StreetName, String
+ * Landmark, String Pincode, String Cityname, String State, String CountryName)
+ * { flat_no.sendKeys(FlatNo); street.sendKeys(StreetName);
+ * landmark.sendKeys(Landmark); pincode.sendKeys(Pincode);
+ * city.sendKeys(Cityname); state.sendKeys(State);
+ * mailing_country.sendKeys(CountryName);
+ * 
+ * TestUtil.actionClassMethod(AddressType); driver.findElement(
+ * By.xpath("//span[contains(text(),'" + selectAddressType + "')]")) .click();
+ * 
+ * }
+ */

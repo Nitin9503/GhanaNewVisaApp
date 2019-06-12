@@ -41,13 +41,13 @@ public class PersonalInfoPageTest extends DriverInit {
 		signUpPage.selectVisaType();
 		signUpPage.selectVisaLocation();
 		signUpPage.selectPortOfArrival();
-		signUpPage.passPhoneNo(phoneNumber);
-		signUpPage.passEmailId(emailId);
-		signUpPage.passReEmailId(emailId);
+		signUpPage.passPhoneNo(TestUtil.readDataFromExcellString(5, 11, 0));
+		signUpPage.passEmailId(TestUtil.readDataFromExcellString(5, 12, 0));
+		signUpPage.passReEmailId(TestUtil.readDataFromExcellString(5, 13, 0));
 		signUpPage.enterCaptchaField();
 		// signUpPage.continueBtn();
 		// signUpPage.cancelBtn();
-		signUpPage.selectDateOfBirth(birthDate);
+		signUpPage.selectDateOfBirth(TestUtil.readDataFromExcellString(5, 14, 0));
 		// signUpPage.continueBtn();
 		signUpPage.continueBtn();
 		TestUtil. writeStringValue(6, 1,1);
@@ -103,7 +103,7 @@ public class PersonalInfoPageTest extends DriverInit {
 
 	@Test(priority = 8)
 	public void passPassportNumberTest() throws InterruptedException, IOException {
-		//personalInfoPage.passPassportNumber(passportNumber);
+	
 		personalInfoPage.passPassportNumber(TestUtil.readDataFromExcellString(6, 8, 0));
 		Assert.assertEquals(personalInfoPage.getTextFrompassPortNumber(), TestUtil.readDataFromExcellString(6, 8, 0), "PassPort Number is not matched when match with Test Data");
 		TestUtil.writeStringValue(6, 8, 1);

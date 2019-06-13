@@ -5,8 +5,13 @@
     <classes>
       <class name="com.ghana.app.qa.testcases.AddressInfoPageTest">
         <methods>
+          <include name="filladdressInfoTest3"/>
+          <include name="selectAddressType"/>
           <include name="setUp"/>
+          <include name="selectFormerNationalityTest"/>
+          <include name="SaveAndContinueFromPersonalInfoTest"/>
           <include name="filladdressInfoTest2"/>
+          <include name="filladdressInfoTest1"/>
         </methods>
       </class> <!-- com.ghana.app.qa.testcases.AddressInfoPageTest -->
     </classes>

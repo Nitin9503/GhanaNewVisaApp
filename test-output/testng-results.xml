@@ -2,40 +2,40 @@
 <testng-results skipped="0" failed="0" total="7" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="110359" started-at="2019-06-12T12:11:47Z" finished-at="2019-06-12T12:13:37Z">
+  <suite name="Default suite" duration-ms="107682" started-at="2019-06-12T12:54:19Z" finished-at="2019-06-12T12:56:07Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="110359" started-at="2019-06-12T12:11:47Z" finished-at="2019-06-12T12:13:37Z">
+    <test name="Default test" duration-ms="107682" started-at="2019-06-12T12:54:19Z" finished-at="2019-06-12T12:56:07Z">
       <class name="com.ghana.app.qa.testcases.AddressInfoPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ghana.app.qa.testcases.AddressInfoPageTest@11c9af63]" name="setUp" is-config="true" duration-ms="11599" started-at="2019-06-12T17:41:47Z" finished-at="2019-06-12T17:41:58Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ghana.app.qa.testcases.AddressInfoPageTest@11c9af63]" name="setUp" is-config="true" duration-ms="9844" started-at="2019-06-12T18:24:19Z" finished-at="2019-06-12T18:24:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="signUpAndFillPersonalInfo()[pri:1, instance:com.ghana.app.qa.testcases.AddressInfoPageTest@11c9af63]" name="signUpAndFillPersonalInfo" duration-ms="64830" started-at="2019-06-12T17:41:58Z" finished-at="2019-06-12T17:43:03Z">
+        <test-method status="PASS" signature="signUpAndFillPersonalInfo()[pri:1, instance:com.ghana.app.qa.testcases.AddressInfoPageTest@11c9af63]" name="signUpAndFillPersonalInfo" duration-ms="64130" started-at="2019-06-12T18:24:29Z" finished-at="2019-06-12T18:25:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signUpAndFillPersonalInfo -->
-        <test-method status="PASS" signature="SaveAndContinueFromPersonalInfoTest()[pri:2, instance:com.ghana.app.qa.testcases.AddressInfoPageTest@11c9af63]" name="SaveAndContinueFromPersonalInfoTest" duration-ms="4639" started-at="2019-06-12T17:43:03Z" finished-at="2019-06-12T17:43:08Z">
+        <test-method status="PASS" signature="SaveAndContinueFromPersonalInfoTest()[pri:2, instance:com.ghana.app.qa.testcases.AddressInfoPageTest@11c9af63]" name="SaveAndContinueFromPersonalInfoTest" duration-ms="4591" started-at="2019-06-12T18:25:33Z" finished-at="2019-06-12T18:25:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SaveAndContinueFromPersonalInfoTest -->
-        <test-method status="PASS" signature="selectFormerNationalityTest()[pri:3, instance:com.ghana.app.qa.testcases.AddressInfoPageTest@11c9af63]" name="selectFormerNationalityTest" duration-ms="6954" started-at="2019-06-12T17:43:08Z" finished-at="2019-06-12T17:43:15Z">
+        <test-method status="PASS" signature="selectFormerNationalityTest()[pri:3, instance:com.ghana.app.qa.testcases.AddressInfoPageTest@11c9af63]" name="selectFormerNationalityTest" duration-ms="6748" started-at="2019-06-12T18:25:38Z" finished-at="2019-06-12T18:25:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectFormerNationalityTest -->
-        <test-method status="PASS" signature="filladdressInfoTest1()[pri:4, instance:com.ghana.app.qa.testcases.AddressInfoPageTest@11c9af63]" name="filladdressInfoTest1" duration-ms="8274" started-at="2019-06-12T17:43:15Z" finished-at="2019-06-12T17:43:23Z">
+        <test-method status="PASS" signature="filladdressInfoTest1()[pri:4, instance:com.ghana.app.qa.testcases.AddressInfoPageTest@11c9af63]" name="filladdressInfoTest1" duration-ms="8266" started-at="2019-06-12T18:25:45Z" finished-at="2019-06-12T18:25:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- filladdressInfoTest1 -->
-        <test-method status="PASS" signature="filladdressInfoTest2()[pri:5, instance:com.ghana.app.qa.testcases.AddressInfoPageTest@11c9af63]" name="filladdressInfoTest2" duration-ms="4728" started-at="2019-06-12T17:43:23Z" finished-at="2019-06-12T17:43:28Z">
+        <test-method status="PASS" signature="filladdressInfoTest2()[pri:5, instance:com.ghana.app.qa.testcases.AddressInfoPageTest@11c9af63]" name="filladdressInfoTest2" duration-ms="4792" started-at="2019-06-12T18:25:53Z" finished-at="2019-06-12T18:25:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- filladdressInfoTest2 -->
-        <test-method status="PASS" signature="filladdressInfoTest3()[pri:6, instance:com.ghana.app.qa.testcases.AddressInfoPageTest@11c9af63]" name="filladdressInfoTest3" duration-ms="6818" started-at="2019-06-12T17:43:28Z" finished-at="2019-06-12T17:43:35Z">
+        <test-method status="PASS" signature="filladdressInfoTest3()[pri:6, instance:com.ghana.app.qa.testcases.AddressInfoPageTest@11c9af63]" name="filladdressInfoTest3" duration-ms="6803" started-at="2019-06-12T18:25:58Z" finished-at="2019-06-12T18:26:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- filladdressInfoTest3 -->
-        <test-method status="PASS" signature="selectAddressType()[pri:6, instance:com.ghana.app.qa.testcases.AddressInfoPageTest@11c9af63]" name="selectAddressType" duration-ms="2479" started-at="2019-06-12T17:43:35Z" finished-at="2019-06-12T17:43:37Z">
+        <test-method status="PASS" signature="selectAddressType()[pri:6, instance:com.ghana.app.qa.testcases.AddressInfoPageTest@11c9af63]" name="selectAddressType" duration-ms="2473" started-at="2019-06-12T18:26:04Z" finished-at="2019-06-12T18:26:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectAddressType -->

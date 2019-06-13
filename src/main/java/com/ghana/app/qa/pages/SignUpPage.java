@@ -272,7 +272,6 @@ public class SignUpPage extends TestBase {
 
 	}
 	public String getBirthDate() throws InterruptedException {
-		Thread.sleep(2000);
 		return dateofbirth.getAttribute("value");
 
 	}
@@ -282,7 +281,6 @@ public class SignUpPage extends TestBase {
 		emailId.sendKeys(EmailId);// nitinthaokar9@gmail.com
 	}
 	public String getTextFromEmailField() throws InterruptedException {
-		Thread.sleep(3000);
 		return emailId.getAttribute("value");
 	}
 
@@ -291,7 +289,6 @@ public class SignUpPage extends TestBase {
 		reenterEmailId.sendKeys(EmailId);
 	}
 	public String getTextFromReEmailField() throws InterruptedException {
-		Thread.sleep(2000);
 		return reenterEmailId.getAttribute("value");
 	}
 
@@ -302,7 +299,6 @@ public class SignUpPage extends TestBase {
 	public void enterCaptchaField() throws InterruptedException {
 		Thread.sleep(2000);
 		String captcha = usercaptatext.getText();
-		Thread.sleep(2000);
 		System.out.println(captcha);
 		usercaptchacode.sendKeys(captcha);
 	}

@@ -111,19 +111,14 @@ public class AddressInfoPage extends TestBase {
 	}
 
 	public String getTextFromFormaernationaltity() throws InterruptedException {
-		Thread.sleep(2000);
 		return getTextfromFormerNationality.getAttribute("value");
 	}
 
 	public void passFlatNumber(String FlatNo) throws InterruptedException {
 		flat_no.sendKeys(FlatNo);
-		Thread.sleep(3000);
-		System.out.println("Flat number===>>>>>>"
-				+ flat_no.getAttribute("value"));
 	}
 
 	public String getTextFlatNumber() throws InterruptedException {
-		Thread.sleep(2000);
 		return flat_no.getAttribute("value");
 
 	}
@@ -133,7 +128,6 @@ public class AddressInfoPage extends TestBase {
 	}
 
 	public String geTextStreetName() throws InterruptedException {
-		Thread.sleep(2000);
 		return street.getAttribute("value");
 	}
 
@@ -142,7 +136,6 @@ public class AddressInfoPage extends TestBase {
 	}
 
 	public String getTextLandmark() throws InterruptedException {
-		Thread.sleep(2000);
 		return landmark.getAttribute("value");
 	}
 
@@ -152,7 +145,6 @@ public class AddressInfoPage extends TestBase {
 	}
 
 	public String getTextPincode() throws InterruptedException {
-		Thread.sleep(2000);
 		return pincode.getAttribute("value");
 
 	}
@@ -161,7 +153,6 @@ public class AddressInfoPage extends TestBase {
 		city.sendKeys(Cityname);
 	}
 	public String getTextCityName() throws InterruptedException {
-		Thread.sleep(2000);
 		return city.getAttribute("value");
 	}
 
@@ -169,7 +160,6 @@ public class AddressInfoPage extends TestBase {
 		state.sendKeys(State);
 	}
 	public String getTextStateName() throws InterruptedException {
-		Thread.sleep(2000);
 		return state.getAttribute("value");
 	}
 	
@@ -177,7 +167,6 @@ public class AddressInfoPage extends TestBase {
 		mailing_country.sendKeys(CountryName);
 	}
 	public String getTextCountryName() throws InterruptedException {
-		Thread.sleep(2000);
 		return mailing_country.getAttribute("value");
 	}
 	
@@ -193,7 +182,6 @@ public class AddressInfoPage extends TestBase {
 
 	}
 	public String getTextFromAddressType() throws InterruptedException{
-		Thread.sleep(2000);
 		return getTextAddressType.getAttribute("value");
 	}
 

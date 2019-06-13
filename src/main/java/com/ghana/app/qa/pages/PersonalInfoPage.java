@@ -71,7 +71,6 @@ public class PersonalInfoPage extends TestBase {
 		firstname.sendKeys(firstName);
 	}
 	public String getTextFromFirstName() throws InterruptedException {
-		Thread.sleep(2000);
 		return firstname.getAttribute("value");
 	}
 
@@ -79,7 +78,7 @@ public class PersonalInfoPage extends TestBase {
 		middlename.sendKeys(middleName);
 	}
 	public String getTextFromMiddleName() throws InterruptedException {
-		Thread.sleep(2000);
+
 		return middlename.getAttribute("value");
 	}
 	
@@ -89,14 +88,14 @@ public class PersonalInfoPage extends TestBase {
 		// return lastname.getText();
 	}
 	public String getTextFromLastName() throws InterruptedException {
-		Thread.sleep(2000);
+
 		return lastname.getAttribute("value");
 	}
 	public void passPassportNumber(String passportNumber) {
 		passport_number.sendKeys(passportNumber);
 	}
 	public String getTextFrompassPortNumber() throws InterruptedException {
-		Thread.sleep(2000);
+
 		return passport_number.getAttribute("value");
 	}
 	public void clickOnGender() {
@@ -104,7 +103,7 @@ public class PersonalInfoPage extends TestBase {
 	}
 
 	public void verifiedGenderSelected() throws InterruptedException {
-		Thread.sleep(2000);
+
 		genderRadioButton = gender.isSelected();
 		System.out.println("genderRadioButton==>" + genderRadioButton);
 	}
@@ -120,7 +119,6 @@ public class PersonalInfoPage extends TestBase {
 	}
 
 	public String getTextFromPassIssueDate() throws InterruptedException {
-		Thread.sleep(2000);
 		return date_of_issued.getAttribute("value");
 	}
 	public void selectPassExpiryDate(String PassExpiryDate) throws InterruptedException {
@@ -134,14 +132,14 @@ public class PersonalInfoPage extends TestBase {
 													// format
 	}
 	public String getTextFromPassExpiryDate() throws InterruptedException {
-		Thread.sleep(2000);
+
 		return date_of_expiry.getAttribute("value");
 	}
 	public void passPlaceOfBirth(String birthPlace) {
 		birth_place.sendKeys(birthPlace);
 	}
 	public String getTextFromPassPlaceOfBirth() throws InterruptedException {
-		Thread.sleep(2000);
+
 		return birth_place.getAttribute("value");
 	}
 	public void clickOnSaveAndContinue() {

@@ -1,6 +1,7 @@
 package com.ghana.app.qa.pages;
 
 import java.io.IOException;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -27,6 +28,14 @@ public class TravelInfoPage extends TestBase {
 
 	@FindBy(xpath = "//span[text()='Do you have a round trip ticket?']")
 	WebElement isApplicantPossessionRoundTicket;
+	
+	@FindBy(xpath = "//select[@id='sel_roundTkt']")
+	WebElement getTextFromRoundTicket;
+	
+	
+	
+	@FindBy(xpath = "//div[@class='sel sel--superman active']//span[@class='sel__box__options sel__box__options--superman']")
+	List<WebElement> totalApplicantPossessionRoundTicket;
 
 	@FindBy(xpath = "//span[text()='Yes']")
 	WebElement yes;
@@ -39,6 +48,12 @@ public class TravelInfoPage extends TestBase {
 
 	@FindBy(xpath = "//span[text()='Traveling By']")
 	WebElement travelingBy;
+	
+	@FindBy(xpath = "//div[@class='sel sel--superman active']//span[@class='sel__box__options sel__box__options--superman']")
+	List<WebElement> totalTravelingOption;
+	
+	@FindBy(xpath = "//select[@id='sel_travelBy']")
+	WebElement getTextTravelingBy;
 
 	@FindBy(xpath = "//span[text()='Air']")
 	WebElement air;
@@ -54,7 +69,13 @@ public class TravelInfoPage extends TestBase {
 
 	@FindBy(xpath = "//span[text()='Purpose of journey']")
 	WebElement purpose_of_journey;
-
+	
+	@FindBy(xpath = "//div[@class='sel sel--superman active']//span[@class='sel__box__options sel__box__options--superman']")
+	List<WebElement> totalOptionOfPurposeJourney;
+	
+	@FindBy(xpath = "//select[@id='sel_purpose']")
+	WebElement getTextpurpose_of_journey;
+	
 	@FindBy(xpath = "//div[@id='nav-travel']//span[text()='Visit Family']")
 	WebElement VisitFamily;
 
@@ -138,13 +159,24 @@ public class TravelInfoPage extends TestBase {
 		departureDate.sendKeys(date);
 
 	}
-
-	public void clickOnIsApplicantPossessionRoundTicket() {
+    public String getTextDateOfDeparture() {
+    	
+		return departureDate.getAttribute("value");
+	}
+    
+	public void clickOnIsApplicantPossessionRoundTicket() throws IOException, InterruptedException {
 		TestUtil.actionClassMethod(isApplicantPossessionRoundTicket);
-		driver.findElement(
-				By.xpath("//span[contains(text(),'" + roundTicket + "')]"))
-				.click();
-
+		System.out.println("Total round of ticket===>" +totalApplicantPossessionRoundTicket.size());
+		for (WebElement ticket : totalApplicantPossessionRoundTicket){
+			System.out.println("Total round of ticket===>" +ticket.getText());
+			if (ticket.getText().equalsIgnoreCase(TestUtil.readDataFromExcellString(9, 4, 0))){
+				ticket.click();
+				System.out.println("Round text===>" +getTextFromRoundTicket());				
+			}		
+		}		
+	}
+	public boolean getTextFromRoundTicket() throws InterruptedException{
+		return getTextFromRoundTicket.isDisplayed();
 	}
 
 	public void clickOnYes() {
@@ -156,15 +188,28 @@ public class TravelInfoPage extends TestBase {
 		ticketNumber.sendKeys(ticketNO);
 
 	}
-
-	public void clickOnTravelBy() {
-		TestUtil.actionClassMethod(travelingBy);
-		driver.findElement(
-				By.xpath("//span[contains(text(),'" + travellingBy + "')]"))
-				.click();
+	public String getTextTicketNumber() {
+		return ticketNumber.getAttribute("value");
 
 	}
 
+	public void clickOnTravelBy() throws IOException, InterruptedException {
+		TestUtil.actionClassMethod(travelingBy);
+		System.out.println("Total travel options are==>"+totalTravelingOption.size());
+		for (WebElement travelOptions:totalTravelingOption){
+			System.out.println("travel options ===>" +travelOptions.getText() );
+			if (travelOptions.getText().equalsIgnoreCase(TestUtil.readDataFromExcellString(9, 6, 0)))
+				travelOptions.click();
+			System.out.println("Which option is selected==>" +getTextTravelingBy());
+			
+		}
+		
+	}
+
+	public String getTextTravelingBy(){
+		
+		return getTextTravelingBy.getAttribute("value");
+	}
 	public void clickOnTravelByAir() {
 		air.click();
 
@@ -185,16 +230,35 @@ public class TravelInfoPage extends TestBase {
 
 	}
 
-	public void clickPurpose_of_journey() throws InterruptedException {
+	public void clickPurpose_of_journey() throws InterruptedException, IOException {
 		TestUtil.actionClassMethod(purpose_of_journey);
-		driver.findElement(
-				By.xpath("//span[contains(text(),'" + JourneyPurpose + "')]"))
-				.click();
+
+		System.out.println("totalOptionOfPurposeJourney=====>" +totalOptionOfPurposeJourney.size());
+		
+		for (WebElement perposeJourneyOptions : totalOptionOfPurposeJourney){
+			
+			System.out.println("perposeJourneyOptions text=====>" +perposeJourneyOptions.getText());
+			
+			if (perposeJourneyOptions.getText().equalsIgnoreCase(TestUtil.readDataFromExcellString(9, 7, 0))){
+				perposeJourneyOptions.click();
+				System.out.println("getTextpurpose_of_journey=====>" +getTextpurpose_of_journey());
+				
+			}
+		}
 
 	}
 
+	
+	public String getTextpurpose_of_journey(){
+		
+		return getTextpurpose_of_journey.getAttribute("value");
+	}
 	public void passPrimaryRefFirstname(String firstname) {
 		primaryRefFirstname.sendKeys(firstname);
+
+	}
+	public String getTextPrimaryRefFirstname() {
+		return primaryRefFirstname.getAttribute("value");
 
 	}
 
@@ -202,14 +266,25 @@ public class TravelInfoPage extends TestBase {
 		primary_ref_lastname.sendKeys(lastName);
 
 	}
+	public String getTextPrimaryRefLastname() {
+		return primary_ref_lastname.getAttribute("value");
+
+	}
 
 	public void pass_Primary_ref_address(String adress) {
 		primary_ref_address.sendKeys(adress);
 
 	}
+	public String getText_Primary_ref_address() {
+		return primary_ref_address.getAttribute("value");
 
+	}
 	public void pass_primary_ref_pincode(String pincode) {
 		primary_ref_pincode.sendKeys(pincode);
+
+	}
+	public String getText_primary_ref_pincode() {
+		return primary_ref_pincode.getAttribute("value");
 
 	}
 
@@ -217,9 +292,18 @@ public class TravelInfoPage extends TestBase {
 		primary_ref_city.sendKeys(city);
 
 	}
+	
+	public String getText_primary_ref_city() {
+		return primary_ref_city.getAttribute("value");
+
+	}
 
 	public void pass_primary_ref_state(String state) {
 		primary_ref_state.sendKeys(state);
+
+	}
+	public String getText_primary_ref_state() {
+		return primary_ref_state.getAttribute("value");
 
 	}
 
@@ -227,9 +311,17 @@ public class TravelInfoPage extends TestBase {
 		primary_ref_country.sendKeys(country);
 
 	}
+	public String getText_primary_ref_country() {
+		return primary_ref_country.getAttribute("value");
+
+	}
 
 	public void pass_primary_ref_phone_number(String phoneNo) {
 		primary_ref_phone_number.sendKeys(phoneNo);
+
+	}
+	public String getText_primary_ref_phone_number() {
+		return primary_ref_phone_number.getAttribute("value");
 
 	}
 
@@ -237,14 +329,26 @@ public class TravelInfoPage extends TestBase {
 		secondaryRefFirstname.sendKeys(firstname);
 
 	}
+	public String getTextsecondaryRefFirstname() {
+		return secondaryRefFirstname.getAttribute("value");
+
+	}
+
 
 	public void pass_secondary_ref_lastname(String lastName) {
 		secondary_ref_lastname.sendKeys(lastName);
 
 	}
+	public String geText_secondary_ref_lastname() {
+		return secondary_ref_lastname.getAttribute("value");
+	}
 
 	public void pass_secondary_ref_address(String adress) {
-		secondary_ref_address.sendKeys(adress);
+		 secondary_ref_address.sendKeys(adress);
+
+	}
+	public String getText_secondary_ref_address() {
+		return secondary_ref_address.getAttribute("value");
 
 	}
 
@@ -252,9 +356,17 @@ public class TravelInfoPage extends TestBase {
 		secondary_ref_pincode.sendKeys(pincode);
 
 	}
+	public String getText_secondary_ref_pincode() {
+		return secondary_ref_pincode.getAttribute("value");
+
+	}
 
 	public void pass_secondary_ref_city(String city) {
 		secondary_ref_city.sendKeys(city);
+
+	}
+	public String geText_secondary_ref_city() {
+		return secondary_ref_city.getAttribute("value");
 
 	}
 
@@ -262,14 +374,26 @@ public class TravelInfoPage extends TestBase {
 		secondary_ref_state.sendKeys(state);
 
 	}
+	public String getText_secondary_ref_state() {
+		return secondary_ref_state.getAttribute("value");
+
+	}
 
 	public void pass_secondary_ref_country(String country) {
 		secondary_ref_country.sendKeys(country);
 
 	}
+	public String getText_secondary_ref_country() {
+		return secondary_ref_country.getAttribute("value");
+
+	}
 
 	public void pass_secondary_ref_phone_number(String phoneNo) {
 		secondary_ref_phone_number.sendKeys(phoneNo);
+
+	}
+	public String getText_secondary_ref_phone_number() {
+		return secondary_ref_phone_number.getAttribute("value");
 
 	}
 
@@ -327,7 +451,10 @@ public class TravelInfoPage extends TestBase {
 		txtReach.sendKeys(passWay);
 
 	}
-	
+	public String getTextOtherWayToReach() {
+		return txtReach.getAttribute("value");
+
+	}
 
 	public void clickOnContinuebutton() {
 		applicant_travel_information_form_btn.click();

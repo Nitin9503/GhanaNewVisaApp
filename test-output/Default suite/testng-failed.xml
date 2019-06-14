@@ -3,17 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.ghana.app.qa.testcases.AddressInfoPageTest">
+      <class name="com.ghana.app.qa.testcases.TravelInfoPageTest">
         <methods>
-          <include name="filladdressInfoTest3"/>
-          <include name="selectAddressType"/>
+          <include name="clickOnIsApplicantPossessionRoundTicketTest"/>
           <include name="setUp"/>
-          <include name="selectFormerNationalityTest"/>
-          <include name="SaveAndContinueFromPersonalInfoTest"/>
-          <include name="filladdressInfoTest2"/>
-          <include name="filladdressInfoTest1"/>
         </methods>
-      </class> <!-- com.ghana.app.qa.testcases.AddressInfoPageTest -->
+      </class> <!-- com.ghana.app.qa.testcases.TravelInfoPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

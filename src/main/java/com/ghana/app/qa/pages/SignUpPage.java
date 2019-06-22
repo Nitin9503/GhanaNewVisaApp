@@ -173,7 +173,7 @@ public class SignUpPage extends TestBase {
 		for (WebElement country : countrys) {
 			if (country.getText().equalsIgnoreCase(TestUtil.readDataFromExcellString(5, 7, 0))) {
 				country.click();
-				Thread.sleep(5000);
+				Thread.sleep(2000);
 				System.out.println("See which country str 1 selected=>" + getFromSelectedNationality());
 				break;
 			}
@@ -193,11 +193,11 @@ public class SignUpPage extends TestBase {
 		TestUtil.actionClassMethod(clickvisaFees);
 		System.out.println("Total visa fee count=>>" + totalVisaFees.size());
 		for (WebElement visaFee : totalVisaFees) {
-			Thread.sleep(2000);
+			Thread.sleep(1000);
 			//System.out.println("Total visa fee printed=>>" + visaFee.getText());
 			if (visaFee.getText().equalsIgnoreCase(TestUtil.readDataFromExcellString(5, 9, 0))) {
 				visaFee.click();
-				Thread.sleep(5000);
+				Thread.sleep(2000);
 			}
 		}
 	}
@@ -218,7 +218,7 @@ public class SignUpPage extends TestBase {
 			System.out.println("Visa Location ==>" + visa.getText());
 			if (visa.getText().equalsIgnoreCase(TestUtil.readDataFromExcellString(5, 10, 0))) {
 				visa.click();
-				Thread.sleep(5000);
+				Thread.sleep(2000);
 				//System.out.println("Text from selected visa location=======>" + getTextFromSelectVisaLocation());
 			}
 
@@ -240,7 +240,7 @@ public class SignUpPage extends TestBase {
 			//System.out.println("totalPortOfArrival get Text => " + portOfArrivale.getText());
 			if (portOfArrivale.getText().equalsIgnoreCase(TestUtil.readDataFromExcellString(5, 8, 0))) {
 				portOfArrivale.click();
-				Thread.sleep(5000);
+				Thread.sleep(2000);
 			//	System.out.println("See which port of arrival type is selected==>" + getTextFromPortofArrival());
 
 				break;
@@ -261,7 +261,7 @@ public class SignUpPage extends TestBase {
 		PhoneNumber.sendKeys(phoneNo);	
 	}
 	public String getTextFromPhoneFiled() throws IOException, InterruptedException {
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		return PhoneNumber.getAttribute("value");	
 	}
 
@@ -297,7 +297,7 @@ public class SignUpPage extends TestBase {
 	}
 
 	public void enterCaptchaField() throws InterruptedException {
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		String captcha = usercaptatext.getText();
 		System.out.println(captcha);
 		usercaptchacode.sendKeys(captcha);
@@ -332,7 +332,7 @@ public class SignUpPage extends TestBase {
 	public void verifyCheckBoxIsSelected() throws InterruptedException {
 		int j = checkBoxesClick.size();
 
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		for (int i = 0; i < j; i++) {
 
 			selectedBoxOnSignUp = checkBoxesClick.get(i).isSelected();

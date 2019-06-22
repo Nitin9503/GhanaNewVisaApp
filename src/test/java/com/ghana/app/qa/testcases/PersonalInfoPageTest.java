@@ -119,7 +119,7 @@ public class PersonalInfoPageTest extends DriverInit {
 
 	@Test(priority = 10)
 	public void selectPassIssueDateTest() throws InterruptedException, IOException {
-		//personalInfoPage.selectPassIssueDate(passportIssuedDate);
+
 		Thread.sleep(3000);
 		System.out.println("Passport Issue date====>"+TestUtil.readDataFromExcellString(6, 9, 0));
 		personalInfoPage.selectPassIssueDate(TestUtil.readDataFromExcellString(6, 9, 0));
@@ -130,7 +130,6 @@ public class PersonalInfoPageTest extends DriverInit {
 
 	@Test(priority = 11)
 	public void selectPassExpiryDateTest() throws InterruptedException, IOException {
-		//personalInfoPage.selectPassExpiryDate(passportExpiryDate);
 		Thread.sleep(3000);
 		System.out.println("Passport Expiry date====>"+TestUtil.readDataFromExcellString(6, 10, 0));
 		personalInfoPage.selectPassExpiryDate(TestUtil.readDataFromExcellString(6, 10, 0));

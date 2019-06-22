@@ -137,11 +137,12 @@ public class TravelInfoPageTest extends DriverInit {
 	@Test(priority = 6)
 	public void passDateOfDepartureTest() throws InterruptedException,
 			IOException {
+		Thread.sleep(3000);
 		travelInfoPage.passDateOfDeparture(TestUtil.readDataFromExcellString(9,
 				3, 0));
 		Assert.assertEquals(travelInfoPage.getTextDateOfDeparture(),
 				TestUtil.readDataFromExcellString(9, 3, 0),
-				"it is not navigate to travel info page when compared with Test Data");
+				"Date of departure is not matched when compared with Test Data");
 		TestUtil.writeStringValue(9, 3, 1);
 		// travelInfoPage.clickOnContinuebutton();
 	}
@@ -158,8 +159,7 @@ public class TravelInfoPageTest extends DriverInit {
 
 	@Test(priority = 8)
 	public void passTicketNumberTest() throws InterruptedException, IOException {
-		travelInfoPage.passTicketNumber(TestUtil.readDataFromExcellString(9, 5,
-				0));
+		travelInfoPage.passTicketNumber(TestUtil.readDataFromExcellString(9, 5,0));
 		Assert.assertEquals(travelInfoPage.getTextTicketNumber(),
 				TestUtil.readDataFromExcellString(9, 5, 0),
 				"Ticket number is not matched when compared with Test Data");
@@ -200,8 +200,7 @@ public class TravelInfoPageTest extends DriverInit {
 	@Test(priority = 12)
 	public void passPrimaryRefLastnameTest() throws InterruptedException,
 			IOException {
-		travelInfoPage.passPrimaryRefLastname(TestUtil
-				.readDataFromExcellString(9, 9, 0));
+		travelInfoPage.passPrimaryRefLastname(TestUtil.readDataFromExcellString(9, 9, 0));
 		Assert.assertEquals(travelInfoPage.getTextPrimaryRefLastname(),
 				TestUtil.readDataFromExcellString(9, 9, 0),
 				"Last name of reference one is not matched when compared with Test Data");
@@ -212,8 +211,7 @@ public class TravelInfoPageTest extends DriverInit {
 	@Test(priority = 13)
 	public void pass_Primary_ref_addressTest() throws InterruptedException,
 			IOException {
-		travelInfoPage.pass_Primary_ref_address(TestUtil
-				.readDataFromExcellString(9, 10, 0));
+		travelInfoPage.pass_Primary_ref_address(TestUtil.readDataFromExcellString(9, 10, 0));
 		Assert.assertEquals(travelInfoPage.getText_Primary_ref_address(),
 				TestUtil.readDataFromExcellString(9, 10, 0),
 				"Address of reference one is not matched when compared with Test Data");
@@ -224,8 +222,7 @@ public class TravelInfoPageTest extends DriverInit {
 	@Test(priority = 14)
 	public void pass_primary_ref_pincodeTest() throws InterruptedException,
 			IOException {
-		travelInfoPage.pass_primary_ref_pincode(TestUtil
-				.readDataFromExcellString(9, 11, 0));
+		travelInfoPage.pass_primary_ref_pincode(TestUtil.readDataFromExcellString(9, 11, 0));
 		Assert.assertEquals(travelInfoPage.getText_primary_ref_pincode(),
 				TestUtil.readDataFromExcellString(9, 11, 0),
 				"Pincode of reference one is not matched when compared with Test Data");
@@ -236,8 +233,7 @@ public class TravelInfoPageTest extends DriverInit {
 	@Test(priority = 15)
 	public void pass_primary_ref_cityTest() throws InterruptedException,
 			IOException {
-		travelInfoPage.pass_primary_ref_city(TestUtil.readDataFromExcellString(
-				9, 12, 0));
+		travelInfoPage.pass_primary_ref_city(TestUtil.readDataFromExcellString(9, 12, 0));
 		Assert.assertEquals(travelInfoPage.getText_primary_ref_city(),
 				TestUtil.readDataFromExcellString(9, 12, 0),
 				"City of reference one is not matched when compared with Test Data");
@@ -248,8 +244,7 @@ public class TravelInfoPageTest extends DriverInit {
 	@Test(priority = 16)
 	public void pass_primary_ref_stateTest() throws InterruptedException,
 			IOException {
-		travelInfoPage.pass_primary_ref_state(TestUtil
-				.readDataFromExcellString(9, 13, 0));
+		travelInfoPage.pass_primary_ref_state(TestUtil.readDataFromExcellString(9, 13, 0));
 		Assert.assertEquals(travelInfoPage.getText_primary_ref_state(),
 				TestUtil.readDataFromExcellString(9, 13, 0),
 				"State of reference one is not matched when compared with Test Data");
@@ -260,8 +255,7 @@ public class TravelInfoPageTest extends DriverInit {
 	@Test(priority = 17)
 	public void pass_primary_ref_countryTest() throws InterruptedException,
 			IOException {
-		travelInfoPage.pass_primary_ref_country(TestUtil
-				.readDataFromExcellString(9, 14, 0));
+		travelInfoPage.pass_primary_ref_country(TestUtil.readDataFromExcellString(9, 14, 0));
 		Assert.assertEquals(travelInfoPage.getText_primary_ref_country(),
 				TestUtil.readDataFromExcellString(9, 14, 0),
 				"Country of reference one is not matched when compared with Test Data");
@@ -270,11 +264,9 @@ public class TravelInfoPageTest extends DriverInit {
 	}
 
 	@Test(priority = 18)
-	public void pass_primary_ref_phone_numberTest()
-			throws InterruptedException, IOException {
+	public void pass_primary_ref_phone_numberTest()throws InterruptedException, IOException {
 
-		travelInfoPage.pass_primary_ref_phone_number(TestUtil
-				.readDataFromExcellString(9, 15, 0));
+		travelInfoPage.pass_primary_ref_phone_number(TestUtil.readDataFromExcellString(9, 15, 0));
 		Assert.assertEquals(travelInfoPage.getText_primary_ref_phone_number(),
 				TestUtil.readDataFromExcellString(9, 15, 0),
 				"Contact number of reference one is not matched when compared with Test Data");
@@ -282,11 +274,8 @@ public class TravelInfoPageTest extends DriverInit {
 	}
 
 	@Test(priority = 19)
-	public void pass_firstName_SecRef() throws InterruptedException,
-			IOException {
-
-		travelInfoPage.passsecondaryRefFirstname(TestUtil
-				.readDataFromExcellString(9, 16, 0));
+	public void pass_firstName_SecRef() throws InterruptedException,IOException {
+		travelInfoPage.passsecondaryRefFirstname(TestUtil.readDataFromExcellString(9, 16, 0));
 		Assert.assertEquals(
 				travelInfoPage.getTextsecondaryRefFirstname(),
 				TestUtil.readDataFromExcellString(9, 16, 0),
@@ -297,8 +286,7 @@ public class TravelInfoPageTest extends DriverInit {
 
 	@Test(priority = 20)
 	public void pass_LastName_SecRef() throws InterruptedException, IOException {
-		travelInfoPage.pass_secondary_ref_lastname(TestUtil
-				.readDataFromExcellString(9, 17, 0));
+		travelInfoPage.pass_secondary_ref_lastname(TestUtil.readDataFromExcellString(9, 17, 0));
 		Assert.assertEquals(travelInfoPage.geText_secondary_ref_lastname(),
 				TestUtil.readDataFromExcellString(9, 17, 0),
 				"Last name number of reference two is not matched when compared with Test Data");
@@ -308,8 +296,7 @@ public class TravelInfoPageTest extends DriverInit {
 
 	@Test(priority = 21)
 	public void pass_Address_SecRef() throws InterruptedException, IOException {
-		travelInfoPage.pass_secondary_ref_address(TestUtil
-				.readDataFromExcellString(9, 18, 0));
+		travelInfoPage.pass_secondary_ref_address(TestUtil.readDataFromExcellString(9, 18, 0));
 		Assert.assertEquals(travelInfoPage.getText_secondary_ref_address(),
 				TestUtil.readDataFromExcellString(9, 18, 0),
 				"Address number of reference two is not matched when compared with Test Data");
@@ -319,8 +306,7 @@ public class TravelInfoPageTest extends DriverInit {
 
 	@Test(priority = 22)
 	public void pass_Pincode_SecRef() throws InterruptedException, IOException {
-		travelInfoPage.pass_secondary_ref_pincode(TestUtil
-				.readDataFromExcellString(9, 19, 0));
+		travelInfoPage.pass_secondary_ref_pincode(TestUtil.readDataFromExcellString(9, 19, 0));
 		Assert.assertEquals(travelInfoPage.getText_secondary_ref_pincode(),
 				TestUtil.readDataFromExcellString(9, 19, 0),
 				"Pincode number of reference two is not matched when compared with Test Data");
@@ -331,8 +317,7 @@ public class TravelInfoPageTest extends DriverInit {
 	@Test(priority = 23)
 	public void pass_City_SecRef() throws InterruptedException, IOException {
 
-		travelInfoPage.pass_secondary_ref_city(TestUtil
-				.readDataFromExcellString(9, 20, 0));
+		travelInfoPage.pass_secondary_ref_city(TestUtil.readDataFromExcellString(9, 20, 0));
 		Assert.assertEquals(travelInfoPage.geText_secondary_ref_city(),
 				TestUtil.readDataFromExcellString(9, 20, 0),
 				"City name of reference two is not matched when compared with Test Data");
@@ -342,10 +327,9 @@ public class TravelInfoPageTest extends DriverInit {
 
 	@Test(priority = 24)
 	public void pass_State_SecRef() throws InterruptedException, IOException {
-		travelInfoPage.pass_secondary_ref_state(TestUtil
-				.readDataFromExcellString(9, 22, 0));
+		travelInfoPage.pass_secondary_ref_state(TestUtil.readDataFromExcellString(9, 21, 0));
 		Assert.assertEquals(travelInfoPage.getText_secondary_ref_state(),
-				TestUtil.readDataFromExcellString(9, 22, 0),
+				TestUtil.readDataFromExcellString(9, 21, 0),
 				"State name of reference two is not matched when compared with Test Data");
 		TestUtil.writeStringValue(9, 21, 1);
 
@@ -353,8 +337,7 @@ public class TravelInfoPageTest extends DriverInit {
 
 	@Test(priority = 25)
 	public void pass_Country_SecRef() throws InterruptedException, IOException {
-		travelInfoPage.pass_secondary_ref_country(TestUtil
-				.readDataFromExcellString(9, 22, 0));
+		travelInfoPage.pass_secondary_ref_country(TestUtil.readDataFromExcellString(9, 22, 0));
 		Assert.assertEquals(travelInfoPage.getText_secondary_ref_country(),
 				TestUtil.readDataFromExcellString(9, 22, 0),
 				"Country name of reference two is not matched when compared with Test Data");
@@ -365,8 +348,7 @@ public class TravelInfoPageTest extends DriverInit {
 	@Test(priority = 26)
 	public void pass_secondary_ref_phone_number() throws InterruptedException,
 			IOException {
-		travelInfoPage.pass_secondary_ref_phone_number(TestUtil
-				.readDataFromExcellString(9, 23, 0));
+		travelInfoPage.pass_secondary_ref_phone_number(TestUtil.readDataFromExcellString(9, 23, 0));
 		Assert.assertEquals(
 				travelInfoPage.getText_secondary_ref_phone_number(),
 				TestUtil.readDataFromExcellString(9, 23, 0),

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="com.ghana.app.qa.testcases.UploadDocPageTest">
+        <methods>
+          <include name="getUploadDocTest"/>
+          <include name="signUpAndFillSignUpPage"/>
+          <include name="fillAddressinfoPageTest"/>
+          <include name="fillPersonalPageTest"/>
+          <include name="setUp"/>
+          <include name="fillEmergencyPageTest"/>
+          <include name="fillTravelInfoPageTest"/>
+        </methods>
+      </class> <!-- com.ghana.app.qa.testcases.UploadDocPageTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

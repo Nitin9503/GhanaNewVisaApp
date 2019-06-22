@@ -159,8 +159,8 @@ public class TravelInfoPage extends TestBase {
 		departureDate.sendKeys(date);
 
 	}
-    public String getTextDateOfDeparture() {
-    	
+    public String getTextDateOfDeparture() throws InterruptedException {
+    	Thread.sleep(2000);
 		return departureDate.getAttribute("value");
 	}
     

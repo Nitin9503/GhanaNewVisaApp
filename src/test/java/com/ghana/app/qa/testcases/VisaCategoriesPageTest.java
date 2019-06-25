@@ -42,8 +42,10 @@ public class VisaCategoriesPageTest extends DriverInit {
 	@Test(priority = 3)
 	public void clickOnVisaTypeTest() throws IOException, InterruptedException {
 		visaCategoriesPage.clickOnVisaType();
-		System.out.println("sign up page title is " + signUpPage.validateSignUpPageTitle());
-		Assert.assertEquals(signUpPage.validateSignUpPageTitle(), "Sign Up",
-				"sign up is not open while clickin on Apply Visa");
+	
+		System.out.println("======================>" + TestUtil.readDataFromExcellString(5, 5, 0));
+		Assert.assertEquals(signUpPage.titleOfTheSignUPPage(), TestUtil.readDataFromExcellString(5, 5, 0));
+		TestUtil. writeStringValue(5, 5, 1);
+		
 	}
 }

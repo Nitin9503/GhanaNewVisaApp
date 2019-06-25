@@ -22,7 +22,7 @@ public class ReviewApplicationPageTest extends DriverInit {
 	}
 
 	@Test(priority = 1)
-	public void signUpAndFillSignUpPage() throws InterruptedException,
+	public static void signUpAndFillSignUpPage() throws InterruptedException,
 			IOException {
 		homePage.clickOnApplyVisa();
 		visaCategoriesPage.clickOnVisaType();

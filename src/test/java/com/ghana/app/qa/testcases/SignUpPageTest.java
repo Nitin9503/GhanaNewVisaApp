@@ -33,10 +33,8 @@ public class SignUpPageTest extends DriverInit {
 	}
 
 	@Test(priority = 2)
-	public void verifyTitleSignUpPage() throws InterruptedException, IOException {	
-		System.out.println("======================>" + TestUtil.readDataFromExcellString(5, 5, 0));
-		Assert.assertEquals(signUpPage.titleOfTheSignUPPage(), TestUtil.readDataFromExcellString(5, 5, 0));
-		TestUtil. writeStringValue(5, 5,1);
+	public void SignUpPageTest() throws InterruptedException, IOException {	
+		
 		Thread.sleep(2000);
 		signUpPage.clickOnCheckBoxes();
 		signUpPage.verifyCheckBoxIsSelected();

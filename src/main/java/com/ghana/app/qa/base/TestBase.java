@@ -51,6 +51,7 @@ public class TestBase {
 	// E:\SeleniumWorkSpace\torenzowebsite\TorenzoWebSite\FileDriver\chromedriver.exe
 	
 	public static WebDriver driver;
+	
    File src;
    public static XSSFWorkbook workbook;
    
@@ -209,9 +210,9 @@ public class TestBase {
 		} else if (OSName.equalsIgnoreCase("Win")) {
 
 			if (broweserName.equals("FF")) {
-				System.setProperty("webdriver.gecko.driver", driverPath + "\\FileDriver\\geckodriver.exe");
-				System.setProperty("webdriver.firefox.marionette", "false");
-				// WebDriverManager.firefoxdriver().setup();
+			//	System.setProperty("webdriver.gecko.driver", driverPath + "\\FileDriver\\geckodriver.exe");
+				//System.setProperty("webdriver.firefox.marionette", "false");
+				WebDriverManager.firefoxdriver().setup();
 				driver = new FirefoxDriver();
 
 
@@ -226,7 +227,8 @@ public class TestBase {
 			}
 
 			else if (broweserName.equalsIgnoreCase("IE")) {
-				System.setProperty("webdriver.ie.driver", driverPath + "\\FileDriver\\IEDriverServer.exe");
+			//	System.setProperty("webdriver.ie.driver", driverPath + "\\FileDriver\\IEDriverServer.exe");
+				WebDriverManager.iedriver().setup();
 				driver = new InternetExplorerDriver();
 			} else if (testOnCloud.equalsIgnoreCase("SauceLab")) {
 				System.out.println("Testing Sauce Lab Cloud");

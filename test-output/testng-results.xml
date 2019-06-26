@@ -1,29 +1,271 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="3" passed="3">
+<testng-results skipped="0" failed="4" total="12" passed="8">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="95577" started-at="2019-06-24T10:48:49Z" finished-at="2019-06-24T10:50:25Z">
+  <suite name="Default suite" duration-ms="386737" started-at="2019-06-25T06:26:01Z" finished-at="2019-06-25T06:32:28Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="95577" started-at="2019-06-24T10:48:49Z" finished-at="2019-06-24T10:50:25Z">
-      <class name="com.ghana.app.qa.testcases.VisaCategoriesPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ghana.app.qa.testcases.VisaCategoriesPageTest@4f67eb2a]" name="setUp" is-config="true" duration-ms="7254" started-at="2019-06-24T16:18:49Z" finished-at="2019-06-24T16:18:56Z">
+    <test name="Default test" duration-ms="386737" started-at="2019-06-25T06:26:01Z" finished-at="2019-06-25T06:32:28Z">
+      <class name="com.ghana.app.qa.testcases.SignUpPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ghana.app.qa.testcases.SignUpPageTest@f381794]" name="setUp" is-config="true" duration-ms="6746" started-at="2019-06-25T11:56:01Z" finished-at="2019-06-25T11:56:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="validateVisaPageTiltleTest()[pri:0, instance:com.ghana.app.qa.testcases.VisaCategoriesPageTest@4f67eb2a]" name="validateVisaPageTiltleTest" duration-ms="2803" started-at="2019-06-24T16:18:56Z" finished-at="2019-06-24T16:18:59Z">
+        <test-method status="PASS" signature="launchAndGotoSignUP()[pri:0, instance:com.ghana.app.qa.testcases.SignUpPageTest@f381794]" name="launchAndGotoSignUP" duration-ms="2224" started-at="2019-06-25T11:56:08Z" finished-at="2019-06-25T11:56:10Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateVisaPageTiltleTest -->
-        <test-method status="PASS" signature="getVisaCategoriesText()[pri:0, instance:com.ghana.app.qa.testcases.VisaCategoriesPageTest@4f67eb2a]" name="getVisaCategoriesText" duration-ms="291" started-at="2019-06-24T16:18:59Z" finished-at="2019-06-24T16:18:59Z">
+        </test-method> <!-- launchAndGotoSignUP -->
+        <test-method status="PASS" signature="SignUpPageTest()[pri:0, instance:com.ghana.app.qa.testcases.SignUpPageTest@f381794]" name="SignUpPageTest" duration-ms="12382" started-at="2019-06-25T11:56:10Z" finished-at="2019-06-25T11:56:23Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getVisaCategoriesText -->
-        <test-method status="PASS" signature="clickOnVisaTypeTest()[pri:0, instance:com.ghana.app.qa.testcases.VisaCategoriesPageTest@4f67eb2a]" name="clickOnVisaTypeTest" duration-ms="85212" started-at="2019-06-24T16:18:59Z" finished-at="2019-06-24T16:20:25Z">
+        </test-method> <!-- SignUpPageTest -->
+        <test-method status="PASS" signature="selectPassportTypeTest()[pri:0, instance:com.ghana.app.qa.testcases.SignUpPageTest@f381794]" name="selectPassportTypeTest" duration-ms="3029" started-at="2019-06-25T11:56:23Z" finished-at="2019-06-25T11:56:26Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickOnVisaTypeTest -->
-      </class> <!-- com.ghana.app.qa.testcases.VisaCategoriesPageTest -->
+        </test-method> <!-- selectPassportTypeTest -->
+        <test-method status="PASS" signature="selectPortOfArrivalTest()[pri:0, instance:com.ghana.app.qa.testcases.SignUpPageTest@f381794]" name="selectPortOfArrivalTest" duration-ms="4225" started-at="2019-06-25T11:56:26Z" finished-at="2019-06-25T11:56:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectPortOfArrivalTest -->
+        <test-method status="FAIL" signature="selectNationalityTest()[pri:0, instance:com.ghana.app.qa.testcases.SignUpPageTest@f381794]" name="selectNationalityTest" duration-ms="3175" started-at="2019-06-25T11:56:30Z" finished-at="2019-06-25T11:56:33Z">
+          <exception class="org.openqa.selenium.interactions.MoveTargetOutOfBoundsException">
+            <message>
+              <![CDATA[The requested mouse movement to (712, -138) would be outside the bounds of the current view port (left: 0, right: 1366, top: 78, bottom: 728)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'TORENZO', ip: '192.168.1.21', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: false, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:42475/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 3b8d6e04-1cc5-41b5-a8f9-3616220b34c5]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.interactions.MoveTargetOutOfBoundsException: The requested mouse movement to (712, -138) would be outside the bounds of the current view port (left: 0, right: 1366, top: 78, bottom: 728)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'TORENZO', ip: '192.168.1.21', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: false, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:42475/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 3b8d6e04-1cc5-41b5-a8f9-3616220b34c5
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:618)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:639)
+	at org.openqa.selenium.interactions.Actions.perform(Actions.java:595)
+	at com.ghana.app.qa.util.TestUtil.actionClassMethod(TestUtil.java:165)
+	at com.ghana.app.qa.pages.SignUpPage.selectNationality(SignUpPage.java:171)
+	at com.ghana.app.qa.testcases.SignUpPageTest.selectNationalityTest(SignUpPageTest.java:63)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.interactions.MoveTargetOutOfBoundsException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectNationalityTest -->
+        <test-method status="FAIL" signature="selectVisaType()[pri:0, instance:com.ghana.app.qa.testcases.SignUpPageTest@f381794]" name="selectVisaType" duration-ms="11549" started-at="2019-06-25T11:56:33Z" finished-at="2019-06-25T11:56:45Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Port Of Arrival selected values is not displayed when selected from drop down and comapare with test data expected [transit visa fees1 INR.2000.0] but found [Single entry(3 months) visa INR.8500.0
+Multiple entry(6 months) visa INR.17000.0
+Multiple entry(12 months) visa INR.25500.0
+Transit (single) visa INR.4200.0
+Transit (multiple) visa INR.6500.0
+Travel Visa Single Entry INR.5000.0
+transit visa fees1 INR.2000.0]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Port Of Arrival selected values is not displayed when selected from drop down and comapare with test data expected [transit visa fees1 INR.2000.0] but found [Single entry(3 months) visa INR.8500.0
+Multiple entry(6 months) visa INR.17000.0
+Multiple entry(12 months) visa INR.25500.0
+Transit (single) visa INR.4200.0
+Transit (multiple) visa INR.6500.0
+Travel Visa Single Entry INR.5000.0
+transit visa fees1 INR.2000.0]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:176)
+	at com.ghana.app.qa.testcases.SignUpPageTest.selectVisaType(SignUpPageTest.java:86)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectVisaType -->
+        <test-method status="FAIL" signature="selectVisaLocation()[pri:0, instance:com.ghana.app.qa.testcases.SignUpPageTest@f381794]" name="selectVisaLocation" duration-ms="1309" started-at="2019-06-25T11:56:45Z" finished-at="2019-06-25T11:56:46Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Visa Location selected values is not displayed when selected from drop down and comapare with test data expected [Mumbai] but found []]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Visa Location selected values is not displayed when selected from drop down and comapare with test data expected [Mumbai] but found []
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:176)
+	at com.ghana.app.qa.testcases.SignUpPageTest.selectVisaLocation(SignUpPageTest.java:96)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectVisaLocation -->
+        <test-method status="PASS" signature="passPhoneNoTest()[pri:0, instance:com.ghana.app.qa.testcases.SignUpPageTest@f381794]" name="passPhoneNoTest" duration-ms="51974" started-at="2019-06-25T11:56:46Z" finished-at="2019-06-25T11:57:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- passPhoneNoTest -->
+        <test-method status="PASS" signature="passEmailIdTest()[pri:0, instance:com.ghana.app.qa.testcases.SignUpPageTest@f381794]" name="passEmailIdTest" duration-ms="126376" started-at="2019-06-25T11:57:38Z" finished-at="2019-06-25T11:59:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- passEmailIdTest -->
+        <test-method status="PASS" signature="passReEmailIdTest()[pri:0, instance:com.ghana.app.qa.testcases.SignUpPageTest@f381794]" name="passReEmailIdTest" duration-ms="126721" started-at="2019-06-25T11:59:44Z" finished-at="2019-06-25T12:01:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- passReEmailIdTest -->
+        <test-method status="PASS" signature="enterCaptchaFieldTest()[pri:0, instance:com.ghana.app.qa.testcases.SignUpPageTest@f381794]" name="enterCaptchaFieldTest" duration-ms="31826" started-at="2019-06-25T12:01:51Z" finished-at="2019-06-25T12:02:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterCaptchaFieldTest -->
+        <test-method status="FAIL" signature="selectDateOfBirthTest()[pri:0, instance:com.ghana.app.qa.testcases.SignUpPageTest@f381794]" name="selectDateOfBirthTest" duration-ms="5173" started-at="2019-06-25T12:02:23Z" finished-at="2019-06-25T12:02:28Z">
+          <exception class="org.openqa.selenium.interactions.MoveTargetOutOfBoundsException">
+            <message>
+              <![CDATA[The requested mouse movement to (935, -46) would be outside the bounds of the current view port (left: 0, right: 1366, top: 78, bottom: 524)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'TORENZO', ip: '192.168.1.21', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: false, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:42475/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 3b8d6e04-1cc5-41b5-a8f9-3616220b34c5]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.interactions.MoveTargetOutOfBoundsException: The requested mouse movement to (935, -46) would be outside the bounds of the current view port (left: 0, right: 1366, top: 78, bottom: 524)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'TORENZO', ip: '192.168.1.21', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: false, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:42475/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 3b8d6e04-1cc5-41b5-a8f9-3616220b34c5
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:618)
+	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:639)
+	at org.openqa.selenium.interactions.Actions.perform(Actions.java:595)
+	at com.ghana.app.qa.util.TestUtil.actionClassMethod(TestUtil.java:165)
+	at com.ghana.app.qa.pages.SignUpPage.selectDateOfBirth(SignUpPage.java:270)
+	at com.ghana.app.qa.testcases.SignUpPageTest.selectDateOfBirthTest(SignUpPageTest.java:135)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.interactions.MoveTargetOutOfBoundsException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectDateOfBirthTest -->
+      </class> <!-- com.ghana.app.qa.testcases.SignUpPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

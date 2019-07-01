@@ -13,7 +13,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.ghana.app.qa.base.TestBase;
 import com.ghana.app.qa.util.TestUtil;
@@ -28,6 +31,10 @@ public class SignUpPage extends TestBase {
 	// elements from signup page
 	@FindBy(xpath = "//span[text()='Passport Type']")
 	public static WebElement PassportType;
+	
+	@FindBy(xpath = "//input[@id='selectAllCheck']")
+	public static WebElement AllcheckBox;
+	
     
 	@FindBy(xpath = "//ul[@id='passport_type']//li")
 	List<WebElement> totalPassportType;
@@ -122,7 +129,7 @@ public class SignUpPage extends TestBase {
 	WebElement basicDoccheckbox;
 
 	@FindBy(xpath = "//input[@id='customCheck1' and @name='example1']")
-	WebElement termsCheckkbox;
+	WebElement termsCheckbox;
 
 	@FindBy(xpath = "//button[text()='Cancel']")
 	WebElement Cancel;
@@ -136,6 +143,14 @@ public class SignUpPage extends TestBase {
 	@FindBy(xpath = "//div[@class ='custom-control custom-radio custom-control-inline']")
 	List<WebElement> selectRadioButton;
 
+	@FindBy(xpath = "//input[@id='customRadio3']")
+	WebElement singleRadioButton;
+
+	
+	
+	//input[@name='example']
+	
+	
 	public String validateSignUpPageTitle() {
 
 		return driver.getTitle();
@@ -143,6 +158,8 @@ public class SignUpPage extends TestBase {
 
 	public void SelectPassportType() throws IOException, InterruptedException {
 		TestUtil.actionClassMethod(PassportType);
+		//PassportType.click();
+		
 		System.out.println("Total size of passport type==>" + sizePassportType());
 		ArrayList<String> passNo = new ArrayList<String>();
 		for (WebElement PassportType : totalPassportType) {
@@ -285,7 +302,7 @@ public class SignUpPage extends TestBase {
 	}
 
 	public void passReEmailId(String EmailId) {
-		TestUtil.actionClassMethod(reenterEmailId);
+		//TestUtil.actionClassMethod(reenterEmailId);
 		reenterEmailId.sendKeys(EmailId);
 	}
 	public String getTextFromReEmailField() throws InterruptedException {
@@ -311,24 +328,24 @@ public class SignUpPage extends TestBase {
 		SignUp.click();
 	}
 
-	public void termsCheckboxselect() {
-		termsCheckkbox.click();
+	public WebElement termsCheckboxselect() {
+		return termsCheckbox;
+	}
+	
+	public WebElement clickOnSelectAll(){
+		
+		return AllcheckBox;
 	}
 
 	public void clickOnCheckBoxes() {
 
-		try {
-			for (WebElement we : checkBoxesClick) {
+			for ( WebElement we : checkBoxesClick) {
 				System.out.println("checkBoxesClick==>" + checkBoxesClick.size());
 				TestUtil.actionClassMethod(we);
+			
 			}
-
-		} catch (Exception e) {
-			System.out.println("all check boxes click done");
-
-		}
+			
 	}
-
 	public void verifyCheckBoxIsSelected() throws InterruptedException {
 		int j = checkBoxesClick.size();
 
@@ -342,17 +359,32 @@ public class SignUpPage extends TestBase {
 
 	}
 
-	public void selectRadioButton() {
 
-		try {
+	public WebElement selectOneRadioButton(){
+		return singleRadioButton;
+		
+	}
+	public WebElement selectRadioButton() {
+		
+	return	selectRadioButton.get(1);
+		
+		
+
+	/*	try {
 			for (WebElement we : selectRadioButton) {
-				TestUtil.actionClassMethod(we);
+				Thread.sleep(1000);
+				//TestUtil.actionClassMethod(we);
+				
+				System.out.println("========================================================>Redio");
+				//we.click();
+			//	Thread.sleep(1000);
+				//TestUtil.clickOnElement(we);
 			}
 
 		} catch (Exception e) {
 			System.out.println("all check boxes click done");
 
-		}
+		}*/
 
 	}
 

@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashMap;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -21,6 +22,7 @@ import static com.ghana.app.qa.util.TestUtil.OSName;
 import org.apache.log4j.Logger;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
@@ -54,16 +56,22 @@ public class TestBase {
 	
    File src;
    public static XSSFWorkbook workbook;
+  
+   
+ static HashMap<String , String> hm = new HashMap<String , String>();
    
 	public TestBase() throws IOException, InterruptedException {
 		driverPath = System.getProperty("user.dir");
 		System.out.println("path==>" + driverPath);
 		OSName = System.getProperty("os.name").substring(0,3);
+		
+		hm.put("system", OSName);
 	
-		if (OSName.equalsIgnoreCase("Mac")) {
+	
+		if (hm.get("system").equalsIgnoreCase("Win")) {
 			 src = new File(
 					".\\src\\main\\java\\com\\ghana\\app\\qa\\testdata\\GhanaVisaTestData1.xlsx");
-		} else if (OSName.equalsIgnoreCase("Win")) {
+		} else if (hm.get("system").equalsIgnoreCase("Mac")) {
 			 src = new File(
 					"./src/main/java/com/ghana/app/qa/testdata/GhanaVisaTestData1.xlsx");		
 		}
@@ -71,12 +79,12 @@ public class TestBase {
 		FileInputStream fis1 = new FileInputStream(src);
 		 workbook = new XSSFWorkbook(fis1);
 	
-			if (OSName.equalsIgnoreCase("Mac")) {
+			if (hm.get("system").equalsIgnoreCase("Mac")) {
 				System.out.println(OSName);
 				prop = new Properties();
 				FileInputStream fis = new FileInputStream("./src/main/java/com/ghana/app/qa/config/config.properties");
 				prop.load(fis);
-			} else if (OSName.equalsIgnoreCase("Win")) {
+			} else if (hm.get("system").equalsIgnoreCase("Win")) {
 				System.out.println(OSName);
 				prop = new Properties();
 				System.out.println(OSName);
@@ -85,15 +93,18 @@ public class TestBase {
 			}
 		}
 	
+	
 	public static void initialization() throws InterruptedException, MalformedURLException {
-		String broweserName = prop.getProperty("browser");
+		hm.put("broweserName", prop.getProperty("browser"));
+	
+	//	String broweserName = prop.getProperty("browser");
 		String headlessmode = prop.getProperty("headlessmode");
 		String testOnCloud = prop.getProperty("cloud");
-		// String cloudBrowser = prop.getProperty("browserOnCloud");
+		 String cloudBrowser = prop.getProperty("browserOnCloud");
 
-		if (OSName.equalsIgnoreCase("Mac")) {
+		if (hm.get("system").equalsIgnoreCase("Win")) {
 
-			if (broweserName.equalsIgnoreCase("FF")) {
+			if (hm.get("broweserName").equalsIgnoreCase("FF")) {
 				if (headlessmode.equalsIgnoreCase("headless")) {
 					System.out.println("Execution on HeadLess FF Browser");
 					FirefoxBinary binary = new FirefoxBinary();
@@ -113,7 +124,7 @@ public class TestBase {
 					driver = new FirefoxDriver();
 				}
 
-			} else if (broweserName.equalsIgnoreCase("chrome")) {
+			} else if (hm.get("broweserName").equalsIgnoreCase("chrome")) {
 				if (headlessmode.equalsIgnoreCase("headless")) {
 					System.out.println("Execution on HeadLess Chrome Browser");
 					WebDriverManager.chromedriver().setup();
@@ -126,15 +137,13 @@ public class TestBase {
 					driver = new ChromeDriver();
 
 				}
-			} else if (broweserName.equalsIgnoreCase("safari")) {
-
-				driver = new SafariDriver();
-			} else if (broweserName.equalsIgnoreCase("IE")) {
+			}
+		 else if (hm.get("broweserName").equalsIgnoreCase("IE")) {
 				// System.setProperty("webdriver.chrome.driver",
 				// "/Users/rahul.kardel/Documents/browser/chromedriver");
 				WebDriverManager.iedriver().setup();
-				driver = new ChromeDriver();
-			} else if (broweserName.equalsIgnoreCase("safari")) {
+				driver = new InternetExplorerDriver();
+			} else if (hm.get("broweserName").equalsIgnoreCase("safari")) {
 				// System.setProperty("webdriver.chrome.driver",
 				// "/Users/rahul.kardel/Documents/browser/chromedriver");
 				driver = new SafariDriver();
@@ -207,9 +216,9 @@ public class TestBase {
 		
 		
 
-		} else if (OSName.equalsIgnoreCase("Win")) {
+		} else if (hm.get("system").equalsIgnoreCase("Mac")) {
 
-			if (broweserName.equals("FF")) {
+			if (hm.get("broweserName").equals("FF")) {
 			//	System.setProperty("webdriver.gecko.driver", driverPath + "\\FileDriver\\geckodriver.exe");
 				//System.setProperty("webdriver.firefox.marionette", "false");
 				WebDriverManager.firefoxdriver().setup();
@@ -218,7 +227,7 @@ public class TestBase {
 
 
 			}
-			else if (broweserName.equalsIgnoreCase("chrome")) {
+			else if (hm.get("broweserName").equalsIgnoreCase("chrome")) {
 				//System.setProperty("webdriver.chrome.driver",driverPath+"\\FileDriver\\chromedriver.exe" );
 				ChromeOptions options = new ChromeOptions();
 				options.addArguments("--disable-infobars");
@@ -226,7 +235,7 @@ public class TestBase {
 				driver = new ChromeDriver(options);
 			}
 
-			else if (broweserName.equalsIgnoreCase("IE")) {
+			else if (hm.get("broweserName").equalsIgnoreCase("IE")) {
 			//	System.setProperty("webdriver.ie.driver", driverPath + "\\FileDriver\\IEDriverServer.exe");
 				WebDriverManager.iedriver().setup();
 				driver = new InternetExplorerDriver();
@@ -301,10 +310,11 @@ public class TestBase {
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
-		driver.get(prop.getProperty("GhanaWebLocalURL"));    //---localhost
+		driver.get(prop.getProperty("GhanaWebURL"));    //---localhost
 		//GhanaWebLocalURL
 		//driver.get(prop.getProperty("GhanaWebURL"));	
 		//driver.get(prop.getProperty("HCDLoginURL"));	
+
 }
 }
 

@@ -28,9 +28,6 @@ public class VisaPaymentPageTest extends DriverInit {
 			IOException {
 		homePage.clickOnApplyVisa();
 		visaCategoriesPage.clickOnVisaType();
-		signUpPage.clickOnCheckBoxes();
-		signUpPage.selectRadioButton();
-		signUpPage.verifyRadioButtonSelected();
 		signUpPage.SelectPassportType();
 		signUpPage.selectNationality();
 		Thread.sleep(1000);
@@ -41,6 +38,9 @@ public class VisaPaymentPageTest extends DriverInit {
 		signUpPage.passEmailId(TestUtil.readDataFromExcellString(5, 12, 0));
 		signUpPage.passReEmailId(TestUtil.readDataFromExcellString(5, 13, 0));
 		signUpPage.enterCaptchaField();
+		TestUtil.clickOnElement(signUpPage.selectOneRadioButton());
+		TestUtil.clickOnElement(signUpPage.termsCheckboxselect());
+		TestUtil.clickOnElement(signUpPage.clickOnSelectAll());
 		signUpPage.selectDateOfBirth(TestUtil
 				.readDataFromExcellString(5, 14, 0));
 		signUpPage.continueBtn();

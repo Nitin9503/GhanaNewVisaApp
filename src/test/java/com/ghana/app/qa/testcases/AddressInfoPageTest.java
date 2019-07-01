@@ -26,12 +26,6 @@ public class AddressInfoPageTest extends DriverInit {
 	public void signUpAndFillPersonalInfo() throws InterruptedException, IOException {
 		homePage.clickOnApplyVisa();
 		visaCategoriesPage.clickOnVisaType();
-		signUpPage.clickOnCheckBoxes();
-		signUpPage.verifyCheckBoxIsSelected();
-		System.out.println("selectedBoxOnSignUp2==>" + selectedBoxOnSignUp);
-		// softAssertion.assertTrue(selectedBoxOnSignUp,
-		// "Check boxes are not selected from SignUp page");
-		signUpPage.selectRadioButton();
 		signUpPage.verifyRadioButtonSelected();
 		// softAssertion.assertTrue(selectedRadioButtonOnSignUp,
 		// "Check boxes are not selected from SignUp page");
@@ -47,6 +41,9 @@ public class AddressInfoPageTest extends DriverInit {
 		signUpPage.passEmailId(TestUtil.readDataFromExcellString(5, 12, 0));
 		signUpPage.passReEmailId(TestUtil.readDataFromExcellString(5, 13, 0));
 		signUpPage.enterCaptchaField();
+		TestUtil.clickOnElement(signUpPage.selectOneRadioButton());
+		TestUtil.clickOnElement(signUpPage.termsCheckboxselect());	
+		TestUtil.clickOnElement(signUpPage.clickOnSelectAll());
 		// signUpPage.continueBtn();
 		// signUpPage.cancelBtn();
 		signUpPage.selectDateOfBirth(TestUtil.readDataFromExcellString(5, 14, 0));

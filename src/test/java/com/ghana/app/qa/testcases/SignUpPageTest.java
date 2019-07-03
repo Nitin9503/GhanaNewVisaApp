@@ -26,10 +26,14 @@ public class SignUpPageTest extends DriverInit {
 		super();		
 	}
 
+
+	
 	@Test(priority = 1)
 	public void launchAndGotoSignUP() throws InterruptedException, IOException {
 		homePage.clickOnApplyVisa();
-		visaCategoriesPage.clickOnVisaType();				
+		visaCategoriesPage.clickOnVisaType();
+
+		//System.out.println();
 	}
 
 /*	@Test(priority = 2)

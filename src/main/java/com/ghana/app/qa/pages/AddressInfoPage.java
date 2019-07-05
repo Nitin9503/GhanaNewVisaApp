@@ -43,10 +43,13 @@ public class AddressInfoPage extends TestBase {
 
 	@FindBy(xpath = "//div[@id='nav-address']//span[text()='None']")
 	WebElement former_nationality_click;
+	
 	@FindBy(xpath = "//input[@id='nationalityText']")
 	WebElement nationalityText;
+	
 	@FindBy(xpath = "//input[@id='email']")
 	WebElement email;
+	
 	@FindBy(xpath = "//input[@id='phone_number']")
 	WebElement phone_number;
 
@@ -62,10 +65,12 @@ public class AddressInfoPage extends TestBase {
 
 	@FindBy(xpath = "//input[@id='pincode']")
 	WebElement pincode;
+	
 	@FindBy(xpath = "//input[@id='city']")
 	WebElement city;
 	@FindBy(xpath = "//input[@id='state']")
 	WebElement state;
+	
 	@FindBy(xpath = "//input[@id='mailing_country']")
 	WebElement mailing_country;
 	
@@ -80,24 +85,28 @@ public class AddressInfoPage extends TestBase {
 	
 	@FindBy(xpath = "//span[text()='Present Address']")
 	WebElement PresentAddress;
+	
 	@FindBy(xpath = "//div[@id='nav-address']//input[@value='Previous']")
 	WebElement PreviousBtn;
+	
 	@FindBy(id = "applicant_address_info_form_btn")
 	WebElement saveContinueBtn;
+	
 	@FindBy(xpath = "//input[@id='emergency_firstname']")
 	WebElement emergency_firstname;
+	
 	@FindBy(xpath = "//input[@id='emergency_lastname']")
 	WebElement emergency_lastname;
 
 	public String getTextAddressInfoPageTitle() throws InterruptedException {
 		Thread.sleep(2000);
 		return addressInfoPageTitle.getText();
-
 	}
 
 	public void selectFormerNaitonality() throws InterruptedException,
 			IOException {
-		TestUtil.actionClassMethod(FormerNationality);
+		TestUtil.clickOnElement(FormerNationality);
+		//TestUtil.actionClassMethod(FormerNationality);
 		System.out.println("Element ========================>"
 				+ TotalFormerNationality.size());
 		for (WebElement formarNaionality : TotalFormerNationality) {
@@ -105,9 +114,7 @@ public class AddressInfoPage extends TestBase {
 					TestUtil.readDataFromExcellString(7, 3, 0))) {
 				formarNaionality.click();
 			}
-
 		}
-
 	}
 
 	public String getTextFromFormaernationaltity() throws InterruptedException {
@@ -120,7 +127,6 @@ public class AddressInfoPage extends TestBase {
 
 	public String getTextFlatNumber() throws InterruptedException {
 		return flat_no.getAttribute("value");
-
 	}
 
 	public void passStreetName(String StreetName) {
@@ -140,13 +146,11 @@ public class AddressInfoPage extends TestBase {
 	}
 
 	public void passPincode(String Pincode) {
-	
 		pincode.sendKeys(Pincode);
 	}
 
 	public String getTextPincode() throws InterruptedException {
 		return pincode.getAttribute("value");
-
 	}
 
 	public void passCityName(String Cityname) {
@@ -171,7 +175,8 @@ public class AddressInfoPage extends TestBase {
 	}
 	
 	public void selectAddressType() throws IOException, InterruptedException {
-		TestUtil.actionClassMethod(AddressType);
+		//TestUtil.actionClassMethod(AddressType);
+		TestUtil.clickOnElement(AddressType);
 		System.out.println("Total address type===>"+ totalAddressType.size());
 		for (WebElement addressType : totalAddressType){
 			System.out.println("Total address type===>"+ addressType.getText());
@@ -190,6 +195,10 @@ public class AddressInfoPage extends TestBase {
 
 	}
 }
+
+
+
+
 
 
 /*driver.findElement(

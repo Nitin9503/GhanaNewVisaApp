@@ -26,36 +26,13 @@ public class SignUpPageTest extends DriverInit {
 		super();		
 	}
 
-
-	
 	@Test(priority = 1)
 	public void launchAndGotoSignUP() throws InterruptedException, IOException {
 		homePage.clickOnApplyVisa();
-		visaCategoriesPage.clickOnVisaType();
-
-		//System.out.println();
+		visaCategoriesPage.clickOnVisaType();				
 	}
 
-/*	@Test(priority = 2)
-	public void SignUpPageTest() throws InterruptedException, IOException {	
-		
-		Thread.sleep(2000);
-		//signUpPage.clickOnCheckBoxes();
-		//signUpPage.verifyCheckBoxIsSelected();
-		//signUpPage.clickOnSelectAll();
-		//System.out.println("selectedBoxOnSignUp2==>" + selectedBoxOnSignUp);
-		// softAssertion.assertTrue(selectedBoxOnSignUp,
-		// "Check boxes are not selected from SignUp page");
-	//	signUpPage.selectRadioButton();
-		//signUpPage.verifyRadioButtonSelected();
-		// softAssertion.assertTrue(selectedRadioButtonOnSignUp,
-		// "Check boxes are not selected from SignUp page");
-		softAssertion.assertAll();
-		
-		
-	}*/
-	
-	@Test(priority = 3)
+	@Test(priority = 2)
 	public void selectPassportTypeTest() throws InterruptedException, IOException {	
 		signUpPage.SelectPassportType();
 		Assert.assertEquals(totalPassportTypeInReq, signUpPage.sizePassportType(), "Passport values are not matched when compare the requirement conutry and get value from application");
@@ -65,7 +42,7 @@ public class SignUpPageTest extends DriverInit {
 		System.out.println("Verification done for passport type");
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 3)
 	public void selectNationalityTest() throws InterruptedException, IOException {
 		signUpPage.selectNationality();
 		Assert.assertEquals(signUpPage.totalCountryCount(), totalCountryListInReq,
@@ -75,7 +52,7 @@ public class SignUpPageTest extends DriverInit {
 		System.out.println("Verification done for selectNationalityTest ");
 	}
 
-	@Test(priority = 5)
+	@Test(priority = 4)
 	public void selectPortOfArrivalTest() throws InterruptedException, IOException {
 		signUpPage.selectPortOfArrival();
 		Assert.assertEquals(signUpPage.totalPortArrival(), totalPortArrivalInReq,
@@ -85,7 +62,7 @@ public class SignUpPageTest extends DriverInit {
 		System.out.println("Verification done for selectPortOfArrivalTest");
 	}
 
-	@Test(priority = 6)
+	@Test(priority = 5)
 	public void selectVisaType() throws InterruptedException, IOException {
 		signUpPage.selectVisaType();
 		Assert.assertEquals(signUpPage.totalVisaFeeCountActual(), totalVisaTypeExpecteed,
@@ -95,7 +72,7 @@ public class SignUpPageTest extends DriverInit {
 		System.out.println("Verification done for selectVisaType");
 	}
 
-	@Test(priority = 7)
+	@Test(priority = 6)
 	public void selectVisaLocation() throws InterruptedException, IOException {
 		signUpPage.selectVisaLocation();
 		Assert.assertEquals(signUpPage.totalVisaLocationActual(), totalVisaLocationExpected,
@@ -104,7 +81,7 @@ public class SignUpPageTest extends DriverInit {
 		TestUtil. writeStringValue(5, 10,1);
 		System.out.println("Verification done for selectVisaLocation");
 	}
-	@Test(priority = 8)
+	@Test(priority = 7)
 	public void passPhoneNoTest() throws InterruptedException, IOException {
 		System.out.println("Mobile number==>" +TestUtil.readDataFromExcellString(5, 11, 0));
 		signUpPage.passPhoneNo(TestUtil.readDataFromExcellString(5, 11, 0));
@@ -113,7 +90,7 @@ public class SignUpPageTest extends DriverInit {
 		System.out.println("Verification done for passPhoneNoTest");
 	}
 
-	@Test(priority = 9)
+	@Test(priority = 8)
 	public void selectDateOfBirthTest() throws InterruptedException, IOException {
 		Thread.sleep(3000);
 		System.out.println("Birth date====>"+TestUtil.readDataFromExcellString(5, 14, 0));
@@ -124,7 +101,7 @@ public class SignUpPageTest extends DriverInit {
 		System.out.println("Verification done for selectDateOfBirthTest");
 	}
 	
-	@Test(priority = 10)
+	@Test(priority = 9)
 	public void passEmailIdTest() throws InterruptedException, IOException {
 		signUpPage.passEmailId(TestUtil.readDataFromExcellString(5, 12, 0));
 		Assert.assertEquals(signUpPage.getTextFromEmailField(), TestUtil.readDataFromExcellString(5, 12, 0),  "Pass Email-Id and get Email-Id is not matched while comparing from TestData");
@@ -132,7 +109,7 @@ public class SignUpPageTest extends DriverInit {
 		System.out.println("Verification done for passEmailIdTest");
 	}
 
-	@Test(priority = 11)
+	@Test(priority = 10)
 	public void passReEmailIdTest() throws InterruptedException, IOException {
 		signUpPage.passReEmailId(TestUtil.readDataFromExcellString(5, 13, 0));
 		Assert.assertEquals(signUpPage.getTextFromReEmailField(), TestUtil.readDataFromExcellString(5, 13, 0),  "Pass Email-Id and get Email-Id is not matched while comparing from TestData");
@@ -140,18 +117,39 @@ public class SignUpPageTest extends DriverInit {
 		System.out.println("Verification done for passReEmailIdTest");
 	}
 
-	@Test(priority = 12)
+	@Test(priority = 11)
 	public void enterCaptchaFieldTest() throws InterruptedException, IOException {
 		signUpPage.enterCaptchaField();
-		// signUpPage.continueBtn();
-		// signUpPage.cancelBtn();
+		// signUpPage.cancelBtn();		
 		TestUtil.clickOnElement(signUpPage.selectOneRadioButton());
+		Assert.assertTrue(signUpPage.verifySelectOneRadioButton(), "Radio button is not selected even click on it");
+		TestUtil. writeStringValue(5, 15,1);
 		TestUtil.clickOnElement(signUpPage.termsCheckboxselect());
-		
+		Assert.assertTrue(signUpPage.verifyTermsCheckboxselect(), "Check(Terms And Condition) box is not selected even click on it");
+		TestUtil. writeStringValue(5, 16,1);
 		TestUtil.clickOnElement(signUpPage.clickOnSelectAll());
-		
-		
-		
+		Assert.assertTrue(signUpPage.verifyclickOnSelectAll(), "Check box(All check box) is not selected even click on it");
+		TestUtil. writeStringValue(5, 17,1);
 	}
 
 }
+
+
+
+
+/*	@Test(priority = 2)
+public void SignUpPageTest() throws InterruptedException, IOException {			
+	Thread.sleep(2000);
+	//signUpPage.clickOnCheckBoxes();
+	//signUpPage.verifyCheckBoxIsSelected();
+	//signUpPage.clickOnSelectAll();
+	//System.out.println("selectedBoxOnSignUp2==>" + selectedBoxOnSignUp);
+	// softAssertion.assertTrue(selectedBoxOnSignUp,
+	// "Check boxes are not selected from SignUp page");
+//	signUpPage.selectRadioButton();
+	//signUpPage.verifyRadioButtonSelected();
+	// softAssertion.assertTrue(selectedRadioButtonOnSignUp,
+	// "Check boxes are not selected from SignUp page");
+	softAssertion.assertAll();
+		
+}*/

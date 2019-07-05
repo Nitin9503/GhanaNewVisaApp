@@ -19,7 +19,6 @@ public class AddressInfoPageTest extends DriverInit {
 
 	public AddressInfoPageTest() throws IOException, InterruptedException {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	@Test(priority = 1)
@@ -27,16 +26,12 @@ public class AddressInfoPageTest extends DriverInit {
 		homePage.clickOnApplyVisa();
 		visaCategoriesPage.clickOnVisaType();
 		signUpPage.verifyRadioButtonSelected();
-		// softAssertion.assertTrue(selectedRadioButtonOnSignUp,
-		// "Check boxes are not selected from SignUp page");
 		signUpPage.SelectPassportType();
 		signUpPage.selectNationality();
 		Thread.sleep(2000);
 		signUpPage.selectPortOfArrival();
 		signUpPage.selectVisaType();
-
 		signUpPage.selectVisaLocation();
-
 		signUpPage.passPhoneNo(TestUtil.readDataFromExcellString(5, 11, 0));
 		signUpPage.passEmailId(TestUtil.readDataFromExcellString(5, 12, 0));
 		signUpPage.passReEmailId(TestUtil.readDataFromExcellString(5, 13, 0));
@@ -44,10 +39,7 @@ public class AddressInfoPageTest extends DriverInit {
 		TestUtil.clickOnElement(signUpPage.selectOneRadioButton());
 		TestUtil.clickOnElement(signUpPage.termsCheckboxselect());	
 		TestUtil.clickOnElement(signUpPage.clickOnSelectAll());
-		// signUpPage.continueBtn();
-		// signUpPage.cancelBtn();
 		signUpPage.selectDateOfBirth(TestUtil.readDataFromExcellString(5, 14, 0));
-		// signUpPage.continueBtn();
 		signUpPage.continueBtn();
 
 		// ----------------------Personal info page
@@ -82,6 +74,8 @@ public class AddressInfoPageTest extends DriverInit {
 	// Test----------------------------------//
 	@Test(priority = 3)
 	public void selectFormerNationalityTest() throws InterruptedException, IOException {
+		
+		Thread.sleep(2000);
 		addressInfoPage.selectFormerNaitonality();
 		Assert.assertEquals(addressInfoPage.getTextFromFormaernationaltity(), TestUtil.readDataFromExcellString(7, 3, 0),
 				"it is not navigate to address info page after clicking on Continue and Save button from Personal Info page");
@@ -128,7 +122,7 @@ public class AddressInfoPageTest extends DriverInit {
 		TestUtil.writeStringValue(7, 10, 1);
 
 	}
-	@Test(priority = 6)
+	@Test(priority = 7)
 	public void selectAddressType() throws InterruptedException, IOException {
 		addressInfoPage.selectAddressType();
 		Assert.assertEquals(addressInfoPage.getTextFromAddressType(), TestUtil.readDataFromExcellString(7, 11, 0),
@@ -137,6 +131,11 @@ public class AddressInfoPageTest extends DriverInit {
 	}
 
 }
+
+
+
+
+
 
 /*	addressInfoPage.PassAddressInfofield(FlatNo, StreetName, Landmark, pinCode, cityName, stateName, countryName);
 System.out.println("Birthdate==>" +providedDate);

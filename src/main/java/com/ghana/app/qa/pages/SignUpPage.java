@@ -31,11 +31,10 @@ public class SignUpPage extends TestBase {
 	// elements from signup page
 	@FindBy(xpath = "//span[text()='Passport Type']")
 	public static WebElement PassportType;
-	
+
 	@FindBy(xpath = "//input[@id='selectAllCheck']")
 	public static WebElement AllcheckBox;
-	
-    
+
 	@FindBy(xpath = "//ul[@id='passport_type']//li")
 	List<WebElement> totalPassportType;
 
@@ -146,11 +145,8 @@ public class SignUpPage extends TestBase {
 	@FindBy(xpath = "//input[@id='customRadio3']")
 	WebElement singleRadioButton;
 
-	
-	
-	//input[@name='example']
-	
-	
+	// input[@name='example']
+
 	public String validateSignUpPageTitle() {
 
 		return driver.getTitle();
@@ -158,20 +154,24 @@ public class SignUpPage extends TestBase {
 
 	public void SelectPassportType() throws IOException, InterruptedException {
 		TestUtil.actionClassMethod(PassportType);
-		//PassportType.click();
-		
-		System.out.println("Total size of passport type==>" + sizePassportType());
+		// PassportType.click();
+
+		System.out.println("Total size of passport type==>"
+				+ sizePassportType());
 		ArrayList<String> passNo = new ArrayList<String>();
 		for (WebElement PassportType : totalPassportType) {
-			//System.out.println("print the value of passport tyep=>" + PassportType.getText());
-			//System.out.println("Values from Arraylist hooo==>" +passNo);
+			// System.out.println("print the value of passport tyep=>" +
+			// PassportType.getText());
+			// System.out.println("Values from Arraylist hooo==>" +passNo);
 			passNo.add(PassportType.getText());
-			if (PassportType.getText().equalsIgnoreCase(TestUtil.readDataFromExcellString(5, 6, 0))) {
+			if (PassportType.getText().equalsIgnoreCase(
+					TestUtil.readDataFromExcellString(5, 6, 0))) {
 				PassportType.click();
-				//System.out.println("See which passport type is selected str 1 selected=>" + getTextPassportTypeName());
+				// System.out.println("See which passport type is selected str 1 selected=>"
+				// + getTextPassportTypeName());
 			}
 		}
-		 System.out.println("Values from Arraylist==>" +passNo.get(0));
+		System.out.println("Values from Arraylist==>" + passNo.get(0));
 
 	}
 
@@ -188,10 +188,12 @@ public class SignUpPage extends TestBase {
 		TestUtil.actionClassMethod(Nationality);
 		System.out.println("Total countries are=>" + countrys.size());
 		for (WebElement country : countrys) {
-			if (country.getText().equalsIgnoreCase(TestUtil.readDataFromExcellString(5, 7, 0))) {
+			if (country.getText().equalsIgnoreCase(
+					TestUtil.readDataFromExcellString(5, 7, 0))) {
 				country.click();
 				Thread.sleep(2000);
-				System.out.println("See which country str 1 selected=>" + getFromSelectedNationality());
+				System.out.println("See which country str 1 selected=>"
+						+ getFromSelectedNationality());
 				break;
 			}
 		}
@@ -211,8 +213,10 @@ public class SignUpPage extends TestBase {
 		System.out.println("Total visa fee count=>>" + totalVisaFees.size());
 		for (WebElement visaFee : totalVisaFees) {
 			Thread.sleep(1000);
-			//System.out.println("Total visa fee printed=>>" + visaFee.getText());
-			if (visaFee.getText().equalsIgnoreCase(TestUtil.readDataFromExcellString(5, 9, 0))) {
+			// System.out.println("Total visa fee printed=>>" +
+			// visaFee.getText());
+			if (visaFee.getText().equalsIgnoreCase(
+					TestUtil.readDataFromExcellString(5, 9, 0))) {
 				visaFee.click();
 				Thread.sleep(2000);
 			}
@@ -233,7 +237,8 @@ public class SignUpPage extends TestBase {
 		System.out.println("Total visa count ==>" + totalVisaLocationActual());
 		for (WebElement visa : VisaLocationCount) {
 			System.out.println("Visa Location ==>" + visa.getText());
-			if (visa.getText().equalsIgnoreCase(TestUtil.readDataFromExcellString(5, 10, 0))) {
+			if (visa.getText().equalsIgnoreCase(
+					TestUtil.readDataFromExcellString(5, 10, 0))) {
 				visa.click();
 				Thread.sleep(2000);
 				//System.out.println("Text from selected visa location=======>" + getTextFromSelectVisaLocation());
@@ -252,13 +257,17 @@ public class SignUpPage extends TestBase {
 
 	public void selectPortOfArrival() throws InterruptedException, IOException {
 		TestUtil.actionClassMethod(PortofArrival);
-		System.out.println("totalPortOfArrival => " + totalPortOfArrival.size());
+		System.out
+				.println("totalPortOfArrival => " + totalPortOfArrival.size());
 		for (WebElement portOfArrivale : totalPortOfArrival) {
-			//System.out.println("totalPortOfArrival get Text => " + portOfArrivale.getText());
-			if (portOfArrivale.getText().equalsIgnoreCase(TestUtil.readDataFromExcellString(5, 8, 0))) {
+			// System.out.println("totalPortOfArrival get Text => " +
+			// portOfArrivale.getText());
+			if (portOfArrivale.getText().equalsIgnoreCase(
+					TestUtil.readDataFromExcellString(5, 8, 0))) {
 				portOfArrivale.click();
 				Thread.sleep(2000);
-			//	System.out.println("See which port of arrival type is selected==>" + getTextFromPortofArrival());
+				// System.out.println("See which port of arrival type is selected==>"
+				// + getTextFromPortofArrival());
 
 				break;
 			}
@@ -274,12 +283,15 @@ public class SignUpPage extends TestBase {
 		return totalPortOfArrival.size();
 	}
 
-	public void passPhoneNo(String phoneNo) throws IOException, InterruptedException {
-		PhoneNumber.sendKeys(phoneNo);	
+	public void passPhoneNo(String phoneNo) throws IOException,
+			InterruptedException {
+		PhoneNumber.sendKeys(phoneNo);
 	}
-	public String getTextFromPhoneFiled() throws IOException, InterruptedException {
+
+	public String getTextFromPhoneFiled() throws IOException,
+			InterruptedException {
 		Thread.sleep(1000);
-		return PhoneNumber.getAttribute("value");	
+		return PhoneNumber.getAttribute("value");
 	}
 
 	public void selectDateOfBirth(String birthDate) throws InterruptedException {
@@ -288,23 +300,26 @@ public class SignUpPage extends TestBase {
 		dateofbirth.sendKeys(birthDate);
 
 	}
+
 	public String getBirthDate() throws InterruptedException {
 		return dateofbirth.getAttribute("value");
 
 	}
 
 	public void passEmailId(String EmailId) throws InterruptedException {
-		
+
 		emailId.sendKeys(EmailId);// nitinthaokar9@gmail.com
 	}
+
 	public String getTextFromEmailField() throws InterruptedException {
 		return emailId.getAttribute("value");
 	}
 
 	public void passReEmailId(String EmailId) {
-		//TestUtil.actionClassMethod(reenterEmailId);
+		// TestUtil.actionClassMethod(reenterEmailId);
 		reenterEmailId.sendKeys(EmailId);
 	}
+
 	public String getTextFromReEmailField() throws InterruptedException {
 		return reenterEmailId.getAttribute("value");
 	}
@@ -331,21 +346,31 @@ public class SignUpPage extends TestBase {
 	public WebElement termsCheckboxselect() {
 		return termsCheckbox;
 	}
-	
-	public WebElement clickOnSelectAll(){
-		
+
+	public boolean verifyTermsCheckboxselect() {
+		return termsCheckbox.isSelected();
+	}
+
+	public WebElement clickOnSelectAll() {
+
 		return AllcheckBox;
+	}
+
+	public boolean verifyclickOnSelectAll() {
+
+		return AllcheckBox.isSelected();
 	}
 
 	public void clickOnCheckBoxes() {
 
-			for ( WebElement we : checkBoxesClick) {
-				System.out.println("checkBoxesClick==>" + checkBoxesClick.size());
-				TestUtil.actionClassMethod(we);
-			
-			}
-			
+		for (WebElement we : checkBoxesClick) {
+			System.out.println("checkBoxesClick==>" + checkBoxesClick.size());
+			TestUtil.actionClassMethod(we);
+
+		}
+
 	}
+
 	public void verifyCheckBoxIsSelected() throws InterruptedException {
 		int j = checkBoxesClick.size();
 
@@ -359,32 +384,33 @@ public class SignUpPage extends TestBase {
 
 	}
 
-
-	public WebElement selectOneRadioButton(){
+	public WebElement selectOneRadioButton() {
 		return singleRadioButton;
-		
+
 	}
+
+	public boolean verifySelectOneRadioButton() {
+		return singleRadioButton.isSelected();
+
+	}
+
 	public WebElement selectRadioButton() {
-		
-	return	selectRadioButton.get(1);
-		
-		
 
-	/*	try {
-			for (WebElement we : selectRadioButton) {
-				Thread.sleep(1000);
-				//TestUtil.actionClassMethod(we);
-				
-				System.out.println("========================================================>Redio");
-				//we.click();
-			//	Thread.sleep(1000);
-				//TestUtil.clickOnElement(we);
-			}
+		return selectRadioButton.get(1);
 
-		} catch (Exception e) {
-			System.out.println("all check boxes click done");
-
-		}*/
+		/*
+		 * try { for (WebElement we : selectRadioButton) { Thread.sleep(1000);
+		 * //TestUtil.actionClassMethod(we);
+		 * 
+		 * System.out.println(
+		 * "========================================================>Redio");
+		 * //we.click(); // Thread.sleep(1000); //TestUtil.clickOnElement(we); }
+		 * 
+		 * } catch (Exception e) {
+		 * System.out.println("all check boxes click done");
+		 * 
+		 * }
+		 */
 
 	}
 
@@ -392,13 +418,16 @@ public class SignUpPage extends TestBase {
 
 		int size = selectRadioButton.size();
 		for (int i = 0; i < size; i++) {
-			boolean selectedRadioButtonOnSignUp = selectRadioButton.get(i).isSelected();
-			System.out.println("selectedRadioButtonOnSignUp==>" + selectedRadioButtonOnSignUp);
+			boolean selectedRadioButtonOnSignUp = selectRadioButton.get(i)
+					.isSelected();
+			System.out.println("selectedRadioButtonOnSignUp==>"
+					+ selectedRadioButtonOnSignUp);
 
 		}
 
 	}
-	public String titleOfTheSignUPPage(){
+
+	public String titleOfTheSignUPPage() {
 		return driver.getTitle();
 	}
 

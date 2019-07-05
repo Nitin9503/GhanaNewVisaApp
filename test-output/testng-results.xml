@@ -1,61 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="11" passed="11">
+<testng-results skipped="0" failed="0" total="7" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="64581" started-at="2019-07-03T05:49:06Z" finished-at="2019-07-03T05:50:11Z">
+  <suite name="Default suite" duration-ms="56885" started-at="2019-07-05T09:08:02Z" finished-at="2019-07-05T09:08:59Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="64581" started-at="2019-07-03T05:49:06Z" finished-at="2019-07-03T05:50:11Z">
-      <class name="com.ghana.app.qa.testcases.SignUpPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ghana.app.qa.testcases.SignUpPageTest@f381794]" name="setUp" is-config="true" duration-ms="20580" started-at="2019-07-03T11:19:06Z" finished-at="2019-07-03T11:19:27Z">
+    <test name="Default test" duration-ms="56885" started-at="2019-07-05T09:08:02Z" finished-at="2019-07-05T09:08:59Z">
+      <class name="com.ghana.app.qa.testcases.AddressInfoPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ghana.app.qa.testcases.AddressInfoPageTest@6c779568]" name="setUp" is-config="true" duration-ms="10278" started-at="2019-07-05T14:38:02Z" finished-at="2019-07-05T14:38:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="launchAndGotoSignUP()[pri:0, instance:com.ghana.app.qa.testcases.SignUpPageTest@f381794]" name="launchAndGotoSignUP" duration-ms="6724" started-at="2019-07-03T11:19:27Z" finished-at="2019-07-03T11:19:33Z">
+        <test-method status="PASS" signature="signUpAndFillPersonalInfo()[pri:0, instance:com.ghana.app.qa.testcases.AddressInfoPageTest@6c779568]" name="signUpAndFillPersonalInfo" duration-ms="32687" started-at="2019-07-05T14:38:12Z" finished-at="2019-07-05T14:38:45Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- launchAndGotoSignUP -->
-        <test-method status="PASS" signature="selectPassportTypeTest()[pri:0, instance:com.ghana.app.qa.testcases.SignUpPageTest@f381794]" name="selectPassportTypeTest" duration-ms="1964" started-at="2019-07-03T11:19:33Z" finished-at="2019-07-03T11:19:35Z">
+        </test-method> <!-- signUpAndFillPersonalInfo -->
+        <test-method status="PASS" signature="SaveAndContinueFromPersonalInfoTest()[pri:0, instance:com.ghana.app.qa.testcases.AddressInfoPageTest@6c779568]" name="SaveAndContinueFromPersonalInfoTest" duration-ms="4806" started-at="2019-07-05T14:38:45Z" finished-at="2019-07-05T14:38:49Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- selectPassportTypeTest -->
-        <test-method status="PASS" signature="selectNationalityTest()[pri:0, instance:com.ghana.app.qa.testcases.SignUpPageTest@f381794]" name="selectNationalityTest" duration-ms="9725" started-at="2019-07-03T11:19:35Z" finished-at="2019-07-03T11:19:45Z">
+        </test-method> <!-- SaveAndContinueFromPersonalInfoTest -->
+        <test-method status="PASS" signature="selectFormerNationalityTest()[pri:0, instance:com.ghana.app.qa.testcases.AddressInfoPageTest@6c779568]" name="selectFormerNationalityTest" duration-ms="6320" started-at="2019-07-05T14:38:49Z" finished-at="2019-07-05T14:38:56Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- selectNationalityTest -->
-        <test-method status="PASS" signature="selectPortOfArrivalTest()[pri:0, instance:com.ghana.app.qa.testcases.SignUpPageTest@f381794]" name="selectPortOfArrivalTest" duration-ms="2840" started-at="2019-07-03T11:19:45Z" finished-at="2019-07-03T11:19:48Z">
+        </test-method> <!-- selectFormerNationalityTest -->
+        <test-method status="PASS" signature="filladdressInfoTest1()[pri:0, instance:com.ghana.app.qa.testcases.AddressInfoPageTest@6c779568]" name="filladdressInfoTest1" duration-ms="925" started-at="2019-07-05T14:38:56Z" finished-at="2019-07-05T14:38:57Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- selectPortOfArrivalTest -->
-        <test-method status="PASS" signature="selectVisaType()[pri:0, instance:com.ghana.app.qa.testcases.SignUpPageTest@f381794]" name="selectVisaType" duration-ms="10030" started-at="2019-07-03T11:19:48Z" finished-at="2019-07-03T11:19:58Z">
+        </test-method> <!-- filladdressInfoTest1 -->
+        <test-method status="PASS" signature="filladdressInfoTest2()[pri:0, instance:com.ghana.app.qa.testcases.AddressInfoPageTest@6c779568]" name="filladdressInfoTest2" duration-ms="683" started-at="2019-07-05T14:38:57Z" finished-at="2019-07-05T14:38:57Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- selectVisaType -->
-        <test-method status="PASS" signature="selectVisaLocation()[pri:0, instance:com.ghana.app.qa.testcases.SignUpPageTest@f381794]" name="selectVisaLocation" duration-ms="2739" started-at="2019-07-03T11:19:58Z" finished-at="2019-07-03T11:20:01Z">
+        </test-method> <!-- filladdressInfoTest2 -->
+        <test-method status="PASS" signature="filladdressInfoTest3()[pri:0, instance:com.ghana.app.qa.testcases.AddressInfoPageTest@6c779568]" name="filladdressInfoTest3" duration-ms="812" started-at="2019-07-05T14:38:57Z" finished-at="2019-07-05T14:38:58Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- selectVisaLocation -->
-        <test-method status="PASS" signature="passPhoneNoTest()[pri:0, instance:com.ghana.app.qa.testcases.SignUpPageTest@f381794]" name="passPhoneNoTest" duration-ms="2021" started-at="2019-07-03T11:20:01Z" finished-at="2019-07-03T11:20:03Z">
+        </test-method> <!-- filladdressInfoTest3 -->
+        <test-method status="PASS" signature="selectAddressType()[pri:0, instance:com.ghana.app.qa.testcases.AddressInfoPageTest@6c779568]" name="selectAddressType" duration-ms="348" started-at="2019-07-05T14:38:58Z" finished-at="2019-07-05T14:38:59Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- passPhoneNoTest -->
-        <test-method status="PASS" signature="selectDateOfBirthTest()[pri:0, instance:com.ghana.app.qa.testcases.SignUpPageTest@f381794]" name="selectDateOfBirthTest" duration-ms="3536" started-at="2019-07-03T11:20:03Z" finished-at="2019-07-03T11:20:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- selectDateOfBirthTest -->
-        <test-method status="PASS" signature="passEmailIdTest()[pri:0, instance:com.ghana.app.qa.testcases.SignUpPageTest@f381794]" name="passEmailIdTest" duration-ms="1538" started-at="2019-07-03T11:20:06Z" finished-at="2019-07-03T11:20:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- passEmailIdTest -->
-        <test-method status="PASS" signature="passReEmailIdTest()[pri:0, instance:com.ghana.app.qa.testcases.SignUpPageTest@f381794]" name="passReEmailIdTest" duration-ms="942" started-at="2019-07-03T11:20:08Z" finished-at="2019-07-03T11:20:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- passReEmailIdTest -->
-        <test-method status="PASS" signature="enterCaptchaFieldTest()[pri:0, instance:com.ghana.app.qa.testcases.SignUpPageTest@f381794]" name="enterCaptchaFieldTest" duration-ms="1844" started-at="2019-07-03T11:20:09Z" finished-at="2019-07-03T11:20:11Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- enterCaptchaFieldTest -->
-      </class> <!-- com.ghana.app.qa.testcases.SignUpPageTest -->
+        </test-method> <!-- selectAddressType -->
+      </class> <!-- com.ghana.app.qa.testcases.AddressInfoPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

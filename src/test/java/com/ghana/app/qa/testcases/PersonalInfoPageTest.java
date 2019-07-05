@@ -26,8 +26,6 @@ public class PersonalInfoPageTest extends DriverInit {
 	public void fillSignUpFormTest() throws InterruptedException, IOException {
 		homePage.clickOnApplyVisa();
 		visaCategoriesPage.clickOnVisaType();
-		// softAssertion.assertTrue(selectedRadioButtonOnSignUp,
-		// "Check boxes are not selected from SignUp page");
 		signUpPage.SelectPassportType();
 		signUpPage.selectNationality();
 		Thread.sleep(2000);		
@@ -38,8 +36,6 @@ public class PersonalInfoPageTest extends DriverInit {
 		signUpPage.passEmailId(TestUtil.readDataFromExcellString(5, 12, 0));
 		signUpPage.passReEmailId(TestUtil.readDataFromExcellString(5, 13, 0));
 		signUpPage.enterCaptchaField();
-		// signUpPage.continueBtn();
-		// signUpPage.cancelBtn();
 		signUpPage.selectDateOfBirth(TestUtil.readDataFromExcellString(5, 14, 0));
 		TestUtil.clickOnElement(signUpPage.selectOneRadioButton());
 		TestUtil.clickOnElement(signUpPage.termsCheckboxselect());
@@ -116,7 +112,7 @@ public class PersonalInfoPageTest extends DriverInit {
 	@Test(priority = 10)
 	public void selectPassIssueDateTest() throws InterruptedException, IOException {
 
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 		System.out.println("Passport Issue date====>"+TestUtil.readDataFromExcellString(6, 9, 0));
 		personalInfoPage.selectPassIssueDate(TestUtil.readDataFromExcellString(6, 9, 0));
 		Assert.assertEquals(personalInfoPage.getTextFromPassIssueDate(), TestUtil.readDataFromExcellString(6, 9, 0),  "Pass passport issue date and get Birth date  is not matched while comparing from TestData");
@@ -126,7 +122,7 @@ public class PersonalInfoPageTest extends DriverInit {
 
 	@Test(priority = 11)
 	public void selectPassExpiryDateTest() throws InterruptedException, IOException {
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 		System.out.println("Passport Expiry date====>"+TestUtil.readDataFromExcellString(6, 10, 0));
 		personalInfoPage.selectPassExpiryDate(TestUtil.readDataFromExcellString(6, 10, 0));
 		Assert.assertEquals(personalInfoPage.getTextFromPassExpiryDate(), TestUtil.readDataFromExcellString(6, 10, 0),  "Pass passport Expiry date and get Birth date  is not matched while comparing from TestData");

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.ghana.app.qa.testcases.HomePageTest">
+      <class name="com.ghana.app.qa.testcases.AddressInfoPageTest">
         <methods>
-          <include name="verifyVisaCategoriesTest"/>
+          <include name="selectAddressType"/>
           <include name="setUp"/>
-          <include name="verifyHomePageTitleTest"/>
+          <include name="selectFormerNationalityTest"/>
         </methods>
-      </class> <!-- com.ghana.app.qa.testcases.HomePageTest -->
+      </class> <!-- com.ghana.app.qa.testcases.AddressInfoPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

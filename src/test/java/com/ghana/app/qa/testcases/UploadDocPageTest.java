@@ -29,9 +29,6 @@ public class UploadDocPageTest extends DriverInit {
 			IOException {
 		homePage.clickOnApplyVisa();
 		visaCategoriesPage.clickOnVisaType();
-		signUpPage.clickOnCheckBoxes();
-		signUpPage.selectRadioButton();
-		signUpPage.verifyRadioButtonSelected();
 		signUpPage.SelectPassportType();
 		signUpPage.selectNationality();
 		Thread.sleep(1000);
@@ -42,6 +39,9 @@ public class UploadDocPageTest extends DriverInit {
 		signUpPage.passEmailId(TestUtil.readDataFromExcellString(5, 12, 0));
 		signUpPage.passReEmailId(TestUtil.readDataFromExcellString(5, 13, 0));
 		signUpPage.enterCaptchaField();
+		TestUtil.clickOnElement(signUpPage.selectOneRadioButton());
+		TestUtil.clickOnElement(signUpPage.termsCheckboxselect());
+		TestUtil.clickOnElement(signUpPage.clickOnSelectAll());
 		signUpPage.selectDateOfBirth(TestUtil
 				.readDataFromExcellString(5, 14, 0));
 		signUpPage.continueBtn();
@@ -129,7 +129,7 @@ public class UploadDocPageTest extends DriverInit {
 	@Test(priority = 5)
 	public void fillTravelInfoPageTest() throws InterruptedException,
 	IOException {
-		
+		Thread.sleep(3000);
 		travelInfoPage.passDateOfDeparture(TestUtil.readDataFromExcellString(9,	3, 0));
 		travelInfoPage.clickOnIsApplicantPossessionRoundTicket();
 		travelInfoPage.passTicketNumber(TestUtil.readDataFromExcellString(9, 5,0));

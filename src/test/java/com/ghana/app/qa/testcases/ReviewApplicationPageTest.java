@@ -33,14 +33,14 @@ public class ReviewApplicationPageTest extends DriverInit {
 		signUpPage.selectVisaType();
 		signUpPage.selectVisaLocation();
 		signUpPage.passPhoneNo(TestUtil.readDataFromExcellString(5, 11, 0));
+		signUpPage.selectDateOfBirth(TestUtil
+				.readDataFromExcellString(5, 14, 0));
 		signUpPage.passEmailId(TestUtil.readDataFromExcellString(5, 12, 0));
 		signUpPage.passReEmailId(TestUtil.readDataFromExcellString(5, 13, 0));
 		signUpPage.enterCaptchaField();
 		TestUtil.clickOnElement(signUpPage.selectOneRadioButton());
 		TestUtil.clickOnElement(signUpPage.termsCheckboxselect());
 		TestUtil.clickOnElement(signUpPage.clickOnSelectAll());
-		signUpPage.selectDateOfBirth(TestUtil
-				.readDataFromExcellString(5, 14, 0));
 		signUpPage.continueBtn();
 
 	}

@@ -31,10 +31,12 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.ITestResult;
 
 import static com.ghana.app.qa.testdata.ConstantVariable.*;
 
 import com.ghana.app.qa.base.TestBase;
+import com.ghana.app.qa.listener.Listener;
 import com.google.common.base.Function;
 
 public class TestUtil extends TestBase {
@@ -43,7 +45,7 @@ public class TestUtil extends TestBase {
 		super();
 
 	}
-
+	ITestResult result;
 	public static DesiredCapabilities caps;
 	public static Properties prop;
 	public static String driverPath;
@@ -292,8 +294,9 @@ public class TestUtil extends TestBase {
 		FileInputStream fis = new FileInputStream(src);
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
 		XSSFSheet sheet = workbook.getSheetAt(sheetName);
-		sheet.getRow(row_number).createCell(colomn_number).setCellValue("PASS");
+		sheet.getRow(row_number).createCell(colomn_number).setCellValue(Listener.statusOfTest());
 
+		System.out.println("value==============================>" +Listener.statusOfTest());
 		FileOutputStream fos = new FileOutputStream(
 				".//src//main//java//com//ghana//app//qa//testdata//GhanaVisaTestData1.xlsx");
 		workbook.write(fos);

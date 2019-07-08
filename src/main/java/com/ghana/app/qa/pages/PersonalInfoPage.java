@@ -111,6 +111,7 @@ public class PersonalInfoPage extends TestBase {
 	public void selectPassIssueDate(String PassIssueDate) throws InterruptedException {
 	
 		//TestUtil.actionClassMethod(date_of_issued);
+		TestUtil.clickOnElement(date_of_issued);
 		date_of_issued.sendKeys(PassIssueDate); // Enter date in required format
 	}
 
@@ -120,6 +121,7 @@ public class PersonalInfoPage extends TestBase {
 	public void selectPassExpiryDate(String PassExpiryDate) throws InterruptedException {
 
 		//TestUtil.actionClassMethod(date_of_expiry);
+		TestUtil.clickOnElement(date_of_expiry);
 		date_of_expiry.sendKeys(PassExpiryDate); // Enter date in required
 													// format
 	}

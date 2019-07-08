@@ -33,10 +33,10 @@ public class PersonalInfoPageTest extends DriverInit {
 		signUpPage.selectVisaLocation();
 		signUpPage.selectPortOfArrival();
 		signUpPage.passPhoneNo(TestUtil.readDataFromExcellString(5, 11, 0));
+		signUpPage.selectDateOfBirth(TestUtil.readDataFromExcellString(5, 14, 0));
 		signUpPage.passEmailId(TestUtil.readDataFromExcellString(5, 12, 0));
 		signUpPage.passReEmailId(TestUtil.readDataFromExcellString(5, 13, 0));
-		signUpPage.enterCaptchaField();
-		signUpPage.selectDateOfBirth(TestUtil.readDataFromExcellString(5, 14, 0));
+		signUpPage.enterCaptchaField();	
 		TestUtil.clickOnElement(signUpPage.selectOneRadioButton());
 		TestUtil.clickOnElement(signUpPage.termsCheckboxselect());
 		TestUtil.clickOnElement(signUpPage.clickOnSelectAll());
@@ -111,9 +111,8 @@ public class PersonalInfoPageTest extends DriverInit {
 
 	@Test(priority = 10)
 	public void selectPassIssueDateTest() throws InterruptedException, IOException {
-
-		Thread.sleep(4000);
 		System.out.println("Passport Issue date====>"+TestUtil.readDataFromExcellString(6, 9, 0));
+		Thread.sleep(4000);
 		personalInfoPage.selectPassIssueDate(TestUtil.readDataFromExcellString(6, 9, 0));
 		Assert.assertEquals(personalInfoPage.getTextFromPassIssueDate(), TestUtil.readDataFromExcellString(6, 9, 0),  "Pass passport issue date and get Birth date  is not matched while comparing from TestData");
 		TestUtil. writeStringValue(6, 9,1);

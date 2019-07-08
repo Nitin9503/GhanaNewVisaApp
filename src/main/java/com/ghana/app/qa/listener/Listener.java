@@ -15,6 +15,8 @@ import com.ghana.app.qa.util.TakeScreenshot;
 
 public class Listener implements ITestListener, ISuiteListener, IInvokedMethodListener, IExecutionListener {
 
+	static ITestResult  result1;
+	
 	// This belongs to ISuiteListener and will execute before the Suite start
 		public void onStart(ISuite arg0) {
 
@@ -122,26 +124,40 @@ public class Listener implements ITestListener, ISuiteListener, IInvokedMethodLi
 
 		}
 
-		private void printTestResults(ITestResult result) throws InterruptedException {
+		public static String statusOfTest(){
 			
-
-	 	   Reporter.log("(About@Test Method)Test Method resides in " + result.getTestClass().getName(), true);
-
+			String status = null;
+			
+			switch(result1.getStatus()){
+			
+			case ITestResult.SUCCESS:
+				status = "Pass";
+				break;
+				
+			case ITestResult.FAILURE:
+				status = "Failed";
+				break;
+				
+			case ITestResult.SKIP:
+				status = "Skipped";
+				break;
+			
+			}
+			return status;
+			
+		}
+		public void printTestResults(ITestResult result) throws InterruptedException {
+			 Reporter.log("(About@Test Method)Test Method resides in " + result.getTestClass().getName(), true);
 			if (result.getParameters().length != 0) {
-
 				String params = null;
-
 				for (Object parameter : result.getParameters()) {
-
 					params += parameter.toString() + ",";
 
 				}
 
 				Reporter.log("Test Method had the following parameters : " + params, true);
 
-			}
-
-			
+			}		
 		
 			String status = null;
 
@@ -151,13 +167,11 @@ public class Listener implements ITestListener, ISuiteListener, IInvokedMethodLi
 
 				status = "Pass";
 				
-
 				break;
 
 			case ITestResult.FAILURE:
 
-				status = "Failed";
-			
+				status = "Failed";		
 
 				break;
 

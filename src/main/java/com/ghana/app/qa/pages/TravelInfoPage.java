@@ -155,7 +155,8 @@ public class TravelInfoPage extends TestBase {
 	}
 
     public void passDateOfDeparture(String date) {
-    	TestUtil.actionClassMethod(departureDate);
+    	//TestUtil.actionClassMethod(departureDate);
+    	TestUtil.clickOnElement(departureDate);
 		departureDate.sendKeys(date);
 
 	}
@@ -194,7 +195,8 @@ public class TravelInfoPage extends TestBase {
 	}
 
 	public void clickOnTravelBy() throws IOException, InterruptedException {
-		TestUtil.actionClassMethod(travelingBy);
+		//TestUtil.actionClassMethod(travelingBy);
+		TestUtil.clickOnElement(travelingBy);
 		System.out.println("Total travel options are==>"+totalTravelingOption.size());
 		for (WebElement travelOptions:totalTravelingOption){
 			System.out.println("travel options ===>" +travelOptions.getText() );
@@ -231,8 +233,8 @@ public class TravelInfoPage extends TestBase {
 	}
 
 	public void clickPurpose_of_journey() throws InterruptedException, IOException {
-		TestUtil.actionClassMethod(purpose_of_journey);
-
+	//	TestUtil.actionClassMethod(purpose_of_journey);
+		TestUtil.clickOnElement(purpose_of_journey);
 		System.out.println("totalOptionOfPurposeJourney=====>" +totalOptionOfPurposeJourney.size());
 		
 		for (WebElement perposeJourneyOptions : totalOptionOfPurposeJourney){
@@ -414,24 +416,26 @@ public class TravelInfoPage extends TestBase {
 
 	
 	public void clickOnByPhoneCheckbox() {
-		TestUtil.actionClassMethod(by_phone_checkbox);
-
+		//TestUtil.actionClassMethod(by_phone_checkbox);
+		
+		TestUtil.clickOnElement(by_phone_checkbox);
 	}
 	public boolean verifyByPhoneCheckbox() {
 		return by_phone_checkbox.isSelected();
 
 	}
 	public void clickOnByEmailCheckbox() {
-		TestUtil.actionClassMethod(by_email_checkbox);
-
+		//TestUtil.actionClassMethod(by_email_checkbox);
+		TestUtil.clickOnElement(by_email_checkbox);
 	}
 	public boolean verifyByEmailCheckbox() {
 		return by_email_checkbox.isSelected();
 
 	}
 	public void clickOnByTextMessageCheckbox() {
-		TestUtil.actionClassMethod(by_text_message_checkbox);
+		//TestUtil.actionClassMethod(by_text_message_checkbox);
 		
+		TestUtil.clickOnElement(by_text_message_checkbox);
 
 	}
 	public boolean verifyByTextMessageCheckbox() {

@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\nikhil.sonawane\AppData\Local\Temp\testng-eclipse--157144156\testng-customsuite.xml</span>
+                    <span>C:\Users\nikhil.sonawane\AppData\Local\Temp\testng-eclipse--20848400\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 2 failed,   </span>
+                    <span class="method-stats">7 methods, 1 failed,   6 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -101,15 +101,49 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.ghana.app.qa.testcases.HomePageTest" hash-for-method="verifyHomePageTitleTest">verifyHomePageTitleTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.ghana.app.qa.testcases.HomePageTest" hash-for-method="verifyVisaCategoriesTest">verifyVisaCategoriesTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.ghana.app.qa.testcases.VisaPaymentPageTest" hash-for-method="verifyClickOnSubmitBtnTest">verifyClickOnSubmitBtnTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Default_suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.ghana.app.qa.testcases.VisaPaymentPageTest" hash-for-method="documentPageTest">documentPageTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.ghana.app.qa.testcases.VisaPaymentPageTest" hash-for-method="fillAddressinfoPageTest">fillAddressinfoPageTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.ghana.app.qa.testcases.VisaPaymentPageTest" hash-for-method="fillEmergencyPageTest">fillEmergencyPageTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.ghana.app.qa.testcases.VisaPaymentPageTest" hash-for-method="fillPersonalPageTest">fillPersonalPageTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.ghana.app.qa.testcases.VisaPaymentPageTest" hash-for-method="fillTravelInfoPageTest">fillTravelInfoPageTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.ghana.app.qa.testcases.VisaPaymentPageTest" hash-for-method="signUpAndFillSignUpPage">signUpAndFillSignUpPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -124,92 +158,22 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.ghana.app.qa.testcases.HomePageTest</span>
+              <span class="class-name">com.ghana.app.qa.testcases.VisaPaymentPageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyHomePageTitleTest">
-                  </a> <!-- verifyHomePageTitleTest -->
-                  <span class="method-name">verifyHomePageTitleTest</span>
-                  <div class="stack-trace"><b>"java.lang.AssertionError: We are navigate to HOme page expected [Home] but found [192.168.1.21]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertEquals(Assert.java:123)
-	at org.testng.Assert.assertEquals(Assert.java:176)
-	at com.ghana.app.qa.testcases.HomePageTest.verifyHomePageTitleTest(HomePageTest.java:32)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-<br/> java.lang.AssertionError: We are navigate to HOme page expected [Home] but found [192.168.1.21]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:494)
-	at org.testng.Assert.assertEquals(Assert.java:123)
-	at org.testng.Assert.assertEquals(Assert.java:176)
-	at com.ghana.app.qa.testcases.HomePageTest.verifyHomePageTitleTest(HomePageTest.java:32)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-"</b><br>org.testng.Assert.fail(Assert.java:94)<br>org.testng.Assert.failNotEquals(Assert.java:494)<br>org.testng.Assert.assertEquals(Assert.java:123)<br>org.testng.Assert.assertEquals(Assert.java:176)<br>com.ghana.app.qa.testcases.HomePageTest.verifyHomePageTitleTest(HomePageTest.java:32)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br>java.lang.reflect.Method.invoke(Method.java:498)<br>org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br>org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br>org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br>org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br>org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>org.testng.TestRunner.privateRun(TestRunner.java:767)<br>org.testng.TestRunner.run(TestRunner.java:617)<br>org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br>org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br>org.testng.SuiteRunner.run(SuiteRunner.java:240)<br>org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br>org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br>org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br>org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br>org.testng.TestNG.run(TestNG.java:1031)<br>org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)<br>org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)<br>org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)<br>
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyVisaCategoriesTest">
-                  </a> <!-- verifyVisaCategoriesTest -->
-                  <span class="method-name">verifyVisaCategoriesTest</span>
-                  <div class="stack-trace"><b>"org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[text()=&apos;Apply Visa&apos;]&quot;}
-  (Session info: chrome=75.0.3770.100)
+                  <a name="verifyClickOnSubmitBtnTest">
+                  </a> <!-- verifyClickOnSubmitBtnTest -->
+                  <span class="method-name">verifyClickOnSubmitBtnTest</span>
+                  <div class="stack-trace"><b>"org.openqa.selenium.NoSuchElementException: Unable to locate element: //input[@name=&apos;creditCardNumber&apos;]
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;NAMET5&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_171&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.100, chrome: {chromedriverVersion: 75.0.3770.8 (681f24ea911fe7..., userDataDir: C:\Users\NIKHIL~1.SON\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:49592}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 21252804367d07a3fe9ab9aabf1c8026
-*** Element info: {Using=xpath, value=//button[text()=&apos;Apply Visa&apos;]}
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0.4, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190619235627, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 2408, moz:profile: C:\Users\nikhil.sonawane\Ap..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 6.1, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5d0e35a4-3452-40aa-8707-7d1b68f1b7ee
+*** Element info: {Using=xpath, value=//input[@name=&apos;creditCardNumber&apos;]}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -226,9 +190,9 @@ Session ID: 21252804367d07a3fe9ab9aabf1c8026
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy8.click(Unknown Source)
-	at com.ghana.app.qa.pages.HomePage.clickOnApplyVisa(HomePage.java:38)
-	at com.ghana.app.qa.testcases.HomePageTest.verifyVisaCategoriesTest(HomePageTest.java:40)
+	at com.sun.proxy.$Proxy9.sendKeys(Unknown Source)
+	at com.ghana.app.qa.pages.VisaPaymentPage.passCardNo(VisaPaymentPage.java:74)
+	at com.ghana.app.qa.testcases.VisaPaymentPageTest.verifyClickOnSubmitBtnTest(VisaPaymentPageTest.java:196)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -253,15 +217,14 @@ Session ID: 21252804367d07a3fe9ab9aabf1c8026
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-<br/> org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[text()=&apos;Apply Visa&apos;]&quot;}
-  (Session info: chrome=75.0.3770.100)
+<br/> org.openqa.selenium.NoSuchElementException: Unable to locate element: //input[@name=&apos;creditCardNumber&apos;]
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;NAMET5&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_171&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.100, chrome: {chromedriverVersion: 75.0.3770.8 (681f24ea911fe7..., userDataDir: C:\Users\NIKHIL~1.SON\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:49592}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 21252804367d07a3fe9ab9aabf1c8026
-*** Element info: {Using=xpath, value=//button[text()=&apos;Apply Visa&apos;]}
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0.4, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190619235627, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 2408, moz:profile: C:\Users\nikhil.sonawane\Ap..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 6.1, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5d0e35a4-3452-40aa-8707-7d1b68f1b7ee
+*** Element info: {Using=xpath, value=//input[@name=&apos;creditCardNumber&apos;]}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -278,9 +241,9 @@ Session ID: 21252804367d07a3fe9ab9aabf1c8026
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy8.click(Unknown Source)
-	at com.ghana.app.qa.pages.HomePage.clickOnApplyVisa(HomePage.java:38)
-	at com.ghana.app.qa.testcases.HomePageTest.verifyVisaCategoriesTest(HomePageTest.java:40)
+	at com.sun.proxy.$Proxy9.sendKeys(Unknown Source)
+	at com.ghana.app.qa.pages.VisaPaymentPage.passCardNo(VisaPaymentPage.java:74)
+	at com.ghana.app.qa.testcases.VisaPaymentPageTest.verifyClickOnSubmitBtnTest(VisaPaymentPageTest.java:196)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -305,16 +268,68 @@ Session ID: 21252804367d07a3fe9ab9aabf1c8026
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-"</b><br>sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br>sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)<br>sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br>java.lang.reflect.Constructor.newInstance(Constructor.java:423)<br>org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)<br>org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)<br>org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)<br>org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)<br>org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)<br>org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)<br>org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)<br>org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)<br>org.openqa.selenium.By$ByXPath.findElement(By.java:353)<br>org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)<br>org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)<br>org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)<br>com.sun.proxy.$Proxy8.click(Unknown Source)<br>com.ghana.app.qa.pages.HomePage.clickOnApplyVisa(HomePage.java:38)<br>com.ghana.app.qa.testcases.HomePageTest.verifyVisaCategoriesTest(HomePageTest.java:40)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br>java.lang.reflect.Method.invoke(Method.java:498)<br>org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br>org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br>org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br>org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br>org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>org.testng.TestRunner.privateRun(TestRunner.java:767)<br>org.testng.TestRunner.run(TestRunner.java:617)<br>org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br>org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br>org.testng.SuiteRunner.run(SuiteRunner.java:240)<br>org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br>org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br>org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br>org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br>org.testng.TestNG.run(TestNG.java:1031)<br>org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)<br>org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)<br>org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)<br>
+"</b><br>sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br>sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)<br>sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br>java.lang.reflect.Constructor.newInstance(Constructor.java:423)<br>org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)<br>org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)<br>org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)<br>org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)<br>org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)<br>org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)<br>org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)<br>org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)<br>org.openqa.selenium.By$ByXPath.findElement(By.java:353)<br>org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)<br>org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)<br>org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)<br>com.sun.proxy.$Proxy9.sendKeys(Unknown Source)<br>com.ghana.app.qa.pages.VisaPaymentPage.passCardNo(VisaPaymentPage.java:74)<br>com.ghana.app.qa.testcases.VisaPaymentPageTest.verifyClickOnSubmitBtnTest(VisaPaymentPageTest.java:196)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br>java.lang.reflect.Method.invoke(Method.java:498)<br>org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br>org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br>org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br>org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br>org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>org.testng.TestRunner.privateRun(TestRunner.java:767)<br>org.testng.TestRunner.run(TestRunner.java:617)<br>org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br>org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br>org.testng.SuiteRunner.run(SuiteRunner.java:240)<br>org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br>org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br>org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br>org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br>org.testng.TestNG.run(TestNG.java:1031)<br>org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)<br>org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)<br>org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)<br>
 </div> <!-- stack-trace -->
+                  <em>
+(Here verifying confirmation message and click on ok btn )                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Default_suite-class-failed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.ghana.app.qa.testcases.VisaPaymentPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="documentPageTest">
+                  </a> <!-- documentPageTest -->
+                  <span class="method-name">documentPageTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="fillAddressinfoPageTest">
+                  </a> <!-- fillAddressinfoPageTest -->
+                  <span class="method-name">fillAddressinfoPageTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="fillEmergencyPageTest">
+                  </a> <!-- fillEmergencyPageTest -->
+                  <span class="method-name">fillEmergencyPageTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="fillPersonalPageTest">
+                  </a> <!-- fillPersonalPageTest -->
+                  <span class="method-name">fillPersonalPageTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="fillTravelInfoPageTest">
+                  </a> <!-- fillTravelInfoPageTest -->
+                  <span class="method-name">fillTravelInfoPageTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="signUpAndFillSignUpPage">
+                  </a> <!-- signUpAndFillSignUpPage -->
+                  <span class="method-name">signUpAndFillSignUpPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\nikhil.sonawane\AppData\Local\Temp\testng-eclipse--157144156\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\nikhil.sonawane\AppData\Local\Temp\testng-eclipse--20848400\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -323,7 +338,7 @@ Session ID: 21252804367d07a3fe9ab9aabf1c8026
 &lt;suite name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.ghana.app.qa.testcases.HomePageTest&quot;/&gt;
+      &lt;class name=&quot;com.ghana.app.qa.testcases.VisaPaymentPageTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -363,15 +378,35 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(7);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyVisaCategoriesTest')
-data.setCell(0, 2, 'com.ghana.app.qa.testcases.HomePageTest')
-data.setCell(0, 3, 120062);
+data.setCell(0, 1, 'verifyClickOnSubmitBtnTest')
+data.setCell(0, 2, 'com.ghana.app.qa.testcases.VisaPaymentPageTest')
+data.setCell(0, 3, 121981);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyHomePageTitleTest')
-data.setCell(1, 2, 'com.ghana.app.qa.testcases.HomePageTest')
-data.setCell(1, 3, 31);
+data.setCell(1, 1, 'signUpAndFillSignUpPage')
+data.setCell(1, 2, 'com.ghana.app.qa.testcases.VisaPaymentPageTest')
+data.setCell(1, 3, 31660);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'fillAddressinfoPageTest')
+data.setCell(2, 2, 'com.ghana.app.qa.testcases.VisaPaymentPageTest')
+data.setCell(2, 3, 3376);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'fillTravelInfoPageTest')
+data.setCell(3, 2, 'com.ghana.app.qa.testcases.VisaPaymentPageTest')
+data.setCell(3, 3, 3062);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'fillPersonalPageTest')
+data.setCell(4, 2, 'com.ghana.app.qa.testcases.VisaPaymentPageTest')
+data.setCell(4, 3, 2270);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'fillEmergencyPageTest')
+data.setCell(5, 2, 'com.ghana.app.qa.testcases.VisaPaymentPageTest')
+data.setCell(5, 3, 2021);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'documentPageTest')
+data.setCell(6, 2, 'com.ghana.app.qa.testcases.VisaPaymentPageTest')
+data.setCell(6, 3, 1896);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -402,22 +437,40 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.ghana.app.qa.testcases.HomePageTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.ghana.app.qa.testcases.VisaPaymentPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">verifyHomePageTitleTest</span>
-                <span class="method-start">9094 ms</span>
+                <span class="method-name">signUpAndFillSignUpPage</span>
+                <span class="method-start">15197 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">fillPersonalPageTest</span>
+                <span class="method-start">46859 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">fillAddressinfoPageTest</span>
+                <span class="method-start">49130 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">fillEmergencyPageTest</span>
+                <span class="method-start">52508 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">fillTravelInfoPageTest</span>
+                <span class="method-start">54531 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">documentPageTest</span>
+                <span class="method-start">57594 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">verifyVisaCategoriesTest</span>
-                <span class="method-start">9129 ms</span>
+                <span class="method-name">verifyClickOnSubmitBtnTest</span>
+                <span class="method-start">59493 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

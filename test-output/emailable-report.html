@@ -31,36 +31,26 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">2</td><td class="numi">129.2 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">6</td><td class="numi">6</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">181.5 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
 <tr><th colspan="4">Default test &#8212; failed</th></tr>
-<tr class="failedodd"><td rowspan="2">com.ghana.app.qa.testcases.HomePageTest</td><td><a href="#m1"><b>verifyHomePageTitleTest</b>  </a></td><td class="numi">1</td><td>1562589580328</td><td class="numi">31</td></tr><tr class="failedodd"><td><a href="#m2"><b>verifyVisaCategoriesTest</b>  </a></td><td class="numi">1</td><td>1562589580363</td><td class="numi">120062</td></tr>
+<tr class="failedodd"><td rowspan="1">com.ghana.app.qa.testcases.VisaPaymentPageTest</td><td><a href="#m1"><b>verifyClickOnSubmitBtnTest</b>  ("Here verifying confirmation message and click on ok btn ")</a></td><td class="numi">1</td><td>1562652059403</td><td class="numi">121981</td></tr>
+<tr><th colspan="4">Default test &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="6">com.ghana.app.qa.testcases.VisaPaymentPageTest</td><td><a href="#m2"><b>signUpAndFillSignUpPage</b>  </a></td><td class="numi">1</td><td>1562652015107</td><td class="numi">31660</td></tr><tr class="passedodd"><td><a href="#m3"><b>fillPersonalPageTest</b>  </a></td><td class="numi">1</td><td>1562652046769</td><td class="numi">2270</td></tr><tr class="passedodd"><td><a href="#m4"><b>fillAddressinfoPageTest</b>  </a></td><td class="numi">1</td><td>1562652049040</td><td class="numi">3376</td></tr><tr class="passedodd"><td><a href="#m5"><b>fillEmergencyPageTest</b>  </a></td><td class="numi">1</td><td>1562652052418</td><td class="numi">2021</td></tr><tr class="passedodd"><td><a href="#m6"><b>fillTravelInfoPageTest</b>  </a></td><td class="numi">1</td><td>1562652054441</td><td class="numi">3062</td></tr><tr class="passedodd"><td><a href="#m7"><b>documentPageTest</b>  </a></td><td class="numi">1</td><td>1562652057504</td><td class="numi">1896</td></tr>
 </table>
 <h1>Default test</h1>
-<h2 id="m1">com.ghana.app.qa.testcases.HomePageTest:verifyHomePageTitleTest</h2>
+<h2 id="m1">com.ghana.app.qa.testcases.VisaPaymentPageTest:verifyClickOnSubmitBtnTest</h2>
 <div style="padding-left:3em">
-<p>We are navigate to HOme page expected [Home] but found [192.168.1.21]</p>
-org.testng.Assert.fail(Assert.java:94)
-<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
-<br/>at org.testng.Assert.assertEquals(Assert.java:123)
-<br/>at org.testng.Assert.assertEquals(Assert.java:176)
-<br/>at com.ghana.app.qa.testcases.HomePageTest.verifyHomePageTitleTest(HomePageTest.java:32)
-<br/>25 lines not shown
-</div>
-<p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">com.ghana.app.qa.testcases.HomePageTest:verifyVisaCategoriesTest</h2>
-<div style="padding-left:3em">
-<p>no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[text()=&apos;Apply Visa&apos;]&quot;}
-  (Session info: chrome=75.0.3770.100)
+<p>Unable to locate element: //input[@name=&apos;creditCardNumber&apos;]
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;NAMET5&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_171&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.100, chrome: {chromedriverVersion: 75.0.3770.8 (681f24ea911fe7..., userDataDir: C:\Users\NIKHIL~1.SON\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:49592}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 21252804367d07a3fe9ab9aabf1c8026
-*** Element info: {Using=xpath, value=//button[text()=&apos;Apply Visa&apos;]}</p>
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 67.0.4, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20190619235627, moz:geckodriverVersion: 0.24.0, moz:headless: false, moz:processID: 2408, moz:profile: C:\Users\nikhil.sonawane\Ap..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 6.1, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 5d0e35a4-3452-40aa-8707-7d1b68f1b7ee
+*** Element info: {Using=xpath, value=//input[@name=&apos;creditCardNumber&apos;]}</p>
 sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 <br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 <br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -77,10 +67,22 @@ sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 <br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 <br/>at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 <br/>at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-<br/>at com.sun.proxy.$Proxy8.click(Unknown Source)
-<br/>at com.ghana.app.qa.pages.HomePage.clickOnApplyVisa(HomePage.java:38)
-<br/>at com.ghana.app.qa.testcases.HomePageTest.verifyVisaCategoriesTest(HomePageTest.java:40)
+<br/>at com.sun.proxy.$Proxy9.sendKeys(Unknown Source)
+<br/>at com.ghana.app.qa.pages.VisaPaymentPage.passCardNo(VisaPaymentPage.java:74)
+<br/>at com.ghana.app.qa.testcases.VisaPaymentPageTest.verifyClickOnSubmitBtnTest(VisaPaymentPageTest.java:196)
 <br/>25 lines not shown
 </div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m2">com.ghana.app.qa.testcases.VisaPaymentPageTest:signUpAndFillSignUpPage</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m3">com.ghana.app.qa.testcases.VisaPaymentPageTest:fillEmergencyPageTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">com.ghana.app.qa.testcases.VisaPaymentPageTest:documentPageTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m5">com.ghana.app.qa.testcases.VisaPaymentPageTest:fillTravelInfoPageTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m6">com.ghana.app.qa.testcases.VisaPaymentPageTest:fillAddressinfoPageTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m7">com.ghana.app.qa.testcases.VisaPaymentPageTest:fillPersonalPageTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>

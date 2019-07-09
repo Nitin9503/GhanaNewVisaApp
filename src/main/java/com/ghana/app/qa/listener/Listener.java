@@ -126,10 +126,13 @@ public class Listener implements ITestListener, ISuiteListener, IInvokedMethodLi
 
 		public static String statusOfTest(){
 			
+		
 			String status = null;
 			
+			System.out.println("Hello======================>" +result1.getStatus());
 			switch(result1.getStatus()){
 			
+
 			case ITestResult.SUCCESS:
 				status = "Pass";
 				break;

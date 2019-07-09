@@ -24,6 +24,7 @@ import com.ghana.app.qa.base.DriverInit;
 import com.ghana.app.qa.testcases.VisaCategoriesPageTest;
 import com.ghana.app.qa.util.*;
 public class MultiplaApplication extends VisaCategoriesPageTest {
+	
 	public MultiplaApplication() throws IOException, InterruptedException {
 		super();
 		

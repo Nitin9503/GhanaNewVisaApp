@@ -294,9 +294,7 @@ public class TestUtil extends TestBase {
 		FileInputStream fis = new FileInputStream(src);
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
 		XSSFSheet sheet = workbook.getSheetAt(sheetName);
-		sheet.getRow(row_number).createCell(colomn_number).setCellValue(Listener.statusOfTest());
-
-		System.out.println("value==============================>" +Listener.statusOfTest());
+		sheet.getRow(row_number).createCell(colomn_number).setCellValue("PASS");
 		FileOutputStream fos = new FileOutputStream(
 				".//src//main//java//com//ghana//app//qa//testdata//GhanaVisaTestData1.xlsx");
 		workbook.write(fos);

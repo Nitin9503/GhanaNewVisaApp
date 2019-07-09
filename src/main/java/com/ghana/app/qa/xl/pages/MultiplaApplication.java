@@ -77,16 +77,18 @@ public class MultiplaApplication extends VisaCategoriesPageTest {
 			        signUpXlPage.selectNationality(nationalityName);
 			        signUpXlPage.selectPortOfArrival(PoOfArrival);
 			        signUpXlPage.selectVisaType(VisaFee);
-			        signUpXlPage.selectVisaLocation(VisaLocatioN);
+			        Thread.sleep(1000);
+			        signUpXlPage.selectVisaLocation("Mumbai");
+			       /* Thread.sleep(1000);
 			        signUpXlPage.selectDateOfBirth(DateBirth);
 			        signUpXlPage.passEmailIdAndPhoneNo(emailAddress, phoneNo );
 			        signUpXlPage.clickOnCheckBoxes();
 					signUpXlPage.verifyCheckBoxIsSelected();
-					signUpXlPage.enterCaptchaField();
-					signUpXlPage.continueBtn();
+					signUpXlPage.enterCaptchaField();*/
+					//signUpXlPage.continueBtn();
 					// signUpXlPage.cancelBtn();
 					
-					//Get Data for Personal Info Page
+					/*//Get Data for Personal Info Page
 						 String visafee = reader.getCellData("PersonalInfo", "Visa_fees", rowNum); 
 						    System.out.println(visafee);
 						    String visaLoc = reader.getCellData("PersonalInfo", "Visa_Location", rowNum);
@@ -108,10 +110,10 @@ public class MultiplaApplication extends VisaCategoriesPageTest {
 					        String passDateExpired = reader.getCellData("PersonalInfo", "passport_expiry_date", rowNum);
 					        System.out.println(passDateExpired);
 					        
-					       /* personalInfoXlPage.SelectvisaFees(visafee);
-					        personalInfoXlPage.SelectvisaLocation(visaLoc);*/
+					        personalInfoXlPage.SelectvisaFees(visafee);
+					        personalInfoXlPage.SelectvisaLocation(visaLoc);
 					        personalInfoXlPage.passFirstName(Fname);
-					        personalInfoXlPage.passMiddleName(Midname);
+					        personalInfoXlPage.passmiddleName(Midname);
 					        personalInfoXlPage.passLastName(Lname);
 					        personalInfoXlPage.passPassportNumber(passptnumber);
 					        personalInfoXlPage.selectPassIssueDate(passDateIssue);
@@ -266,8 +268,8 @@ public class MultiplaApplication extends VisaCategoriesPageTest {
 			    		visaPaymentPage.clickOnOKtbtn();
 			    		visaPaymentPage.clickOnDonetbtn();
 			            //Get Data for payment page Page
-			           /* visaPaymentPage.clickOnSubmitBtn();
-			    		visaPaymentPage.verifyConfirmationPop()*/;
+			            visaPaymentPage.clickOnSubmitBtn();
+			    		visaPaymentPage.verifyConfirmationPop();
 			    		driver.manage().deleteAllCookies();
 			    		Thread.sleep(2000);
 			    		
@@ -281,7 +283,7 @@ public class MultiplaApplication extends VisaCategoriesPageTest {
 			            driver.get(prop.getProperty("GhanaWebLocalURL"));
 			            Thread.sleep(2000);
 			    		homePage.clickOnApplyVisa();
-			    		visaCategoriesPage.clickOnVisaType(); 
+			    		visaCategoriesPage.clickOnVisaType(); */
 			 }
 			
 			 }

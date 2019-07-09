@@ -46,6 +46,9 @@ public class PersonalInfoXlPage extends TestBase {
 	WebElement clickVisaLocation;//
 	@FindBy(xpath = "//input[@id='firstname']")
 	WebElement firstname;
+	@FindBy(xpath = "//input[@id='middlename']")
+	WebElement middleName;
+	
 	@FindBy(xpath = "//input[@id='lastname']")
 	WebElement lastname;
 	@FindBy(xpath = "//input[@type='radio' and @value='Male']")
@@ -98,7 +101,10 @@ public class PersonalInfoXlPage extends TestBase {
 	public void passFirstName(String firstName) {
 		firstname.sendKeys(firstName);
 	}
-
+	public void passmiddleName(String middlename) {
+		middleName.sendKeys(middlename);
+	}
+	
 	public void passLastName(String lastName) {
 		lastname.sendKeys(lastName);
 		// return lastname.getText();

@@ -1,8 +1,11 @@
 package com.ghana.app.qa.xl.pages;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
+
 import static com.ghana.app.qa.testdata.ConstantVariable.*;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -25,6 +28,9 @@ public class SignUpXlPage extends TestBase {
 	@FindBy(xpath = "//span[text()='Passport Type']")
 	public static WebElement PassportType;
 
+	@FindBy(xpath="//ul[@id='passport_type']//li")
+	List<WebElement> TotalPassportType;
+	
 	@FindBy(id = "Official")
 	// Diplomatic, Service, Special, Ordinary
 	WebElement PassportTypeName;
@@ -44,6 +50,20 @@ public class SignUpXlPage extends TestBase {
 	@FindBy(xpath = "//ul[@id='img_category_options']//li[text()='Ghana Airport']")
 	WebElement selectPortofArrival;
 
+	@FindBy(xpath = "//span[text()='Select Visa Type']")
+	WebElement SelectvisaType;
+	
+	@FindBy(xpath = "//ul[@id='ul_visa_type']//li")
+	List<WebElement> TotalVisaType;
+	
+	@FindBy(xpath = "//span[text()='Select Visa Location']")
+	WebElement visaLocations;
+
+
+	
+	@FindBy(xpath = "//ul[@id='ul_visa_location']//li")
+	List<WebElement> TotalVisaLocation;
+	
 	@FindBy(id = "phone_number")
 	WebElement PhoneNumber;
 
@@ -61,7 +81,10 @@ public class SignUpXlPage extends TestBase {
 
 	@FindBy(xpath = "//input[@id='customRadio3']")
 	WebElement visaTypeCheckBox;
-
+	
+	@FindBy(xpath = "//label[@id='text_captcha']")
+	WebElement usercaptatext;
+	
 	@FindBy(xpath = "//input[@id='usercaptchacode']")
 	WebElement usercaptchacode;
 
@@ -88,9 +111,21 @@ public class SignUpXlPage extends TestBase {
 		return driver.getTitle();
 	}
 
+	public int passportTypesize(){
+		return TotalPassportType.size();
+		
+	}
 	public void SelectPassportType(String PaType) {
 		TestUtil.actionClassMethod(PassportType);
-		driver.findElement(By.xpath("//li[@id='" + PaType + "']")).click();
+		System.out.println(passportTypesize());
+		//ArrayList<String> paType = new ArrayList<String>();
+		for(WebElement PaTypeList : TotalPassportType){
+			//paType.add(PaTypeList.getText());
+			if(PaTypeList.getText().equalsIgnoreCase(PaType)){
+				PaTypeList.click();
+			}
+		}
+		//driver.findElement(By.xpath("//li[@id='" + PaType + "']")).click();
 		
 	}
 
@@ -106,7 +141,35 @@ public class SignUpXlPage extends TestBase {
 		driver.findElement(By.xpath("//li[text()='" + PoArrival + "']")).click();
 	
 	}
+public void selectVisaType(String visaType) throws InterruptedException{
+	TestUtil.actionClassMethod(SelectvisaType);
+	for(WebElement viType :TotalVisaType){
+		if(viType.getText().equalsIgnoreCase(visaType)){
+			viType.click();
+			Thread.sleep(1000);
+			
+		}
+		
+	}
+	
+}
+public void selectVisaLocation(String visaLocation) throws InterruptedException{
+	Thread.sleep(2000);
+	TestUtil.actionClassMethod(visaLocations);
 
+	System.out.println("click on visalocation");
+	for(WebElement viLocation : TotalVisaLocation){
+		System.out.println(viLocation.getText());
+		System.out.println(visaLocation);
+		if(viLocation.getText().equalsIgnoreCase(visaLocation)){
+			System.out.println("before click");
+			viLocation.click();
+			System.out.println("after click");
+			
+		}
+		
+	}
+}
 	public void passPhoneNo(String phoneNo) {
 		PhoneNumber.sendKeys(phoneNo);
 	}
@@ -136,8 +199,11 @@ public class SignUpXlPage extends TestBase {
 		visaTypeCheckBox.click();
 	}
 
-	public void enterCaptchaField(String captchacode) {
-		usercaptchacode.sendKeys(captchacode);
+	public void enterCaptchaField() throws InterruptedException {
+		Thread.sleep(1000);
+		String captcha = usercaptatext.getText();
+		System.out.println(captcha);
+		usercaptchacode.sendKeys(captcha);
 	}
 
 	public void cancelBtn() {

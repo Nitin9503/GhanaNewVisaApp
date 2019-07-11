@@ -1,14 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [Torenzo WebSite]">
-  <test thread-count="3" name="TorenzoTest(failed)">
+<suite thread-count="3" name="Failed suite [Torenzo WebSite]" parallel="none">
+  <test name="TorenzoTest(failed)" parallel="none">
     <classes>
+      <class name="com.ghana.app.qa.testcases.EmergencyContactPageTest">
+        <methods>
+          <include name="selectRelationTest"/>
+          <include name="setUp"/>
+          <include name="SaveAndContinueAddressInfoTest"/>
+          <include name="emergencyProfessionDetailsTest3"/>
+          <include name="emergencyContactDetailsTest"/>
+          <include name="emergencyProfessionDetailsTest2"/>
+          <include name="emergencyProfessionDetailsTest1"/>
+          <include name="fillAddressinfoPageTest"/>
+        </methods>
+      </class> <!-- com.ghana.app.qa.testcases.EmergencyContactPageTest -->
+      <class name="com.ghana.app.qa.testcases.AddressInfoPageTest">
+        <methods>
+          <include name="filladdressInfoTest3"/>
+          <include name="selectAddressType"/>
+          <include name="setUp"/>
+          <include name="SaveAndContinueFromPersonalInfoTest"/>
+          <include name="filladdressInfoTest2"/>
+        </methods>
+      </class> <!-- com.ghana.app.qa.testcases.AddressInfoPageTest -->
+      <class name="com.ghana.app.qa.testcases.PersonalInfoPageTest">
+        <methods>
+          <include name="clickOnGenderTest"/>
+          <include name="getApplicationIdTest"/>
+          <include name="selectPassExpiryDateTest"/>
+          <include name="passFirstNameTest"/>
+          <include name="setUp"/>
+          <include name="passPassportNumberTest"/>
+          <include name="selectPassIssueDateTest"/>
+          <include name="passMiddleNameTest"/>
+          <include name="passPlaceOfBirthTest"/>
+          <include name="passLastNameTest"/>
+        </methods>
+      </class> <!-- com.ghana.app.qa.testcases.PersonalInfoPageTest -->
       <class name="com.ghana.app.qa.testcases.SignUpPageTest">
         <methods>
           <include name="passReEmailIdTest"/>
           <include name="selectDateOfBirthTest"/>
           <include name="passPhoneNoTest"/>
-          <include name="tearDown"/>
           <include name="enterCaptchaFieldTest"/>
           <include name="selectPortOfArrivalTest"/>
           <include name="setUp"/>
@@ -19,21 +53,50 @@
           <include name="selectVisaType"/>
         </methods>
       </class> <!-- com.ghana.app.qa.testcases.SignUpPageTest -->
+      <class name="com.ghana.app.qa.testcases.HomePageTest">
+        <methods>
+          <include name="verifyVisaCategoriesTest"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.ghana.app.qa.testcases.HomePageTest -->
+      <class name="com.ghana.app.qa.testcases.TravelInfoPageTest">
+        <methods>
+          <include name="passPrimaryRefFirstnameTest"/>
+          <include name="clickOnIsApplicantPossessionRoundTicketTest"/>
+          <include name="fillEmergencyPageTest"/>
+          <include name="passPrimaryRefLastnameTest"/>
+          <include name="fillAddressinfoPageTest"/>
+          <include name="pass_City_SecRef"/>
+          <include name="pass_LastName_SecRef"/>
+          <include name="passDateOfDepartureTest"/>
+          <include name="pass_Address_SecRef"/>
+          <include name="pass_primary_ref_stateTest"/>
+          <include name="pass_primary_ref_phone_numberTest"/>
+          <include name="fillPersonalPageTest"/>
+          <include name="pass_secondary_ref_phone_number"/>
+          <include name="ContinueAndSaveEmergTest"/>
+          <include name="passTicketNumberTest"/>
+          <include name="pass_firstName_SecRef"/>
+          <include name="verifyCheckBoxTest"/>
+          <include name="pass_Pincode_SecRef"/>
+          <include name="pass_Primary_ref_addressTest"/>
+          <include name="pass_Country_SecRef"/>
+          <include name="setUp"/>
+          <include name="pass_State_SecRef"/>
+          <include name="clickPurpose_of_journeyTest"/>
+          <include name="pass_primary_ref_cityTest"/>
+          <include name="clickOnTravelByTest"/>
+          <include name="pass_primary_ref_countryTest"/>
+          <include name="pass_primary_ref_pincodeTest"/>
+        </methods>
+      </class> <!-- com.ghana.app.qa.testcases.TravelInfoPageTest -->
       <class name="com.ghana.app.qa.testcases.VisaCategoriesPageTest">
         <methods>
           <include name="getVisaCategoriesText"/>
           <include name="clickOnVisaTypeTest"/>
-          <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- com.ghana.app.qa.testcases.VisaCategoriesPageTest -->
-      <class name="com.ghana.app.qa.testcases.HomePageTest">
-        <methods>
-          <include name="verifyVisaCategoriesTest"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.ghana.app.qa.testcases.HomePageTest -->
     </classes>
   </test> <!-- TorenzoTest(failed) -->
 </suite> <!-- Failed suite [Torenzo WebSite] -->

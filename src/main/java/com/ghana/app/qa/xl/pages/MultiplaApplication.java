@@ -1,3 +1,4 @@
+
 package com.ghana.app.qa.xl.pages;
 
 
@@ -76,19 +77,22 @@ public class MultiplaApplication extends VisaCategoriesPageTest {
 			        signUpXlPage.SelectPassportType(passportType);
 			        signUpXlPage.selectNationality(nationalityName);
 			        signUpXlPage.selectPortOfArrival(PoOfArrival);
+			       
+			        signUpXlPage.selectVisaLocation(VisaLocatioN);
+			        Thread.sleep(1000);
+			        
 			        signUpXlPage.selectVisaType(VisaFee);
 			        Thread.sleep(1000);
-			        signUpXlPage.selectVisaLocation("Mumbai");
-			       /* Thread.sleep(1000);
+			        
 			        signUpXlPage.selectDateOfBirth(DateBirth);
 			        signUpXlPage.passEmailIdAndPhoneNo(emailAddress, phoneNo );
 			        signUpXlPage.clickOnCheckBoxes();
 					signUpXlPage.verifyCheckBoxIsSelected();
-					signUpXlPage.enterCaptchaField();*/
-					//signUpXlPage.continueBtn();
-					// signUpXlPage.cancelBtn();
+					signUpXlPage.enterCaptchaField();
+					signUpXlPage.continueBtn();
+					 signUpXlPage.cancelBtn();
 					
-					/*//Get Data for Personal Info Page
+					//Get Data for Personal Info Page
 						 String visafee = reader.getCellData("PersonalInfo", "Visa_fees", rowNum); 
 						    System.out.println(visafee);
 						    String visaLoc = reader.getCellData("PersonalInfo", "Visa_Location", rowNum);
@@ -283,7 +287,7 @@ public class MultiplaApplication extends VisaCategoriesPageTest {
 			            driver.get(prop.getProperty("GhanaWebLocalURL"));
 			            Thread.sleep(2000);
 			    		homePage.clickOnApplyVisa();
-			    		visaCategoriesPage.clickOnVisaType(); */
+			    		visaCategoriesPage.clickOnVisaType(); 
 			 }
 			
 			 }

@@ -20,7 +20,6 @@ public class VisaPaymentPageTest extends DriverInit {
 
 	public VisaPaymentPageTest() throws IOException, InterruptedException {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	
 	@Test(priority = 1)

@@ -6,6 +6,7 @@ import java.util.List;
 
 import static com.ghana.app.qa.testdata.ConstantVariable.*;
 
+import org.apache.poi.hssf.record.PageBreakRecord.Break;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -13,7 +14,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.ghana.app.qa.base.TestBase;
 import com.ghana.app.qa.util.TestUtil;
@@ -37,7 +40,10 @@ public class SignUpXlPage extends TestBase {
 
 	@FindBy(xpath = "//span[text()='Nationality']")
 	WebElement Nationality;
-
+   
+	@FindBy(xpath = "//ul[@id='ul_nationality']//li")
+	List<WebElement> TotalCountry;
+	
 	@FindBy(xpath = "//ul[@id='ul_nationality']//li[text()='India']")
 	WebElement selectNationality;
 
@@ -131,9 +137,19 @@ public class SignUpXlPage extends TestBase {
 
 	public void selectNationality(String NaName) throws InterruptedException {
 		TestUtil.actionClassMethod(Nationality);
-		nationalitySearchField.sendKeys(NaName);
-		driver.findElement(By.xpath("//li[text()='" + NaName + "']")).click();
-
+		//nationalitySearchField.sendKeys(NaName);
+		//driver.findElement(By.xpath("//li[text()='" + NaName + "']")).click();
+		System.out.println(TotalCountry.size());
+        for(WebElement country : TotalCountry){
+        	//System.out.println(country.getText());
+        	if(country.getText().equalsIgnoreCase(NaName)){
+        		country.click();
+        		break;
+        		
+        	}
+        	
+        }
+		
 	}
 
 	public void selectPortOfArrival(String PoArrival) {
@@ -146,7 +162,8 @@ public void selectVisaType(String visaType) throws InterruptedException{
 	for(WebElement viType :TotalVisaType){
 		if(viType.getText().equalsIgnoreCase(visaType)){
 			viType.click();
-			Thread.sleep(1000);
+			break;
+		
 			
 		}
 		
@@ -155,11 +172,19 @@ public void selectVisaType(String visaType) throws InterruptedException{
 }
 public void selectVisaLocation(String visaLocation) throws InterruptedException{
 	Thread.sleep(2000);
+	// Create object of WebDriverWait class and it will wait max of 20 seconds.
+			// By default it will accepts in Seconds
+			WebDriverWait wait = new WebDriverWait(driver, 20);
+	 
+			// Here we will wait until element is not visible, if element is visible then it will return web element
+			// or else it will throw exception
+			WebElement element = wait
+					.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Select Visa Location']")));
 	TestUtil.actionClassMethod(visaLocations);
 
 	System.out.println("click on visalocation");
 	for(WebElement viLocation : TotalVisaLocation){
-		System.out.println(viLocation.getText());
+		//System.out.println(viLocation.getText());
 		System.out.println(visaLocation);
 		if(viLocation.getText().equalsIgnoreCase(visaLocation)){
 			System.out.println("before click");

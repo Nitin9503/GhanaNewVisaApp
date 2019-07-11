@@ -2,6 +2,7 @@
 <testng-results skipped="0" failed="6" total="7" passed="1">
   <reporter-output>
   </reporter-output>
+<<<<<<< Updated upstream
   <suite name="Default suite" duration-ms="669246" started-at="2019-07-10T12:07:19Z" finished-at="2019-07-10T12:18:29Z">
     <groups>
     </groups>
@@ -364,6 +365,46 @@ Session ID: 05c51173f7ad172eefe2cf80a64ab76e
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
 	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+=======
+  <suite name="Default suite" duration-ms="54444" started-at="2019-07-11T05:28:45Z" finished-at="2019-07-11T05:29:39Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="54444" started-at="2019-07-11T05:28:45Z" finished-at="2019-07-11T05:29:39Z">
+      <class name="com.ghana.app.qa.xl.pages.MultiplaApplication">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ghana.app.qa.xl.pages.MultiplaApplication@4a668b6e]" name="setUp" is-config="true" duration-ms="9265" started-at="2019-07-11T10:58:45Z" finished-at="2019-07-11T10:58:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateVisaPageTiltleTest()[pri:0, instance:com.ghana.app.qa.xl.pages.MultiplaApplication@4a668b6e]" name="validateVisaPageTiltleTest" duration-ms="2420" started-at="2019-07-11T10:58:54Z" finished-at="2019-07-11T10:58:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateVisaPageTiltleTest -->
+        <test-method status="PASS" signature="getVisaCategoriesText()[pri:0, instance:com.ghana.app.qa.xl.pages.MultiplaApplication@4a668b6e]" name="getVisaCategoriesText" duration-ms="75" started-at="2019-07-11T10:58:57Z" finished-at="2019-07-11T10:58:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getVisaCategoriesText -->
+        <test-method status="PASS" signature="clickOnVisaTypeTest()[pri:0, instance:com.ghana.app.qa.xl.pages.MultiplaApplication@4a668b6e]" name="clickOnVisaTypeTest" duration-ms="1801" started-at="2019-07-11T10:58:57Z" finished-at="2019-07-11T10:58:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnVisaTypeTest -->
+        <test-method status="FAIL" signature="selectPassPortType()[pri:0, instance:com.ghana.app.qa.xl.pages.MultiplaApplication@4a668b6e]" name="selectPassPortType" duration-ms="40843" started-at="2019-07-11T10:58:59Z" finished-at="2019-07-11T10:59:39Z">
+          <exception class="java.lang.IndexOutOfBoundsException">
+            <message>
+              <![CDATA[Index: 12, Size: 4]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IndexOutOfBoundsException: Index: 12, Size: 4
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
+	at com.sun.proxy.$Proxy9.get(Unknown Source)
+	at com.ghana.app.qa.xl.pages.SignUpXlPage.verifyCheckBoxIsSelected(SignUpXlPage.java:267)
+	at com.ghana.app.qa.xl.pages.MultiplaApplication.selectPassPortType(MultiplaApplication.java:89)
+>>>>>>> Stashed changes
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -398,7 +439,7 @@ Session ID: 05c51173f7ad172eefe2cf80a64ab76e
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          </exception> <!-- java.lang.IndexOutOfBoundsException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyClickOnSubmitBtnTest -->

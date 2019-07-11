@@ -3,12 +3,18 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.ghana.app.qa.xl.pages.MultiplaApplication">
+      <class name="com.ghana.app.qa.testcases.VisaPaymentPageTest">
         <methods>
+          <include name="fillTravelInfoPageTest"/>
+          <include name="tearDown"/>
+          <include name="documentPageTest"/>
           <include name="setUp"/>
-          <include name="selectPassPortType"/>
+          <include name="verifyClickOnSubmitBtnTest"/>
+          <include name="fillAddressinfoPageTest"/>
+          <include name="fillEmergencyPageTest"/>
+          <include name="fillPersonalPageTest"/>
         </methods>
-      </class> <!-- com.ghana.app.qa.xl.pages.MultiplaApplication -->
+      </class> <!-- com.ghana.app.qa.testcases.VisaPaymentPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

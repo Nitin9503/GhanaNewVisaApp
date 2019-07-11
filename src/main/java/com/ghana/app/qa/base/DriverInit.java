@@ -131,11 +131,11 @@ public class DriverInit extends TestBase {
 
 
 	
-	  /*@AfterClass
+	  @AfterClass
 	  public void tearDown() {
 	 
 	  driver.quit();
-	  }*/
+	  }
 	
 
 }

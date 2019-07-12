@@ -10,6 +10,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -180,7 +181,6 @@ public class ConsulatePageApproveTest extends DriverInit {
 
 	@Test(priority=6, description="Here verifying confirmation message and click on ok btn ")
 	public void documentPageAndPaymentPageTest() throws InterruptedException, IOException {
-
 		uploadDocPage.getUploadDoc();
 		uploadDocPage.clicksaveAndContiBtn();
 		TestUtil.writeStringValue(11, 1, 1);
@@ -214,7 +214,7 @@ public class ConsulatePageApproveTest extends DriverInit {
 
 	@Test(priority = 8, description = "This test will verify we navigated to Welcome To Ghana Embassy page upon cliclking on Login button")
 	public void verifyTitleOfConsulateTitle() {
-		softAssertion.assertEquals(highAndConsulateLoginPage.getTitleOfConsulate(), prop.getProperty("titleOfBucketPage"),
+		Assert.assertEquals(highAndConsulateLoginPage.getTitleOfConsulate(), prop.getProperty("titleOfBucketPage"),
 				"We are not navigate to consulate dashboard page after enetering valid creadentials");	
 		// print the value of present app in new application bucket , HCG application and Approve application
 		softAssertion.assertAll();
@@ -237,10 +237,10 @@ public class ConsulatePageApproveTest extends DriverInit {
 	}
 	
 	@Test(priority = 10, description = "Here we are getting text from Applicant Information and comparing with Applicant filed data")
-	public void getTextFromApplicantInformationCN() throws InterruptedException {
-		softAssertion.assertEquals(applicantDashBoardPage.getTextFullName(), (firstName + " " + lastName),
+	public void getTextFromApplicantInformationCN() throws InterruptedException, IOException {
+		Assert.assertEquals(applicantDashBoardPage.getTextFullName(), (TestUtil.readDataFromExcellString(6, 5, 0) + " " + TestUtil.readDataFromExcellString(6, 7, 0)),
 				"Provided and Get firstName are not matched");
-		softAssertion.assertEquals(applicantDashBoardPage.getTextPassportNumber(), (passportNumber),
+		Assert.assertEquals(applicantDashBoardPage.getTextPassportNumber(), (TestUtil.readDataFromExcellString(6, 8, 0)),
 				"Provided and Get Passport Number are not matched");
 		/*TestUtil.dateAlter(birthDate);
 		softAssertion.assertEquals(applicantDashBoardPage.getTextDateOfBirth(), providedDate,
@@ -250,8 +250,7 @@ public class ConsulatePageApproveTest extends DriverInit {
 				"Provided and Get Passport Issued Date are not matched");
 		TestUtil.dateAlter(passportExpiryDate);
 		softAssertion.assertEquals(applicantDashBoardPage.getTextPassportExpiryDate(), providedDate,
-				"Provided and Get Passport Expiry Date are not matched");*/
-		softAssertion.assertAll();
+				"Provided and Get Passport Expiry Date are not matched");*/	
 	}
 
 	
@@ -264,23 +263,23 @@ public class ConsulatePageApproveTest extends DriverInit {
 		softAssertion.assertAll();
 	}
 	@Test(priority = 12, description = "Here we are getting text from Address Information and comparing with Applicant filed data")
-	public void getTextFromAddressInformationCN() throws InterruptedException {
+	public void getTextFromAddressInformationCN() throws InterruptedException, IOException {
 
-		softAssertion.assertEquals(cNAddressInfo.getTextFromEmailID(), (emailId),
+		Assert.assertEquals(cNAddressInfo.getTextFromEmailID(), (TestUtil.readDataFromExcellString(5, 12, 0)),
 				"Provided and Get firstName are not matched");
-		softAssertion.assertEquals(cNAddressInfo.getTextFromPhoneNumber(), (phoneNumber),
+		Assert.assertEquals(cNAddressInfo.getTextFromPhoneNumber(), (TestUtil.readDataFromExcellString(5, 11, 0)),
 				"Provided and Get Passport Number are not matched");
-		softAssertion.assertEquals(cNAddressInfo.getTextlandmark(), (Landmark),
+		Assert.assertEquals(cNAddressInfo.getTextlandmark(), (TestUtil.readDataFromExcellString(7, 6, 0)),
 				"Provided and Get Landmark are not matched");
-		softAssertion.assertEquals(cNAddressInfo.getTextFromAddress(), (FlatNo + "," + StreetName),
+		Assert.assertEquals(cNAddressInfo.getTextFromAddress(), (TestUtil.readDataFromExcellString(7, 4, 0) + "," + TestUtil.readDataFromExcellString(7, 5, 0)),
 				"Provided and Get Birth Date  are not matched");
-		softAssertion.assertEquals(cNAddressInfo.getTextFromCityAndPinCode(), (cityName + "," + pinCode),
+		Assert.assertEquals(cNAddressInfo.getTextFromCityAndPinCode(), (TestUtil.readDataFromExcellString(7, 8, 0) + "," + TestUtil.readDataFromExcellString(7, 7, 0)),
 				"Provided and Get Birth Place  are not matched");
-		softAssertion.assertEquals(cNAddressInfo.getTextFromState(), (stateName),
+		Assert.assertEquals(cNAddressInfo.getTextFromState(), (TestUtil.readDataFromExcellString(7, 9, 0)),
 				"Provided and Get Passport Issued Date are not matched");
-		softAssertion.assertEquals(cNAddressInfo.getTextFromCountry(), (countryName),
+		Assert.assertEquals(cNAddressInfo.getTextFromCountry(), (TestUtil.readDataFromExcellString(7, 10, 0)),
 				"Provided and Get Passport Expiry Date are not matched");
-		softAssertion.assertAll();
+	
 	}
 	
 	@Test(priority = 13)
@@ -291,36 +290,35 @@ public class ConsulatePageApproveTest extends DriverInit {
 		softAssertion.assertAll();
 	}
 	@Test(priority = 14, description = "Here we are getting text from Travel Information and comparing with Applicant filed data")
-	public void getTextFromTravelInformationCN() throws InterruptedException {
+	public void getTextFromTravelInformationCN() throws InterruptedException, IOException {
 
-		softAssertion.assertEquals(cNTravelInfo.getTextReferenceName1(), (priFirstName + " " + priLastName),
+		Assert.assertEquals(cNTravelInfo.getTextReferenceName1(), (TestUtil.readDataFromExcellString(9, 8, 0) + " " + TestUtil.readDataFromExcellString(9, 9, 0)),
 				"Provided and Get firstName are not matched");
-		softAssertion.assertEquals(cNTravelInfo.getTextReferenceContact1(), (primaryRefrencePhoneNo),
+		Assert.assertEquals(cNTravelInfo.getTextReferenceContact1(), (TestUtil.readDataFromExcellString(9, 15, 0)),
 				"Provided and Get Passport Number are not matched");
-		softAssertion.assertEquals(cNTravelInfo.getTextReferenceAddress1(),
-				(primaryAddress + "," + primaryCity + "," + primaryState + "," + primaryCountry + "," + primaryPinCode),
+		Assert.assertEquals(cNTravelInfo.getTextReferenceAddress1(),
+				(TestUtil.readDataFromExcellString(9, 10, 0) + "," + TestUtil.readDataFromExcellString(9, 12, 0) + "," + TestUtil.readDataFromExcellString(9, 13, 0) + "," + TestUtil.readDataFromExcellString(9, 14, 0) + "," + TestUtil.readDataFromExcellString(9, 11, 0)),
 				"Provided and Get Landmark are not matched 1");
-		softAssertion.assertEquals(cNTravelInfo.getTextReferenceCity1(), (primaryCity + "," + primaryPinCode),
+		Assert.assertEquals(cNTravelInfo.getTextReferenceCity1(), (TestUtil.readDataFromExcellString(9, 12, 0) + "," + TestUtil.readDataFromExcellString(9, 11, 0)),
 				"Provided and Get Birth Place  are not matched");
-		softAssertion.assertEquals(cNTravelInfo.getTextReferenceState1(), (primaryState),
+		Assert.assertEquals(cNTravelInfo.getTextReferenceState1(), (TestUtil.readDataFromExcellString(9, 13, 0)),
 				"Provided and Get Passport Issued Date are not matched");
-		softAssertion.assertEquals(cNTravelInfo.getTextReferenceCountry1(), (primaryCountry),
+		Assert.assertEquals(cNTravelInfo.getTextReferenceCountry1(), (TestUtil.readDataFromExcellString(9, 14, 0)),
 				"Provided and Get Passport Expiry Date are not matched");
-		softAssertion.assertEquals(cNTravelInfo.getTextReferenceName2(), (secFirstName + " " + secLastName),
+		Assert.assertEquals(cNTravelInfo.getTextReferenceName2(), (TestUtil.readDataFromExcellString(9, 16, 0) + " " + TestUtil.readDataFromExcellString(9, 17, 0)),
 				"Provided and Get firstName are not matched");
-		softAssertion.assertEquals(cNTravelInfo.getTextReferenceContact2(), (secondaryRefrencePhoneNo),
+		Assert.assertEquals(cNTravelInfo.getTextReferenceContact2(), (TestUtil.readDataFromExcellString(9, 23, 0)),
 				"Provided and Get Passport Number are not matched");
-		softAssertion.assertEquals(
-				cNTravelInfo.getTextReferenceAddress2(), (secondaryAddress + "," + secondaryCity + "," + secondaryState
-						+ "," + secondaryCountry + "," + secondaryPinCode),
+		Assert.assertEquals(
+				cNTravelInfo.getTextReferenceAddress2(), (TestUtil.readDataFromExcellString(9, 18, 0) + "," + TestUtil.readDataFromExcellString(9, 20, 0) + "," + TestUtil.readDataFromExcellString(9, 21, 0)
+						+ "," + TestUtil.readDataFromExcellString(9, 22, 0) + "," + TestUtil.readDataFromExcellString(9, 19, 0)),
 				"Provided and Get Landmark are not matched 2");
-		softAssertion.assertEquals(cNTravelInfo.getTextReferenceCity2(), (secondaryCity + "," + secondaryPinCode),
+		Assert.assertEquals(cNTravelInfo.getTextReferenceCity2(), (TestUtil.readDataFromExcellString(9, 20, 0) + "," + TestUtil.readDataFromExcellString(9, 11, 0)),
 				"Provided and Get Birth Place  are not matched");
-		softAssertion.assertEquals(cNTravelInfo.getTextReferenceState2(), (secondaryState),
+		Assert.assertEquals(cNTravelInfo.getTextReferenceState2(), (TestUtil.readDataFromExcellString(9, 13, 0)),
 				"Provided and Get Passport Issued Date are not matched");
-		softAssertion.assertEquals(cNTravelInfo.getTextReferenceCountry2(), (secondaryCountry),
+		Assert.assertEquals(cNTravelInfo.getTextReferenceCountry2(), (TestUtil.readDataFromExcellString(9, 14, 0)),
 				"Provided and Get Passport Expiry Date are not matched");
-		softAssertion.assertAll();
 
 	}
 	@Test(priority = 15)

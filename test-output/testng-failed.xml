@@ -3,18 +3,35 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.ghana.app.qa.testcases.VisaPaymentPageTest">
+      <class name="com.ghana.app.qa.testcases.ConsulatePageApproveTest">
         <methods>
-          <include name="fillTravelInfoPageTest"/>
+          <include name="clickOnInterviewScheduleAndcancelCN"/>
           <include name="tearDown"/>
-          <include name="documentPageTest"/>
+          <include name="verifyApplicaInHCGApplicationBucket"/>
+          <include name="clickOnNextButtonAndVerifyTitleDocumentVerificationCN"/>
+          <include name="clickOnApproveAndVerifyPopText1CN"/>
+          <include name="getTextFromAddressInformationCN"/>
+          <include name="selectOneByOneCheckBoxAndVerifyCN"/>
+          <include name="getTextFromTravelInformationCN"/>
+          <include name="clickOnInterviewScheduleAndCloseCN"/>
+          <include name="verifyCanceAndCrossButton"/>
+          <include name="clickOnBackButtonAndVerifyTitleApplicantInformationCN"/>
+          <include name="clickOnNextButtonAndVerifyTitleTravelInformationCN"/>
+          <include name="getTextFromApplicantInformationCN"/>
+          <include name="clickOnBackButtonAndVerifyTitleAddressInformationCN"/>
+          <include name="selectAllCheckBoxAndVerifyCN"/>
+          <include name="verfiyTitleOfCNDocumentVerificatonPageCN"/>
+          <include name="clickOnAddressInforCN"/>
+          <include name="clickOnApproveAndVerifyPopTextCN"/>
+          <include name="clickOnBackButtonAndVerifyTitleTravelInformationCN"/>
+          <include name="passCommentCN"/>
+          <include name="clickOnApproveCN"/>
+          <include name="verfiyTitleOfCNTravelInfoPageCN"/>
+          <include name="verifyApplicationSentOpens"/>
           <include name="setUp"/>
-          <include name="verifyClickOnSubmitBtnTest"/>
-          <include name="fillAddressinfoPageTest"/>
-          <include name="fillEmergencyPageTest"/>
-          <include name="fillPersonalPageTest"/>
+          <include name="clickOnNextButtonAndVerifyTitleAddressInformationCN"/>
         </methods>
-      </class> <!-- com.ghana.app.qa.testcases.VisaPaymentPageTest -->
+      </class> <!-- com.ghana.app.qa.testcases.ConsulatePageApproveTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

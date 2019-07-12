@@ -304,17 +304,13 @@ public class TestBase {
 				driver = new RemoteWebDriver(new URL(SauceLabURL), caps);
 			}	
 
-
 	}
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
-<<<<<<< Updated upstream
-		driver.get(prop.getProperty("ServerUrl"));    //---localhost
-=======
+		//driver.get(prop.getProperty("ServerUrl"));    //---localhost
 		driver.get(prop.getProperty("GhanaWebLocalURL"));    //---localhost
->>>>>>> Stashed changes
 		//GhanaWebLocalURL
 		//driver.get(prop.getProperty("GhanaWebURL"));	
 		//driver.get(prop.getProperty("HCDLoginURL"));	

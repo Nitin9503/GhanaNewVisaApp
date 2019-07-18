@@ -174,12 +174,10 @@ public class VisaPaymentPageTest extends DriverInit {
 
 	@Test(priority = 6)
 	public void documentPageTest() throws InterruptedException, IOException {
-
 		uploadDocPage.getUploadDoc();
 		uploadDocPage.clicksaveAndContiBtn();
 		TestUtil.writeStringValue(11, 1, 1);
 		Thread.sleep(1000);
-
 	} 
 
 
@@ -188,24 +186,36 @@ public class VisaPaymentPageTest extends DriverInit {
 		//visaPaymentPage.getTextsubmitBtn();	
 		reviewApplicationPage.clickOnContinuebutton();
 		TestUtil.writeStringValue(12, 1, 1);
-		softAssertion.assertEquals(visaPaymentPage.getTextPaymentPageTitle(), TestUtil.readDataFromExcellString(12, 2, 0),
+		Assert.assertEquals(visaPaymentPage.getTextPaymentPageTitle(), TestUtil.readDataFromExcellString(12, 2, 0),
 				"it is not navigate to payment info page");	
 		TestUtil.writeStringValue(12, 2, 1);
 		visaPaymentPage.clickOnCheckoutBtn();
+		Assert.assertEquals(driver.getTitle(), TestUtil.readDataFromExcellString(12, 3, 0),
+				"it is not navigate to CCAvenue: Billing Shipping after clicking on CheckOut button");	
+		TestUtil.writeStringValue(12, 3, 1);
 		visaPaymentPage.passCardNo();
 		TestUtil.selectValuefromDropDown(visaPaymentPage.selectExpiryDateMonth(), month);
 		TestUtil.selectValuefromDropDown(visaPaymentPage.selectExpiryDateYear(), year);
 		visaPaymentPage.passCvvNo();
-		System.out.println( "verifyClickOnSubmitBtnTest2");
+		TestUtil.writeStringValue(12, 4, 1);
 		visaPaymentPage.clickOnMakePaymentBtn();
+		Assert.assertEquals(driver.getTitle(), TestUtil.readDataFromExcellString(12, 5, 0),
+				"it is not navigate to Send PARes to TermUrl after clicking on MakePayment button");	
+		TestUtil.writeStringValue(12, 5, 1);
 		visaPaymentPage.clickOnSubmitbtn();
+		Assert.assertEquals(driver.getTitle(), TestUtil.readDataFromExcellString(12, 6, 0),
+				"it is not navigate to Payment after clicking on Submit button");	
+		TestUtil.writeStringValue(12, 6, 1);
 		visaPaymentPage.clickOnOKtbtn();
+		System.out.println("================================>" +driver.getTitle());
+		Assert.assertEquals(driver.getTitle(), TestUtil.readDataFromExcellString(12, 7, 0),
+				"it is not navigate to Track Application after clicking on OK button");	
+		TestUtil.writeStringValue(12, 7, 1);
 		visaPaymentPage.clickOnDonetbtn();
-		//visaPaymentPage.verifyConfirmationPop();
 		Thread.sleep(2000);
 		Assert.assertEquals(homePage.validateHomePageTitle(), TestUtil.readDataFromExcellString(5, 1, 0),
 				"We are not navigate to Home page after payment");
-		TestUtil.writeStringValue(12, 3, 1);
+		TestUtil.writeStringValue(12, 8, 1);
 		System.out.println( "visa applicationID after payment==>" +applicationID);
 		
 	}

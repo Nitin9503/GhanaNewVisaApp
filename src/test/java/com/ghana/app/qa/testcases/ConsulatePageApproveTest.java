@@ -183,9 +183,11 @@ public class ConsulatePageApproveTest extends DriverInit {
 	public void documentPageAndPaymentPageTest() throws InterruptedException, IOException {
 		uploadDocPage.getUploadDoc();
 		uploadDocPage.clicksaveAndContiBtn();
-		TestUtil.writeStringValue(11, 1, 1);
-		Thread.sleep(1000);
 		reviewApplicationPage.clickOnContinuebutton();
+		TestUtil.writeStringValue(12, 1, 1);
+		softAssertion.assertEquals(visaPaymentPage.getTextPaymentPageTitle(), TestUtil.readDataFromExcellString(12, 2, 0),
+				"it is not navigate to payment info page");	
+		TestUtil.writeStringValue(12, 2, 1);
 		visaPaymentPage.clickOnCheckoutBtn();
 		visaPaymentPage.passCardNo();
 		TestUtil.selectValuefromDropDown(visaPaymentPage.selectExpiryDateMonth(), month);
@@ -200,14 +202,19 @@ public class ConsulatePageApproveTest extends DriverInit {
 	} 
 
 	@Test(priority = 7, description = "This test will verify login functinality with pass valid creadentials and click on Login button")
-	public void loginIntoConsulate() throws InterruptedException {
+	public void loginIntoConsulate() throws InterruptedException, IOException {
 		Thread.sleep(2000);		
 		TestUtil.toOpenNewTab();
 		TestUtil.toSwitchBetweenWindows(1);
 		driver.get(prop.getProperty("HCDLoginURL"));	
+		Assert.assertEquals(driver.getTitle(), TestUtil.readDataFromExcellString(0, 1, 0), "Consulate login page is not displayed");
+		TestUtil.writeStringValue(0, 1, 1);
 		highAndConsulateLoginPage.passUserName(prop.getProperty("UserNameCN"));
 		highAndConsulateLoginPage.passPassword(prop.getProperty("PassWordCN"));
+		TestUtil.writeStringValue(0, 2, 1);
 		highAndConsulateLoginPage.clickOnLoginButton();
+		Assert.assertEquals(driver.getTitle(), TestUtil.readDataFromExcellString(0, 3, 0), "Bucket page is not displayed upon clicking on Login");
+		TestUtil.writeStringValue(0, 3, 1);
 		System.out.println( "applicationIDCN==>" +applicationID);
 
 	}
@@ -520,6 +527,7 @@ public class ConsulatePageApproveTest extends DriverInit {
 		consulatedashBoardPage.openButton1PopApplicationSentToHCD();
 		softAssertion.assertEquals(applicantDashBoardPage.titleOfApplicationDetailsPage(), prop.getProperty("applicantDashboardTitle"),
 				"We are not navigate to Applicant Dashboard page upon clicking on New Application from Applicant Dashboard");
+		Thread.sleep(2000);
 		applicantDashBoardPage.clickOnBackButton();
 		softAssertion.assertEquals(highAndConsulateLoginPage.getTitleOfConsulate(), "Welcome To Ghana Embassy",
 				"We are not navigate to consulate dashboard page after enetering valid creadentials");
@@ -543,7 +551,7 @@ public class ConsulatePageApproveTest extends DriverInit {
 				"We are not navigate to consulate dashboard page after enetering valid creadentials");
 		System.out.println("2222");
 		softAssertion.assertAll();
-		System.out.println("Passed");	
+		System.out.println("Passed Approve");	
 		TestUtil.toCloseNewTab();	
 	}	
 	

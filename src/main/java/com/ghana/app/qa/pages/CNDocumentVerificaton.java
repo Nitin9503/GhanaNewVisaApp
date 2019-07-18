@@ -3,14 +3,16 @@ package com.ghana.app.qa.pages;
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
 import com.ghana.app.qa.base.TestBase;
 import com.ghana.app.qa.util.TestUtil;
-import static com.ghana.app.qa.testdata.ConstantVariable.applicationID;
+
 import static com.ghana.app.qa.testdata.ConstantVariable.*;
 public class CNDocumentVerificaton extends TestBase {
 
@@ -326,8 +328,7 @@ public class CNDocumentVerificaton extends TestBase {
 	}
 
 	public void clickOnApprove() {
-	/*driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-	TestUtil.actionClassMethod(approve);*/
+
 	TestUtil.clickOnElement(approve);
 	}
 
@@ -370,7 +371,8 @@ public class CNDocumentVerificaton extends TestBase {
 		confirmFromApprove.click();
 
 	}
-	public void getTextFromApproveButtonFromCN() {
+	public void getTextFromApproveButtonFromCN() throws InterruptedException {
+		Thread.sleep(2000);
 		getTextFromApproveButtonFromCN = confirmFromApprove.getAttribute("value");
 		getTextFromApproveButtonFromCN = getTextFromApproveButtonFromCN.replaceAll(getTextFromApproveButtonFromCN, "HCG Application");
 	}

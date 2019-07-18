@@ -45,7 +45,7 @@ public class TestUtil extends TestBase {
 		super();
 
 	}
-	ITestResult result;
+	static File src;
 	public static DesiredCapabilities caps;
 	public static Properties prop;
 	public static String driverPath;
@@ -58,7 +58,6 @@ public class TestUtil extends TestBase {
 
 	public static String providedDate = " ";
 	// Static variable for Launch activety of browser
-
 	public static String hubURL = "http://192.168.1.39:5568/wd/hub";
 	public static final String USERNAME = "sachin1";
 	public static final String ACCESS_KEY = "0576f84d-89b5-4a1e-8eee-f19e4bb26729";
@@ -69,32 +68,27 @@ public class TestUtil extends TestBase {
 	public static void scrollUpByPixel(int pixel) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0, 'pixel')");
-
 	}
 
 	public static void scrollUpAtEndOFPage() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-
 	}
 
 	public static void scrollUpHorizontalORVIsibilityOFElement(
 			WebElement element) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView();", element);
-
 	}
 
 	public static void toOpenNewTab() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.open()");
-
 	}
 
 	public static void toCloseNewTab() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.close()");
-
 	}
 
 	public static void typeText(WebElement element, String value) {
@@ -159,13 +153,11 @@ public class TestUtil extends TestBase {
 			int maxTimeout) {
 		WebDriverWait wait = new WebDriverWait(driver, maxTimeout);
 		wait.until(ExpectedConditions.visibilityOf(element));
-
 	}
 
 	public static void actionClassMethod(WebElement element) {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(element).click().perform();
-
 	}
 
 	public static void datePickerMethod(WebElement element) {
@@ -191,19 +183,6 @@ public class TestUtil extends TestBase {
 		System.out.println("Application id==>" + applicationID);
 	}
 
-	public static void fluentWait(WebElement element) {
-		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
-				.withTimeout(30, TimeUnit.SECONDS)
-				.pollingEvery(5, TimeUnit.SECONDS)
-				.ignoring(NoSuchElementException.class);
-
-		WebElement foo = wait.until(new Function<WebDriver, WebElement>() {
-			public WebElement apply(WebDriver driver) {
-				return driver.findElement(By.id("foo"));
-			}
-		});
-	}
-
 	public static void HandleAlertPopupAccept() {
 		try {
 			Alert alert = driver.switchTo().alert();
@@ -211,7 +190,6 @@ public class TestUtil extends TestBase {
 		} catch (Exception e) {
 			System.out.println("Alert is not present");
 		}
-
 	}
 
 	public static void HandleAlertPopupReject() {
@@ -230,7 +208,6 @@ public class TestUtil extends TestBase {
 		} catch (Exception e) {
 			System.out.println("Alert is not present");
 		}
-
 	}
 
 	public static void toSwitchBetweenWindows(int i) {
@@ -240,12 +217,10 @@ public class TestUtil extends TestBase {
 			driver.switchTo().window(tabs.get(i));
 		} catch (Exception e) {
 			System.out.println("Window is not available");
-
 		}
 	}
 
 	public static void switchToFrameByIndex(int i) {
-
 		try {
 
 			driver.switchTo().frame(i);
@@ -288,20 +263,37 @@ public class TestUtil extends TestBase {
 	}
 
 	public static void writeStringValue(int sheetName, int row_number,
-			int colomn_number) throws IOException {
-		File src = new File(
-				".//src//main//java//com//ghana//app//qa//testdata//GhanaVisaTestData1.xlsx");
+			int colomn_number) throws IOException {	
+		if (hm.get("system").equalsIgnoreCase("Win")) {
+			 src = new File(
+					".\\src\\main\\java\\com\\ghana\\app\\qa\\testdata\\GhanaVisaApplicantTestData.xlsx");			
+		} else if (hm.get("system").equalsIgnoreCase("Mac")) {
+			 src = new File(
+					"./src/main/java/com/ghana/app/qa/testdata/GhanaVisaApplicantTestData.xlsx");	
+		}
+		
 		FileInputStream fis = new FileInputStream(src);
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
 		XSSFSheet sheet = workbook.getSheetAt(sheetName);
 		sheet.getRow(row_number).createCell(colomn_number).setCellValue("PASS");
+		
+		if (hm.get("system").equalsIgnoreCase("Win")) {
+			 src = new File(
+					".\\src\\main\\java\\com\\ghana\\app\\qa\\testdata\\GhanaVisaApplicantTestData.xlsx");
+			
+		} else if (hm.get("system").equalsIgnoreCase("Mac")) {
+			 src = new File(
+					"./src/main/java/com/ghana/app/qa/testdata/GhanaVisaApplicantTestData.xlsx");
+				
+		}
 		FileOutputStream fos = new FileOutputStream(
-				".//src//main//java//com//ghana//app//qa//testdata//GhanaVisaTestData1.xlsx");
+				".//src//main//java//com//ghana//app//qa//testdata//GhanaVisaApplicantTestData.xlsx");
 		workbook.write(fos);
 		fos.close();
 		// System.out.println("Mobile number ===>"+String.valueOf(sheet.getRow(row_number).getCell(colomn_number).getNumericCellValue()));
 
 		// return
 		// String.valueOf(sheet.getRow(row_number).getCell(colomn_number).getNumericCellValue());
+		
 	}
 }

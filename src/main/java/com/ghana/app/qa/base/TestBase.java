@@ -58,7 +58,7 @@ public class TestBase {
    public static XSSFWorkbook workbook;
   
    
- static HashMap<String , String> hm = new HashMap<String , String>();
+ public static HashMap<String , String> hm = new HashMap<String , String>();
    
 	public TestBase() throws IOException, InterruptedException {
 		driverPath = System.getProperty("user.dir");
@@ -70,10 +70,11 @@ public class TestBase {
 	
 		if (hm.get("system").equalsIgnoreCase("Win")) {
 			 src = new File(
-					".\\src\\main\\java\\com\\ghana\\app\\qa\\testdata\\GhanaVisaTestData1.xlsx");
+					".\\src\\main\\java\\com\\ghana\\app\\qa\\testdata\\GhanaVisaApplicantTestData.xlsx");
+			 
 		} else if (hm.get("system").equalsIgnoreCase("Mac")) {
 			 src = new File(
-					"./src/main/java/com/ghana/app/qa/testdata/GhanaVisaTestData1.xlsx");		
+					"./src/main/java/com/ghana/app/qa/testdata/GhanaVisaApplicantTestData.xlsx");		
 		}
 			
 		FileInputStream fis1 = new FileInputStream(src);

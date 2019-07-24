@@ -20,6 +20,9 @@ public class CNTravelInfo extends TestBase {
 	@FindBy(id = "travellingby")
 	WebElement travelBy;
 
+	@FindBy(id = "dateOfDeparture")
+	WebElement dateOfDeparture;
+	
 	@FindBy(id = "purposeofjourney")
 	WebElement purposeOfVisit;
 
@@ -68,6 +71,11 @@ public class CNTravelInfo extends TestBase {
 
 	}
 
+	public String getDateOfDeparture() {
+		return dateOfDeparture.getAttribute("value");
+
+	}
+	
 	public String getTextzticketNumber() {
 		return ticketNumber.getAttribute("value");
 

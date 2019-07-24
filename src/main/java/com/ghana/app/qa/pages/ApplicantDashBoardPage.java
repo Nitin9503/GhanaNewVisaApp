@@ -62,6 +62,10 @@ public class ApplicantDashBoardPage extends TestBase {
 	@FindBy(xpath = "//button[text()='Back']")
 	WebElement backButton;
 	
+	@FindBy(xpath = "//div[@class='form-group row']//button[text()='Cancel' and @type='button']")
+	WebElement cancelButton;
+	
+	
 	@FindBy(xpath = "//button[text()='Next']")
 	WebElement nextButton;
 	
@@ -114,6 +118,9 @@ public class ApplicantDashBoardPage extends TestBase {
 		backButton.click();
 	}
 	
+	public void clickOnCancelButton(){
+		cancelButton.click();
+	}
 	public void clickOnApplicantInfor(){
 		applicantInforClick.click();
 	}

@@ -165,7 +165,7 @@ public class ConsulatedashBoardPage extends TestBase {
 	}
 
 	public void crossButton1PopApplicationSentToHCD() {
-		TestUtil.clickOnElement(crossButton1);
+		TestUtil.actionClassMethod(crossButton1);
 	
 	}
 	public void crossButtonFromFlagBucket() {
@@ -182,7 +182,7 @@ public class ConsulatedashBoardPage extends TestBase {
 	
 	
 	public void cancelButton1PopApplicationSentToHCD() {
-        TestUtil.clickOnElement(cancelButton1);
+        TestUtil.actionClassMethod(cancelButton1);
 		
 	}
 	public void cancelButtonFromFlag() {

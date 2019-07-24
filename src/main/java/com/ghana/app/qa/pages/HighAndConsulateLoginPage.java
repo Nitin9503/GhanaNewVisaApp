@@ -8,6 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.ghana.app.qa.base.TestBase;
+import com.ghana.app.qa.util.TestUtil;
 
 public class HighAndConsulateLoginPage extends TestBase {
 
@@ -24,13 +25,20 @@ public class HighAndConsulateLoginPage extends TestBase {
 	@FindBy(xpath = "//input[@name='Login' and @type='submit']")
 	WebElement login;
 	
-	public void passUserName(String Username) {
+	public void passUserName(String Username) throws InterruptedException {
 		username.sendKeys(Username);
+		TestUtil.colorElement(username);
+		Thread.sleep(3000);
 	}
 
-	public void passPassword(String Password) {
-		password.sendKeys(Password);
-	}
+	public void passPassword(String Password) throws InterruptedException
+		{
+			password.sendKeys(Password);
+			TestUtil.colorElement(password);
+			Thread.sleep(3000);
+		}
+	
+	
 	public void clickOnLoginButton() {
 		login.click();
 	}

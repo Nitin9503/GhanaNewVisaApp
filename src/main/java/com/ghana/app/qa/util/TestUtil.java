@@ -296,4 +296,12 @@ public class TestUtil extends TestBase {
 		// String.valueOf(sheet.getRow(row_number).getCell(colomn_number).getNumericCellValue());
 		
 	}
+	
+	public static void colorElement(WebElement element) throws InterruptedException{	
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		
+		js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", element);
+		Thread.sleep(4000);
+	}
+	
 }

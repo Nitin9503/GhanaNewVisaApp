@@ -202,7 +202,7 @@ public class ConsulatePageApproveTest extends DriverInit {
 		driver.get(prop.getProperty("HCDLoginURL"));	
 		Assert.assertEquals(driver.getTitle(), TestUtil.readDataFromExcellString(13, 1, 0), "Consulate login page is not displayed");
 		TestUtil.writeStringValue(13, 1, 1);
-		highAndConsulateLoginPage.passUserName(prop.getProperty("UserNameCN"));
+		highAndConsulateLoginPage.passUserName(prop.getProperty("UserNameCN"));		
 		highAndConsulateLoginPage.passPassword(prop.getProperty("PassWordCN"));
 		TestUtil.writeStringValue(13, 2, 1);
 		highAndConsulateLoginPage.clickOnLoginButton();	

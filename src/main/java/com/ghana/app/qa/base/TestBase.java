@@ -310,8 +310,8 @@ public class TestBase {
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
-		//driver.get(prop.getProperty("ServerUrl"));    //---localhost
-		driver.get(prop.getProperty("GhanaWebLocalURL"));    //---localhost
+		driver.get(prop.getProperty("ServerUrl"));    //---localhost
+		//driver.get(prop.getProperty("GhanaWebLocalURL"));    //---localhost
 		//GhanaWebLocalURL
 		//driver.get(prop.getProperty("GhanaWebURL"));	
 		//driver.get(prop.getProperty("HCDLoginURL"));	

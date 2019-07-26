@@ -20,6 +20,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
@@ -248,8 +249,10 @@ public class TestUtil extends TestBase {
 	public static String readDataFromExcellString(int sheetName,
 			int row_number, int colomn_number) throws IOException,
 			InterruptedException {
+		Actions act = new Actions(driver);
 		XSSFSheet sheet = workbook.getSheetAt(sheetName);
 		// System.out.println("===========>"+sheet.getRow(row_number).getCell(colomn_number).getStringCellValue());
+		act.sendKeys(Keys.F9);
 		return sheet.getRow(row_number).getCell(colomn_number)
 				.getStringCellValue();
 	}
@@ -257,6 +260,7 @@ public class TestUtil extends TestBase {
 	public static String readDataFromExcellNumeric(int sheetName,
 			int row_number, int colomn_number) throws IOException {
 		XSSFSheet sheet = workbook.getSheetAt(sheetName);
+	
 		// System.out.println("Mobile number ===>"+String.valueOf(sheet.getRow(row_number).getCell(colomn_number).getNumericCellValue()));
 		return String.valueOf(sheet.getRow(row_number).getCell(colomn_number)
 				.getNumericCellValue());

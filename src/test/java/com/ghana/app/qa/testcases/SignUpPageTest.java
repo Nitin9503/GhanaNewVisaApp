@@ -74,6 +74,7 @@ public class SignUpPageTest extends DriverInit {
 
 	@Test(priority = 6)
 	public void selectVisaLocation() throws InterruptedException, IOException {
+		Thread.sleep(2000);
 		signUpPage.selectVisaLocation();
 		Assert.assertEquals(signUpPage.totalVisaLocationActual(), totalVisaLocationExpected,
 				"Total Visa Location values are not matched when compare the requirement and get value from application");

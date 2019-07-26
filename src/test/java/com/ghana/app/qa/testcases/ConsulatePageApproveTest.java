@@ -199,7 +199,12 @@ public class ConsulatePageApproveTest extends DriverInit {
 		Thread.sleep(2000);		
 		TestUtil.toOpenNewTab();
 		TestUtil.toSwitchBetweenWindows(1);
-		driver.get(prop.getProperty("HCDLoginURL"));	
+		if (prop.getProperty("server").equalsIgnoreCase("Global")) {
+			driver.get(prop.getProperty("GhanaWebConsulateGlobalURL"));				 
+		} else if (prop.getProperty("server").equalsIgnoreCase("Local")) {
+			driver.get(prop.getProperty("GhanaWebConsulateLocalURL"));	
+			//driver.get(prop.getProperty("GhanaWebURL"));
+		}
 		Assert.assertEquals(driver.getTitle(), TestUtil.readDataFromExcellString(13, 1, 0), "Consulate login page is not displayed");
 		TestUtil.writeStringValue(13, 1, 1);
 		highAndConsulateLoginPage.passUserName(prop.getProperty("UserNameCN"));		

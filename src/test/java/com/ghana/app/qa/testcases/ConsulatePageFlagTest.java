@@ -10,6 +10,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -34,9 +35,6 @@ public class ConsulatePageFlagTest extends DriverInit {
 			IOException {
 		homePage.clickOnApplyVisa();
 		visaCategoriesPage.clickOnVisaType();
-		signUpPage.clickOnCheckBoxes();
-		signUpPage.selectRadioButton();
-		signUpPage.verifyRadioButtonSelected();
 		signUpPage.SelectPassportType();
 		signUpPage.selectNationality();
 		Thread.sleep(1000);
@@ -47,6 +45,9 @@ public class ConsulatePageFlagTest extends DriverInit {
 		signUpPage.passEmailId(TestUtil.readDataFromExcellString(5, 12, 0));
 		signUpPage.passReEmailId(TestUtil.readDataFromExcellString(5, 13, 0));
 		signUpPage.enterCaptchaField();
+		TestUtil.clickOnElement(signUpPage.selectOneRadioButton());
+		TestUtil.clickOnElement(signUpPage.termsCheckboxselect());
+		TestUtil.clickOnElement(signUpPage.clickOnSelectAll());
 		signUpPage.selectDateOfBirth(TestUtil
 				.readDataFromExcellString(5, 14, 0));
 		signUpPage.continueBtn();
@@ -206,7 +207,12 @@ public class ConsulatePageFlagTest extends DriverInit {
 		Thread.sleep(5000);		
 		TestUtil.toOpenNewTab();
 		TestUtil.toSwitchBetweenWindows(1);
-		driver.get(prop.getProperty("HCDLoginURL"));	
+		if (prop.getProperty("server").equalsIgnoreCase("Global")) {
+			driver.get(prop.getProperty("GhanaWebConsulateGlobalURL"));				 
+		} else if (prop.getProperty("server").equalsIgnoreCase("Local")) {
+			driver.get(prop.getProperty("GhanaWebConsulateLocalURL"));	
+			//driver.get(prop.getProperty("GhanaWebURL"));
+		}	
 		highAndConsulateLoginPage.passUserName(prop.getProperty("UserNameCN"));
 		highAndConsulateLoginPage.passPassword(prop.getProperty("PassWordCN"));
 		highAndConsulateLoginPage.clickOnLoginButton();
@@ -215,94 +221,97 @@ public class ConsulatePageFlagTest extends DriverInit {
 	}
 
 	@Test(priority = 8, description = "This test will verify we navigated to Welcome To Ghana Embassy page upon cliclking on Login button")
-	public void verifyTitleOfConsulateTitle() {
-		softAssertion.assertEquals(highAndConsulateLoginPage.getTitleOfConsulate(), prop.getProperty("titleOfBucketPage"),
+	public void verifyTitleOfConsulateTitle() throws IOException, InterruptedException {
+		Assert.assertEquals(highAndConsulateLoginPage.getTitleOfConsulate(), TestUtil.readDataFromExcellString(13, 3, 0),
 				"We are not navigate to consulate dashboard page after enetering valid creadentials");	
-		// print the value of present app in new application bucket , HCG application and Approve application
-		softAssertion.assertAll();
+		TestUtil.writeStringValue(13, 3, 1);
 	}  
 
 	@Test(priority = 9, description = "This test will verify we navigated to Welcome To Ghana Embassy page upon cliclking on Login button" )
-	public void clickOnNewApplicationCN() throws InterruptedException {
+	public void clickOnNewApplicationCN() throws InterruptedException, IOException {
 		System.out.println("HI2");
 		Thread.sleep(3000);	
-		System.out.println("newApplication==>" +prop.getProperty("newApplicationBucket"));
+		System.out.println("newApplication==>" +TestUtil.readDataFromExcellString(13, 4, 0));
 		System.out.println("consulatedashBoardPage.textNewApplicationBucket()==>" +consulatedashBoardPage.textNewApplicationBucket());
-		softAssertion.assertEquals(consulatedashBoardPage.textNewApplicationBucket(), prop.getProperty("newApplicationBucket"),
-				"We are not in new Application bucket");		
-		softAssertion.assertEquals(TestUtil.getTextFromApplicationID(), applicationID,
+		Assert.assertEquals(consulatedashBoardPage.textNewApplicationBucket(),TestUtil.readDataFromExcellString(13, 4, 0),
+				"We are not in new Application bucket");
+		TestUtil.writeStringValue(13, 4, 1);
+		Assert.assertEquals(TestUtil.getTextFromApplicationID(), applicationID,
 				"We are not navigate to Applicant Dashboard page upon clicking on New Application from Applicant Dashboard");
 		TestUtil.clickOnElement();
-		softAssertion.assertEquals(applicantDashBoardPage.titleOfApplicationDetailsPage(), prop.getProperty("applicantDashboardTitle"),
+		Assert.assertEquals(applicantDashBoardPage.titleOfApplicationDetailsPage(), TestUtil.readDataFromExcellString(14, 1, 0),
 				"We are not navigate to Applicant Dashboard page upon clicking on New Application from Applicant Dashboard");
-		softAssertion.assertAll();
+		TestUtil.writeStringValue(14, 1, 1);
 	}
 	
 	@Test(priority = 10)
-	public void verfiyTitleOfCNDocumentVerificatonPageCN() throws InterruptedException {
+	public void verfiyTitleOfCNDocumentVerificatonPageCN() throws InterruptedException, IOException {
 		applicantDashBoardPage.clickOnDocumentVeri();
-		softAssertion.assertEquals(cNDocumentVerificaton.titleOfCNDocumentVerificatonPage(), prop.getProperty("documentVerificationTitle"),
+		Assert.assertEquals(cNDocumentVerificaton.titleOfCNDocumentVerificatonPage(), TestUtil.readDataFromExcellString(14, 36, 0),
 				"We are not navigate to Document Verification page upon clicking on Document Verification from Applicant Dashboard");
-		softAssertion.assertAll();
+		TestUtil.writeStringValue(14, 36, 1);
 	}
 
 	@Test(priority =11, description = "Click On Reject And Verify Pop Text and then click on Cross, Verify that on which page navigated")
-	public void clickOnRejectAndVerifyPopText2CN(){
+	public void clickOnRejectAndVerifyPopText2CN() throws IOException, InterruptedException{
 		cNDocumentVerificaton.clickOnReject();
-		cNDocumentVerificaton.passInReason(prop.getProperty("reasonOfFlagCN"));
+		cNDocumentVerificaton.passInReason(TestUtil.readDataFromExcellString(18, 1, 0));
+		TestUtil.writeStringValue(18, 1, 1);
 		cNDocumentVerificaton.getTextFromFlagButtonFromCN();
 		cNDocumentVerificaton.clickOnFlagAndReject();
-		softAssertion.assertEquals(highAndConsulateLoginPage.getTitleOfConsulate(), prop.getProperty("titleOfBucketPage"),
+		Assert.assertEquals(highAndConsulateLoginPage.getTitleOfConsulate(), TestUtil.readDataFromExcellString(13, 3, 0),
 				"We are not navigate to consulate dashboard page after enetering valid creadentials");			
-		softAssertion.assertAll();
-	
+		TestUtil.writeStringValue(18, 2, 1);
 	}
 	@Test(priority = 12, description = "This test will verify whether application is sent to HCD side")
-	public void verifyApplicaInRejectApplicationBucket() throws InterruptedException {
+	public void verifyApplicaInRejectApplicationBucket() throws InterruptedException, IOException {
 		// check whether application removed from new application bucket and added in HCG application iin count
 		System.out.println("HEllllllllllllllllllllllOO");
 		System.out.println("getTextFromFlagButtonFromCN==>" +getTextFromFlagButtonFromCN);
-		softAssertion.assertEquals(consulatedashBoardPage.textFlaggedApplicationBucket(), getTextFromFlagButtonFromCN,
+		Assert.assertEquals(consulatedashBoardPage.textFlaggedApplicationBucket(), getTextFromFlagButtonFromCN,
 				"We are not in Flagged Application bucket to check the application is present after Flagged by CN");		
 		TestUtil.clickOnElement();
 		consulatedashBoardPage.confirmationPop2ApplicationSentToFlag();
 		System.out.println("consulatedashBoardPage.confirmationPop2ApplicationSentToFlag();;==>" +consulatedashBoardPage.confirmationPop2ApplicationSentToFlag());
-		softAssertion.assertEquals(consulatedashBoardPage.confirmationPop2ApplicationSentToFlag(), prop.getProperty("confirmationFromRejectAndApprovePopup"),
+		Assert.assertEquals(consulatedashBoardPage.confirmationPop2ApplicationSentToFlag(), TestUtil.readDataFromExcellString(17, 22, 0),
 				"Confirmation popup is not displayed upon clicking on Application which is sent to Flag bucket");
+		TestUtil.writeStringValue(18, 3, 1);
 		System.out.println("consulatedashBoardPage.textFromPop1PopApplicationSentToHCD();==>" +consulatedashBoardPage.textFromPop2ApplicationSentToRejected());
 		//softAssertion.assertEquals(consulatedashBoardPage.textFromPop1PopApplicationSentToHCD(), "This application is already sent to High Commsion for"
 			//	+"confirmation, Are you sure you want to open this?",
 			//	"Application is not sent to HCD side(Checked in Bucket) even after approved the application");	
-		softAssertion.assertAll();
+	
 	}
 	
 	@Test(priority = 13, description = "This test will verify whether application is opens upon clicing on Open button and also clicking back button navigates to Bucket")
-	public void verifyApplicationSentToRejectBucketOpens() throws InterruptedException {
+	public void verifyApplicationSentToRejectBucketOpens() throws InterruptedException, IOException {
 		consulatedashBoardPage.clickOnOpenButtonFromFlagApplication();
-		softAssertion.assertEquals(applicantDashBoardPage.titleOfApplicationDetailsPage(), prop.getProperty("applicantDashboardTitle"),
+		Assert.assertEquals(applicantDashBoardPage.titleOfApplicationDetailsPage(), TestUtil.readDataFromExcellString(14, 1, 0),
 				"We are not navigate to Applicant Dashboard page upon clicking on New Application from Applicant Dashboard");
-		applicantDashBoardPage.clickOnBackButton();
-		softAssertion.assertEquals(highAndConsulateLoginPage.getTitleOfConsulate(),  prop.getProperty("titleOfBucketPage"),
+		TestUtil.writeStringValue(18, 4, 1);
+		applicantDashBoardPage.clickOnCancelButton();
+		Assert.assertEquals(highAndConsulateLoginPage.getTitleOfConsulate(),  TestUtil.readDataFromExcellString(13, 3, 0),
 				"We are not navigate to consulate dashboard page after enetering valid creadentials");
-		softAssertion.assertAll();
+		TestUtil.writeStringValue(18, 5, 1);
 		
 	}
 	@Test(priority = 14, description = "This test will verify whether application is opens upon clicing on Open button and also clicking back button navigates to Bucket")
-	public void verifyCanceAndCrossButton() throws InterruptedException {
+	public void verifyCanceAndCrossButton() throws InterruptedException, IOException {
 		Thread.sleep(3000);
 		TestUtil.clickOnElement();
 		Thread.sleep(3000);
 		consulatedashBoardPage.crossButtonFromFlagBucket();
-		softAssertion.assertEquals(highAndConsulateLoginPage.getTitleOfConsulate(), prop.getProperty("titleOfBucketPage"),
+		softAssertion.assertEquals(highAndConsulateLoginPage.getTitleOfConsulate(), TestUtil.readDataFromExcellString(13, 3, 0),
 				"We are not navigate to consulate dashboard page after enetering valid creadentials");
 		Thread.sleep(3000);
+		TestUtil.writeStringValue(18, 6, 1);
 		TestUtil.clickOnElement();
 		Thread.sleep(3000);		
 		consulatedashBoardPage.cancelButtonFromFlag();	
-		softAssertion.assertEquals(highAndConsulateLoginPage.getTitleOfConsulate(), prop.getProperty("titleOfBucketPage"),
+		softAssertion.assertEquals(highAndConsulateLoginPage.getTitleOfConsulate(), TestUtil.readDataFromExcellString(13, 3, 0),
 				"We are not navigate to consulate dashboard page after enetering valid creadentials");
 		System.out.println("2222");
-		softAssertion.assertAll();
+		TestUtil.writeStringValue(18, 7, 1);
 		System.out.println("Passed");	
 		TestUtil.toCloseNewTab();	
 	}	

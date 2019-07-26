@@ -233,6 +233,7 @@ public class SignUpPage extends TestBase {
 	}
 
 	public void selectVisaLocation() throws InterruptedException, IOException {
+		Thread.sleep(2000);
 		TestUtil.actionClassMethod(visaLocation);
 		System.out.println("Total visa count ==>" + totalVisaLocationActual());
 		for (WebElement visa : VisaLocationCount) {

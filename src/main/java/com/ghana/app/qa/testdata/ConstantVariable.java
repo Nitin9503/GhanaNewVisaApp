@@ -36,8 +36,8 @@ public class ConstantVariable {
 	//TestData
 	public static int totalPassportTypeInReq=5;
 	public static int totalCountryListInReq=250;
-	public static int totalPortArrivalInReq=2;
-	public static int totalVisaTypeExpecteed=7;
+	public static int totalPortArrivalInReq=6;
+	public static int totalVisaTypeExpecteed=5;
 	public static int totalVisaLocationExpected=3;
 	public static String nationalityName = "India"; // India,
 	public static String portOfArrival = "Kotoka Accra Airport";

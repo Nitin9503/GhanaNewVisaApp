@@ -203,7 +203,12 @@ public class ConsulatePageRejectTest extends DriverInit {
 		Thread.sleep(5000);		
 		TestUtil.toOpenNewTab();
 		TestUtil.toSwitchBetweenWindows(1);
-		driver.get(prop.getProperty("HCDLoginURL"));	
+		if (prop.getProperty("server").equalsIgnoreCase("Global")) {
+			driver.get(prop.getProperty("GhanaWebConsulateGlobalURL"));				 
+		} else if (prop.getProperty("server").equalsIgnoreCase("Local")) {
+			driver.get(prop.getProperty("GhanaWebConsulateLocalURL"));	
+			//driver.get(prop.getProperty("GhanaWebURL"));
+		}
 		highAndConsulateLoginPage.passUserName(prop.getProperty("UserNameCN"));
 		highAndConsulateLoginPage.passPassword(prop.getProperty("PassWordCN"));
 		highAndConsulateLoginPage.clickOnLoginButton();

@@ -3,9 +3,11 @@ package com.ghana.app.qa.testcases;
 import static com.ghana.app.qa.testdata.ConstantVariable.*;
 
 import java.io.IOException;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import static com.ghana.app.qa.util.TestUtil.*;
 
+import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -72,7 +74,8 @@ public class PersonalInfoPageTest extends DriverInit {
 
 	@Test(priority = 5)
 	public void passFirstNameTest() throws InterruptedException, IOException {
-		personalInfoPage.passFirstName(TestUtil.readDataFromExcellString(6, 5, 0));
+	
+		personalInfoPage.passFirstName(TestUtil.readDataFromExcellString(6, 5, 2));
 		Assert.assertEquals(personalInfoPage.getTextFromFirstName(), TestUtil.readDataFromExcellString(6, 5, 0), "First name is not matched when match with Test Data");
 		TestUtil.writeStringValue(6, 5, 1);
 	}

@@ -9,6 +9,7 @@ import static com.ghana.app.qa.util.TestUtil.prop;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -48,7 +49,7 @@ SoftAssert softAssertion = new SoftAssert();
 	}
 
 	@Test(priority = 2)
-	public void fillPersonalPageTest() throws InterruptedException, IOException {
+	public void fillFormAndPaymentTest() throws InterruptedException, IOException {
 		// ----------------------Personal info page //
 		// Test----------------------------------//
 		Thread.sleep(1000);
@@ -194,7 +195,13 @@ SoftAssert softAssertion = new SoftAssert();
 		System.out.println( "applicationID after payment==>visa" +applicationID);
 		TestUtil.toOpenNewTab();
 		TestUtil.toSwitchBetweenWindows(1);
-		driver.get(prop.getProperty("HCDLoginURL"));	
+		
+		if (prop.getProperty("server").equalsIgnoreCase("Global")) {
+			driver.get(prop.getProperty("GhanaWebConsulateGlobalURL"));				 
+		} else if (prop.getProperty("server").equalsIgnoreCase("Local")) {
+			driver.get(prop.getProperty("GhanaWebConsulateLocalURL"));	
+			//driver.get(prop.getProperty("GhanaWebURL"));
+		}	
 		highAndConsulateLoginPage.passUserName(prop.getProperty("UserNameCN"));
 		highAndConsulateLoginPage.passPassword(prop.getProperty("PassWordCN"));
 		highAndConsulateLoginPage.clickOnLoginButton();
@@ -210,152 +217,211 @@ SoftAssert softAssertion = new SoftAssert();
 		cNDocumentVerificaton.selectAllCheckBoxes();
 		cNDocumentVerificaton.clickOnApprove();
 		cNDocumentVerificaton.clickOnConfirmFromApprove();
+		Thread.sleep(3000);
 		TestUtil.toCloseNewTab();
 		TestUtil.toSwitchBetweenWindows(0);
 		Thread.sleep(3000);
 	}
 	
 	@Test(priority = 8, description = "This test will verify login functinality of HighCommission with valid creadentials and click on Login button")
-	public void loginIntoHighCommission() throws InterruptedException {
+	public void loginIntoHighCommission() throws InterruptedException, IOException {
 		Thread.sleep(3000);	
 		TestUtil.toOpenNewTab();
 		TestUtil.toSwitchBetweenWindows(1);	
-		driver.get(prop.getProperty("HCDLoginURL"));
+		if (prop.getProperty("server").equalsIgnoreCase("Global")) {
+			driver.get(prop.getProperty("GhanaWebConsulateGlobalURL"));				 
+		} else if (prop.getProperty("server").equalsIgnoreCase("Local")) {
+			driver.get(prop.getProperty("GhanaWebConsulateLocalURL"));	
+			//driver.get(prop.getProperty("GhanaWebURL"));
+		}
+		Assert.assertEquals(driver.getTitle(), TestUtil.readDataFromExcellString(19, 1, 0), "Consulate login page is not displayed");
+		TestUtil.writeStringValue(19, 1, 1);
 		highAndConsulateLoginPage.passUserName(prop.getProperty("UserNameHCD"));
 		highAndConsulateLoginPage.passPassword(prop.getProperty("PassWordHCD"));
+		TestUtil.writeStringValue(19, 2, 1);
 		highAndConsulateLoginPage.clickOnLoginButton();
+				
 	}
 	
 	@Test(priority=9, description = "This test will verify the title of HighCommission page after login" )
-	public void verifHighCommissionPageTitle(){
-		softAssertion.assertEquals(		
-				hCDDashboardPage.titleofHCDDashBoard(), prop.getProperty("titleOfBucketPage"),
+	public void verifHighCommissionPageTitle() throws IOException, InterruptedException{
+		Assert.assertEquals(		
+				hCDDashboardPage.titleofHCDDashBoard(), TestUtil.readDataFromExcellString(19, 3, 0),
 				"We are not navigate to High Commission dashboard page after enetering valid creadentials");
-		softAssertion.assertAll();
+		TestUtil.writeStringValue(19, 3, 1);
 	}
 	@Test(priority = 10, description = "This test will verify we navigated to HCDGeneral Verification page upon cliclking on New Application" )
-	public void clickOnNewApplication() throws InterruptedException {
-		//hCDDashboardPage.clickOnNewApplication();
-		// Get count of application from mumbai consulate and approve bucket and then perform verification
+	public void clickOnNewApplication() throws InterruptedException, IOException {
+		Assert.assertEquals(hCDDashboardPage.bucketNameInHCD(), TestUtil.readDataFromExcellString(5, 10, 0),
+				"Application is not mumbai bucket as we provided the visa location as mumbai");	
+		TestUtil.writeStringValue(19, 4, 1);
+		Assert.assertEquals(TestUtil.getTextFromApplicationID(), applicationID,
+				"We are not navigate to Applicant Dashboard page upon clicking on New Application from Applicant Dashboard");				
 		TestUtil.clickOnElement();
-		softAssertion.assertEquals(hCDApplicantInfoPage.getTitleOfHCDGGeneralVerifi(), prop.getProperty("hCDGeneralVerificationTitle"),
+		Assert.assertEquals(hCDApplicantInfoPage.getTitleOfHCDGGeneralVerifi(), TestUtil.readDataFromExcellString(20, 1, 0),
 				"We are not navigate to HCDGeneral Verification page upon clicking on New Application from HCD Dashboard");
-		softAssertion.assertAll();
+		TestUtil.writeStringValue(20, 1, 1);
 	}
+	
 	@Test(priority = 11, description = "Here we are getting text from Applicant Information and comparing with Applicant filed data")
-	public void getTextFromApplicantInformation() throws InterruptedException {
+	public void getTextFromApplicantInformation() throws InterruptedException, IOException {
 		Thread.sleep(2000);
-	//	hCDDocumentVerificationPage.previousButtonFromDocument();
+	/*//	hCDDocumentVerificationPage.previousButtonFromDocument();
 		String value  = hCDApplicantInfoPage.getTextFullName().trim();
 	System.out.println("valuevaluevalue=>" +value);
 		System.out.println("Text from HCD==>"  +hCDApplicantInfoPage.getTextFullName());
-		System.out.println("Text From Applicant++" +firstName + " " +lastName);
-		softAssertion.assertEquals(value, (firstName + " " +lastName),
-				"Provided and Get firstName are not matched");
-		softAssertion.assertEquals(hCDApplicantInfoPage.getTextPassportNumberHCD(), (passportNumber),
+		System.out.println("Text From Applicant++" +firstName + " " +lastName);*/
+	
+		Assert.assertEquals(hCDApplicantInfoPage.getTextVisaFee(), (TestUtil.readDataFromExcellString(5, 9, 0)),
+				"Provided and Get Visa fees are not matched in HCD");
+		TestUtil.writeStringValue(20, 2, 1);
+		Assert.assertEquals(hCDApplicantInfoPage.getTextFullName(), (TestUtil.readDataFromExcellString(6, 5, 0) + " " + TestUtil.readDataFromExcellString(6, 7, 0)),
+				"Provided and Get firstName are not matched in HCD");
+		TestUtil.writeStringValue(20, 3, 1);
+		Assert.assertEquals(hCDApplicantInfoPage.getTextPassportNumberHCD(), (passportNumber),
 				"Provided and Get Passport Number are not matched");
-		/*softAssertion.assertEquals(hCDApplicantInfoPage.getTextDateOfBirthHCD(), (birthDate),
+		TestUtil.writeStringValue(20, 4, 1);		
+		Assert.assertEquals(hCDApplicantInfoPage.getTextDateOfBirthHCD(), TestUtil.readDataFromExcellString(5, 14, 0),
 				"Provided and Get Birth Date  are not matched");
-		softAssertion.assertEquals(hCDApplicantInfoPage.getTextPassportDateOfIssueHCD(), (passportIssuedDate),
+		TestUtil.writeStringValue(20, 5, 1);		
+		Assert.assertEquals(hCDApplicantInfoPage.getTextPassportDateOfIssueHCD(), TestUtil.readDataFromExcellString(6, 9, 0),
 				"Provided and Get Passport Issued Date are not matched");
-		softAssertion.assertEquals(hCDApplicantInfoPage.getTextPassportExpiryDateHCD(), (passportExpiryDate),
-				"Provided and Get Passport Expiry Date are not matched");*/
-		softAssertion.assertAll();
+		TestUtil.writeStringValue(20, 6, 1);
+		Assert.assertEquals(hCDApplicantInfoPage.getTextPassportExpiryDateHCD(), TestUtil.readDataFromExcellString(6, 10, 0),
+				"Provided and Get Passport Expiry Date are not matched");
+		TestUtil.writeStringValue(20, 7, 1);
 	}
 	
 	@Test(priority = 12, description = "Here we are getting text from Address Information and comparing with Applicant filed data")
-	public void getTextFromAddressInformation() throws InterruptedException {
-
-		softAssertion.assertEquals(hCDApplicantInfoPage.getTextEmailIdHCD(), (emailId),
-				"Provided and Get firstName are not matched");
-		softAssertion.assertEquals(hCDApplicantInfoPage.getTextPhoneNumberHCD(), (phoneNumber),
-				"Provided and Get Passport Number are not matched");
-		softAssertion.assertEquals(hCDApplicantInfoPage.getTextLandmarkHCD(), (Landmark),
-				"Provided and Get Landmark are not matched");
-		softAssertion.assertEquals(hCDApplicantInfoPage.getTextAddressLine1HCD(), (FlatNo + "," + StreetName),
+	public void getTextFromAddressInformation() throws InterruptedException, IOException {
+		
+		Assert.assertEquals(hCDApplicantInfoPage.getTextFormerNationalityHCD(), (TestUtil.readDataFromExcellString(7, 3, 0)),
+				"Provided and Get Former Nationality are not matched in HCD");
+		TestUtil.writeStringValue(20, 8, 1);
+		Assert.assertEquals(hCDApplicantInfoPage.getTextNationalityHCD(), (TestUtil.readDataFromExcellString(5, 7, 0)),
+				"Provided and Get Nationality are not matched in HCD");
+		TestUtil.writeStringValue(20, 9, 1);
+		Assert.assertEquals(hCDApplicantInfoPage.getTextEmailIdHCD(), TestUtil.readDataFromExcellString(5, 12, 0),
+				"Provided and Get firstName are not matched in HCD");
+		TestUtil.writeStringValue(20, 11, 1);
+		Assert.assertEquals(hCDApplicantInfoPage.getTextPhoneNumberHCD(), TestUtil.readDataFromExcellString(5, 11, 0),
+				"Provided and Get Passport Number are not matched in HCD");
+		TestUtil.writeStringValue(20, 12, 1);
+		Assert.assertEquals(hCDApplicantInfoPage.getTextLandmarkHCD(), TestUtil.readDataFromExcellString(7, 6, 0),
+				"Provided and Get Landmark are not matched in HCD");
+		TestUtil.writeStringValue(20, 13, 1);
+		Assert.assertEquals(hCDApplicantInfoPage.getTextAddressLine1HCD(), (TestUtil.readDataFromExcellString(7, 4, 0) + "," + TestUtil.readDataFromExcellString(7, 5, 0)),
 				"Provided and Get Birth Date  are not matched");
-		softAssertion.assertEquals(hCDApplicantInfoPage.getTextcityAndPinHCD(), (cityName + "," + pinCode),
+		TestUtil.writeStringValue(20, 14, 1);
+		Assert.assertEquals(hCDApplicantInfoPage.getTextcityAndPinHCD(), (TestUtil.readDataFromExcellString(7, 8, 0) + "," + TestUtil.readDataFromExcellString(7, 7, 0)),
 				"Provided and Get Birth Place  are not matched");
-		softAssertion.assertEquals(hCDApplicantInfoPage.getTextEm_state(), (stateName),
+		TestUtil.writeStringValue(20, 15, 1);
+		Assert.assertEquals(hCDApplicantInfoPage.getTextEm_state(), (TestUtil.readDataFromExcellString(7, 9, 0)),
 				"Provided and Get Passport Issued Date are not matched");
-		softAssertion.assertEquals(hCDApplicantInfoPage.getTextEm_country(), (countryName),
+		TestUtil.writeStringValue(20, 16, 1);
+		Assert.assertEquals(hCDApplicantInfoPage.getTextEm_country(), (TestUtil.readDataFromExcellString(7, 10, 0)),
 				"Provided and Get Passport Expiry Date are not matched");
-		softAssertion.assertAll();
+		TestUtil.writeStringValue(20, 17, 1);
+	
 	
 	}
 
 	@Test(priority = 13, description = "Here we are getting text from Travel Information and comparing with Applicant filed data")
-	public void getTextFromTravelInformation() throws InterruptedException {
-
-		softAssertion.assertEquals(hCDApplicantInfoPage.getTextRefName1HCD(), (priFirstName + " " +priLastName),
+	public void getTextFromTravelInformation() throws InterruptedException, IOException {
+		
+		
+		Assert.assertEquals(hCDApplicantInfoPage.getTextDateOfDepartureHCD(), (TestUtil.readDataFromExcellString(9, 3, 0)),
+				"Provided and Get Data Of Departure are not matched");
+		TestUtil.writeStringValue(20, 19, 1);	
+		Assert.assertEquals(hCDApplicantInfoPage.getTextTicketNumberHCD(), (TestUtil.readDataFromExcellString(9, 5, 0)),
+				"Provided and Get Ticket number is not matched");
+		TestUtil.writeStringValue(20, 20, 1);
+		Assert.assertEquals(hCDApplicantInfoPage.getTextTravellingByHCD(), (TestUtil.readDataFromExcellString(9, 6, 0)),
+				"Provided and Get Travel By is not matched");
+		TestUtil.writeStringValue(20, 21, 1);		
+		Assert.assertEquals(hCDApplicantInfoPage.getTextPurposeToVisitHCD(), (TestUtil.readDataFromExcellString(9, 7, 0)),
+				"Provided and Get Purpose of Visit is not matched");
+		TestUtil.writeStringValue(20, 22, 1);
+		Assert.assertEquals(hCDApplicantInfoPage.getTextRefName1HCD(), TestUtil.readDataFromExcellString(9, 8, 0)+" "+(TestUtil.readDataFromExcellString(9, 9, 0)),
 				"Provided and Get firstName are not matched");
-		softAssertion.assertEquals(hCDApplicantInfoPage.getTextRefContact1HCD(), (primaryRefrencePhoneNo),
+		TestUtil.writeStringValue(20, 28, 1);
+		Assert.assertEquals(hCDApplicantInfoPage.getTextRefContact1HCD(), TestUtil.readDataFromExcellString(9, 15, 0),
 				"Provided and Get Passport Number are not matched");
+		TestUtil.writeStringValue(20, 23, 1);
 		System.out.println("Text from HCD==>"  +hCDApplicantInfoPage.getTextRefAddress1HCD());
 		System.out.println("Text From Applicant++" +primaryAddress + "," + primaryCity + "," + primaryState + "," + primaryCountry + "," + primaryPinCode);	
 		
-		softAssertion.assertEquals(hCDApplicantInfoPage.getTextRefAddress1HCD(),
-				(primaryAddress + "," + primaryCity + "," + primaryState + "," + primaryCountry + "," + primaryPinCode),
+		Assert.assertEquals(hCDApplicantInfoPage.getTextRefAddress1HCD(),
+				TestUtil.readDataFromExcellString(9, 10, 0) + "," + TestUtil.readDataFromExcellString(9, 12, 0) + "," + TestUtil.readDataFromExcellString(9, 13, 0) + "," + TestUtil.readDataFromExcellString(9, 14, 0) + "," + TestUtil.readDataFromExcellString(9, 11, 0),
 				"Provided and Get Landmark are not matched 1");
-		softAssertion.assertEquals(hCDApplicantInfoPage.getTextRefCity1HCD(), (primaryCity + "," + primaryPinCode),
+		TestUtil.writeStringValue(20, 24, 1);
+		Assert.assertEquals(hCDApplicantInfoPage.getTextRefCity1HCD(), (TestUtil.readDataFromExcellString(9, 12, 0) + "," + TestUtil.readDataFromExcellString(9, 11, 0)),
 				"Provided and Get Birth Place  are not matched");
-		softAssertion.assertEquals(hCDApplicantInfoPage.getTextRefState1HCD(), (primaryState),
+		TestUtil.writeStringValue(20, 25, 1);
+		Assert.assertEquals(hCDApplicantInfoPage.getTextRefState1HCD(), TestUtil.readDataFromExcellString(9, 13, 0),
 				"Provided and Get Passport Issued Date are not matched");
-		softAssertion.assertEquals(hCDApplicantInfoPage.getTextRefCountry1HCD(), (primaryCountry),
+		TestUtil.writeStringValue(20, 26, 1);
+		Assert.assertEquals(hCDApplicantInfoPage.getTextRefCountry1HCD(), (TestUtil.readDataFromExcellString(9, 14, 0)),
 				"Provided and Get Passport Expiry Date are not matched");
-		softAssertion.assertEquals(hCDApplicantInfoPage.getTextRefName2HCD(), (secFirstName + " " + secLastName),
+		TestUtil.writeStringValue(20, 27, 1);
+		Assert.assertEquals(hCDApplicantInfoPage.getTextRefName2HCD(), (TestUtil.readDataFromExcellString(9, 16, 0) + " " + TestUtil.readDataFromExcellString(9, 17, 0)),
 				"Provided and Get firstName are not matched");
-		softAssertion.assertEquals(hCDApplicantInfoPage.getTextRefContact2HCD(), (secondaryRefrencePhoneNo),
+		TestUtil.writeStringValue(20, 29, 1);
+		Assert.assertEquals(hCDApplicantInfoPage.getTextRefContact2HCD(),(TestUtil.readDataFromExcellString(9, 23, 0)),
 				"Provided and Get Passport Number are not matched");
-		softAssertion.assertEquals(
-				hCDApplicantInfoPage.getTextRefAddress2HCD(), (secondaryAddress + "," + secondaryCity + "," + secondaryState
-						+ "," + secondaryCountry + "," + secondaryPinCode),
+		TestUtil.writeStringValue(20, 30, 1);
+		Assert.assertEquals(
+				hCDApplicantInfoPage.getTextRefAddress2HCD(), (TestUtil.readDataFromExcellString(9, 18, 0) + "," + TestUtil.readDataFromExcellString(9, 20, 0) + "," + TestUtil.readDataFromExcellString(9, 21, 0)
+						+ "," + TestUtil.readDataFromExcellString(9, 22, 0) + "," + TestUtil.readDataFromExcellString(9, 19, 0)),
 				"Provided and Get Landmark are not matched 2");
-		softAssertion.assertEquals(hCDApplicantInfoPage.getTextRefCity2HCD(), (secondaryCity + "," + secondaryPinCode),
+		TestUtil.writeStringValue(20, 31, 1);
+		Assert.assertEquals(hCDApplicantInfoPage.getTextRefCity2HCD(), (TestUtil.readDataFromExcellString(9, 20, 0) + "," + TestUtil.readDataFromExcellString(9, 19, 0)),
 				"Provided and Get Birth Place  are not matched");
-		softAssertion.assertEquals(hCDApplicantInfoPage.getTextRefState2HCD(), (secondaryState),
+		TestUtil.writeStringValue(20, 32, 1);
+		Assert.assertEquals(hCDApplicantInfoPage.getTextRefState2HCD(), (TestUtil.readDataFromExcellString(9, 21, 0)),
 				"Provided and Get Passport Issued Date are not matched");
-		softAssertion.assertEquals(hCDApplicantInfoPage.getTextrefCountry2HCD(), (secondaryCountry),
+		TestUtil.writeStringValue(20, 33, 1);
+		Assert.assertEquals(hCDApplicantInfoPage.getTextrefCountry2HCD(), (TestUtil.readDataFromExcellString(9, 14, 0)),
 				"Provided and Get Passport Expiry Date are not matched");
-		softAssertion.assertAll();
+		TestUtil.writeStringValue(20, 34, 1);
 		
 	}
 	
 	@Test(priority = 14, description = "click On Document verification and verified the title of Document verification page")
-	public void verfiyTitleOfCNDocumentVerificatonPage() throws InterruptedException {
+	public void verfiyTitleOfCNDocumentVerificatonPage() throws InterruptedException, IOException {
 		hCDGeneralVerificationPage.clickOnDocumentVeri();
-		softAssertion.assertEquals(hCDGeneralVerificationPage.titleOfCNDocumentVerificatonPage(), prop.getProperty("HCDDoccumentVerificationTitle"),
+		Assert.assertEquals(hCDGeneralVerificationPage.titleOfCNDocumentVerificatonPage(), TestUtil.readDataFromExcellString(20, 35, 0),
 				"We are not navigate to Document Verification page upon clicking on Document Verification from Applicant Dashboard");
-		softAssertion.assertAll();
+		TestUtil.writeStringValue(20, 35, 1);
 	}
 	
 	@Test(priority = 15, description = "This test will verify whether we navigate to applicant info page upon clicking on previous button from Document verification page")
-	public void clickOnPreviousButtonAndVerifyTitleApplicantInformation() throws InterruptedException {
+	public void clickOnPreviousButtonAndVerifyTitleApplicantInformation() throws InterruptedException, IOException {
 		hCDDocumentVerificationPage.previousButtonFromDocument();
-		softAssertion.assertEquals(hCDApplicantInfoPage.getTitleOfHCDGGeneralVerifi(), prop.getProperty("hCDGeneralVerificationTitle"),
+		Assert.assertEquals(hCDApplicantInfoPage.getTitleOfHCDGGeneralVerifi(), TestUtil.readDataFromExcellString(20, 1, 0),
 				"We are not navigate to HCDGeneral Verification page upon clicking on Previous Button from Applicant Information");
-		softAssertion.assertAll();
+		TestUtil.writeStringValue(20, 36, 1);
 	}
 	@Test(priority = 16, description = "This test will verify whether we navigate to Document verification page upon clicking on next button from applicant info page ")
-	public void clickOnNextButtonAndVerifyTitleDocumentVerifi() throws InterruptedException {
+	public void clickOnNextButtonAndVerifyTitleDocumentVerifi() throws InterruptedException, IOException {
 		hCDGeneralVerificationPage.clickOnnNxtButton();
-		softAssertion.assertEquals(hCDGeneralVerificationPage.titleOfCNDocumentVerificatonPage(), prop.getProperty("HCDDoccumentVerificationTitle"),
-				"We are not navigate to Document Verification page upon clicking on Document Verification from Applicant Dashboard");
-		softAssertion.assertAll();
+		Assert.assertEquals(hCDGeneralVerificationPage.titleOfCNDocumentVerificatonPage(), TestUtil.readDataFromExcellString(20, 35, 0), "We are not navigate to Document Verification page upon clicking on Document Verification from Applicant Dashboard");
+		TestUtil.writeStringValue(20, 37, 1);
 	
 	}
 
 	@Test(priority = 17 , description = "This test will verify whether check boxes is selected or not on Document verification")
-	public void selectAllCheckBoxAndVerify() throws InterruptedException {
+	public void selectAllCheckBoxAndVerify() throws InterruptedException, IOException {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);	
 		hCDDocumentVerificationPage.selectAllCheckBoxes();
 		hCDDocumentVerificationPage.verifyAllCheckBox();
 		System.out.println("selectedBoxDoc" +selectedBoxDocAll);
-		softAssertion.assertTrue(selectedBoxDocAll,
+		Assert.assertTrue(selectedBoxDocAll,
 				"Check Boxes is not selected upon clicking on [Select All Check] only select all button from Document Verification page");		
-		softAssertion.assertTrue(selectedCheckBoxOnDocSingle,
+		TestUtil.writeStringValue(21, 1, 1);
+		Assert.assertTrue(selectedCheckBoxOnDocSingle,
 				"All check Boxes is not selected upon clicking on [Select All Check] from Document Verification page");
-		softAssertion.assertAll();
+		TestUtil.writeStringValue(21, 2, 1);
 	}
 	@Test(priority = 18, description = "This test will verify whether check boxes is selected (one by one)or not on Document verification")
 	public void selectOneByOneCheckBoxAndVerify() throws InterruptedException {
@@ -365,108 +431,106 @@ SoftAssert softAssertion = new SoftAssert();
 		System.out.println("selectedBoxDoc" +selectedCheckBoxOnDocSingle);
 		hCDDocumentVerificationPage.verifyOneByOneCheckBox();
 		System.out.println("selectedBoxDoc" +selectedCheckBoxOnDocSingle);
-		softAssertion.assertTrue(selectedCheckBoxOnDocSingle,
+		Assert.assertTrue(selectedCheckBoxOnDocSingle,
 				"Check Boxes is not selected upon clicking on [One By One Check] from Document Verification page");
-		softAssertion.assertAll();
 	}
 
 		@Test(priority = 19, description = "Click On Approve And Verify Pop Text and then click on Cancel, Verify that on which page navigated")
-		public void clickOnApproveAndVerifyPopText() throws InterruptedException {
+		public void clickOnApproveAndVerifyPopText() throws InterruptedException, IOException {
 			hCDDocumentVerificationPage.clickOnApprove();
-			softAssertion.assertEquals(hCDDocumentVerificationPage.getTextFromAcceptConfirmationPop(), prop.getProperty("confirmationFromRejectAndApprovePopup"),
+			Assert.assertEquals(hCDDocumentVerificationPage.getTextFromAcceptConfirmationPop(), TestUtil.readDataFromExcellString(20, 35, 0),
 					"Confirmation popup is not displayed upon clicking on Approve from Document Verification");
+			TestUtil.writeStringValue(21, 3, 1);
 			hCDDocumentVerificationPage.clickOnCancelFromApprove();
-			softAssertion.assertEquals(hCDDocumentVerificationPage.titleOfCNDocumentVerificatonPage(),  prop.getProperty("HCDDoccumentVerificationTitle"),
+			Assert.assertEquals(hCDDocumentVerificationPage.titleOfCNDocumentVerificatonPage(),  TestUtil.readDataFromExcellString(20, 35, 0),
 					"Document Verification page is not displayed upon clicking on Cancel button from Confirmation popup");
-			softAssertion.assertAll();
+			TestUtil.writeStringValue(21, 4, 1);
 		}
 
 		@Test(priority = 20, description = "Click On Approve And Verify Pop Text and then click on Cross, Verify that on which page navigated")
-		public void clickOnApproveAndVerifyPopText1() throws InterruptedException {
+		public void clickOnApproveAndVerifyPopText1() throws InterruptedException, IOException {
 			Thread.sleep(3000);
 			hCDDocumentVerificationPage.clickOnApprove();
-			softAssertion.assertEquals(hCDDocumentVerificationPage.getTextFromAcceptConfirmationPop(), prop.getProperty("confirmationFromRejectAndApprovePopup"),
-					"Confirmation popup is not displayed upon clicking on Approve from Document Verification");
-			Thread.sleep(3000);
 			hCDDocumentVerificationPage.clickOnCloseApprove();
-			softAssertion.assertEquals(hCDDocumentVerificationPage.titleOfCNDocumentVerificatonPage(),  prop.getProperty("HCDDoccumentVerificationTitle"),
+			Assert.assertEquals(hCDDocumentVerificationPage.titleOfCNDocumentVerificatonPage(),  TestUtil.readDataFromExcellString(20, 35, 0),
 					"Document Verification page is not displayed upon clicking on Cross button from Confirmation popup");
-		
-			softAssertion.assertAll();
+			TestUtil.writeStringValue(21, 5, 1);
+			
 		}
 		@Test(priority =21, description = "Application is verified and approved")
-		public void passComment() {
-			hCDDocumentVerificationPage.passComment(prop.getProperty("passCommentFromHCDSide"));
+		public void passComment() throws IOException, InterruptedException {
+			hCDDocumentVerificationPage.passComment(TestUtil.readDataFromExcellString(21, 6, 0));
 			hCDDocumentVerificationPage.addCooment();
 			hCDDocumentVerificationPage.getTextFromAddedComment();
-			softAssertion.assertEquals(hCDDocumentVerificationPage.getTextFromAddedComment(), prop.getProperty("passCommentFromHCDSide"),
+			Assert.assertEquals(hCDDocumentVerificationPage.getTextFromAddedComment(), TestUtil.readDataFromExcellString(21, 6, 0),
 					"Latest passed comment is not matched after getting text from comment section");
-			softAssertion.assertAll();
 		}
 	
 	@Test(priority = 22, description = "Click On Approve And Verify Pop Text and then click on Cancel, Verify that on which page navigated")
-	public void approveApplication() throws InterruptedException {
+	public void approveApplication() throws InterruptedException, IOException {
 		hCDDocumentVerificationPage.selectAllCheckBoxes();	
 		System.out.println("approveApplication");
 		hCDDocumentVerificationPage.clickOnApprove();
 		hCDDocumentVerificationPage.getTextFromApproveButtonPop();
 		hCDDocumentVerificationPage.clickOnConfirmFromApprove();
 		System.out.println("approveApplication1");
-		softAssertion.assertEquals(		
-				hCDDashboardPage.titleofHCDDashBoard(), prop.getProperty("titleOfBucketPage"),
+		Assert.assertEquals(hCDDashboardPage.titleofHCDDashBoard(), TestUtil.readDataFromExcellString(19, 3, 0),
 				"We are not navigate to High Commission dashboard page after enetering valid creadentials");
-		softAssertion.assertAll();
-			
+		TestUtil.writeStringValue(21, 7, 1);	
 	}
 	@Test(priority = 23, description = "This test will verify Approved application by HCD Whether it is in Approved Bucket in HCD")
-	public void verifyApprovedApplicaIsInApproveBucketHCD() throws InterruptedException {
+	public void verifyApprovedApplicaIsInApproveBucketHCD() throws InterruptedException, IOException {
 		Thread.sleep(3000);	
 		System.out.println("getTextFromApproveFromHCD==>" +getTextFromApproveFromHCD);
 		System.out.println("hCDDashboardPage.getTextApprovedApplicationsBucket()==>" +hCDDashboardPage.getTextApprovedApplicationsBucket());
 		hCDDocumentVerificationPage.getTextconfirmFromApproveHCD();
-		softAssertion.assertEquals(hCDDashboardPage.getTextApprovedApplicationsBucket(), getTextFromApproveFromHCD,
-				"We are not in Approve Application bucket to check the application is present after approved by HCD");		
-		softAssertion.assertEquals(TestUtil.getTextFromApplicationID(), applicationID,
+		Assert.assertEquals(hCDDashboardPage.getTextApprovedApplicationsBucket(), getTextFromApproveFromHCD,
+				"We are not in Approve Application bucket to check the application is present after approved by HCD");	
+		TestUtil.writeStringValue(21, 8, 1);	
+		Assert.assertEquals(TestUtil.getTextFromApplicationID(), applicationID,
 				"Application is not matched with each other so it did not click on Application");
 		TestUtil.clickOnElement();
-		softAssertion.assertAll();
+		TestUtil.writeStringValue(21, 9, 1);	
 	//	TestUtil.toCloseNewTab();
 		
 	}
 	@Test(priority = 24, description = "This test will verify whether application is opens upon clicing on Open button and also clicking back button navigates to Bucket")
-	public void verifyApplicationSentOpens() throws InterruptedException {
+	public void verifyApplicationSentOpens() throws InterruptedException, IOException {
 		Thread.sleep(3000);
 		hCDDashboardPage.getTextConfirmationPopApproveBucket();
 		System.out.println("Confirmation popup==>" +hCDDashboardPage.getTextConfirmationPopApproveBucket());
-		softAssertion.assertEquals(hCDDashboardPage.getTextConfirmationPopApproveBucket(), prop.getProperty("confirmationFromRejectAndApprovePopup"),
+		Assert.assertEquals(hCDDashboardPage.getTextConfirmationPopApproveBucket(), TestUtil.readDataFromExcellString(21, 10, 0),
 				"Confirmation popup is not displayed upon clicking on Application which is sent to Approve Bucket");
+		TestUtil.writeStringValue(21, 10, 1);	
 		System.out.println("consulatedashBoardPage.textFromPop1PopApplicationSentToHCD();==>" +consulatedashBoardPage.textFromPop1PopApplicationSentToHCD());
 		hCDDashboardPage.clickOnOpenButtonFromApproveHCDBucket();
-		softAssertion.assertEquals(hCDApplicantInfoPage.getTitleOfHCDGGeneralVerifi(), prop.getProperty("hCDGeneralVerificationTitle"),
+		Assert.assertEquals(hCDApplicantInfoPage.getTitleOfHCDGGeneralVerifi(), TestUtil.readDataFromExcellString(20, 1, 0),
 				"We are not navigate to Applicant Dashboard page upon clicking on New Application from Applicant Dashboard");
-		hCDApplicantInfoPage.clickOnBackButton();
-		softAssertion.assertEquals(hCDDashboardPage.titleofHCDDashBoard(), prop.getProperty("titleOfBucketPage"),
+		TestUtil.writeStringValue(21, 11, 1);	
+		hCDApplicantInfoPage.clickOnCancelButton();	
+		Assert.assertEquals(hCDDashboardPage.titleofHCDDashBoard(), TestUtil.readDataFromExcellString(19, 3, 0),
 				"We are not navigate to HCD dashboard page after clicking on back button from Applicant Dashboard at HCD");
-		softAssertion.assertAll();
+		TestUtil.writeStringValue(21, 12, 1);
 		
 	}
 	
 	@Test(priority = 25, description = "This test will verify whether application is opens upon clicing on Open button and also clicking back button navigates to Bucket")
-	public void verifyCanceAndCrossButton() throws InterruptedException {
+	public void verifyCanceAndCrossButton() throws InterruptedException, IOException {
 		Thread.sleep(3000);
 		TestUtil.clickOnElement();
 		Thread.sleep(3000);
 		hCDDashboardPage.crossButtonPopApproveBucket();
-		softAssertion.assertEquals(hCDDashboardPage.titleofHCDDashBoard(), prop.getProperty("titleOfBucketPage"),
+		Assert.assertEquals(hCDDashboardPage.titleofHCDDashBoard(), TestUtil.readDataFromExcellString(19, 3, 0),
 				"We are not navigate to consulate dashboard page after enetering valid creadentials");
+		TestUtil.writeStringValue(21, 13, 1);
 		Thread.sleep(3000);
 		TestUtil.clickOnElement();
 		Thread.sleep(3000);		
 		hCDDashboardPage.cancelButtonPopApproveBucket();	
-		softAssertion.assertEquals(hCDDashboardPage.titleofHCDDashBoard(), prop.getProperty("titleOfBucketPage"),
+		Assert.assertEquals(hCDDashboardPage.titleofHCDDashBoard(), TestUtil.readDataFromExcellString(19, 3, 0),
 				"We are not navigate to consulate dashboard page after enetering valid creadentials");
+		TestUtil.writeStringValue(21, 14, 1);
 		System.out.println("2222");
-		softAssertion.assertAll();
 		System.out.println("Passed");	
 		TestUtil.toCloseNewTab();	
 	}
@@ -476,7 +540,12 @@ SoftAssert softAssertion = new SoftAssert();
 		Thread.sleep(5000);		
 		TestUtil.toOpenNewTab();
 		TestUtil.toSwitchBetweenWindows(1);
-		driver.get(prop.getProperty("HCDLoginURL"));	
+		if (prop.getProperty("server").equalsIgnoreCase("Global")) {
+			driver.get(prop.getProperty("GhanaWebConsulateGlobalURL"));				 
+		} else if (prop.getProperty("server").equalsIgnoreCase("Local")) {
+			driver.get(prop.getProperty("GhanaWebConsulateLocalURL"));	
+			//driver.get(prop.getProperty("GhanaWebURL"));
+		}
 		highAndConsulateLoginPage.passUserName(prop.getProperty("UserNameCN"));
 		highAndConsulateLoginPage.passPassword(prop.getProperty("PassWordCN"));
 		highAndConsulateLoginPage.clickOnLoginButton();
@@ -484,13 +553,14 @@ SoftAssert softAssertion = new SoftAssert();
 
 	}
 	@Test(priority = 27, description = "This test will verify whether application is sent to CN side from HCD side and application present in Approve Bucket")
-	public void verifyApproveBucktInCN() throws InterruptedException{	
+	public void verifyApproveBucktInCN() throws InterruptedException, IOException{	
 		hCDDocumentVerificationPage.getTextconfirmFromApproveHCD();
 		softAssertion.assertEquals(consulatedashBoardPage.textApprovedApplicationsBucket(), getTextFromApproveFromHCD,
 				"We are not in Approve Application bucket to check the application is present after approved by HCD");	
 		TestUtil.clickOnElement();
+		TestUtil.writeStringValue(21, 14, 1);
 		System.out.println("Application is approved by HCD");
-		softAssertion.assertAll();
+
 	}
 	
 	

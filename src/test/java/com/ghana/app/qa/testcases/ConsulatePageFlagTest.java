@@ -301,14 +301,14 @@ public class ConsulatePageFlagTest extends DriverInit {
 		TestUtil.clickOnElement();
 		Thread.sleep(3000);
 		consulatedashBoardPage.crossButtonFromFlagBucket();
-		softAssertion.assertEquals(highAndConsulateLoginPage.getTitleOfConsulate(), TestUtil.readDataFromExcellString(13, 3, 0),
+		Assert.assertEquals(highAndConsulateLoginPage.getTitleOfConsulate(), TestUtil.readDataFromExcellString(13, 3, 0),
 				"We are not navigate to consulate dashboard page after enetering valid creadentials");
 		Thread.sleep(3000);
 		TestUtil.writeStringValue(18, 6, 1);
 		TestUtil.clickOnElement();
 		Thread.sleep(3000);		
 		consulatedashBoardPage.cancelButtonFromFlag();	
-		softAssertion.assertEquals(highAndConsulateLoginPage.getTitleOfConsulate(), TestUtil.readDataFromExcellString(13, 3, 0),
+		Assert.assertEquals(highAndConsulateLoginPage.getTitleOfConsulate(), TestUtil.readDataFromExcellString(13, 3, 0),
 				"We are not navigate to consulate dashboard page after enetering valid creadentials");
 		System.out.println("2222");
 		TestUtil.writeStringValue(18, 7, 1);

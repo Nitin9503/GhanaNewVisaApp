@@ -3,26 +3,23 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.ghana.app.qa.testcases.ConsulatePageFlagTest">
+      <class name="com.ghana.app.qa.testcases.HighCommissionPageApproveTest">
         <methods>
-          <include name="clickOnNewApplicationCN"/>
-          <include name="loginIntoConsulate"/>
-          <include name="fillEmergencyPageTest"/>
+          <include name="clickOnApproveAndVerifyPopText1"/>
           <include name="tearDown"/>
-          <include name="verifyApplicaInRejectApplicationBucket"/>
-          <include name="verifyCanceAndCrossButton"/>
-          <include name="signUpAndFillSignUpPage"/>
-          <include name="fillTravelInfoPageTest"/>
-          <include name="verfiyTitleOfCNDocumentVerificatonPageCN"/>
-          <include name="clickOnRejectAndVerifyPopText2CN"/>
-          <include name="documentPageAndPaymentPageTest"/>
+          <include name="verifyApproveBucktInCN"/>
+          <include name="clickOnNextButtonAndVerifyTitleDocumentVerifi"/>
+          <include name="verifyApprovedApplicaIsInApproveBucketHCD"/>
+          <include name="getTextFromTravelInformation"/>
+          <include name="loginIntoConsulate"/>
+          <include name="passComment"/>
+          <include name="clickOnApproveAndVerifyPopText"/>
           <include name="setUp"/>
-          <include name="fillAddressinfoPageTest"/>
-          <include name="verifyApplicationSentToRejectBucketOpens"/>
-          <include name="fillPersonalPageTest"/>
-          <include name="verifyTitleOfConsulateTitle"/>
+          <include name="getTextFromApplicantInformation"/>
+          <include name="verifyApplicationSentOpens"/>
+          <include name="verfiyTitleOfCNDocumentVerificatonPage"/>
         </methods>
-      </class> <!-- com.ghana.app.qa.testcases.ConsulatePageFlagTest -->
+      </class> <!-- com.ghana.app.qa.testcases.HighCommissionPageApproveTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

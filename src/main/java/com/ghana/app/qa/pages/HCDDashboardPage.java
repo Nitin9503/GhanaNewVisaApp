@@ -18,7 +18,7 @@ public class HCDDashboardPage extends TestBase {
 
 		PageFactory.initElements(driver, this);
 	}
-
+	
 	@FindBy(xpath = "//ul[@class='list-group list-group-flush']")
 	List<WebElement> clickOnNewApplication;
 
@@ -254,6 +254,29 @@ public class HCDDashboardPage extends TestBase {
 	public String titleofHCDDashBoard() {
 		return driver.getTitle();
 
+	}
+	
+	public String bucketNameInHCD() throws IOException, InterruptedException{
+		
+		String bucketName[] = {"Mumbai" , "New Delhi" , "Kolkata"};
+		String value = null;		
+		for( String name : bucketName){
+			if(TestUtil.readDataFromExcellString(5, 10, 0).equalsIgnoreCase(name))
+			{
+				value =  name;
+				
+			} else if  (TestUtil.readDataFromExcellString(5, 10, 0).equalsIgnoreCase(name)){
+				value =  name;
+				
+			}else  if (TestUtil.readDataFromExcellString(5, 10, 0).equalsIgnoreCase(name)){
+				
+				value =  name;
+			}
+	
+		}
+	
+		return value;		
+		
 	}
 
 }

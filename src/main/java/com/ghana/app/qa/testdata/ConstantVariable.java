@@ -14,6 +14,12 @@ public class ConstantVariable {
 	public static boolean selectedBoxDocAll;
 	public static boolean selectedCheckBoxOnDocSingle;
 
+	// HCD side
+	
+	public static boolean unselectedBoxDocHCD;
+	public static boolean selectedBoxDocAllHCD;
+	
+	
 	// Buckets title
 	public static String newApplication = "";
 	public static String getTextFromApproveButtonFromCN = "";

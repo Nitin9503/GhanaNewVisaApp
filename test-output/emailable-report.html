@@ -31,40 +31,224 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">14</td><td class="numi">14</td><td class="numi">0</td><td class="numi">0</td><td class="numi">181.4 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">16</td><td class="numi">16</td><td class="numi">0</td><td class="numi_attn">11</td><td class="numi">279.1 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
+<tr><th colspan="4">Default test &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="11">com.ghana.app.qa.testcases.HighCommissionPageApproveTest</td><td><a href="#m1"><b>getTextFromApplicantInformation</b>  ("Here we are getting text from Applicant Information and comparing with Applicant filed data")</a></td><td class="numi">1</td><td>1565344252077</td><td class="numi">5164</td></tr><tr class="failedodd"><td><a href="#m2"><b>getTextFromTravelInformation</b>  ("Here we are getting text from Travel Information and comparing with Applicant filed data")</a></td><td class="numi">1</td><td>1565344259176</td><td class="numi">1714</td></tr><tr class="failedodd"><td><a href="#m3"><b>verfiyTitleOfCNDocumentVerificatonPage</b>  ("click On Document verification and verified the title of Document verification page")</a></td><td class="numi">1</td><td>1565344260891</td><td class="numi">1734</td></tr><tr class="failedodd"><td><a href="#m4"><b>clickOnNextButtonAndVerifyTitleDocumentVerifi</b>  ("This test will verify whether we navigate to Document verification page upon clicking on next button from applicant info page ")</a></td><td class="numi">1</td><td>1565344263992</td><td class="numi">1747</td></tr><tr class="failedodd"><td><a href="#m5"><b>clickOnApproveAndVerifyPopText</b>  ("Click On Approve And Verify Pop Text and then click on Cancel, Verify that on which page navigated")</a></td><td class="numi">1</td><td>1565344274766</td><td class="numi">753</td></tr><tr class="failedodd"><td><a href="#m6"><b>clickOnApproveAndVerifyPopText1</b>  ("Click On Approve And Verify Pop Text and then click on Cross, Verify that on which page navigated")</a></td><td class="numi">1</td><td>1565344275521</td><td class="numi">3125</td></tr><tr class="failedodd"><td><a href="#m7"><b>passComment</b>  ("Application is verified and approved")</a></td><td class="numi">1</td><td>1565344278648</td><td class="numi">1941</td></tr><tr class="failedodd"><td><a href="#m8"><b>verifyApprovedApplicaIsInApproveBucketHCD</b>  ("This test will verify Approved application by HCD Whether it is in Approved Bucket in HCD")</a></td><td class="numi">1</td><td>1565344292128</td><td class="numi">33145</td></tr><tr class="failedodd"><td><a href="#m9"><b>verifyApplicationSentOpens</b>  ("This test will verify whether application is opens upon clicing on Open button and also clicking back button navigates to Bucket")</a></td><td class="numi">1</td><td>1565344325274</td><td class="numi">12089</td></tr><tr class="failedodd"><td><a href="#m10"><b>loginIntoConsulate</b>  ("This test will verify login functinality with pass valid creadentials and click on Login button")</a></td><td class="numi">1</td><td>1565344359962</td><td class="numi">6014</td></tr><tr class="failedodd"><td><a href="#m11"><b>verifyApproveBucktInCN</b>  ("This test will verify whether application is sent to CN side from HCD side and application present in Approve Bucket")</a></td><td class="numi">1</td><td>1565344365977</td><td class="numi">1013</td></tr>
 <tr><th colspan="4">Default test &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="14">com.ghana.app.qa.testcases.ConsulatePageFlagTest</td><td><a href="#m1"><b>signUpAndFillSignUpPage</b>  </a></td><td class="numi">1</td><td>1564142910789</td><td class="numi">32136</td></tr><tr class="passedodd"><td><a href="#m2"><b>fillPersonalPageTest</b>  </a></td><td class="numi">1</td><td>1564142942928</td><td class="numi">2441</td></tr><tr class="passedodd"><td><a href="#m3"><b>fillAddressinfoPageTest</b>  </a></td><td class="numi">1</td><td>1564142945371</td><td class="numi">5853</td></tr><tr class="passedodd"><td><a href="#m4"><b>fillEmergencyPageTest</b>  </a></td><td class="numi">1</td><td>1564142951226</td><td class="numi">2363</td></tr><tr class="passedodd"><td><a href="#m5"><b>fillTravelInfoPageTest</b>  </a></td><td class="numi">1</td><td>1564142953591</td><td class="numi">3840</td></tr><tr class="passedodd"><td><a href="#m6"><b>documentPageAndPaymentPageTest</b>  ("Here verifying confirmation message and click on ok btn ")</a></td><td class="numi">1</td><td>1564142957433</td><td class="numi">19288</td></tr><tr class="passedodd"><td><a href="#m7"><b>loginIntoConsulate</b>  ("This test will verify login functinality with pass valid creadentials and click on Login button")</a></td><td class="numi">1</td><td>1564142976722</td><td class="numi">24204</td></tr><tr class="passedodd"><td><a href="#m8"><b>verifyTitleOfConsulateTitle</b>  ("This test will verify we navigated to Welcome To Ghana Embassy page upon cliclking on Login button")</a></td><td class="numi">1</td><td>1564143000928</td><td class="numi">228</td></tr><tr class="passedodd"><td><a href="#m9"><b>clickOnNewApplicationCN</b>  ("This test will verify we navigated to Welcome To Ghana Embassy page upon cliclking on Login button")</a></td><td class="numi">1</td><td>1564143001162</td><td class="numi">29975</td></tr><tr class="passedodd"><td><a href="#m10"><b>verfiyTitleOfCNDocumentVerificatonPageCN</b>  </a></td><td class="numi">1</td><td>1564143031140</td><td class="numi">985</td></tr><tr class="passedodd"><td><a href="#m11"><b>clickOnRejectAndVerifyPopText2CN</b>  ("Click On Reject And Verify Pop Text and then click on Cross, Verify that on which page navigated")</a></td><td class="numi">1</td><td>1564143032125</td><td class="numi">3133</td></tr><tr class="passedodd"><td><a href="#m12"><b>verifyApplicaInRejectApplicationBucket</b>  ("This test will verify whether application is sent to HCD side")</a></td><td class="numi">1</td><td>1564143035260</td><td class="numi">20436</td></tr><tr class="passedodd"><td><a href="#m13"><b>verifyApplicationSentToRejectBucketOpens</b>  ("This test will verify whether application is opens upon clicing on Open button and also clicking back button navigates to Bucket")</a></td><td class="numi">1</td><td>1564143055697</td><td class="numi">3152</td></tr><tr class="passedodd"><td><a href="#m14"><b>verifyCanceAndCrossButton</b>  ("This test will verify whether application is opens upon clicing on Open button and also clicking back button navigates to Bucket")</a></td><td class="numi">1</td><td>1564143058850</td><td class="numi">22516</td></tr>
+<tr class="passedodd"><td rowspan="16">com.ghana.app.qa.testcases.HighCommissionPageApproveTest</td><td><a href="#m12"><b>signUpAndFillSignUpPage</b>  </a></td><td class="numi">1</td><td>1565344100709</td><td class="numi">33487</td></tr><tr class="passedodd"><td><a href="#m13"><b>fillFormAndPaymentTest</b>  </a></td><td class="numi">1</td><td>1565344134197</td><td class="numi">2927</td></tr><tr class="passedodd"><td><a href="#m14"><b>fillAddressinfoPageTest</b>  </a></td><td class="numi">1</td><td>1565344137126</td><td class="numi">7845</td></tr><tr class="passedodd"><td><a href="#m15"><b>fillEmergencyPageTest</b>  </a></td><td class="numi">1</td><td>1565344144973</td><td class="numi">2770</td></tr><tr class="passedodd"><td><a href="#m16"><b>fillTravelInfoPageTest</b>  </a></td><td class="numi">1</td><td>1565344147745</td><td class="numi">4265</td></tr><tr class="passedodd"><td><a href="#m17"><b>documentPageAndPaymentPageTest</b>  ("Here verifying confirmation message and click on ok btn ")</a></td><td class="numi">1</td><td>1565344152013</td><td class="numi">38924</td></tr><tr class="passedodd"><td><a href="#m18"><b>getApproveFromCN</b>  ("This test will approve the application from CN")</a></td><td class="numi">1</td><td>1565344190938</td><td class="numi">26872</td></tr><tr class="passedodd"><td><a href="#m19"><b>loginIntoHighCommission</b>  ("This test will verify login functinality of HighCommission with valid creadentials and click on Login button")</a></td><td class="numi">1</td><td>1565344217811</td><td class="numi">22094</td></tr><tr class="passedodd"><td><a href="#m20"><b>verifHighCommissionPageTitle</b>  ("This test will verify the title of HighCommission page after login")</a></td><td class="numi">1</td><td>1565344239907</td><td class="numi">271</td></tr><tr class="passedodd"><td><a href="#m21"><b>clickOnNewApplication</b>  ("This test will verify we navigated to HCDGeneral Verification page upon cliclking on New Application")</a></td><td class="numi">1</td><td>1565344240199</td><td class="numi">11877</td></tr><tr class="passedodd"><td><a href="#m22"><b>getTextFromAddressInformation</b>  ("Here we are getting text from Address Information and comparing with Applicant filed data")</a></td><td class="numi">1</td><td>1565344257243</td><td class="numi">1932</td></tr><tr class="passedodd"><td><a href="#m23"><b>clickOnPreviousButtonAndVerifyTitleApplicantInformation</b>  ("This test will verify whether we navigate to applicant info page upon clicking on previous button from Document verification page")</a></td><td class="numi">1</td><td>1565344262626</td><td class="numi">1365</td></tr><tr class="passedodd"><td><a href="#m24"><b>selectAllCheckBoxAndVerify</b>  ("This test will verify whether check boxes is selected or not on Document verification")</a></td><td class="numi">1</td><td>1565344265740</td><td class="numi">4663</td></tr><tr class="passedodd"><td><a href="#m25"><b>selectOneByOneCheckBoxAndVerify</b>  ("This test will verify whether check boxes is selected (one by one)or not on Document verification")</a></td><td class="numi">1</td><td>1565344270404</td><td class="numi">4361</td></tr><tr class="passedodd"><td><a href="#m26"><b>approveApplication</b>  ("Click On Approve And Verify Pop Text and then click on Cancel, Verify that on which page navigated")</a></td><td class="numi">1</td><td>1565344280590</td><td class="numi">11537</td></tr><tr class="passedodd"><td><a href="#m27"><b>verifyCanceAndCrossButton</b>  ("This test will verify whether application is opens upon clicing on Open button and also clicking back button navigates to Bucket")</a></td><td class="numi">1</td><td>1565344337365</td><td class="numi">22594</td></tr>
 </table>
 <h1>Default test</h1>
-<h2 id="m1">com.ghana.app.qa.testcases.ConsulatePageFlagTest:verifyApplicationSentToRejectBucketOpens</h2>
+<h2 id="m1">com.ghana.app.qa.testcases.HighCommissionPageApproveTest:getTextFromApplicantInformation</h2>
+<div style="padding-left:3em">
+<p>Provided and Get firstName are not matched in HCD expected [Arjun Pardeshi] but found [ Arjun Pardeshi]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertEquals(Assert.java:123)
+<br/>at org.testng.Assert.assertEquals(Assert.java:176)
+<br/>at com.ghana.app.qa.testcases.HighCommissionPageApproveTest.getTextFromApplicantInformation(HighCommissionPageApproveTest.java:278)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">com.ghana.app.qa.testcases.ConsulatePageFlagTest:clickOnNewApplicationCN</h2>
+<h2 id="m2">com.ghana.app.qa.testcases.HighCommissionPageApproveTest:clickOnApproveAndVerifyPopText1</h2>
+<div style="padding-left:3em">
+<p>Document Verification page is not displayed upon clicking on Cross button from Confirmation popup expected [HCD Doccument Verification] but found [HCD Document Verification]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertEquals(Assert.java:123)
+<br/>at org.testng.Assert.assertEquals(Assert.java:176)
+<br/>at com.ghana.app.qa.testcases.HighCommissionPageApproveTest.clickOnApproveAndVerifyPopText1(HighCommissionPageApproveTest.java:455)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">com.ghana.app.qa.testcases.ConsulatePageFlagTest:verifyTitleOfConsulateTitle</h2>
+<h2 id="m3">com.ghana.app.qa.testcases.HighCommissionPageApproveTest:verifyApplicationSentOpens</h2>
+<div style="padding-left:3em">
+<p>Confirmation popup is not displayed upon clicking on Application which is sent to Approve Bucket expected [Confirmation] but found []</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertEquals(Assert.java:123)
+<br/>at org.testng.Assert.assertEquals(Assert.java:176)
+<br/>at com.ghana.app.qa.testcases.HighCommissionPageApproveTest.verifyApplicationSentOpens(HighCommissionPageApproveTest.java:502)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m4">com.ghana.app.qa.testcases.ConsulatePageFlagTest:clickOnRejectAndVerifyPopText2CN</h2>
+<h2 id="m4">com.ghana.app.qa.testcases.HighCommissionPageApproveTest:loginIntoConsulate</h2>
+<div style="padding-left:3em">
+<p>no such window: window was already closed
+  (Session info: chrome=76.0.3809.100)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;TORENZO&apos;, ip: &apos;192.168.188.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Users\TEJASH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51872}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: d4e61fa2432829b6398caf15273df3c0</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:489)
+<br/>at com.ghana.app.qa.util.TestUtil.toOpenNewTab(TestUtil.java:87)
+<br/>at com.ghana.app.qa.testcases.HighCommissionPageApproveTest.loginIntoConsulate(HighCommissionPageApproveTest.java:541)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m5">com.ghana.app.qa.testcases.ConsulatePageFlagTest:fillPersonalPageTest</h2>
+<h2 id="m5">com.ghana.app.qa.testcases.HighCommissionPageApproveTest:clickOnApproveAndVerifyPopText</h2>
+<div style="padding-left:3em">
+<p>Confirmation popup is not displayed upon clicking on Approve from Document Verification expected [HCD Doccument Verification] but found [Confirmation]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertEquals(Assert.java:123)
+<br/>at org.testng.Assert.assertEquals(Assert.java:176)
+<br/>at com.ghana.app.qa.testcases.HighCommissionPageApproveTest.clickOnApproveAndVerifyPopText(HighCommissionPageApproveTest.java:441)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m6">com.ghana.app.qa.testcases.ConsulatePageFlagTest:fillEmergencyPageTest</h2>
+<h2 id="m6">com.ghana.app.qa.testcases.HighCommissionPageApproveTest:verifyApprovedApplicaIsInApproveBucketHCD</h2>
+<div style="padding-left:3em">
+<p>no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//input[@value=&apos;Approve&apos;]&quot;}
+  (Session info: chrome=76.0.3809.100)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;TORENZO&apos;, ip: &apos;192.168.188.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Users\TEJASH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51872}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: d4e61fa2432829b6398caf15273df3c0
+*** Element info: {Using=xpath, value=//input[@value=&apos;Approve&apos;]}</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+<br/>at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<br/>at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+<br/>at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+<br/>at com.sun.proxy.$Proxy9.getAttribute(Unknown Source)
+<br/>at com.ghana.app.qa.pages.HCDDocumentVerificationPage.getTextconfirmFromApproveHCD(HCDDocumentVerificationPage.java:426)
+<br/>at com.ghana.app.qa.testcases.HighCommissionPageApproveTest.verifyApprovedApplicaIsInApproveBucketHCD(HighCommissionPageApproveTest.java:486)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m7">com.ghana.app.qa.testcases.ConsulatePageFlagTest:documentPageAndPaymentPageTest</h2>
+<h2 id="m7">com.ghana.app.qa.testcases.HighCommissionPageApproveTest:getTextFromTravelInformation</h2>
+<div style="padding-left:3em">
+<p>Provided and Get Landmark are not matched 2 expected [77436 Fairview Trail, Sekondi-Takoradi,Kumasi,Ashanti[4],Ghana,GA015] but found [77436 Fairview Trail, Sekondi-Takoradi]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertEquals(Assert.java:123)
+<br/>at org.testng.Assert.assertEquals(Assert.java:176)
+<br/>at com.ghana.app.qa.testcases.HighCommissionPageApproveTest.getTextFromTravelInformation(HighCommissionPageApproveTest.java:373)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m8">com.ghana.app.qa.testcases.ConsulatePageFlagTest:fillAddressinfoPageTest</h2>
+<h2 id="m8">com.ghana.app.qa.testcases.HighCommissionPageApproveTest:verifyApproveBucktInCN</h2>
+<div style="padding-left:3em">
+<p>no such window: window was already closed
+  (Session info: chrome=76.0.3809.100)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;TORENZO&apos;, ip: &apos;192.168.188.1&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_151&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Users\TEJASH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51872}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: d4e61fa2432829b6398caf15273df3c0
+*** Element info: {Using=xpath, value=//input[@value=&apos;Approve&apos;]}</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+<br/>at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+<br/>at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+<br/>at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+<br/>at com.sun.proxy.$Proxy9.getAttribute(Unknown Source)
+<br/>at com.ghana.app.qa.pages.HCDDocumentVerificationPage.getTextconfirmFromApproveHCD(HCDDocumentVerificationPage.java:426)
+<br/>at com.ghana.app.qa.testcases.HighCommissionPageApproveTest.verifyApproveBucktInCN(HighCommissionPageApproveTest.java:557)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m9">com.ghana.app.qa.testcases.ConsulatePageFlagTest:signUpAndFillSignUpPage</h2>
+<h2 id="m9">com.ghana.app.qa.testcases.HighCommissionPageApproveTest:clickOnNextButtonAndVerifyTitleDocumentVerifi</h2>
+<div style="padding-left:3em">
+<p>We are not navigate to Document Verification page upon clicking on Document Verification from Applicant Dashboard expected [HCD Doccument Verification] but found [HCD Document Verification]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertEquals(Assert.java:123)
+<br/>at org.testng.Assert.assertEquals(Assert.java:176)
+<br/>at com.ghana.app.qa.testcases.HighCommissionPageApproveTest.clickOnNextButtonAndVerifyTitleDocumentVerifi(HighCommissionPageApproveTest.java:408)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m10">com.ghana.app.qa.testcases.ConsulatePageFlagTest:verifyApplicaInRejectApplicationBucket</h2>
+<h2 id="m10">com.ghana.app.qa.testcases.HighCommissionPageApproveTest:passComment</h2>
+<div style="padding-left:3em">
+<p>Latest passed comment is not matched after getting text from comment section expected [Application is Approved from HCD side ] but found [Application is Approved from HCD side]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertEquals(Assert.java:123)
+<br/>at org.testng.Assert.assertEquals(Assert.java:176)
+<br/>at com.ghana.app.qa.testcases.HighCommissionPageApproveTest.passComment(HighCommissionPageApproveTest.java:465)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m11">com.ghana.app.qa.testcases.ConsulatePageFlagTest:verfiyTitleOfCNDocumentVerificatonPageCN</h2>
+<h2 id="m11">com.ghana.app.qa.testcases.HighCommissionPageApproveTest:verfiyTitleOfCNDocumentVerificatonPage</h2>
+<div style="padding-left:3em">
+<p>We are not navigate to Document Verification page upon clicking on Document Verification from Applicant Dashboard expected [HCD Doccument Verification] but found [HCD Document Verification]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertEquals(Assert.java:123)
+<br/>at org.testng.Assert.assertEquals(Assert.java:176)
+<br/>at com.ghana.app.qa.testcases.HighCommissionPageApproveTest.verfiyTitleOfCNDocumentVerificatonPage(HighCommissionPageApproveTest.java:393)
+<br/>25 lines not shown
+</div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m12">com.ghana.app.qa.testcases.ConsulatePageFlagTest:fillTravelInfoPageTest</h2>
+<h2 id="m12">com.ghana.app.qa.testcases.HighCommissionPageApproveTest:verifyCanceAndCrossButton</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m13">com.ghana.app.qa.testcases.ConsulatePageFlagTest:loginIntoConsulate</h2>
+<h2 id="m13">com.ghana.app.qa.testcases.HighCommissionPageApproveTest:approveApplication</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m14">com.ghana.app.qa.testcases.ConsulatePageFlagTest:verifyCanceAndCrossButton</h2>
+<h2 id="m14">com.ghana.app.qa.testcases.HighCommissionPageApproveTest:fillEmergencyPageTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m15">com.ghana.app.qa.testcases.HighCommissionPageApproveTest:loginIntoHighCommission</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m16">com.ghana.app.qa.testcases.HighCommissionPageApproveTest:signUpAndFillSignUpPage</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m17">com.ghana.app.qa.testcases.HighCommissionPageApproveTest:getApproveFromCN</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m18">com.ghana.app.qa.testcases.HighCommissionPageApproveTest:getTextFromAddressInformation</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m19">com.ghana.app.qa.testcases.HighCommissionPageApproveTest:verifHighCommissionPageTitle</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m20">com.ghana.app.qa.testcases.HighCommissionPageApproveTest:fillAddressinfoPageTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m21">com.ghana.app.qa.testcases.HighCommissionPageApproveTest:clickOnNewApplication</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m22">com.ghana.app.qa.testcases.HighCommissionPageApproveTest:selectOneByOneCheckBoxAndVerify</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m23">com.ghana.app.qa.testcases.HighCommissionPageApproveTest:fillFormAndPaymentTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m24">com.ghana.app.qa.testcases.HighCommissionPageApproveTest:clickOnPreviousButtonAndVerifyTitleApplicantInformation</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m25">com.ghana.app.qa.testcases.HighCommissionPageApproveTest:fillTravelInfoPageTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m26">com.ghana.app.qa.testcases.HighCommissionPageApproveTest:documentPageAndPaymentPageTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m27">com.ghana.app.qa.testcases.HighCommissionPageApproveTest:selectAllCheckBoxAndVerify</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>

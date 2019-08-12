@@ -213,8 +213,7 @@ public class TestUtil extends TestBase {
 
 	public static void toSwitchBetweenWindows(int i) {
 		try {
-			ArrayList<String> tabs = new ArrayList<String>(
-					driver.getWindowHandles());
+			ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
 			driver.switchTo().window(tabs.get(i));
 		} catch (Exception e) {
 			System.out.println("Window is not available");

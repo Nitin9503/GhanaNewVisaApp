@@ -149,8 +149,8 @@ public class HCDApplicantInfoPage extends TestBase {
 	@FindBy(id = "em_school_contact")
 	WebElement em_school_contact;
 
-	@FindBy(xpath = "//button[text()='Back']")
-	WebElement backButton;
+	@FindBy(xpath = "//button[text()='Cancel']")
+	WebElement Cancel;
 
 	@FindBy(xpath = "//button[text()='Next']")
 	WebElement nextButton;
@@ -165,9 +165,9 @@ public class HCDApplicantInfoPage extends TestBase {
 		nextButton.click();
 	}
 
-	public void clickOnBackButton() {
+	public void clickOnCancelButton() {
 
-		backButton.click();
+		Cancel.click();
 	}
 
 	public String getTextEm_school_contact() {
@@ -303,6 +303,10 @@ public class HCDApplicantInfoPage extends TestBase {
 	public String getTextDateOfDepartureHCD() {
 
 		return DateOfDepartureHCD.getAttribute("value");
+	}
+	public String getTextPurposeToVisitHCD() {
+
+		return purposeHCD.getAttribute("value");
 	}
 
 	public String getTextCountryHCD() {
